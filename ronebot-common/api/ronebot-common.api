@@ -1,0 +1,499 @@
+public abstract interface class cn/rtast/rob/BaseBotInstance {
+	public abstract fun createBot (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun disposeBot (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun isActionInitialized ()Z
+}
+
+public abstract interface class cn/rtast/rob/BotFactory {
+	public abstract fun getGroupCommandExecutionTimes ()I
+	public abstract fun getPrivateCommandExecutionTimes ()I
+	public abstract fun getTotalCommandExecutionTimes ()I
+	public abstract fun resetGroupCommandExecutionTimes ()V
+	public abstract fun resetPrivateCommandExecutionTimes ()V
+	public abstract fun setGroupCommandExecutionTimes (I)V
+	public abstract fun setPrivateCommandExecutionTimes (I)V
+	public abstract fun setTotalCommandExecutionTimes (I)V
+}
+
+public final class cn/rtast/rob/BotFactory$DefaultImpls {
+	public static fun resetGroupCommandExecutionTimes (Lcn/rtast/rob/BotFactory;)V
+	public static fun resetPrivateCommandExecutionTimes (Lcn/rtast/rob/BotFactory;)V
+}
+
+public final class cn/rtast/rob/Const_jvmKt {
+	public static final fun getCommonCoroutineScope ()Lkotlinx/coroutines/CoroutineScope;
+}
+
+public abstract interface class cn/rtast/rob/SendAction {
+	public abstract fun send (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface annotation class cn/rtast/rob/annotations/InternalROBApi : java/lang/annotation/Annotation {
+}
+
+public abstract interface class cn/rtast/rob/command/CommandManager {
+	public abstract fun generateRegex (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getCommandRegex ()Lkotlin/text/Regex;
+	public abstract fun getCommands ()Ljava/util/List;
+	public abstract fun getGroupDslCommands ()Ljava/util/List;
+	public abstract fun getPrivateDslCommands ()Ljava/util/List;
+	public abstract fun handleGroup (Lcn/rtast/rob/entity/IGroupMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun handlePrivate (Lcn/rtast/rob/entity/IPrivateMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun register (Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun registerGroupDsl (Ljava/util/List;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun registerPrivateDsl (Ljava/util/List;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun setCommandRegex (Lkotlin/text/Regex;)V
+}
+
+public final class cn/rtast/rob/command/CommandManager$DefaultImpls {
+	public static fun generateRegex (Lcn/rtast/rob/command/CommandManager;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun register (Lcn/rtast/rob/command/CommandManager;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun registerGroupDsl (Lcn/rtast/rob/command/CommandManager;Ljava/util/List;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun registerPrivateDsl (Lcn/rtast/rob/command/CommandManager;Ljava/util/List;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class cn/rtast/rob/command/IBaseCommand {
+	public abstract fun executeGroup (Lcn/rtast/rob/entity/IGroupMessage;Ljava/util/List;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun executeGroup (Lcn/rtast/rob/entity/IGroupMessage;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun executePrivate (Lcn/rtast/rob/entity/IPrivateMessage;Ljava/util/List;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun executePrivate (Lcn/rtast/rob/entity/IPrivateMessage;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getCommandNames ()Ljava/util/List;
+	public abstract fun handleGroup (Lcn/rtast/rob/entity/IGroupMessage;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun handlePrivate (Lcn/rtast/rob/entity/IPrivateMessage;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun onGroupSession (Lcn/rtast/rob/entity/IGroupMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun onPrivateSession (Lcn/rtast/rob/entity/IPrivateMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun reject (Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/entity/IMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun reject (Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/entity/IMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun skipSession (Lcn/rtast/rob/entity/IGroupMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun skipSession (Lcn/rtast/rob/entity/IPrivateMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun startSession (Lcn/rtast/rob/entity/IGroupMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun startSession (Lcn/rtast/rob/entity/IPrivateMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class cn/rtast/rob/entity/IGroupMessage : cn/rtast/rob/entity/IMessage {
+}
+
+public abstract interface class cn/rtast/rob/entity/IGroupSender : cn/rtast/rob/entity/ISender {
+}
+
+public abstract interface class cn/rtast/rob/entity/IMessage {
+	public abstract fun getSessionId ()Lkotlin/uuid/Uuid;
+	public abstract fun setSessionId (Lkotlin/uuid/Uuid;)V
+}
+
+public abstract interface class cn/rtast/rob/entity/IMessageChain {
+	public abstract fun getSize ()I
+	public abstract fun isEmpty ()Z
+}
+
+public abstract interface class cn/rtast/rob/entity/IPrivateMessage : cn/rtast/rob/entity/IMessage {
+}
+
+public abstract interface class cn/rtast/rob/entity/IPrivateSender : cn/rtast/rob/entity/ISender {
+}
+
+public abstract interface class cn/rtast/rob/entity/ISender {
+	public abstract fun getUserId ()J
+}
+
+public final class cn/rtast/rob/entity/Resource {
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Z
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBase64 ()Z
+	public final fun getContent ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/entity/ResourceKt {
+	public static final fun toByteArray (Lcn/rtast/rob/entity/Resource;)[B
+	public static final fun toByteArraySafely (Lcn/rtast/rob/entity/Resource;)[B
+	public static final fun toResource (Ljava/lang/String;Z)Lcn/rtast/rob/entity/Resource;
+	public static final fun toResource (Lkotlinx/io/files/Path;)Lcn/rtast/rob/entity/Resource;
+	public static final fun toResource ([B)Lcn/rtast/rob/entity/Resource;
+	public static synthetic fun toResource$default (Ljava/lang/String;ZILjava/lang/Object;)Lcn/rtast/rob/entity/Resource;
+}
+
+public final class cn/rtast/rob/entity/Resource_jvmKt {
+	public static final fun toResource (Ljava/io/File;)Lcn/rtast/rob/entity/Resource;
+	public static final fun toResource (Ljava/io/InputStream;)Lcn/rtast/rob/entity/Resource;
+	public static final fun toResource (Ljava/net/URI;)Lcn/rtast/rob/entity/Resource;
+	public static final fun toResource (Ljava/net/URL;)Lcn/rtast/rob/entity/Resource;
+	public static final fun toResource (Ljava/nio/file/Path;)Lcn/rtast/rob/entity/Resource;
+}
+
+public final class cn/rtast/rob/enums/MusicShareType : java/lang/Enum {
+	public static final field Companion Lcn/rtast/rob/enums/MusicShareType$Companion;
+	public static final field Netease Lcn/rtast/rob/enums/MusicShareType;
+	public static final field QQ Lcn/rtast/rob/enums/MusicShareType;
+	public static final field Xiami Lcn/rtast/rob/enums/MusicShareType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getType ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/enums/MusicShareType;
+	public static fun values ()[Lcn/rtast/rob/enums/MusicShareType;
+}
+
+public final class cn/rtast/rob/enums/MusicShareType$Companion {
+	public final fun forName (Ljava/lang/String;)Lcn/rtast/rob/enums/MusicShareType;
+}
+
+public final class cn/rtast/rob/enums/Permission : java/lang/Enum {
+	public static final field ADMIN Lcn/rtast/rob/enums/Permission;
+	public static final field MEMBER Lcn/rtast/rob/enums/Permission;
+	public static final field OWNER Lcn/rtast/rob/enums/Permission;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getOrder ()I
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/enums/Permission;
+	public static fun values ()[Lcn/rtast/rob/enums/Permission;
+}
+
+public final class cn/rtast/rob/enums/PokeMessage : java/lang/Enum {
+	public static final field BaoBeiQiu Lcn/rtast/rob/enums/PokeMessage;
+	public static final field FangDaZhao Lcn/rtast/rob/enums/PokeMessage;
+	public static final field GouYin Lcn/rtast/rob/enums/PokeMessage;
+	public static final field Heartbroken Lcn/rtast/rob/enums/PokeMessage;
+	public static final field JeiYin Lcn/rtast/rob/enums/PokeMessage;
+	public static final field Like Lcn/rtast/rob/enums/PokeMessage;
+	public static final field Poke Lcn/rtast/rob/enums/PokeMessage;
+	public static final field QiaoMen Lcn/rtast/rob/enums/PokeMessage;
+	public static final field RangNiPi Lcn/rtast/rob/enums/PokeMessage;
+	public static final field Rose Lcn/rtast/rob/enums/PokeMessage;
+	public static final field ShouLei Lcn/rtast/rob/enums/PokeMessage;
+	public static final field ShowLive Lcn/rtast/rob/enums/PokeMessage;
+	public static final field SixSixSix Lcn/rtast/rob/enums/PokeMessage;
+	public static final field SuiPing Lcn/rtast/rob/enums/PokeMessage;
+	public static final field ZhaoHuanShu Lcn/rtast/rob/enums/PokeMessage;
+	public static final field ZhuaYiXia Lcn/rtast/rob/enums/PokeMessage;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getId ()I
+	public final fun getPokeName ()Ljava/lang/String;
+	public final fun getType ()I
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/enums/PokeMessage;
+	public static fun values ()[Lcn/rtast/rob/enums/PokeMessage;
+}
+
+public final class cn/rtast/rob/enums/QQFace : java/lang/Enum {
+	public static final field AnZhongGuanCha Lcn/rtast/rob/enums/QQFace;
+	public static final field AoMan Lcn/rtast/rob/enums/QQFace;
+	public static final field BaiYan Lcn/rtast/rob/enums/QQFace;
+	public static final field BiShi Lcn/rtast/rob/enums/QQFace;
+	public static final field BiXin Lcn/rtast/rob/enums/QQFace;
+	public static final field BiZui Lcn/rtast/rob/enums/QQFace;
+	public static final field BianPao Lcn/rtast/rob/enums/QQFace;
+	public static final field BianXing Lcn/rtast/rob/enums/QQFace;
+	public static final field CaHan Lcn/rtast/rob/enums/QQFace;
+	public static final field CaiWang Lcn/rtast/rob/enums/QQFace;
+	public static final field CangSang Lcn/rtast/rob/enums/QQFace;
+	public static final field ChiGua Lcn/rtast/rob/enums/QQFace;
+	public static final field ChiTang Lcn/rtast/rob/enums/QQFace;
+	public static final field ChongBai Lcn/rtast/rob/enums/QQFace;
+	public static final field ChuoYiChuo Lcn/rtast/rob/enums/QQFace;
+	public static final field CiYa Lcn/rtast/rob/enums/QQFace;
+	public static final field DaCall Lcn/rtast/rob/enums/QQFace;
+	public static final field DaHuoChe Lcn/rtast/rob/enums/QQFace;
+	public static final field DaKu Lcn/rtast/rob/enums/QQFace;
+	public static final field DaLongZhou Lcn/rtast/rob/enums/QQFace;
+	public static final field DaYuanZhong Lcn/rtast/rob/enums/QQFace;
+	public static final field DaZhaoHu Lcn/rtast/rob/enums/QQFace;
+	public static final field DanGao Lcn/rtast/rob/enums/QQFace;
+	public static final field DeYi Lcn/rtast/rob/enums/QQFace;
+	public static final field Doge Lcn/rtast/rob/enums/QQFace;
+	public static final field Emm Lcn/rtast/rob/enums/QQFace;
+	public static final field FaDai Lcn/rtast/rob/enums/QQFace;
+	public static final field FaNu Lcn/rtast/rob/enums/QQFace;
+	public static final field FenDou Lcn/rtast/rob/enums/QQFace;
+	public static final field GanGa Lcn/rtast/rob/enums/QQFace;
+	public static final field GuZhang Lcn/rtast/rob/enums/QQFace;
+	public static final field HaQian Lcn/rtast/rob/enums/QQFace;
+	public static final field HaiXiu Lcn/rtast/rob/enums/QQFace;
+	public static final field HanXiao Lcn/rtast/rob/enums/QQFace;
+	public static final field HeHeDa Lcn/rtast/rob/enums/QQFace;
+	public static final field HongBaoDuoDuo Lcn/rtast/rob/enums/QQFace;
+	public static final field HuaDuoLian Lcn/rtast/rob/enums/QQFace;
+	public static final field HuaLongZhou Lcn/rtast/rob/enums/QQFace;
+	public static final field HuaiXiao Lcn/rtast/rob/enums/QQFace;
+	public static final field HuoChe Lcn/rtast/rob/enums/QQFace;
+	public static final field JiE Lcn/rtast/rob/enums/QQFace;
+	public static final field JianQiang Lcn/rtast/rob/enums/QQFace;
+	public static final field JingKong Lcn/rtast/rob/enums/QQFace;
+	public static final field JingLi Lcn/rtast/rob/enums/QQFace;
+	public static final field JingXia Lcn/rtast/rob/enums/QQFace;
+	public static final field JingYa Lcn/rtast/rob/enums/QQFace;
+	public static final field KeAi Lcn/rtast/rob/enums/QQFace;
+	public static final field KeLian Lcn/rtast/rob/enums/QQFace;
+	public static final field KouBi Lcn/rtast/rob/enums/QQFace;
+	public static final field Ku Lcn/rtast/rob/enums/QQFace;
+	public static final field KuLou Lcn/rtast/rob/enums/QQFace;
+	public static final field KuaiKuLe Lcn/rtast/rob/enums/QQFace;
+	public static final field KuangXiao Lcn/rtast/rob/enums/QQFace;
+	public static final field Kun Lcn/rtast/rob/enums/QQFace;
+	public static final field LaYanJing Lcn/rtast/rob/enums/QQFace;
+	public static final field LanQiu Lcn/rtast/rob/enums/QQFace;
+	public static final field LeiBen Lcn/rtast/rob/enums/QQFace;
+	public static final field LengHan Lcn/rtast/rob/enums/QQFace;
+	public static final field LiuHan Lcn/rtast/rob/enums/QQFace;
+	public static final field LiuLei Lcn/rtast/rob/enums/QQFace;
+	public static final field LongNianKuaiLe Lcn/rtast/rob/enums/QQFace;
+	public static final field LueLueLue Lcn/rtast/rob/enums/QQFace;
+	public static final field MaiMeng Lcn/rtast/rob/enums/QQFace;
+	public static final field MianWuBiaoQing Lcn/rtast/rob/enums/QQFace;
+	public static final field MiaoMiao Lcn/rtast/rob/enums/QQFace;
+	public static final field MoGuiXiao Lcn/rtast/rob/enums/QQFace;
+	public static final field MoJinLi Lcn/rtast/rob/enums/QQFace;
+	public static final field MoYu Lcn/rtast/rob/enums/QQFace;
+	public static final field NanGuo Lcn/rtast/rob/enums/QQFace;
+	public static final field NaoKuoTeng Lcn/rtast/rob/enums/QQFace;
+	public static final field NiZhenBangBang Lcn/rtast/rob/enums/QQFace;
+	public static final field NiuQiChongTian Lcn/rtast/rob/enums/QQFace;
+	public static final field Oh Lcn/rtast/rob/enums/QQFace;
+	public static final field OhYo Lcn/rtast/rob/enums/QQFace;
+	public static final field PenXue Lcn/rtast/rob/enums/QQFace;
+	public static final field PieZui Lcn/rtast/rob/enums/QQFace;
+	public static final field QiaoDa Lcn/rtast/rob/enums/QQFace;
+	public static final field QiaoQiao Lcn/rtast/rob/enums/QQFace;
+	public static final field QingZhu Lcn/rtast/rob/enums/QQFace;
+	public static final field QiuDaLe Lcn/rtast/rob/enums/QQFace;
+	public static final field QiuFangGuo Lcn/rtast/rob/enums/QQFace;
+	public static final field Se Lcn/rtast/rob/enums/QQFace;
+	public static final field ShengQi Lcn/rtast/rob/enums/QQFace;
+	public static final field Shuai Lcn/rtast/rob/enums/QQFace;
+	public static final field Shui Lcn/rtast/rob/enums/QQFace;
+	public static final field SuanQ Lcn/rtast/rob/enums/QQFace;
+	public static final field TaiYang Lcn/rtast/rob/enums/QQFace;
+	public static final field TianPing Lcn/rtast/rob/enums/QQFace;
+	public static final field TiaoPi Lcn/rtast/rob/enums/QQFace;
+	public static final field TieTie Lcn/rtast/rob/enums/QQFace;
+	public static final field TouGan Lcn/rtast/rob/enums/QQFace;
+	public static final field TouTu Lcn/rtast/rob/enums/QQFace;
+	public static final field TouXiao Lcn/rtast/rob/enums/QQFace;
+	public static final field Tu Lcn/rtast/rob/enums/QQFace;
+	public static final field TuoSai Lcn/rtast/rob/enums/QQFace;
+	public static final field WanHuo Lcn/rtast/rob/enums/QQFace;
+	public static final field WangWang Lcn/rtast/rob/enums/QQFace;
+	public static final field WeiQu Lcn/rtast/rob/enums/QQFace;
+	public static final field WeiXiao Lcn/rtast/rob/enums/QQFace;
+	public static final field WenHaoLian Lcn/rtast/rob/enums/QQFace;
+	public static final field WoFangLe Lcn/rtast/rob/enums/QQFace;
+	public static final field WoXiangKaiLe Lcn/rtast/rob/enums/QQFace;
+	public static final field WoZuiMei Lcn/rtast/rob/enums/QQFace;
+	public static final field WuLian Lcn/rtast/rob/enums/QQFace;
+	public static final field WuNai Lcn/rtast/rob/enums/QQFace;
+	public static final field WuYanXiao Lcn/rtast/rob/enums/QQFace;
+	public static final field Xia Lcn/rtast/rob/enums/QQFace;
+	public static final field XiaoJiuJie Lcn/rtast/rob/enums/QQFace;
+	public static final field XiaoKu Lcn/rtast/rob/enums/QQFace;
+	public static final field XieYanXiao Lcn/rtast/rob/enums/QQFace;
+	public static final field XinNianDaLong Lcn/rtast/rob/enums/QQFace;
+	public static final field XinNianZhongLong Lcn/rtast/rob/enums/QQFace;
+	public static final field Xu Lcn/rtast/rob/enums/QQFace;
+	public static final field XuBiaoShi Lcn/rtast/rob/enums/QQFace;
+	public static final field YanHua Lcn/rtast/rob/enums/QQFace;
+	public static final field YiWen Lcn/rtast/rob/enums/QQFace;
+	public static final field YinXian Lcn/rtast/rob/enums/QQFace;
+	public static final field YouHengHeng Lcn/rtast/rob/enums/QQFace;
+	public static final field YouQinQin Lcn/rtast/rob/enums/QQFace;
+	public static final field YouXian Lcn/rtast/rob/enums/QQFace;
+	public static final field YueLiang Lcn/rtast/rob/enums/QQFace;
+	public static final field Yun Lcn/rtast/rob/enums/QQFace;
+	public static final field ZaiJian Lcn/rtast/rob/enums/QQFace;
+	public static final field ZaiXiFenXi Lcn/rtast/rob/enums/QQFace;
+	public static final field ZhaYanJing Lcn/rtast/rob/enums/QQFace;
+	public static final field ZheMo Lcn/rtast/rob/enums/QQFace;
+	public static final field ZhongHuoChe Lcn/rtast/rob/enums/QQFace;
+	public static final field ZhongLongZhou Lcn/rtast/rob/enums/QQFace;
+	public static final field ZhouMa Lcn/rtast/rob/enums/QQFace;
+	public static final field ZhuaKuang Lcn/rtast/rob/enums/QQFace;
+	public static final field ZuoHengHeng Lcn/rtast/rob/enums/QQFace;
+	public static final field ZuoQinQin Lcn/rtast/rob/enums/QQFace;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getId ()I
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/enums/QQFace;
+	public static fun values ()[Lcn/rtast/rob/enums/QQFace;
+}
+
+public abstract interface class cn/rtast/rob/event/BaseDispatchEvent {
+	public abstract fun getAction ()Lcn/rtast/rob/SendAction;
+}
+
+public final class cn/rtast/rob/event/EventHandlerKt {
+	public static final fun dispatchEvent (Lcn/rtast/rob/BaseBotInstance;Lcn/rtast/rob/event/BaseDispatchEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getEventHandlers ()Ljava/util/Map;
+}
+
+public final class cn/rtast/rob/event/FlowEventKt {
+	public static final fun emitFlowEvent (Lcn/rtast/rob/BaseBotInstance;Lcn/rtast/rob/event/BaseDispatchEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getFlowEventChannel ()Ljava/util/Map;
+}
+
+public final class cn/rtast/rob/exceptions/NonBase64ResourceException : java/lang/Exception {
+	public fun <init> (Ljava/lang/String;)V
+}
+
+public final class cn/rtast/rob/exceptions/PlatformNotSupportedException : java/lang/Exception {
+	public fun <init> (Ljava/lang/String;)V
+}
+
+public final class cn/rtast/rob/exceptions/WebsocketProtocolNotSupportedException : java/lang/Exception {
+	public fun <init> (Ljava/lang/String;)V
+}
+
+public final class cn/rtast/rob/interceptor/CommandExecutionResult : java/lang/Enum {
+	public static final field CONTINUE Lcn/rtast/rob/interceptor/CommandExecutionResult;
+	public static final field STOP Lcn/rtast/rob/interceptor/CommandExecutionResult;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/interceptor/CommandExecutionResult;
+	public static fun values ()[Lcn/rtast/rob/interceptor/CommandExecutionResult;
+}
+
+public abstract interface class cn/rtast/rob/interceptor/ICommandInterceptor {
+	public abstract fun afterGroupExecute (Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun afterPrivateExecute (Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun beforeGroupExecute (Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun beforePrivateExecute (Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun handleGroupInterceptor (Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun handlePrivateInterceptor (Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/interceptor/ICommandInterceptor$DefaultImpls {
+	public static fun afterGroupExecute (Lcn/rtast/rob/interceptor/ICommandInterceptor;Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun afterPrivateExecute (Lcn/rtast/rob/interceptor/ICommandInterceptor;Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun beforeGroupExecute (Lcn/rtast/rob/interceptor/ICommandInterceptor;Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun beforePrivateExecute (Lcn/rtast/rob/interceptor/ICommandInterceptor;Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun handleGroupInterceptor (Lcn/rtast/rob/interceptor/ICommandInterceptor;Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun handlePrivateInterceptor (Lcn/rtast/rob/interceptor/ICommandInterceptor;Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/scheduler/BotCoroutineScheduler : cn/rtast/rob/scheduler/BotScheduler {
+	public fun <init> (Lcn/rtast/rob/BaseBotInstance;)V
+	public fun cancelTask (Lcn/rtast/rob/scheduler/TaskHandle;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun scheduleTask-O4J4VbY (JJLkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun scheduleTask-vLdBGDU (Lkotlin/jvm/functions/Function2;JJLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class cn/rtast/rob/scheduler/BotScheduler {
+	public abstract fun cancelTask (Lcn/rtast/rob/scheduler/TaskHandle;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun scheduleTask-O4J4VbY (JJLkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun scheduleTask-vLdBGDU (Lkotlin/jvm/functions/Function2;JJLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/scheduler/BotScheduler$DefaultImpls {
+	public static fun scheduleTask-O4J4VbY (Lcn/rtast/rob/scheduler/BotScheduler;JJLkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/scheduler/CoroutineTaskHandle : cn/rtast/rob/scheduler/TaskHandle {
+	public fun <init> (Lkotlinx/coroutines/Job;)V
+	public fun cancel (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun isCancelled ()Z
+}
+
+public final class cn/rtast/rob/scheduler/GlobalCoroutineScheduler : cn/rtast/rob/scheduler/GlobalScheduler {
+	public fun <init> (Ljava/util/List;Lkotlinx/coroutines/CoroutineDispatcher;)V
+	public synthetic fun <init> (Ljava/util/List;Lkotlinx/coroutines/CoroutineDispatcher;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun cancelTask (Lcn/rtast/rob/scheduler/TaskHandle;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun scheduleTask-O4J4VbY (JJLkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun scheduleTask-vLdBGDU (Lkotlin/jvm/functions/Function2;JJLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class cn/rtast/rob/scheduler/GlobalScheduler {
+	public abstract fun cancelTask (Lcn/rtast/rob/scheduler/TaskHandle;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun scheduleTask-O4J4VbY (JJLkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun scheduleTask-vLdBGDU (Lkotlin/jvm/functions/Function2;JJLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/scheduler/GlobalScheduler$DefaultImpls {
+	public static fun scheduleTask-O4J4VbY (Lcn/rtast/rob/scheduler/GlobalScheduler;JJLkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class cn/rtast/rob/scheduler/TaskHandle {
+	public abstract fun cancel (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun isCancelled ()Z
+}
+
+public abstract interface class cn/rtast/rob/session/IGroupSession : cn/rtast/rob/session/ISession {
+	public abstract fun getMessage ()Lcn/rtast/rob/entity/IGroupMessage;
+	public abstract fun getSender ()Lcn/rtast/rob/entity/IGroupSender;
+}
+
+public final class cn/rtast/rob/session/IGroupSession$DefaultImpls {
+	public static fun endSession (Lcn/rtast/rob/session/IGroupSession;)V
+}
+
+public abstract interface class cn/rtast/rob/session/IPrivateSession : cn/rtast/rob/session/ISession {
+	public abstract fun getMessage ()Lcn/rtast/rob/entity/IPrivateMessage;
+	public abstract fun getSender ()Lcn/rtast/rob/entity/IPrivateSender;
+}
+
+public final class cn/rtast/rob/session/IPrivateSession$DefaultImpls {
+	public static fun endSession (Lcn/rtast/rob/session/IPrivateSession;)V
+}
+
+public abstract interface class cn/rtast/rob/session/ISession {
+	public abstract fun endSession ()V
+	public abstract fun getActive ()Z
+	public abstract fun getCommand ()Lcn/rtast/rob/command/IBaseCommand;
+	public abstract fun getId ()Lkotlin/uuid/Uuid;
+	public abstract fun getMessage ()Lcn/rtast/rob/entity/IMessage;
+	public abstract fun getSender ()Lcn/rtast/rob/entity/ISender;
+	public abstract fun setActive (Z)V
+}
+
+public final class cn/rtast/rob/session/ISession$DefaultImpls {
+	public static fun endSession (Lcn/rtast/rob/session/ISession;)V
+}
+
+public abstract interface class cn/rtast/rob/session/ISessionManager {
+	public abstract fun endGroupSession (Lcn/rtast/rob/entity/IGroupSender;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun endPrivateSession (Lcn/rtast/rob/entity/IPrivateSender;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getGroupActiveSessions ()Ljava/util/Map;
+	public abstract fun getGroupSession (Lcn/rtast/rob/entity/IGroupSender;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getPrivateActiveSessions ()Ljava/util/Map;
+	public abstract fun getPrivateSession (Lcn/rtast/rob/entity/IPrivateSender;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun startGroupSession (Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun startPrivateSession (Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/session/ISessionManager$DefaultImpls {
+	public static fun endGroupSession (Lcn/rtast/rob/session/ISessionManager;Lcn/rtast/rob/entity/IGroupSender;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun endPrivateSession (Lcn/rtast/rob/session/ISessionManager;Lcn/rtast/rob/entity/IPrivateSender;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/util/Base64Kt {
+	public static final fun decodeToBase64 (Ljava/lang/String;)Ljava/lang/String;
+	public static final fun decodeToBase64 ([B)Ljava/lang/String;
+	public static final fun decodeToByteArrayBase64 (Ljava/lang/String;)[B
+	public static final fun decodeToByteArrayBase64 ([B)[B
+	public static final fun encodeToBase64 (Ljava/lang/String;)Ljava/lang/String;
+	public static final fun encodeToBase64 ([B)Ljava/lang/String;
+}
+
+public abstract interface class cn/rtast/rob/util/IBotManager {
+	public abstract fun addBotInstance (Lcn/rtast/rob/BaseBotInstance;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun allBots ()Ljava/util/List;
+	public abstract fun disableAllBots (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun disableBotInstance (Lcn/rtast/rob/BaseBotInstance;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun enableAllBots (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun enableBotInstance (Lcn/rtast/rob/BaseBotInstance;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun get (Lcn/rtast/rob/util/IBotManager$ID;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getBotInstanceByAction (Lcn/rtast/rob/SendAction;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getBotInstanceStatus (Lcn/rtast/rob/BaseBotInstance;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun removeBotInstance (Lcn/rtast/rob/BaseBotInstance;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/util/IBotManager$ID {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lcn/rtast/rob/util/IBotManager$ID;
+	public static synthetic fun copy$default (Lcn/rtast/rob/util/IBotManager$ID;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/util/IBotManager$ID;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/util/IBotManagerKt {
+	public static final fun getID (I)Lcn/rtast/rob/util/IBotManager$ID;
+	public static final fun getID (J)Lcn/rtast/rob/util/IBotManager$ID;
+	public static final fun getID (Ljava/lang/String;)Lcn/rtast/rob/util/IBotManager$ID;
+}
+

@@ -1,0 +1,19 @@
+public final class cn/rtast/rob/starter/common/ROneBotTarget : java/lang/Enum {
+	public static final field Companion Lcn/rtast/rob/starter/common/ROneBotTarget$Companion;
+	public static final field Jvm Lcn/rtast/rob/starter/common/ROneBotTarget;
+	public static final field LinuxArm64 Lcn/rtast/rob/starter/common/ROneBotTarget;
+	public static final field LinuxX64 Lcn/rtast/rob/starter/common/ROneBotTarget;
+	public static final field MacOSArm64 Lcn/rtast/rob/starter/common/ROneBotTarget;
+	public static final field MacOSX64 Lcn/rtast/rob/starter/common/ROneBotTarget;
+	public static final field MingwX64 Lcn/rtast/rob/starter/common/ROneBotTarget;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getTargetDisplayName ()Ljava/lang/String;
+	public final fun getTargetName ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/starter/common/ROneBotTarget;
+	public static fun values ()[Lcn/rtast/rob/starter/common/ROneBotTarget;
+}
+
+public final class cn/rtast/rob/starter/common/ROneBotTarget$Companion {
+	public final fun fromString (Ljava/lang/String;)Lcn/rtast/rob/starter/common/ROneBotTarget;
+}
+

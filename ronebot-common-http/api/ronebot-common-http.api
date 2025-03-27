@@ -1,0 +1,29 @@
+public final class cn/rtast/rob/common/http/Http {
+	public static final field INSTANCE Lcn/rtast/rob/common/http/Http;
+	public final fun addHeaders (Lokhttp3/Request$Builder;Ljava/util/Map;)Lokhttp3/Request$Builder;
+	public final fun buildDeleteRequest (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)Lokhttp3/Request;
+	public static synthetic fun buildDeleteRequest$default (Lcn/rtast/rob/common/http/Http;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;ILjava/lang/Object;)Lokhttp3/Request;
+	public final fun buildParams (Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+	public final fun delete (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)Ljava/lang/String;
+	public static synthetic fun delete$default (Lcn/rtast/rob/common/http/Http;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;ILjava/lang/Object;)Ljava/lang/String;
+	public final fun executeRequest (Lokhttp3/Request;)Ljava/lang/String;
+	public final fun get (Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)Ljava/lang/String;
+	public static synthetic fun get$default (Lcn/rtast/rob/common/http/Http;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;ILjava/lang/Object;)Ljava/lang/String;
+	public final fun getJsonHeader ()Ljava/util/Map;
+	public final fun getJsonMediaType ()Lokhttp3/MediaType;
+	public final fun getOkHttpClient ()Lokhttp3/OkHttpClient;
+	public final fun post (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)Ljava/lang/String;
+	public static synthetic fun post$default (Lcn/rtast/rob/common/http/Http;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;ILjava/lang/Object;)Ljava/lang/String;
+	public final fun put (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)Ljava/lang/String;
+	public static synthetic fun put$default (Lcn/rtast/rob/common/http/Http;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;ILjava/lang/Object;)Ljava/lang/String;
+}
+
+public abstract interface class cn/rtast/rob/common/http/SendActionExt : cn/rtast/rob/SendAction {
+	public abstract fun send (Ljava/lang/String;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun send (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/common/http/SendActionExt$DefaultImpls {
+	public static fun send (Lcn/rtast/rob/common/http/SendActionExt;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+

@@ -1,0 +1,719 @@
+public final class cn/rtast/rob/qqbot/BotInstance : cn/rtast/rob/BaseBotInstance {
+	public fun createBot (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun disposeBot (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getScheduler ()Lcn/rtast/rob/scheduler/BotCoroutineScheduler;
+	public fun isActionInitialized ()Z
+}
+
+public final class cn/rtast/rob/qqbot/QBotFactory : cn/rtast/rob/BotFactory {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/QBotFactory;
+	public static field interceptor Lcn/rtast/rob/interceptor/ICommandInterceptor;
+	public final fun createServer (ILjava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/qbot/QQBotListener;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getCommandManager ()Lcn/rtast/rob/qqbot/command/CommandManagerImpl;
+	public final fun getGlobalScheduler ()Lcn/rtast/rob/scheduler/GlobalCoroutineScheduler;
+	public fun getGroupCommandExecutionTimes ()I
+	public final fun getInterceptor ()Lcn/rtast/rob/interceptor/ICommandInterceptor;
+	public fun getPrivateCommandExecutionTimes ()I
+	public fun getTotalCommandExecutionTimes ()I
+	public fun resetGroupCommandExecutionTimes ()V
+	public fun resetPrivateCommandExecutionTimes ()V
+	public fun setGroupCommandExecutionTimes (I)V
+	public final fun setInterceptor (Lcn/rtast/rob/interceptor/ICommandInterceptor;)V
+	public fun setPrivateCommandExecutionTimes (I)V
+	public fun setTotalCommandExecutionTimes (I)V
+}
+
+public abstract interface class cn/rtast/rob/qqbot/actionable/C2CMessageActionable {
+	public abstract fun reply (Lcn/rtast/rob/qqbot/segment/Keyboard;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun reply (Lcn/rtast/rob/qqbot/segment/Markdown;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun reply (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun revoke (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class cn/rtast/rob/qqbot/actionable/GroupMessageActionable : cn/rtast/rob/qqbot/actionable/C2CMessageActionable {
+}
+
+public abstract class cn/rtast/rob/qqbot/command/BaseCommand : cn/rtast/rob/command/IBaseCommand {
+	public fun <init> ()V
+	public synthetic fun executeGroup (Lcn/rtast/rob/entity/IGroupMessage;Ljava/util/List;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun executeGroup (Lcn/rtast/rob/entity/IGroupMessage;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun executeGroup (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;Ljava/util/List;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun executeGroup (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun executePrivate (Lcn/rtast/rob/entity/IPrivateMessage;Ljava/util/List;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun executePrivate (Lcn/rtast/rob/entity/IPrivateMessage;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun executePrivate (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;Ljava/util/List;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun executePrivate (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getCommandNames ()Ljava/util/List;
+	public synthetic fun handleGroup (Lcn/rtast/rob/entity/IGroupMessage;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun handleGroup (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun handlePrivate (Lcn/rtast/rob/entity/IPrivateMessage;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun handlePrivate (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/qqbot/command/CommandManagerImpl : cn/rtast/rob/command/CommandManager {
+	public fun <init> ()V
+	public fun generateRegex (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getCommandRegex ()Lkotlin/text/Regex;
+	public fun getCommands ()Ljava/util/List;
+	public fun getGroupDslCommands ()Ljava/util/List;
+	public fun getPrivateDslCommands ()Ljava/util/List;
+	public synthetic fun handleGroup (Lcn/rtast/rob/entity/IGroupMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun handleGroup (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun handlePrivate (Lcn/rtast/rob/entity/IPrivateMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun handlePrivate (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun register (Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun register (Lcn/rtast/rob/qqbot/command/BaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun registerGroupDsl (Ljava/util/List;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun registerPrivateDsl (Ljava/util/List;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun setCommandRegex (Lkotlin/text/Regex;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/HttpCallbackACK {
+	public fun <init> ()V
+	public fun <init> (I)V
+	public synthetic fun <init> (IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun copy (I)Lcn/rtast/rob/qqbot/entity/HttpCallbackACK;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/HttpCallbackACK;IILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/HttpCallbackACK;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getOp ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent : cn/rtast/rob/entity/IPrivateMessage, cn/rtast/rob/qqbot/actionable/C2CMessageActionable {
+	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;Lkotlin/uuid/Uuid;)V
+	public synthetic fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;Lkotlin/uuid/Uuid;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;
+	public final fun component3 ()Lkotlin/uuid/Uuid;
+	public final fun copy (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;Lkotlin/uuid/Uuid;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;Lkotlin/uuid/Uuid;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getD ()Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;
+	public final fun getId ()Ljava/lang/String;
+	public fun getSessionId ()Lkotlin/uuid/Uuid;
+	public fun hashCode ()I
+	public fun reply (Lcn/rtast/rob/qqbot/segment/Keyboard;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun reply (Lcn/rtast/rob/qqbot/segment/Markdown;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun reply (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun revoke (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun setSessionId (Lkotlin/uuid/Uuid;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Attachment {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Attachment;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Attachment;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Attachment;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContent ()Ljava/lang/String;
+	public final fun getContentType ()Ljava/lang/String;
+	public final fun getFilename ()Ljava/lang/String;
+	public final fun getHeight ()I
+	public final fun getUrl ()Ljava/lang/String;
+	public final fun getWidth ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody {
+	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/util/List;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;)V
+	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
+	public final fun component6 ()Ljava/util/List;
+	public final fun component7 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;
+	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/util/List;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/util/List;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun getAttachments ()Ljava/util/List;
+	public final fun getAuthor ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
+	public final fun getContent ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getMessageScene ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun setAction (Lcn/rtast/rob/qqbot/qbot/QQBotAction;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent {
+	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;
+	public final fun copy (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getD ()Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;
+	public final fun getId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent {
+	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun getOpenId ()Ljava/lang/String;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun setAction (Lcn/rtast/rob/qqbot/qbot/QQBotAction;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent {
+	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;
+	public final fun copy (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getD ()Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;
+	public final fun getId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent {
+	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun getOpenId ()Ljava/lang/String;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun setAction (Lcn/rtast/rob/qqbot/qbot/QQBotAction;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/FriendAddEvent {
+	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;
+	public final fun copy (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;)Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getD ()Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;
+	public final fun getId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent {
+	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;)V
+	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
+	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;)Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun getAuthor ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
+	public final fun getOpenid ()Ljava/lang/String;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun setAction (Lcn/rtast/rob/qqbot/qbot/QQBotAction;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent {
+	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;
+	public final fun copy (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getD ()Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;
+	public final fun getId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getUnionOpenId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent {
+	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;)V
+	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;
+	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun getAuthor ()Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;
+	public final fun getOpenId ()Ljava/lang/String;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun setAction (Lcn/rtast/rob/qqbot/qbot/QQBotAction;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent {
+	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;
+	public final fun copy (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getD ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;
+	public final fun getId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent {
+	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun getGroupOpenId ()Ljava/lang/String;
+	public final fun getOpMemberOpenId ()Ljava/lang/String;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun setAction (Lcn/rtast/rob/qqbot/qbot/QQBotAction;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent : cn/rtast/rob/entity/IGroupMessage, cn/rtast/rob/qqbot/actionable/GroupMessageActionable {
+	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;Lkotlin/uuid/Uuid;)V
+	public synthetic fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;Lkotlin/uuid/Uuid;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;
+	public final fun component3 ()Lkotlin/uuid/Uuid;
+	public final fun copy (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;Lkotlin/uuid/Uuid;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;Lkotlin/uuid/Uuid;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getD ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;
+	public final fun getId ()Ljava/lang/String;
+	public fun getSessionId ()Lkotlin/uuid/Uuid;
+	public fun hashCode ()I
+	public fun reply (Lcn/rtast/rob/qqbot/segment/Keyboard;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun reply (Lcn/rtast/rob/qqbot/segment/Markdown;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun reply (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun revoke (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun setSessionId (Lkotlin/uuid/Uuid;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Ljava/lang/String;
+	public final fun getMemberOpenId ()Ljava/lang/String;
+	public final fun getUnionOpenId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody {
+	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;)V
+	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;
+	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun getAuthor ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
+	public final fun getContent ()Ljava/lang/String;
+	public final fun getGroupId ()Ljava/lang/String;
+	public final fun getGroupOpenId ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getMessageScene ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun setAction (Lcn/rtast/rob/qqbot/qbot/QQBotAction;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getSource ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent {
+	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;
+	public final fun copy (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;)Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getD ()Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;
+	public final fun getId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent {
+	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun getGroupOpenId ()Ljava/lang/String;
+	public final fun getOpMemberOpenId ()Ljava/lang/String;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun setAction (Lcn/rtast/rob/qqbot/qbot/QQBotAction;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent {
+	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;
+	public final fun copy (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getD ()Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;
+	public final fun getId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent {
+	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun getGroupOpenId ()Ljava/lang/String;
+	public final fun getOpMemberOpenId ()Ljava/lang/String;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun setAction (Lcn/rtast/rob/qqbot/qbot/QQBotAction;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent {
+	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;
+	public final fun copy (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getD ()Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;
+	public final fun getId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent {
+	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public final fun getGroupOpenId ()Ljava/lang/String;
+	public final fun getOpMemberOpenId ()Ljava/lang/String;
+	public final fun getTimestamp ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun setAction (Lcn/rtast/rob/qqbot/qbot/QQBotAction;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/enums/ButtonActionAnchor : java/lang/Enum {
+	public static final field Normal Lcn/rtast/rob/qqbot/enums/ButtonActionAnchor;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getType ()I
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/qqbot/enums/ButtonActionAnchor;
+	public static fun values ()[Lcn/rtast/rob/qqbot/enums/ButtonActionAnchor;
+}
+
+public final class cn/rtast/rob/qqbot/enums/ButtonActionType : java/lang/Enum {
+	public static final field Callback Lcn/rtast/rob/qqbot/enums/ButtonActionType;
+	public static final field Command Lcn/rtast/rob/qqbot/enums/ButtonActionType;
+	public static final field MiniApp Lcn/rtast/rob/qqbot/enums/ButtonActionType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getType ()I
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/qqbot/enums/ButtonActionType;
+	public static fun values ()[Lcn/rtast/rob/qqbot/enums/ButtonActionType;
+}
+
+public final class cn/rtast/rob/qqbot/enums/ButtonPermissionType : java/lang/Enum {
+	public static final field Everyone Lcn/rtast/rob/qqbot/enums/ButtonPermissionType;
+	public static final field OnlyAdmin Lcn/rtast/rob/qqbot/enums/ButtonPermissionType;
+	public static final field SpecifyRoleGroup Lcn/rtast/rob/qqbot/enums/ButtonPermissionType;
+	public static final field SpecifyUser Lcn/rtast/rob/qqbot/enums/ButtonPermissionType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getType ()I
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/qqbot/enums/ButtonPermissionType;
+	public static fun values ()[Lcn/rtast/rob/qqbot/enums/ButtonPermissionType;
+}
+
+public final class cn/rtast/rob/qqbot/enums/MsgType : java/lang/Enum {
+	public static final field ARK Lcn/rtast/rob/qqbot/enums/MsgType;
+	public static final field Embed Lcn/rtast/rob/qqbot/enums/MsgType;
+	public static final field Markdown Lcn/rtast/rob/qqbot/enums/MsgType;
+	public static final field Media Lcn/rtast/rob/qqbot/enums/MsgType;
+	public static final field PlainText Lcn/rtast/rob/qqbot/enums/MsgType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getType ()I
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/qqbot/enums/MsgType;
+	public static fun values ()[Lcn/rtast/rob/qqbot/enums/MsgType;
+}
+
+public final class cn/rtast/rob/qqbot/enums/OPCode : java/lang/Enum {
+	public static final field CallbackURLVerify Lcn/rtast/rob/qqbot/enums/OPCode;
+	public static final field Dispatch Lcn/rtast/rob/qqbot/enums/OPCode;
+	public static final field HTTPCallbackACK Lcn/rtast/rob/qqbot/enums/OPCode;
+	public static final field Heartbeat Lcn/rtast/rob/qqbot/enums/OPCode;
+	public static final field HeartbeatACK Lcn/rtast/rob/qqbot/enums/OPCode;
+	public static final field Hello Lcn/rtast/rob/qqbot/enums/OPCode;
+	public static final field Identify Lcn/rtast/rob/qqbot/enums/OPCode;
+	public static final field InvalidSession Lcn/rtast/rob/qqbot/enums/OPCode;
+	public static final field Reconnect Lcn/rtast/rob/qqbot/enums/OPCode;
+	public static final field Resume Lcn/rtast/rob/qqbot/enums/OPCode;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getOpCode ()I
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/qqbot/enums/OPCode;
+	public static fun values ()[Lcn/rtast/rob/qqbot/enums/OPCode;
+}
+
+public final class cn/rtast/rob/qqbot/enums/internal/HTTPMethod : java/lang/Enum {
+	public static final field DELETE Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod;
+	public static final field GET Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod;
+	public static final field POST Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod;
+	public static final field PUT Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod;
+	public static fun values ()[Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod;
+}
+
+public abstract class cn/rtast/rob/qqbot/interceptor/ExecutionInterceptor : cn/rtast/rob/interceptor/ICommandInterceptor {
+	public fun <init> ()V
+	public synthetic fun afterGroupExecute (Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun afterGroupExecute (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;Lcn/rtast/rob/qqbot/command/BaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun afterPrivateExecute (Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun afterPrivateExecute (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;Lcn/rtast/rob/qqbot/command/BaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun beforeGroupExecute (Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun beforeGroupExecute (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;Lcn/rtast/rob/qqbot/command/BaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun beforePrivateExecute (Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun beforePrivateExecute (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;Lcn/rtast/rob/qqbot/command/BaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun handleGroupInterceptor (Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun handleGroupInterceptor (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;Lcn/rtast/rob/qqbot/command/BaseCommand;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun handlePrivateInterceptor (Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun handlePrivateInterceptor (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;Lcn/rtast/rob/qqbot/command/BaseCommand;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/qqbot/qbot/QQBotAction : cn/rtast/rob/qqbot/qbot/SendActionMoreExt {
+	public final fun revokeGroupMessage (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun revokePrivateMessage (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun send (Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod;Ljava/lang/String;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun send (Ljava/lang/String;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun send (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun sendGroupKeyboardMessage (Ljava/lang/String;Lcn/rtast/rob/qqbot/segment/Keyboard;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun sendGroupMarkdownMessage (Ljava/lang/String;Lcn/rtast/rob/qqbot/segment/Markdown;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun sendGroupPlainTextMessage (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun sendPrivateKeyboardMessage (Ljava/lang/String;Lcn/rtast/rob/qqbot/segment/Keyboard;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun sendPrivateMarkdownMessage (Ljava/lang/String;Lcn/rtast/rob/qqbot/segment/Markdown;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun sendPrivatePlainTextMessage (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class cn/rtast/rob/qqbot/qbot/QQBotListener {
+	public abstract fun onC2CMessage (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun onC2CMessageReceiveEvent (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun onC2CMessageRejectEvent (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun onFriendAdd (Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun onFriendDelete (Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun onGroupAddRobot (Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun onGroupDeleteRobot (Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun onGroupMessage (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun onGroupMessageReceiveEvent (Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun onGroupMessageRejectEvent (Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/qqbot/qbot/QQBotListener$DefaultImpls {
+	public static fun onC2CMessage (Lcn/rtast/rob/qqbot/qbot/QQBotListener;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun onC2CMessageReceiveEvent (Lcn/rtast/rob/qqbot/qbot/QQBotListener;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun onC2CMessageRejectEvent (Lcn/rtast/rob/qqbot/qbot/QQBotListener;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun onFriendAdd (Lcn/rtast/rob/qqbot/qbot/QQBotListener;Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun onFriendDelete (Lcn/rtast/rob/qqbot/qbot/QQBotListener;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun onGroupAddRobot (Lcn/rtast/rob/qqbot/qbot/QQBotListener;Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun onGroupDeleteRobot (Lcn/rtast/rob/qqbot/qbot/QQBotListener;Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun onGroupMessage (Lcn/rtast/rob/qqbot/qbot/QQBotListener;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun onGroupMessageReceiveEvent (Lcn/rtast/rob/qqbot/qbot/QQBotListener;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static fun onGroupMessageRejectEvent (Lcn/rtast/rob/qqbot/qbot/QQBotListener;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class cn/rtast/rob/qqbot/qbot/SendActionMoreExt : cn/rtast/rob/common/http/SendActionExt {
+	public abstract fun send (Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod;Ljava/lang/String;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/qqbot/qbot/SendActionMoreExt$DefaultImpls {
+	public static fun send (Lcn/rtast/rob/qqbot/qbot/SendActionMoreExt;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class cn/rtast/rob/qqbot/segment/Keyboard {
+	public fun <init> (Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;)Lcn/rtast/rob/qqbot/segment/Keyboard;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/segment/Keyboard;Ljava/util/List;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/segment/Keyboard;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContent ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/segment/Keyboard$Action {
+	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/segment/Keyboard$Permission;Ljava/lang/String;ZZILjava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcn/rtast/rob/qqbot/segment/Keyboard$Permission;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Z
+	public final fun component5 ()Z
+	public final fun component6 ()I
+	public final fun component7 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Lcn/rtast/rob/qqbot/segment/Keyboard$Permission;Ljava/lang/String;ZZILjava/lang/String;)Lcn/rtast/rob/qqbot/segment/Keyboard$Action;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/segment/Keyboard$Action;Ljava/lang/String;Lcn/rtast/rob/qqbot/segment/Keyboard$Permission;Ljava/lang/String;ZZILjava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/segment/Keyboard$Action;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAnchor ()I
+	public final fun getData ()Ljava/lang/String;
+	public final fun getEnter ()Z
+	public final fun getPermission ()Lcn/rtast/rob/qqbot/segment/Keyboard$Permission;
+	public final fun getReply ()Z
+	public final fun getType ()Ljava/lang/String;
+	public final fun getUnsupportedTips ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/segment/Keyboard$Button {
+	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData;Lcn/rtast/rob/qqbot/segment/Keyboard$Action;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData;
+	public final fun component3 ()Lcn/rtast/rob/qqbot/segment/Keyboard$Action;
+	public final fun copy (Ljava/lang/String;Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData;Lcn/rtast/rob/qqbot/segment/Keyboard$Action;)Lcn/rtast/rob/qqbot/segment/Keyboard$Button;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/segment/Keyboard$Button;Ljava/lang/String;Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData;Lcn/rtast/rob/qqbot/segment/Keyboard$Action;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/segment/Keyboard$Button;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Lcn/rtast/rob/qqbot/segment/Keyboard$Action;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getRenderData ()Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/segment/Keyboard$Permission {
+	public fun <init> (ILjava/util/List;Ljava/util/List;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ljava/util/List;
+	public final fun copy (ILjava/util/List;Ljava/util/List;)Lcn/rtast/rob/qqbot/segment/Keyboard$Permission;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/segment/Keyboard$Permission;ILjava/util/List;Ljava/util/List;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/segment/Keyboard$Permission;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getSpecifyRoleIds ()Ljava/util/List;
+	public final fun getSpecifyUserIds ()Ljava/util/List;
+	public final fun getType ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/segment/Keyboard$RenderData {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;I)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()I
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;I)Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLabel ()Ljava/lang/String;
+	public final fun getStyle ()I
+	public final fun getVisitedLabel ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/segment/Keyboard$Row {
+	public fun <init> (Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;)Lcn/rtast/rob/qqbot/segment/Keyboard$Row;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/segment/Keyboard$Row;Ljava/util/List;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/segment/Keyboard$Row;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getButtons ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/segment/Markdown {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lcn/rtast/rob/qqbot/segment/Markdown;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/segment/Markdown;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/segment/Markdown;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContent ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/qqbot/util/ButtonManager {
+	public final fun addButton ()V
+}
+
+public final class cn/rtast/rob/qqbot/util/HttpServer {
+	public fun <init> (ILjava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/qbot/QQBotListener;Lcn/rtast/rob/qqbot/BotInstance;)V
+	public final fun startHttpServer ()Lio/ktor/server/engine/EmbeddedServer;
+}
+

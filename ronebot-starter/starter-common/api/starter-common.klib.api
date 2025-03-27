@@ -1,0 +1,30 @@
+// Klib ABI Dump
+// Targets: [wasmJs]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <cn.rtast.rob:starter-common>
+final enum class cn.rtast.rob.starter.common/ROneBotTarget : kotlin/Enum<cn.rtast.rob.starter.common/ROneBotTarget> { // cn.rtast.rob.starter.common/ROneBotTarget|null[0]
+    enum entry Jvm // cn.rtast.rob.starter.common/ROneBotTarget.Jvm|null[0]
+    enum entry LinuxArm64 // cn.rtast.rob.starter.common/ROneBotTarget.LinuxArm64|null[0]
+    enum entry LinuxX64 // cn.rtast.rob.starter.common/ROneBotTarget.LinuxX64|null[0]
+    enum entry MacOSArm64 // cn.rtast.rob.starter.common/ROneBotTarget.MacOSArm64|null[0]
+    enum entry MacOSX64 // cn.rtast.rob.starter.common/ROneBotTarget.MacOSX64|null[0]
+    enum entry MingwX64 // cn.rtast.rob.starter.common/ROneBotTarget.MingwX64|null[0]
+
+    final val entries // cn.rtast.rob.starter.common/ROneBotTarget.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.starter.common/ROneBotTarget> // cn.rtast.rob.starter.common/ROneBotTarget.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val targetDisplayName // cn.rtast.rob.starter.common/ROneBotTarget.targetDisplayName|{}targetDisplayName[0]
+        final fun <get-targetDisplayName>(): kotlin/String // cn.rtast.rob.starter.common/ROneBotTarget.targetDisplayName.<get-targetDisplayName>|<get-targetDisplayName>(){}[0]
+    final val targetName // cn.rtast.rob.starter.common/ROneBotTarget.targetName|{}targetName[0]
+        final fun <get-targetName>(): kotlin/String // cn.rtast.rob.starter.common/ROneBotTarget.targetName.<get-targetName>|<get-targetName>(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.starter.common/ROneBotTarget // cn.rtast.rob.starter.common/ROneBotTarget.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.starter.common/ROneBotTarget> // cn.rtast.rob.starter.common/ROneBotTarget.values|values#static(){}[0]
+
+    final object Companion { // cn.rtast.rob.starter.common/ROneBotTarget.Companion|null[0]
+        final fun fromString(kotlin/String): cn.rtast.rob.starter.common/ROneBotTarget? // cn.rtast.rob.starter.common/ROneBotTarget.Companion.fromString|fromString(kotlin.String){}[0]
+    }
+}

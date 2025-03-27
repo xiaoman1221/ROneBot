@@ -1,0 +1,75 @@
+public final class cn/rtast/rob/starter/backend/MainKt {
+	public static final fun getConfig ()Lcn/rtast/rob/starter/backend/entity/Config;
+	public static final fun getTempDir ()Ljava/io/File;
+	public static final fun main ()V
+	public static synthetic fun main ([Ljava/lang/String;)V
+}
+
+public final class cn/rtast/rob/starter/backend/entity/Config {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lcn/rtast/rob/starter/backend/entity/Config;
+	public static synthetic fun copy$default (Lcn/rtast/rob/starter/backend/entity/Config;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/starter/backend/entity/Config;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFrontend ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/starter/backend/entity/LatestVersion {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lcn/rtast/rob/starter/backend/entity/LatestVersion;
+	public static synthetic fun copy$default (Lcn/rtast/rob/starter/backend/entity/LatestVersion;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/starter/backend/entity/LatestVersion;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getVersion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/starter/backend/enums/ExtraFeature : java/lang/Enum {
+	public static final field Companion Lcn/rtast/rob/starter/backend/enums/ExtraFeature$Companion;
+	public static final field Permission Lcn/rtast/rob/starter/backend/enums/ExtraFeature;
+	public static final field StringFormat Lcn/rtast/rob/starter/backend/enums/ExtraFeature;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getFeatureName ()Ljava/lang/String;
+	public final fun getFeatureString ()Ljava/lang/String;
+	public final fun getReplacement ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/starter/backend/enums/ExtraFeature;
+	public static fun values ()[Lcn/rtast/rob/starter/backend/enums/ExtraFeature;
+}
+
+public final class cn/rtast/rob/starter/backend/enums/ExtraFeature$Companion {
+	public final fun fromList (Ljava/lang/String;)Lcn/rtast/rob/starter/backend/enums/ExtraFeature;
+}
+
+public final class cn/rtast/rob/starter/backend/enums/ProjectType : java/lang/Enum {
+	public static final field Companion Lcn/rtast/rob/starter/backend/enums/ProjectType$Companion;
+	public static final field OneBot11 Lcn/rtast/rob/starter/backend/enums/ProjectType;
+	public static final field QQBot Lcn/rtast/rob/starter/backend/enums/ProjectType;
+	public final fun getBuildScriptName ()Ljava/lang/String;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getMainClassName ()Ljava/lang/String;
+	public final fun getPlatformName ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/starter/backend/enums/ProjectType;
+	public static fun values ()[Lcn/rtast/rob/starter/backend/enums/ProjectType;
+}
+
+public final class cn/rtast/rob/starter/backend/enums/ProjectType$Companion {
+	public final fun fromString (Ljava/lang/String;)Lcn/rtast/rob/starter/backend/enums/ProjectType;
+}
+
+public final class cn/rtast/rob/starter/backend/util/ProjectGeneratorKt {
+	public static final fun generateProject (Lcn/rtast/rob/starter/backend/enums/ProjectType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)[B
+}
+
+public final class cn/rtast/rob/starter/backend/util/Resources {
+	public static final field INSTANCE Lcn/rtast/rob/starter/backend/util/Resources;
+	public final fun load (Ljava/lang/String;)[B
+	public final fun loadConfig ()Lcn/rtast/rob/starter/backend/entity/Config;
+}
+
+public final class cn/rtast/rob/starter/backend/util/ZipKt {
+	public static final fun zipDirectory (Ljava/io/File;Ljava/io/File;)V
+}
+

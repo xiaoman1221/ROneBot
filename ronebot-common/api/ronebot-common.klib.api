@@ -1,0 +1,503 @@
+// Klib ABI Dump
+// Targets: [linuxArm64, linuxX64, macosArm64, macosX64, mingwX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <cn.rtast.rob:ronebot-common>
+open annotation class cn.rtast.rob.annotations/InternalROBApi : kotlin/Annotation { // cn.rtast.rob.annotations/InternalROBApi|null[0]
+    constructor <init>() // cn.rtast.rob.annotations/InternalROBApi.<init>|<init>(){}[0]
+}
+
+final enum class cn.rtast.rob.enums/MusicShareType : kotlin/Enum<cn.rtast.rob.enums/MusicShareType> { // cn.rtast.rob.enums/MusicShareType|null[0]
+    enum entry Netease // cn.rtast.rob.enums/MusicShareType.Netease|null[0]
+    enum entry QQ // cn.rtast.rob.enums/MusicShareType.QQ|null[0]
+    enum entry Xiami // cn.rtast.rob.enums/MusicShareType.Xiami|null[0]
+
+    final val entries // cn.rtast.rob.enums/MusicShareType.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.enums/MusicShareType> // cn.rtast.rob.enums/MusicShareType.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val type // cn.rtast.rob.enums/MusicShareType.type|{}type[0]
+        final fun <get-type>(): kotlin/String // cn.rtast.rob.enums/MusicShareType.type.<get-type>|<get-type>(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.enums/MusicShareType // cn.rtast.rob.enums/MusicShareType.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.enums/MusicShareType> // cn.rtast.rob.enums/MusicShareType.values|values#static(){}[0]
+
+    final object Companion { // cn.rtast.rob.enums/MusicShareType.Companion|null[0]
+        final fun forName(kotlin/String): cn.rtast.rob.enums/MusicShareType // cn.rtast.rob.enums/MusicShareType.Companion.forName|forName(kotlin.String){}[0]
+    }
+}
+
+final enum class cn.rtast.rob.enums/Permission : kotlin/Enum<cn.rtast.rob.enums/Permission> { // cn.rtast.rob.enums/Permission|null[0]
+    enum entry ADMIN // cn.rtast.rob.enums/Permission.ADMIN|null[0]
+    enum entry MEMBER // cn.rtast.rob.enums/Permission.MEMBER|null[0]
+    enum entry OWNER // cn.rtast.rob.enums/Permission.OWNER|null[0]
+
+    final val entries // cn.rtast.rob.enums/Permission.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.enums/Permission> // cn.rtast.rob.enums/Permission.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val order // cn.rtast.rob.enums/Permission.order|{}order[0]
+        final fun <get-order>(): kotlin/Int // cn.rtast.rob.enums/Permission.order.<get-order>|<get-order>(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.enums/Permission // cn.rtast.rob.enums/Permission.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.enums/Permission> // cn.rtast.rob.enums/Permission.values|values#static(){}[0]
+}
+
+final enum class cn.rtast.rob.enums/PokeMessage : kotlin/Enum<cn.rtast.rob.enums/PokeMessage> { // cn.rtast.rob.enums/PokeMessage|null[0]
+    enum entry BaoBeiQiu // cn.rtast.rob.enums/PokeMessage.BaoBeiQiu|null[0]
+    enum entry FangDaZhao // cn.rtast.rob.enums/PokeMessage.FangDaZhao|null[0]
+    enum entry GouYin // cn.rtast.rob.enums/PokeMessage.GouYin|null[0]
+    enum entry Heartbroken // cn.rtast.rob.enums/PokeMessage.Heartbroken|null[0]
+    enum entry JeiYin // cn.rtast.rob.enums/PokeMessage.JeiYin|null[0]
+    enum entry Like // cn.rtast.rob.enums/PokeMessage.Like|null[0]
+    enum entry Poke // cn.rtast.rob.enums/PokeMessage.Poke|null[0]
+    enum entry QiaoMen // cn.rtast.rob.enums/PokeMessage.QiaoMen|null[0]
+    enum entry RangNiPi // cn.rtast.rob.enums/PokeMessage.RangNiPi|null[0]
+    enum entry Rose // cn.rtast.rob.enums/PokeMessage.Rose|null[0]
+    enum entry ShouLei // cn.rtast.rob.enums/PokeMessage.ShouLei|null[0]
+    enum entry ShowLive // cn.rtast.rob.enums/PokeMessage.ShowLive|null[0]
+    enum entry SixSixSix // cn.rtast.rob.enums/PokeMessage.SixSixSix|null[0]
+    enum entry SuiPing // cn.rtast.rob.enums/PokeMessage.SuiPing|null[0]
+    enum entry ZhaoHuanShu // cn.rtast.rob.enums/PokeMessage.ZhaoHuanShu|null[0]
+    enum entry ZhuaYiXia // cn.rtast.rob.enums/PokeMessage.ZhuaYiXia|null[0]
+
+    final val entries // cn.rtast.rob.enums/PokeMessage.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.enums/PokeMessage> // cn.rtast.rob.enums/PokeMessage.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val id // cn.rtast.rob.enums/PokeMessage.id|{}id[0]
+        final fun <get-id>(): kotlin/Int // cn.rtast.rob.enums/PokeMessage.id.<get-id>|<get-id>(){}[0]
+    final val pokeName // cn.rtast.rob.enums/PokeMessage.pokeName|{}pokeName[0]
+        final fun <get-pokeName>(): kotlin/String // cn.rtast.rob.enums/PokeMessage.pokeName.<get-pokeName>|<get-pokeName>(){}[0]
+    final val type // cn.rtast.rob.enums/PokeMessage.type|{}type[0]
+        final fun <get-type>(): kotlin/Int // cn.rtast.rob.enums/PokeMessage.type.<get-type>|<get-type>(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.enums/PokeMessage // cn.rtast.rob.enums/PokeMessage.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.enums/PokeMessage> // cn.rtast.rob.enums/PokeMessage.values|values#static(){}[0]
+}
+
+final enum class cn.rtast.rob.enums/QQFace : kotlin/Enum<cn.rtast.rob.enums/QQFace> { // cn.rtast.rob.enums/QQFace|null[0]
+    enum entry AnZhongGuanCha // cn.rtast.rob.enums/QQFace.AnZhongGuanCha|null[0]
+    enum entry AoMan // cn.rtast.rob.enums/QQFace.AoMan|null[0]
+    enum entry BaiYan // cn.rtast.rob.enums/QQFace.BaiYan|null[0]
+    enum entry BiShi // cn.rtast.rob.enums/QQFace.BiShi|null[0]
+    enum entry BiXin // cn.rtast.rob.enums/QQFace.BiXin|null[0]
+    enum entry BiZui // cn.rtast.rob.enums/QQFace.BiZui|null[0]
+    enum entry BianPao // cn.rtast.rob.enums/QQFace.BianPao|null[0]
+    enum entry BianXing // cn.rtast.rob.enums/QQFace.BianXing|null[0]
+    enum entry CaHan // cn.rtast.rob.enums/QQFace.CaHan|null[0]
+    enum entry CaiWang // cn.rtast.rob.enums/QQFace.CaiWang|null[0]
+    enum entry CangSang // cn.rtast.rob.enums/QQFace.CangSang|null[0]
+    enum entry ChiGua // cn.rtast.rob.enums/QQFace.ChiGua|null[0]
+    enum entry ChiTang // cn.rtast.rob.enums/QQFace.ChiTang|null[0]
+    enum entry ChongBai // cn.rtast.rob.enums/QQFace.ChongBai|null[0]
+    enum entry ChuoYiChuo // cn.rtast.rob.enums/QQFace.ChuoYiChuo|null[0]
+    enum entry CiYa // cn.rtast.rob.enums/QQFace.CiYa|null[0]
+    enum entry DaCall // cn.rtast.rob.enums/QQFace.DaCall|null[0]
+    enum entry DaHuoChe // cn.rtast.rob.enums/QQFace.DaHuoChe|null[0]
+    enum entry DaKu // cn.rtast.rob.enums/QQFace.DaKu|null[0]
+    enum entry DaLongZhou // cn.rtast.rob.enums/QQFace.DaLongZhou|null[0]
+    enum entry DaYuanZhong // cn.rtast.rob.enums/QQFace.DaYuanZhong|null[0]
+    enum entry DaZhaoHu // cn.rtast.rob.enums/QQFace.DaZhaoHu|null[0]
+    enum entry DanGao // cn.rtast.rob.enums/QQFace.DanGao|null[0]
+    enum entry DeYi // cn.rtast.rob.enums/QQFace.DeYi|null[0]
+    enum entry Doge // cn.rtast.rob.enums/QQFace.Doge|null[0]
+    enum entry Emm // cn.rtast.rob.enums/QQFace.Emm|null[0]
+    enum entry FaDai // cn.rtast.rob.enums/QQFace.FaDai|null[0]
+    enum entry FaNu // cn.rtast.rob.enums/QQFace.FaNu|null[0]
+    enum entry FenDou // cn.rtast.rob.enums/QQFace.FenDou|null[0]
+    enum entry GanGa // cn.rtast.rob.enums/QQFace.GanGa|null[0]
+    enum entry GuZhang // cn.rtast.rob.enums/QQFace.GuZhang|null[0]
+    enum entry HaQian // cn.rtast.rob.enums/QQFace.HaQian|null[0]
+    enum entry HaiXiu // cn.rtast.rob.enums/QQFace.HaiXiu|null[0]
+    enum entry HanXiao // cn.rtast.rob.enums/QQFace.HanXiao|null[0]
+    enum entry HeHeDa // cn.rtast.rob.enums/QQFace.HeHeDa|null[0]
+    enum entry HongBaoDuoDuo // cn.rtast.rob.enums/QQFace.HongBaoDuoDuo|null[0]
+    enum entry HuaDuoLian // cn.rtast.rob.enums/QQFace.HuaDuoLian|null[0]
+    enum entry HuaLongZhou // cn.rtast.rob.enums/QQFace.HuaLongZhou|null[0]
+    enum entry HuaiXiao // cn.rtast.rob.enums/QQFace.HuaiXiao|null[0]
+    enum entry HuoChe // cn.rtast.rob.enums/QQFace.HuoChe|null[0]
+    enum entry JiE // cn.rtast.rob.enums/QQFace.JiE|null[0]
+    enum entry JianQiang // cn.rtast.rob.enums/QQFace.JianQiang|null[0]
+    enum entry JingKong // cn.rtast.rob.enums/QQFace.JingKong|null[0]
+    enum entry JingLi // cn.rtast.rob.enums/QQFace.JingLi|null[0]
+    enum entry JingXia // cn.rtast.rob.enums/QQFace.JingXia|null[0]
+    enum entry JingYa // cn.rtast.rob.enums/QQFace.JingYa|null[0]
+    enum entry KeAi // cn.rtast.rob.enums/QQFace.KeAi|null[0]
+    enum entry KeLian // cn.rtast.rob.enums/QQFace.KeLian|null[0]
+    enum entry KouBi // cn.rtast.rob.enums/QQFace.KouBi|null[0]
+    enum entry Ku // cn.rtast.rob.enums/QQFace.Ku|null[0]
+    enum entry KuLou // cn.rtast.rob.enums/QQFace.KuLou|null[0]
+    enum entry KuaiKuLe // cn.rtast.rob.enums/QQFace.KuaiKuLe|null[0]
+    enum entry KuangXiao // cn.rtast.rob.enums/QQFace.KuangXiao|null[0]
+    enum entry Kun // cn.rtast.rob.enums/QQFace.Kun|null[0]
+    enum entry LaYanJing // cn.rtast.rob.enums/QQFace.LaYanJing|null[0]
+    enum entry LanQiu // cn.rtast.rob.enums/QQFace.LanQiu|null[0]
+    enum entry LeiBen // cn.rtast.rob.enums/QQFace.LeiBen|null[0]
+    enum entry LengHan // cn.rtast.rob.enums/QQFace.LengHan|null[0]
+    enum entry LiuHan // cn.rtast.rob.enums/QQFace.LiuHan|null[0]
+    enum entry LiuLei // cn.rtast.rob.enums/QQFace.LiuLei|null[0]
+    enum entry LongNianKuaiLe // cn.rtast.rob.enums/QQFace.LongNianKuaiLe|null[0]
+    enum entry LueLueLue // cn.rtast.rob.enums/QQFace.LueLueLue|null[0]
+    enum entry MaiMeng // cn.rtast.rob.enums/QQFace.MaiMeng|null[0]
+    enum entry MianWuBiaoQing // cn.rtast.rob.enums/QQFace.MianWuBiaoQing|null[0]
+    enum entry MiaoMiao // cn.rtast.rob.enums/QQFace.MiaoMiao|null[0]
+    enum entry MoGuiXiao // cn.rtast.rob.enums/QQFace.MoGuiXiao|null[0]
+    enum entry MoJinLi // cn.rtast.rob.enums/QQFace.MoJinLi|null[0]
+    enum entry MoYu // cn.rtast.rob.enums/QQFace.MoYu|null[0]
+    enum entry NanGuo // cn.rtast.rob.enums/QQFace.NanGuo|null[0]
+    enum entry NaoKuoTeng // cn.rtast.rob.enums/QQFace.NaoKuoTeng|null[0]
+    enum entry NiZhenBangBang // cn.rtast.rob.enums/QQFace.NiZhenBangBang|null[0]
+    enum entry NiuQiChongTian // cn.rtast.rob.enums/QQFace.NiuQiChongTian|null[0]
+    enum entry Oh // cn.rtast.rob.enums/QQFace.Oh|null[0]
+    enum entry OhYo // cn.rtast.rob.enums/QQFace.OhYo|null[0]
+    enum entry PenXue // cn.rtast.rob.enums/QQFace.PenXue|null[0]
+    enum entry PieZui // cn.rtast.rob.enums/QQFace.PieZui|null[0]
+    enum entry QiaoDa // cn.rtast.rob.enums/QQFace.QiaoDa|null[0]
+    enum entry QiaoQiao // cn.rtast.rob.enums/QQFace.QiaoQiao|null[0]
+    enum entry QingZhu // cn.rtast.rob.enums/QQFace.QingZhu|null[0]
+    enum entry QiuDaLe // cn.rtast.rob.enums/QQFace.QiuDaLe|null[0]
+    enum entry QiuFangGuo // cn.rtast.rob.enums/QQFace.QiuFangGuo|null[0]
+    enum entry Se // cn.rtast.rob.enums/QQFace.Se|null[0]
+    enum entry ShengQi // cn.rtast.rob.enums/QQFace.ShengQi|null[0]
+    enum entry Shuai // cn.rtast.rob.enums/QQFace.Shuai|null[0]
+    enum entry Shui // cn.rtast.rob.enums/QQFace.Shui|null[0]
+    enum entry SuanQ // cn.rtast.rob.enums/QQFace.SuanQ|null[0]
+    enum entry TaiYang // cn.rtast.rob.enums/QQFace.TaiYang|null[0]
+    enum entry TianPing // cn.rtast.rob.enums/QQFace.TianPing|null[0]
+    enum entry TiaoPi // cn.rtast.rob.enums/QQFace.TiaoPi|null[0]
+    enum entry TieTie // cn.rtast.rob.enums/QQFace.TieTie|null[0]
+    enum entry TouGan // cn.rtast.rob.enums/QQFace.TouGan|null[0]
+    enum entry TouTu // cn.rtast.rob.enums/QQFace.TouTu|null[0]
+    enum entry TouXiao // cn.rtast.rob.enums/QQFace.TouXiao|null[0]
+    enum entry Tu // cn.rtast.rob.enums/QQFace.Tu|null[0]
+    enum entry TuoSai // cn.rtast.rob.enums/QQFace.TuoSai|null[0]
+    enum entry WanHuo // cn.rtast.rob.enums/QQFace.WanHuo|null[0]
+    enum entry WangWang // cn.rtast.rob.enums/QQFace.WangWang|null[0]
+    enum entry WeiQu // cn.rtast.rob.enums/QQFace.WeiQu|null[0]
+    enum entry WeiXiao // cn.rtast.rob.enums/QQFace.WeiXiao|null[0]
+    enum entry WenHaoLian // cn.rtast.rob.enums/QQFace.WenHaoLian|null[0]
+    enum entry WoFangLe // cn.rtast.rob.enums/QQFace.WoFangLe|null[0]
+    enum entry WoXiangKaiLe // cn.rtast.rob.enums/QQFace.WoXiangKaiLe|null[0]
+    enum entry WoZuiMei // cn.rtast.rob.enums/QQFace.WoZuiMei|null[0]
+    enum entry WuLian // cn.rtast.rob.enums/QQFace.WuLian|null[0]
+    enum entry WuNai // cn.rtast.rob.enums/QQFace.WuNai|null[0]
+    enum entry WuYanXiao // cn.rtast.rob.enums/QQFace.WuYanXiao|null[0]
+    enum entry Xia // cn.rtast.rob.enums/QQFace.Xia|null[0]
+    enum entry XiaoJiuJie // cn.rtast.rob.enums/QQFace.XiaoJiuJie|null[0]
+    enum entry XiaoKu // cn.rtast.rob.enums/QQFace.XiaoKu|null[0]
+    enum entry XieYanXiao // cn.rtast.rob.enums/QQFace.XieYanXiao|null[0]
+    enum entry XinNianDaLong // cn.rtast.rob.enums/QQFace.XinNianDaLong|null[0]
+    enum entry XinNianZhongLong // cn.rtast.rob.enums/QQFace.XinNianZhongLong|null[0]
+    enum entry Xu // cn.rtast.rob.enums/QQFace.Xu|null[0]
+    enum entry XuBiaoShi // cn.rtast.rob.enums/QQFace.XuBiaoShi|null[0]
+    enum entry YanHua // cn.rtast.rob.enums/QQFace.YanHua|null[0]
+    enum entry YiWen // cn.rtast.rob.enums/QQFace.YiWen|null[0]
+    enum entry YinXian // cn.rtast.rob.enums/QQFace.YinXian|null[0]
+    enum entry YouHengHeng // cn.rtast.rob.enums/QQFace.YouHengHeng|null[0]
+    enum entry YouQinQin // cn.rtast.rob.enums/QQFace.YouQinQin|null[0]
+    enum entry YouXian // cn.rtast.rob.enums/QQFace.YouXian|null[0]
+    enum entry YueLiang // cn.rtast.rob.enums/QQFace.YueLiang|null[0]
+    enum entry Yun // cn.rtast.rob.enums/QQFace.Yun|null[0]
+    enum entry ZaiJian // cn.rtast.rob.enums/QQFace.ZaiJian|null[0]
+    enum entry ZaiXiFenXi // cn.rtast.rob.enums/QQFace.ZaiXiFenXi|null[0]
+    enum entry ZhaYanJing // cn.rtast.rob.enums/QQFace.ZhaYanJing|null[0]
+    enum entry ZheMo // cn.rtast.rob.enums/QQFace.ZheMo|null[0]
+    enum entry ZhongHuoChe // cn.rtast.rob.enums/QQFace.ZhongHuoChe|null[0]
+    enum entry ZhongLongZhou // cn.rtast.rob.enums/QQFace.ZhongLongZhou|null[0]
+    enum entry ZhouMa // cn.rtast.rob.enums/QQFace.ZhouMa|null[0]
+    enum entry ZhuaKuang // cn.rtast.rob.enums/QQFace.ZhuaKuang|null[0]
+    enum entry ZuoHengHeng // cn.rtast.rob.enums/QQFace.ZuoHengHeng|null[0]
+    enum entry ZuoQinQin // cn.rtast.rob.enums/QQFace.ZuoQinQin|null[0]
+
+    final val entries // cn.rtast.rob.enums/QQFace.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.enums/QQFace> // cn.rtast.rob.enums/QQFace.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val id // cn.rtast.rob.enums/QQFace.id|{}id[0]
+        final fun <get-id>(): kotlin/Int // cn.rtast.rob.enums/QQFace.id.<get-id>|<get-id>(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.enums/QQFace // cn.rtast.rob.enums/QQFace.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.enums/QQFace> // cn.rtast.rob.enums/QQFace.values|values#static(){}[0]
+}
+
+final enum class cn.rtast.rob.interceptor/CommandExecutionResult : kotlin/Enum<cn.rtast.rob.interceptor/CommandExecutionResult> { // cn.rtast.rob.interceptor/CommandExecutionResult|null[0]
+    enum entry CONTINUE // cn.rtast.rob.interceptor/CommandExecutionResult.CONTINUE|null[0]
+    enum entry STOP // cn.rtast.rob.interceptor/CommandExecutionResult.STOP|null[0]
+
+    final val entries // cn.rtast.rob.interceptor/CommandExecutionResult.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.interceptor/CommandExecutionResult> // cn.rtast.rob.interceptor/CommandExecutionResult.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.interceptor/CommandExecutionResult // cn.rtast.rob.interceptor/CommandExecutionResult.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.interceptor/CommandExecutionResult> // cn.rtast.rob.interceptor/CommandExecutionResult.values|values#static(){}[0]
+}
+
+abstract interface <#A: cn.rtast.rob.command/IBaseCommand<out cn.rtast.rob.entity/IGroupMessage, out cn.rtast.rob.entity/IPrivateMessage>, #B: cn.rtast.rob.entity/IGroupMessage, #C: cn.rtast.rob.entity/IPrivateMessage> cn.rtast.rob.command/CommandManager { // cn.rtast.rob.command/CommandManager|null[0]
+    abstract val commands // cn.rtast.rob.command/CommandManager.commands|{}commands[0]
+        abstract fun <get-commands>(): kotlin.collections/MutableList<#A> // cn.rtast.rob.command/CommandManager.commands.<get-commands>|<get-commands>(){}[0]
+    abstract val groupDslCommands // cn.rtast.rob.command/CommandManager.groupDslCommands|{}groupDslCommands[0]
+        abstract fun <get-groupDslCommands>(): kotlin.collections/MutableList<kotlin.collections/Map<kotlin.collections/List<kotlin/String>, kotlin.coroutines/SuspendFunction1<#B, kotlin/Unit>>> // cn.rtast.rob.command/CommandManager.groupDslCommands.<get-groupDslCommands>|<get-groupDslCommands>(){}[0]
+    abstract val privateDslCommands // cn.rtast.rob.command/CommandManager.privateDslCommands|{}privateDslCommands[0]
+        abstract fun <get-privateDslCommands>(): kotlin.collections/MutableList<kotlin.collections/Map<kotlin.collections/List<kotlin/String>, kotlin.coroutines/SuspendFunction1<#C, kotlin/Unit>>> // cn.rtast.rob.command/CommandManager.privateDslCommands.<get-privateDslCommands>|<get-privateDslCommands>(){}[0]
+
+    abstract var commandRegex // cn.rtast.rob.command/CommandManager.commandRegex|{}commandRegex[0]
+        abstract fun <get-commandRegex>(): kotlin.text/Regex // cn.rtast.rob.command/CommandManager.commandRegex.<get-commandRegex>|<get-commandRegex>(){}[0]
+        abstract fun <set-commandRegex>(kotlin.text/Regex) // cn.rtast.rob.command/CommandManager.commandRegex.<set-commandRegex>|<set-commandRegex>(kotlin.text.Regex){}[0]
+
+    abstract suspend fun handleGroup(#B) // cn.rtast.rob.command/CommandManager.handleGroup|handleGroup(1:1){}[0]
+    abstract suspend fun handlePrivate(#C) // cn.rtast.rob.command/CommandManager.handlePrivate|handlePrivate(1:2){}[0]
+    open suspend fun generateRegex() // cn.rtast.rob.command/CommandManager.generateRegex|generateRegex(){}[0]
+    open suspend fun register(#A) // cn.rtast.rob.command/CommandManager.register|register(1:0){}[0]
+    open suspend fun registerGroupDsl(kotlin.collections/List<kotlin/String>, kotlin.coroutines/SuspendFunction1<#B, kotlin/Unit>) // cn.rtast.rob.command/CommandManager.registerGroupDsl|registerGroupDsl(kotlin.collections.List<kotlin.String>;kotlin.coroutines.SuspendFunction1<1:1,kotlin.Unit>){}[0]
+    open suspend fun registerPrivateDsl(kotlin.collections/List<kotlin/String>, kotlin.coroutines/SuspendFunction1<#C, kotlin/Unit>) // cn.rtast.rob.command/CommandManager.registerPrivateDsl|registerPrivateDsl(kotlin.collections.List<kotlin.String>;kotlin.coroutines.SuspendFunction1<1:2,kotlin.Unit>){}[0]
+}
+
+abstract interface <#A: cn.rtast.rob.command/IBaseCommand<out cn.rtast.rob.entity/IGroupMessage, out cn.rtast.rob.entity/IPrivateMessage>, #B: cn.rtast.rob.entity/IGroupMessage, #C: cn.rtast.rob.entity/IPrivateMessage> cn.rtast.rob.interceptor/ICommandInterceptor { // cn.rtast.rob.interceptor/ICommandInterceptor|null[0]
+    open suspend fun afterGroupExecute(#B, #A) // cn.rtast.rob.interceptor/ICommandInterceptor.afterGroupExecute|afterGroupExecute(1:1;1:0){}[0]
+    open suspend fun afterPrivateExecute(#C, #A) // cn.rtast.rob.interceptor/ICommandInterceptor.afterPrivateExecute|afterPrivateExecute(1:2;1:0){}[0]
+    open suspend fun beforeGroupExecute(#B, #A): cn.rtast.rob.interceptor/CommandExecutionResult // cn.rtast.rob.interceptor/ICommandInterceptor.beforeGroupExecute|beforeGroupExecute(1:1;1:0){}[0]
+    open suspend fun beforePrivateExecute(#C, #A): cn.rtast.rob.interceptor/CommandExecutionResult // cn.rtast.rob.interceptor/ICommandInterceptor.beforePrivateExecute|beforePrivateExecute(1:2;1:0){}[0]
+    open suspend fun handleGroupInterceptor(#B, #A, kotlin.coroutines/SuspendFunction1<#B, kotlin/Unit>) // cn.rtast.rob.interceptor/ICommandInterceptor.handleGroupInterceptor|handleGroupInterceptor(1:1;1:0;kotlin.coroutines.SuspendFunction1<1:1,kotlin.Unit>){}[0]
+    open suspend fun handlePrivateInterceptor(#C, #A, kotlin.coroutines/SuspendFunction1<#C, kotlin/Unit>) // cn.rtast.rob.interceptor/ICommandInterceptor.handlePrivateInterceptor|handlePrivateInterceptor(1:2;1:0;kotlin.coroutines.SuspendFunction1<1:2,kotlin.Unit>){}[0]
+}
+
+abstract interface <#A: cn.rtast.rob.entity/IGroupMessage, #B: cn.rtast.rob.entity/IPrivateMessage> cn.rtast.rob.command/IBaseCommand { // cn.rtast.rob.command/IBaseCommand|null[0]
+    abstract val commandNames // cn.rtast.rob.command/IBaseCommand.commandNames|{}commandNames[0]
+        abstract fun <get-commandNames>(): kotlin.collections/List<kotlin/String> // cn.rtast.rob.command/IBaseCommand.commandNames.<get-commandNames>|<get-commandNames>(){}[0]
+
+    abstract suspend fun (#A).reject(cn.rtast.rob.entity/IMessageChain) // cn.rtast.rob.command/IBaseCommand.reject|reject@1:0(cn.rtast.rob.entity.IMessageChain){}[0]
+    abstract suspend fun (#A).skipSession() // cn.rtast.rob.command/IBaseCommand.skipSession|skipSession@1:0(){}[0]
+    abstract suspend fun (#A).startSession() // cn.rtast.rob.command/IBaseCommand.startSession|startSession@1:0(){}[0]
+    abstract suspend fun (#B).reject(cn.rtast.rob.entity/IMessageChain) // cn.rtast.rob.command/IBaseCommand.reject|reject@1:1(cn.rtast.rob.entity.IMessageChain){}[0]
+    abstract suspend fun (#B).skipSession() // cn.rtast.rob.command/IBaseCommand.skipSession|skipSession@1:1(){}[0]
+    abstract suspend fun (#B).startSession() // cn.rtast.rob.command/IBaseCommand.startSession|startSession@1:1(){}[0]
+    abstract suspend fun executeGroup(#A, kotlin.collections/List<kotlin/String>) // cn.rtast.rob.command/IBaseCommand.executeGroup|executeGroup(1:0;kotlin.collections.List<kotlin.String>){}[0]
+    abstract suspend fun executeGroup(#A, kotlin.collections/List<kotlin/String>, kotlin/String) // cn.rtast.rob.command/IBaseCommand.executeGroup|executeGroup(1:0;kotlin.collections.List<kotlin.String>;kotlin.String){}[0]
+    abstract suspend fun executePrivate(#B, kotlin.collections/List<kotlin/String>) // cn.rtast.rob.command/IBaseCommand.executePrivate|executePrivate(1:1;kotlin.collections.List<kotlin.String>){}[0]
+    abstract suspend fun executePrivate(#B, kotlin.collections/List<kotlin/String>, kotlin/String) // cn.rtast.rob.command/IBaseCommand.executePrivate|executePrivate(1:1;kotlin.collections.List<kotlin.String>;kotlin.String){}[0]
+    abstract suspend fun handleGroup(#A, kotlin/String) // cn.rtast.rob.command/IBaseCommand.handleGroup|handleGroup(1:0;kotlin.String){}[0]
+    abstract suspend fun handlePrivate(#B, kotlin/String) // cn.rtast.rob.command/IBaseCommand.handlePrivate|handlePrivate(1:1;kotlin.String){}[0]
+    abstract suspend fun onGroupSession(#A) // cn.rtast.rob.command/IBaseCommand.onGroupSession|onGroupSession(1:0){}[0]
+    abstract suspend fun onPrivateSession(#B) // cn.rtast.rob.command/IBaseCommand.onPrivateSession|onPrivateSession(1:1){}[0]
+}
+
+abstract interface <#A: cn.rtast.rob.entity/IPrivateMessage, #B: cn.rtast.rob.entity/IGroupMessage, #C: cn.rtast.rob.session/IPrivateSession, #D: cn.rtast.rob.session/IGroupSession, #E: cn.rtast.rob.command/IBaseCommand<out cn.rtast.rob.entity/IGroupMessage, out cn.rtast.rob.entity/IPrivateMessage>, #F: cn.rtast.rob.entity/IGroupSender, #G: cn.rtast.rob.entity/IPrivateSender> cn.rtast.rob.session/ISessionManager { // cn.rtast.rob.session/ISessionManager|null[0]
+    abstract val groupActiveSessions // cn.rtast.rob.session/ISessionManager.groupActiveSessions|{}groupActiveSessions[0]
+        abstract fun <get-groupActiveSessions>(): kotlin.collections/MutableMap<#F, out cn.rtast.rob.session/IGroupSession> // cn.rtast.rob.session/ISessionManager.groupActiveSessions.<get-groupActiveSessions>|<get-groupActiveSessions>(){}[0]
+    abstract val privateActiveSessions // cn.rtast.rob.session/ISessionManager.privateActiveSessions|{}privateActiveSessions[0]
+        abstract fun <get-privateActiveSessions>(): kotlin.collections/MutableMap<#G, out cn.rtast.rob.session/IPrivateSession> // cn.rtast.rob.session/ISessionManager.privateActiveSessions.<get-privateActiveSessions>|<get-privateActiveSessions>(){}[0]
+
+    abstract suspend fun getGroupSession(#F): #D? // cn.rtast.rob.session/ISessionManager.getGroupSession|getGroupSession(1:5){}[0]
+    abstract suspend fun getPrivateSession(#G): #C? // cn.rtast.rob.session/ISessionManager.getPrivateSession|getPrivateSession(1:6){}[0]
+    abstract suspend fun startGroupSession(#B, #E): #D // cn.rtast.rob.session/ISessionManager.startGroupSession|startGroupSession(1:1;1:4){}[0]
+    abstract suspend fun startPrivateSession(#A, #E): #C // cn.rtast.rob.session/ISessionManager.startPrivateSession|startPrivateSession(1:0;1:4){}[0]
+    open suspend fun endGroupSession(#F) // cn.rtast.rob.session/ISessionManager.endGroupSession|endGroupSession(1:5){}[0]
+    open suspend fun endPrivateSession(#G) // cn.rtast.rob.session/ISessionManager.endPrivateSession|endPrivateSession(1:6){}[0]
+}
+
+abstract interface <#A: cn.rtast.rob/BaseBotInstance> cn.rtast.rob.scheduler/BotScheduler { // cn.rtast.rob.scheduler/BotScheduler|null[0]
+    abstract suspend fun cancelTask(cn.rtast.rob.scheduler/TaskHandle): kotlin/Boolean // cn.rtast.rob.scheduler/BotScheduler.cancelTask|cancelTask(cn.rtast.rob.scheduler.TaskHandle){}[0]
+    abstract suspend fun scheduleTask(kotlin.coroutines/SuspendFunction1<#A, kotlin/Unit>, kotlin.time/Duration, kotlin.time/Duration): cn.rtast.rob.scheduler/TaskHandle // cn.rtast.rob.scheduler/BotScheduler.scheduleTask|scheduleTask(kotlin.coroutines.SuspendFunction1<1:0,kotlin.Unit>;kotlin.time.Duration;kotlin.time.Duration){}[0]
+    open suspend fun scheduleTask(kotlin.time/Duration, kotlin.time/Duration, kotlin.coroutines/SuspendFunction1<#A, kotlin/Unit>): cn.rtast.rob.scheduler/TaskHandle // cn.rtast.rob.scheduler/BotScheduler.scheduleTask|scheduleTask(kotlin.time.Duration;kotlin.time.Duration;kotlin.coroutines.SuspendFunction1<1:0,kotlin.Unit>){}[0]
+}
+
+abstract interface <#A: cn.rtast.rob/BaseBotInstance> cn.rtast.rob.scheduler/GlobalScheduler { // cn.rtast.rob.scheduler/GlobalScheduler|null[0]
+    abstract suspend fun cancelTask(cn.rtast.rob.scheduler/TaskHandle): kotlin/Boolean // cn.rtast.rob.scheduler/GlobalScheduler.cancelTask|cancelTask(cn.rtast.rob.scheduler.TaskHandle){}[0]
+    abstract suspend fun scheduleTask(kotlin.coroutines/SuspendFunction1<kotlin.collections/List<#A>, kotlin/Unit>, kotlin.time/Duration, kotlin.time/Duration): cn.rtast.rob.scheduler/TaskHandle // cn.rtast.rob.scheduler/GlobalScheduler.scheduleTask|scheduleTask(kotlin.coroutines.SuspendFunction1<kotlin.collections.List<1:0>,kotlin.Unit>;kotlin.time.Duration;kotlin.time.Duration){}[0]
+    open suspend fun scheduleTask(kotlin.time/Duration, kotlin.time/Duration, kotlin.coroutines/SuspendFunction1<kotlin.collections/List<#A>, kotlin/Unit>): cn.rtast.rob.scheduler/TaskHandle // cn.rtast.rob.scheduler/GlobalScheduler.scheduleTask|scheduleTask(kotlin.time.Duration;kotlin.time.Duration;kotlin.coroutines.SuspendFunction1<kotlin.collections.List<1:0>,kotlin.Unit>){}[0]
+}
+
+abstract interface <#A: cn.rtast.rob/SendAction> cn.rtast.rob.event/BaseDispatchEvent { // cn.rtast.rob.event/BaseDispatchEvent|null[0]
+    abstract val action // cn.rtast.rob.event/BaseDispatchEvent.action|{}action[0]
+        abstract fun <get-action>(): #A // cn.rtast.rob.event/BaseDispatchEvent.action.<get-action>|<get-action>(){}[0]
+}
+
+abstract interface <#A: kotlin.collections/List<#B>, #B: cn.rtast.rob/BaseBotInstance, #C: out cn.rtast.rob/SendAction> cn.rtast.rob.util/IBotManager { // cn.rtast.rob.util/IBotManager|null[0]
+    abstract fun allBots(): #A // cn.rtast.rob.util/IBotManager.allBots|allBots(){}[0]
+    abstract suspend fun addBotInstance(#B) // cn.rtast.rob.util/IBotManager.addBotInstance|addBotInstance(1:1){}[0]
+    abstract suspend fun disableAllBots() // cn.rtast.rob.util/IBotManager.disableAllBots|disableAllBots(){}[0]
+    abstract suspend fun disableBotInstance(#B) // cn.rtast.rob.util/IBotManager.disableBotInstance|disableBotInstance(1:1){}[0]
+    abstract suspend fun enableAllBots() // cn.rtast.rob.util/IBotManager.enableAllBots|enableAllBots(){}[0]
+    abstract suspend fun enableBotInstance(#B) // cn.rtast.rob.util/IBotManager.enableBotInstance|enableBotInstance(1:1){}[0]
+    abstract suspend fun get(cn.rtast.rob.util/IBotManager.ID): #B? // cn.rtast.rob.util/IBotManager.get|get(cn.rtast.rob.util.IBotManager.ID){}[0]
+    abstract suspend fun getBotInstanceByAction(#C): #B // cn.rtast.rob.util/IBotManager.getBotInstanceByAction|getBotInstanceByAction(1:2){}[0]
+    abstract suspend fun getBotInstanceStatus(#B): kotlin/Boolean // cn.rtast.rob.util/IBotManager.getBotInstanceStatus|getBotInstanceStatus(1:1){}[0]
+    abstract suspend fun removeBotInstance(#B) // cn.rtast.rob.util/IBotManager.removeBotInstance|removeBotInstance(1:1){}[0]
+
+    final class ID { // cn.rtast.rob.util/IBotManager.ID|null[0]
+        constructor <init>(kotlin/String) // cn.rtast.rob.util/IBotManager.ID.<init>|<init>(kotlin.String){}[0]
+
+        final val id // cn.rtast.rob.util/IBotManager.ID.id|{}id[0]
+            final fun <get-id>(): kotlin/String // cn.rtast.rob.util/IBotManager.ID.id.<get-id>|<get-id>(){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.util/IBotManager.ID.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): cn.rtast.rob.util/IBotManager.ID // cn.rtast.rob.util/IBotManager.ID.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.util/IBotManager.ID.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.util/IBotManager.ID.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.util/IBotManager.ID.toString|toString(){}[0]
+    }
+}
+
+abstract interface cn.rtast.rob.entity/IGroupMessage : cn.rtast.rob.entity/IMessage // cn.rtast.rob.entity/IGroupMessage|null[0]
+
+abstract interface cn.rtast.rob.entity/IGroupSender : cn.rtast.rob.entity/ISender // cn.rtast.rob.entity/IGroupSender|null[0]
+
+abstract interface cn.rtast.rob.entity/IMessageChain { // cn.rtast.rob.entity/IMessageChain|null[0]
+    abstract val isEmpty // cn.rtast.rob.entity/IMessageChain.isEmpty|{}isEmpty[0]
+        abstract fun <get-isEmpty>(): kotlin/Boolean // cn.rtast.rob.entity/IMessageChain.isEmpty.<get-isEmpty>|<get-isEmpty>(){}[0]
+    abstract val size // cn.rtast.rob.entity/IMessageChain.size|{}size[0]
+        abstract fun <get-size>(): kotlin/Int // cn.rtast.rob.entity/IMessageChain.size.<get-size>|<get-size>(){}[0]
+}
+
+abstract interface cn.rtast.rob.entity/IPrivateMessage : cn.rtast.rob.entity/IMessage // cn.rtast.rob.entity/IPrivateMessage|null[0]
+
+abstract interface cn.rtast.rob.entity/IPrivateSender : cn.rtast.rob.entity/ISender // cn.rtast.rob.entity/IPrivateSender|null[0]
+
+abstract interface cn.rtast.rob.entity/ISender { // cn.rtast.rob.entity/ISender|null[0]
+    abstract val userId // cn.rtast.rob.entity/ISender.userId|{}userId[0]
+        abstract fun <get-userId>(): kotlin/Long // cn.rtast.rob.entity/ISender.userId.<get-userId>|<get-userId>(){}[0]
+}
+
+abstract interface cn.rtast.rob.scheduler/TaskHandle { // cn.rtast.rob.scheduler/TaskHandle|null[0]
+    abstract val isCancelled // cn.rtast.rob.scheduler/TaskHandle.isCancelled|{}isCancelled[0]
+        abstract fun <get-isCancelled>(): kotlin/Boolean // cn.rtast.rob.scheduler/TaskHandle.isCancelled.<get-isCancelled>|<get-isCancelled>(){}[0]
+
+    abstract suspend fun cancel(): kotlin/Boolean // cn.rtast.rob.scheduler/TaskHandle.cancel|cancel(){}[0]
+}
+
+abstract interface cn.rtast.rob.session/IGroupSession : cn.rtast.rob.session/ISession { // cn.rtast.rob.session/IGroupSession|null[0]
+    abstract val message // cn.rtast.rob.session/IGroupSession.message|{}message[0]
+        abstract fun <get-message>(): cn.rtast.rob.entity/IGroupMessage // cn.rtast.rob.session/IGroupSession.message.<get-message>|<get-message>(){}[0]
+    abstract val sender // cn.rtast.rob.session/IGroupSession.sender|{}sender[0]
+        abstract fun <get-sender>(): cn.rtast.rob.entity/IGroupSender // cn.rtast.rob.session/IGroupSession.sender.<get-sender>|<get-sender>(){}[0]
+}
+
+abstract interface cn.rtast.rob.session/IPrivateSession : cn.rtast.rob.session/ISession { // cn.rtast.rob.session/IPrivateSession|null[0]
+    abstract val message // cn.rtast.rob.session/IPrivateSession.message|{}message[0]
+        abstract fun <get-message>(): cn.rtast.rob.entity/IPrivateMessage // cn.rtast.rob.session/IPrivateSession.message.<get-message>|<get-message>(){}[0]
+    abstract val sender // cn.rtast.rob.session/IPrivateSession.sender|{}sender[0]
+        abstract fun <get-sender>(): cn.rtast.rob.entity/IPrivateSender // cn.rtast.rob.session/IPrivateSession.sender.<get-sender>|<get-sender>(){}[0]
+}
+
+abstract interface cn.rtast.rob.session/ISession { // cn.rtast.rob.session/ISession|null[0]
+    abstract val command // cn.rtast.rob.session/ISession.command|{}command[0]
+        abstract fun <get-command>(): cn.rtast.rob.command/IBaseCommand<out cn.rtast.rob.entity/IGroupMessage, out cn.rtast.rob.entity/IPrivateMessage> // cn.rtast.rob.session/ISession.command.<get-command>|<get-command>(){}[0]
+    abstract val id // cn.rtast.rob.session/ISession.id|{}id[0]
+        abstract fun <get-id>(): kotlin.uuid/Uuid // cn.rtast.rob.session/ISession.id.<get-id>|<get-id>(){}[0]
+    abstract val message // cn.rtast.rob.session/ISession.message|{}message[0]
+        abstract fun <get-message>(): cn.rtast.rob.entity/IMessage // cn.rtast.rob.session/ISession.message.<get-message>|<get-message>(){}[0]
+    abstract val sender // cn.rtast.rob.session/ISession.sender|{}sender[0]
+        abstract fun <get-sender>(): cn.rtast.rob.entity/ISender // cn.rtast.rob.session/ISession.sender.<get-sender>|<get-sender>(){}[0]
+
+    abstract var active // cn.rtast.rob.session/ISession.active|{}active[0]
+        abstract fun <get-active>(): kotlin/Boolean // cn.rtast.rob.session/ISession.active.<get-active>|<get-active>(){}[0]
+        abstract fun <set-active>(kotlin/Boolean) // cn.rtast.rob.session/ISession.active.<set-active>|<set-active>(kotlin.Boolean){}[0]
+
+    open fun endSession() // cn.rtast.rob.session/ISession.endSession|endSession(){}[0]
+}
+
+abstract interface cn.rtast.rob/BaseBotInstance { // cn.rtast.rob/BaseBotInstance|null[0]
+    abstract val isActionInitialized // cn.rtast.rob/BaseBotInstance.isActionInitialized|{}isActionInitialized[0]
+        abstract fun <get-isActionInitialized>(): kotlin/Boolean // cn.rtast.rob/BaseBotInstance.isActionInitialized.<get-isActionInitialized>|<get-isActionInitialized>(){}[0]
+
+    abstract suspend fun createBot(): cn.rtast.rob/BaseBotInstance // cn.rtast.rob/BaseBotInstance.createBot|createBot(){}[0]
+    abstract suspend fun disposeBot() // cn.rtast.rob/BaseBotInstance.disposeBot|disposeBot(){}[0]
+}
+
+abstract interface cn.rtast.rob/BotFactory { // cn.rtast.rob/BotFactory|null[0]
+    abstract var groupCommandExecutionTimes // cn.rtast.rob/BotFactory.groupCommandExecutionTimes|{}groupCommandExecutionTimes[0]
+        abstract fun <get-groupCommandExecutionTimes>(): kotlin/Int // cn.rtast.rob/BotFactory.groupCommandExecutionTimes.<get-groupCommandExecutionTimes>|<get-groupCommandExecutionTimes>(){}[0]
+        abstract fun <set-groupCommandExecutionTimes>(kotlin/Int) // cn.rtast.rob/BotFactory.groupCommandExecutionTimes.<set-groupCommandExecutionTimes>|<set-groupCommandExecutionTimes>(kotlin.Int){}[0]
+    abstract var privateCommandExecutionTimes // cn.rtast.rob/BotFactory.privateCommandExecutionTimes|{}privateCommandExecutionTimes[0]
+        abstract fun <get-privateCommandExecutionTimes>(): kotlin/Int // cn.rtast.rob/BotFactory.privateCommandExecutionTimes.<get-privateCommandExecutionTimes>|<get-privateCommandExecutionTimes>(){}[0]
+        abstract fun <set-privateCommandExecutionTimes>(kotlin/Int) // cn.rtast.rob/BotFactory.privateCommandExecutionTimes.<set-privateCommandExecutionTimes>|<set-privateCommandExecutionTimes>(kotlin.Int){}[0]
+    abstract var totalCommandExecutionTimes // cn.rtast.rob/BotFactory.totalCommandExecutionTimes|{}totalCommandExecutionTimes[0]
+        abstract fun <get-totalCommandExecutionTimes>(): kotlin/Int // cn.rtast.rob/BotFactory.totalCommandExecutionTimes.<get-totalCommandExecutionTimes>|<get-totalCommandExecutionTimes>(){}[0]
+        abstract fun <set-totalCommandExecutionTimes>(kotlin/Int) // cn.rtast.rob/BotFactory.totalCommandExecutionTimes.<set-totalCommandExecutionTimes>|<set-totalCommandExecutionTimes>(kotlin.Int){}[0]
+
+    open fun resetGroupCommandExecutionTimes() // cn.rtast.rob/BotFactory.resetGroupCommandExecutionTimes|resetGroupCommandExecutionTimes(){}[0]
+    open fun resetPrivateCommandExecutionTimes() // cn.rtast.rob/BotFactory.resetPrivateCommandExecutionTimes|resetPrivateCommandExecutionTimes(){}[0]
+}
+
+abstract interface cn.rtast.rob/SendAction { // cn.rtast.rob/SendAction|null[0]
+    abstract suspend fun send(kotlin/String) // cn.rtast.rob/SendAction.send|send(kotlin.String){}[0]
+}
+
+sealed interface cn.rtast.rob.entity/IMessage { // cn.rtast.rob.entity/IMessage|null[0]
+    abstract var sessionId // cn.rtast.rob.entity/IMessage.sessionId|{}sessionId[0]
+        abstract fun <get-sessionId>(): kotlin.uuid/Uuid? // cn.rtast.rob.entity/IMessage.sessionId.<get-sessionId>|<get-sessionId>(){}[0]
+        abstract fun <set-sessionId>(kotlin.uuid/Uuid?) // cn.rtast.rob.entity/IMessage.sessionId.<set-sessionId>|<set-sessionId>(kotlin.uuid.Uuid?){}[0]
+}
+
+final class <#A: cn.rtast.rob/BaseBotInstance> cn.rtast.rob.scheduler/BotCoroutineScheduler : cn.rtast.rob.scheduler/BotScheduler<#A> { // cn.rtast.rob.scheduler/BotCoroutineScheduler|null[0]
+    constructor <init>(#A) // cn.rtast.rob.scheduler/BotCoroutineScheduler.<init>|<init>(1:0){}[0]
+
+    final suspend fun cancelTask(cn.rtast.rob.scheduler/TaskHandle): kotlin/Boolean // cn.rtast.rob.scheduler/BotCoroutineScheduler.cancelTask|cancelTask(cn.rtast.rob.scheduler.TaskHandle){}[0]
+    final suspend fun scheduleTask(kotlin.coroutines/SuspendFunction1<#A, kotlin/Unit>, kotlin.time/Duration, kotlin.time/Duration): cn.rtast.rob.scheduler/TaskHandle // cn.rtast.rob.scheduler/BotCoroutineScheduler.scheduleTask|scheduleTask(kotlin.coroutines.SuspendFunction1<1:0,kotlin.Unit>;kotlin.time.Duration;kotlin.time.Duration){}[0]
+}
+
+final class <#A: cn.rtast.rob/BaseBotInstance> cn.rtast.rob.scheduler/GlobalCoroutineScheduler : cn.rtast.rob.scheduler/GlobalScheduler<#A> { // cn.rtast.rob.scheduler/GlobalCoroutineScheduler|null[0]
+    constructor <init>(kotlin.collections/List<#A>, kotlinx.coroutines/CoroutineDispatcher = ...) // cn.rtast.rob.scheduler/GlobalCoroutineScheduler.<init>|<init>(kotlin.collections.List<1:0>;kotlinx.coroutines.CoroutineDispatcher){}[0]
+
+    final suspend fun cancelTask(cn.rtast.rob.scheduler/TaskHandle): kotlin/Boolean // cn.rtast.rob.scheduler/GlobalCoroutineScheduler.cancelTask|cancelTask(cn.rtast.rob.scheduler.TaskHandle){}[0]
+    final suspend fun scheduleTask(kotlin.coroutines/SuspendFunction1<kotlin.collections/List<#A>, kotlin/Unit>, kotlin.time/Duration, kotlin.time/Duration): cn.rtast.rob.scheduler/TaskHandle // cn.rtast.rob.scheduler/GlobalCoroutineScheduler.scheduleTask|scheduleTask(kotlin.coroutines.SuspendFunction1<kotlin.collections.List<1:0>,kotlin.Unit>;kotlin.time.Duration;kotlin.time.Duration){}[0]
+}
+
+final class cn.rtast.rob.entity/Resource { // cn.rtast.rob.entity/Resource|null[0]
+    final val base64 // cn.rtast.rob.entity/Resource.base64|{}base64[0]
+        final fun <get-base64>(): kotlin/Boolean // cn.rtast.rob.entity/Resource.base64.<get-base64>|<get-base64>(){}[0]
+    final val content // cn.rtast.rob.entity/Resource.content|{}content[0]
+        final fun <get-content>(): kotlin/String // cn.rtast.rob.entity/Resource.content.<get-content>|<get-content>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.entity/Resource.component1|component1(){}[0]
+    final fun component2(): kotlin/Boolean // cn.rtast.rob.entity/Resource.component2|component2(){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.entity/Resource.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.entity/Resource.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.entity/Resource.toString|toString(){}[0]
+}
+
+final class cn.rtast.rob.exceptions/NonBase64ResourceException : kotlin/Exception { // cn.rtast.rob.exceptions/NonBase64ResourceException|null[0]
+    constructor <init>(kotlin/String) // cn.rtast.rob.exceptions/NonBase64ResourceException.<init>|<init>(kotlin.String){}[0]
+}
+
+final class cn.rtast.rob.exceptions/PlatformNotSupportedException : kotlin/Exception { // cn.rtast.rob.exceptions/PlatformNotSupportedException|null[0]
+    constructor <init>(kotlin/String) // cn.rtast.rob.exceptions/PlatformNotSupportedException.<init>|<init>(kotlin.String){}[0]
+}
+
+final class cn.rtast.rob.exceptions/WebsocketProtocolNotSupportedException : kotlin/Exception { // cn.rtast.rob.exceptions/WebsocketProtocolNotSupportedException|null[0]
+    constructor <init>(kotlin/String) // cn.rtast.rob.exceptions/WebsocketProtocolNotSupportedException.<init>|<init>(kotlin.String){}[0]
+}
+
+final class cn.rtast.rob.scheduler/CoroutineTaskHandle : cn.rtast.rob.scheduler/TaskHandle { // cn.rtast.rob.scheduler/CoroutineTaskHandle|null[0]
+    constructor <init>(kotlinx.coroutines/Job) // cn.rtast.rob.scheduler/CoroutineTaskHandle.<init>|<init>(kotlinx.coroutines.Job){}[0]
+
+    final val isCancelled // cn.rtast.rob.scheduler/CoroutineTaskHandle.isCancelled|{}isCancelled[0]
+        final fun <get-isCancelled>(): kotlin/Boolean // cn.rtast.rob.scheduler/CoroutineTaskHandle.isCancelled.<get-isCancelled>|<get-isCancelled>(){}[0]
+
+    final suspend fun cancel(): kotlin/Boolean // cn.rtast.rob.scheduler/CoroutineTaskHandle.cancel|cancel(){}[0]
+}
+
+final val cn.rtast.rob.event/eventHandlers // cn.rtast.rob.event/eventHandlers|{}eventHandlers[0]
+    final fun <get-eventHandlers>(): kotlin.collections/MutableMap<cn.rtast.rob/BaseBotInstance, kotlin.collections/MutableMap<kotlin.reflect/KClass<out cn.rtast.rob.event/BaseDispatchEvent<*>>, kotlin.coroutines/SuspendFunction1<cn.rtast.rob.event/BaseDispatchEvent<*>, kotlin/Unit>>> // cn.rtast.rob.event/eventHandlers.<get-eventHandlers>|<get-eventHandlers>(){}[0]
+final val cn.rtast.rob.event/flowEventChannel // cn.rtast.rob.event/flowEventChannel|{}flowEventChannel[0]
+    final fun <get-flowEventChannel>(): kotlin.collections/MutableMap<cn.rtast.rob/BaseBotInstance, kotlinx.coroutines.channels/Channel<cn.rtast.rob.event/BaseDispatchEvent<out cn.rtast.rob/SendAction>>> // cn.rtast.rob.event/flowEventChannel.<get-flowEventChannel>|<get-flowEventChannel>(){}[0]
+final val cn.rtast.rob.util/ID // cn.rtast.rob.util/ID|@kotlin.Int{}ID[0]
+    final fun (kotlin/Int).<get-ID>(): cn.rtast.rob.util/IBotManager.ID // cn.rtast.rob.util/ID.<get-ID>|<get-ID>@kotlin.Int(){}[0]
+final val cn.rtast.rob.util/ID // cn.rtast.rob.util/ID|@kotlin.Long{}ID[0]
+    final fun (kotlin/Long).<get-ID>(): cn.rtast.rob.util/IBotManager.ID // cn.rtast.rob.util/ID.<get-ID>|<get-ID>@kotlin.Long(){}[0]
+final val cn.rtast.rob.util/ID // cn.rtast.rob.util/ID|@kotlin.String{}ID[0]
+    final fun (kotlin/String).<get-ID>(): cn.rtast.rob.util/IBotManager.ID // cn.rtast.rob.util/ID.<get-ID>|<get-ID>@kotlin.String(){}[0]
+final val cn.rtast.rob/commonCoroutineScope // cn.rtast.rob/commonCoroutineScope|{}commonCoroutineScope[0]
+    final fun <get-commonCoroutineScope>(): kotlinx.coroutines/CoroutineScope // cn.rtast.rob/commonCoroutineScope.<get-commonCoroutineScope>|<get-commonCoroutineScope>(){}[0]
+
+final fun (cn.rtast.rob.entity/Resource).cn.rtast.rob.entity/toByteArray(): kotlin/ByteArray // cn.rtast.rob.entity/toByteArray|toByteArray@cn.rtast.rob.entity.Resource(){}[0]
+final fun (cn.rtast.rob.entity/Resource).cn.rtast.rob.entity/toByteArraySafely(): kotlin/ByteArray? // cn.rtast.rob.entity/toByteArraySafely|toByteArraySafely@cn.rtast.rob.entity.Resource(){}[0]
+final fun (kotlin/ByteArray).cn.rtast.rob.entity/toResource(): cn.rtast.rob.entity/Resource // cn.rtast.rob.entity/toResource|toResource@kotlin.ByteArray(){}[0]
+final fun (kotlin/ByteArray).cn.rtast.rob.util/decodeToBase64(): kotlin/String // cn.rtast.rob.util/decodeToBase64|decodeToBase64@kotlin.ByteArray(){}[0]
+final fun (kotlin/ByteArray).cn.rtast.rob.util/decodeToByteArrayBase64(): kotlin/ByteArray // cn.rtast.rob.util/decodeToByteArrayBase64|decodeToByteArrayBase64@kotlin.ByteArray(){}[0]
+final fun (kotlin/ByteArray).cn.rtast.rob.util/encodeToBase64(): kotlin/String // cn.rtast.rob.util/encodeToBase64|encodeToBase64@kotlin.ByteArray(){}[0]
+final fun (kotlin/String).cn.rtast.rob.entity/toResource(kotlin/Boolean = ...): cn.rtast.rob.entity/Resource // cn.rtast.rob.entity/toResource|toResource@kotlin.String(kotlin.Boolean){}[0]
+final fun (kotlin/String).cn.rtast.rob.util/decodeToBase64(): kotlin/String // cn.rtast.rob.util/decodeToBase64|decodeToBase64@kotlin.String(){}[0]
+final fun (kotlin/String).cn.rtast.rob.util/decodeToByteArrayBase64(): kotlin/ByteArray // cn.rtast.rob.util/decodeToByteArrayBase64|decodeToByteArrayBase64@kotlin.String(){}[0]
+final fun (kotlin/String).cn.rtast.rob.util/encodeToBase64(): kotlin/String // cn.rtast.rob.util/encodeToBase64|encodeToBase64@kotlin.String(){}[0]
+final fun (kotlinx.io.files/Path).cn.rtast.rob.entity/toResource(): cn.rtast.rob.entity/Resource // cn.rtast.rob.entity/toResource|toResource@kotlinx.io.files.Path(){}[0]
+final inline fun <#A: reified cn.rtast.rob.event/BaseDispatchEvent<*>> (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.event/flowEvent(crossinline kotlin.coroutines/SuspendFunction1<kotlinx.coroutines.flow/Flow<#A>, kotlin/Unit>) // cn.rtast.rob.event/flowEvent|flowEvent@cn.rtast.rob.BaseBotInstance(kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.flow.Flow<0:0>,kotlin.Unit>){0§<cn.rtast.rob.event.BaseDispatchEvent<*>>}[0]
+final inline fun <#A: reified cn.rtast.rob.event/BaseDispatchEvent<*>> (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.event/onEvent(crossinline kotlin.coroutines/SuspendFunction1<#A, kotlin/Unit>) // cn.rtast.rob.event/onEvent|onEvent@cn.rtast.rob.BaseBotInstance(kotlin.coroutines.SuspendFunction1<0:0,kotlin.Unit>){0§<cn.rtast.rob.event.BaseDispatchEvent<*>>}[0]
+final inline fun <#A: reified cn.rtast.rob.event/BaseDispatchEvent<*>> (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.event/subscribe(crossinline kotlin.coroutines/SuspendFunction1<#A, kotlin/Unit>) // cn.rtast.rob.event/subscribe|subscribe@cn.rtast.rob.BaseBotInstance(kotlin.coroutines.SuspendFunction1<0:0,kotlin.Unit>){0§<cn.rtast.rob.event.BaseDispatchEvent<*>>}[0]
+final suspend fun (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.event/dispatchEvent(cn.rtast.rob.event/BaseDispatchEvent<out cn.rtast.rob/SendAction>) // cn.rtast.rob.event/dispatchEvent|dispatchEvent@cn.rtast.rob.BaseBotInstance(cn.rtast.rob.event.BaseDispatchEvent<out|cn.rtast.rob.SendAction>){}[0]
+final suspend fun <#A: cn.rtast.rob.event/BaseDispatchEvent<out cn.rtast.rob/SendAction>> (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.event/emitFlowEvent(#A) // cn.rtast.rob.event/emitFlowEvent|emitFlowEvent@cn.rtast.rob.BaseBotInstance(0:0){0§<cn.rtast.rob.event.BaseDispatchEvent<out|cn.rtast.rob.SendAction>>}[0]
