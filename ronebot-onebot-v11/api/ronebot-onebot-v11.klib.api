@@ -328,6 +328,17 @@ final enum class cn.rtast.rob.enums/UserSex : kotlin/Enum<cn.rtast.rob.enums/Use
     }
 }
 
+final enum class cn.rtast.rob.event.raw.lagrange/GroupRequestsType : kotlin/Enum<cn.rtast.rob.event.raw.lagrange/GroupRequestsType> { // cn.rtast.rob.event.raw.lagrange/GroupRequestsType|null[0]
+    enum entry add // cn.rtast.rob.event.raw.lagrange/GroupRequestsType.add|null[0]
+    enum entry invite // cn.rtast.rob.event.raw.lagrange/GroupRequestsType.invite|null[0]
+
+    final val entries // cn.rtast.rob.event.raw.lagrange/GroupRequestsType.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.event.raw.lagrange/GroupRequestsType> // cn.rtast.rob.event.raw.lagrange/GroupRequestsType.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.event.raw.lagrange/GroupRequestsType // cn.rtast.rob.event.raw.lagrange/GroupRequestsType.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.event.raw.lagrange/GroupRequestsType> // cn.rtast.rob.event.raw.lagrange/GroupRequestsType.values|values#static(){}[0]
+}
+
 abstract interface cn.rtast.rob.actionable/FileEventActionable { // cn.rtast.rob.actionable/FileEventActionable|null[0]
     abstract suspend fun readBytes(): kotlin/ByteArray // cn.rtast.rob.actionable/FileEventActionable.readBytes|readBytes(){}[0]
     abstract suspend fun saveTo(kotlinx.io.files/Path) // cn.rtast.rob.actionable/FileEventActionable.saveTo|saveTo(kotlinx.io.files.Path){}[0]
@@ -1969,6 +1980,83 @@ final class cn.rtast.rob.event.raw.lagrange/GetGroupFileUrl { // cn.rtast.rob.ev
     }
 }
 
+final class cn.rtast.rob.event.raw.lagrange/GetGroupRequests { // cn.rtast.rob.event.raw.lagrange/GetGroupRequests|null[0]
+    constructor <init>(kotlin.collections/List<cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests>) // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.<init>|<init>(kotlin.collections.List<cn.rtast.rob.event.raw.lagrange.GetGroupRequests.GroupRequests>){}[0]
+
+    final val data // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.data|{}data[0]
+        final fun <get-data>(): kotlin.collections/List<cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests> // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.data.<get-data>|<get-data>(){}[0]
+
+    final fun component1(): kotlin.collections/List<cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests> // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.component1|component1(){}[0]
+    final fun copy(kotlin.collections/List<cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests> = ...): cn.rtast.rob.event.raw.lagrange/GetGroupRequests // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.copy|copy(kotlin.collections.List<cn.rtast.rob.event.raw.lagrange.GetGroupRequests.GroupRequests>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.toString|toString(){}[0]
+
+    final class GroupRequests { // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests|null[0]
+        constructor <init>(cn.rtast.rob.event.raw.lagrange/GroupRequestsType? = ..., kotlin/Long, kotlin/Long, kotlin/Long, kotlin/String, kotlin/String, kotlin/Long, kotlin/Long) // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.<init>|<init>(cn.rtast.rob.event.raw.lagrange.GroupRequestsType?;kotlin.Long;kotlin.Long;kotlin.Long;kotlin.String;kotlin.String;kotlin.Long;kotlin.Long){}[0]
+
+        final val comment // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.comment|{}comment[0]
+            final fun <get-comment>(): kotlin/String // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.comment.<get-comment>|<get-comment>(){}[0]
+        final val flag // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.flag|{}flag[0]
+            final fun <get-flag>(): kotlin/String // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.flag.<get-flag>|<get-flag>(){}[0]
+        final val groupId // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.groupId|{}groupId[0]
+            final fun <get-groupId>(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.groupId.<get-groupId>|<get-groupId>(){}[0]
+        final val invitorId // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.invitorId|{}invitorId[0]
+            final fun <get-invitorId>(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.invitorId.<get-invitorId>|<get-invitorId>(){}[0]
+        final val selfId // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.selfId|{}selfId[0]
+            final fun <get-selfId>(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.selfId.<get-selfId>|<get-selfId>(){}[0]
+        final val time // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.time|{}time[0]
+            final fun <get-time>(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.time.<get-time>|<get-time>(){}[0]
+        final val type // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.type|{}type[0]
+            final fun <get-type>(): cn.rtast.rob.event.raw.lagrange/GroupRequestsType? // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.type.<get-type>|<get-type>(){}[0]
+        final val userId // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.userId|{}userId[0]
+            final fun <get-userId>(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.userId.<get-userId>|<get-userId>(){}[0]
+
+        final fun component1(): cn.rtast.rob.event.raw.lagrange/GroupRequestsType? // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.component1|component1(){}[0]
+        final fun component2(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.component2|component2(){}[0]
+        final fun component3(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.component3|component3(){}[0]
+        final fun component4(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.component4|component4(){}[0]
+        final fun component5(): kotlin/String // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.component5|component5(){}[0]
+        final fun component6(): kotlin/String // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.component6|component6(){}[0]
+        final fun component7(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.component7|component7(){}[0]
+        final fun component8(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.component8|component8(){}[0]
+        final fun copy(cn.rtast.rob.event.raw.lagrange/GroupRequestsType? = ..., kotlin/Long = ..., kotlin/Long = ..., kotlin/Long = ..., kotlin/String = ..., kotlin/String = ..., kotlin/Long = ..., kotlin/Long = ...): cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.copy|copy(cn.rtast.rob.event.raw.lagrange.GroupRequestsType?;kotlin.Long;kotlin.Long;kotlin.Long;kotlin.String;kotlin.String;kotlin.Long;kotlin.Long){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests> { // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests) // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.event.raw.lagrange.GetGroupRequests.GroupRequests){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.Companion|null[0]
+            final val $childSerializers // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.Companion.$childSerializers|{}$childSerializers[0]
+
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests> // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.event.raw.lagrange/GetGroupRequests> { // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.event.raw.lagrange/GetGroupRequests // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.event.raw.lagrange/GetGroupRequests) // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.event.raw.lagrange.GetGroupRequests){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.Companion|null[0]
+        final val $childSerializers // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.event.raw.lagrange/GetGroupRequests> // cn.rtast.rob.event.raw.lagrange/GetGroupRequests.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final class cn.rtast.rob.event.raw.lagrange/GetGroupRootFiles { // cn.rtast.rob.event.raw.lagrange/GetGroupRootFiles|null[0]
     constructor <init>(cn.rtast.rob.event.raw.lagrange/GetGroupRootFiles.RootFiles) // cn.rtast.rob.event.raw.lagrange/GetGroupRootFiles.<init>|<init>(cn.rtast.rob.event.raw.lagrange.GetGroupRootFiles.RootFiles){}[0]
 
@@ -2866,7 +2954,7 @@ final class cn.rtast.rob.event.raw.lagrange/RawFileEvent : cn.rtast.rob.actionab
 }
 
 final class cn.rtast.rob.event.raw.lagrange/RawPokeEvent { // cn.rtast.rob.event.raw.lagrange/RawPokeEvent|null[0]
-    constructor <init>(kotlin/String, kotlin/String, kotlin/String, kotlin/Long, kotlin/Long, kotlin/Long, kotlin/Long?) // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.<init>|<init>(kotlin.String;kotlin.String;kotlin.String;kotlin.Long;kotlin.Long;kotlin.Long;kotlin.Long?){}[0]
+    constructor <init>(kotlin/String, kotlin/String, kotlin/String, kotlin/Long, kotlin/Long, kotlin/Long?) // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.<init>|<init>(kotlin.String;kotlin.String;kotlin.String;kotlin.Long;kotlin.Long;kotlin.Long?){}[0]
 
     final val actionImgUrl // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.actionImgUrl|{}actionImgUrl[0]
         final fun <get-actionImgUrl>(): kotlin/String // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.actionImgUrl.<get-actionImgUrl>|<get-actionImgUrl>(){}[0]
@@ -2874,8 +2962,6 @@ final class cn.rtast.rob.event.raw.lagrange/RawPokeEvent { // cn.rtast.rob.event
         final fun <get-groupId>(): kotlin/Long? // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.groupId.<get-groupId>|<get-groupId>(){}[0]
     final val pokeAction // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.pokeAction|{}pokeAction[0]
         final fun <get-pokeAction>(): kotlin/String // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.pokeAction.<get-pokeAction>|<get-pokeAction>(){}[0]
-    final val senderId // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.senderId|{}senderId[0]
-        final fun <get-senderId>(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.senderId.<get-senderId>|<get-senderId>(){}[0]
     final val suffix // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.suffix|{}suffix[0]
         final fun <get-suffix>(): kotlin/String // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.suffix.<get-suffix>|<get-suffix>(){}[0]
     final val targetId // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.targetId|{}targetId[0]
@@ -2892,9 +2978,8 @@ final class cn.rtast.rob.event.raw.lagrange/RawPokeEvent { // cn.rtast.rob.event
     final fun component3(): kotlin/String // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.component3|component3(){}[0]
     final fun component4(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.component4|component4(){}[0]
     final fun component5(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.component5|component5(){}[0]
-    final fun component6(): kotlin/Long // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.component6|component6(){}[0]
-    final fun component7(): kotlin/Long? // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.component7|component7(){}[0]
-    final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., kotlin/Long = ..., kotlin/Long = ..., kotlin/Long = ..., kotlin/Long? = ...): cn.rtast.rob.event.raw.lagrange/RawPokeEvent // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.copy|copy(kotlin.String;kotlin.String;kotlin.String;kotlin.Long;kotlin.Long;kotlin.Long;kotlin.Long?){}[0]
+    final fun component6(): kotlin/Long? // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.component6|component6(){}[0]
+    final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., kotlin/Long = ..., kotlin/Long = ..., kotlin/Long? = ...): cn.rtast.rob.event.raw.lagrange/RawPokeEvent // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.copy|copy(kotlin.String;kotlin.String;kotlin.String;kotlin.Long;kotlin.Long;kotlin.Long?){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // cn.rtast.rob.event.raw.lagrange/RawPokeEvent.toString|toString(){}[0]
@@ -4972,6 +5057,116 @@ final class cn.rtast.rob.event.raw/StrangerInfo { // cn.rtast.rob.event.raw/Stra
     }
 }
 
+final class cn.rtast.rob.event.raw/UploadGroupFileResponse { // cn.rtast.rob.event.raw/UploadGroupFileResponse|null[0]
+    constructor <init>(cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile) // cn.rtast.rob.event.raw/UploadGroupFileResponse.<init>|<init>(cn.rtast.rob.event.raw.UploadGroupFileResponse.UploadGroupFile){}[0]
+
+    final val data // cn.rtast.rob.event.raw/UploadGroupFileResponse.data|{}data[0]
+        final fun <get-data>(): cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile // cn.rtast.rob.event.raw/UploadGroupFileResponse.data.<get-data>|<get-data>(){}[0]
+
+    final fun component1(): cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile // cn.rtast.rob.event.raw/UploadGroupFileResponse.component1|component1(){}[0]
+    final fun copy(cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile = ...): cn.rtast.rob.event.raw/UploadGroupFileResponse // cn.rtast.rob.event.raw/UploadGroupFileResponse.copy|copy(cn.rtast.rob.event.raw.UploadGroupFileResponse.UploadGroupFile){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw/UploadGroupFileResponse.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw/UploadGroupFileResponse.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.event.raw/UploadGroupFileResponse.toString|toString(){}[0]
+
+    final class UploadGroupFile { // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile|null[0]
+        constructor <init>(kotlin/String, kotlin/Int) // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.<init>|<init>(kotlin.String;kotlin.Int){}[0]
+
+        final val message // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.message|{}message[0]
+            final fun <get-message>(): kotlin/String // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.message.<get-message>|<get-message>(){}[0]
+        final val retCode // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.retCode|{}retCode[0]
+            final fun <get-retCode>(): kotlin/Int // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.retCode.<get-retCode>|<get-retCode>(){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.component1|component1(){}[0]
+        final fun component2(): kotlin/Int // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.component2|component2(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/Int = ...): cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.copy|copy(kotlin.String;kotlin.Int){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile> { // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile) // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.event.raw.UploadGroupFileResponse.UploadGroupFile){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile> // cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.event.raw/UploadGroupFileResponse> { // cn.rtast.rob.event.raw/UploadGroupFileResponse.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.event.raw/UploadGroupFileResponse.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.event.raw/UploadGroupFileResponse.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.event.raw/UploadGroupFileResponse.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.event.raw/UploadGroupFileResponse // cn.rtast.rob.event.raw/UploadGroupFileResponse.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.event.raw/UploadGroupFileResponse) // cn.rtast.rob.event.raw/UploadGroupFileResponse.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.event.raw.UploadGroupFileResponse){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.event.raw/UploadGroupFileResponse.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.event.raw/UploadGroupFileResponse> // cn.rtast.rob.event.raw/UploadGroupFileResponse.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.event.raw/UploadPrivateFileResponse { // cn.rtast.rob.event.raw/UploadPrivateFileResponse|null[0]
+    constructor <init>(cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile) // cn.rtast.rob.event.raw/UploadPrivateFileResponse.<init>|<init>(cn.rtast.rob.event.raw.UploadPrivateFileResponse.UploadPrivateFile){}[0]
+
+    final val data // cn.rtast.rob.event.raw/UploadPrivateFileResponse.data|{}data[0]
+        final fun <get-data>(): cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile // cn.rtast.rob.event.raw/UploadPrivateFileResponse.data.<get-data>|<get-data>(){}[0]
+
+    final fun component1(): cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile // cn.rtast.rob.event.raw/UploadPrivateFileResponse.component1|component1(){}[0]
+    final fun copy(cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile = ...): cn.rtast.rob.event.raw/UploadPrivateFileResponse // cn.rtast.rob.event.raw/UploadPrivateFileResponse.copy|copy(cn.rtast.rob.event.raw.UploadPrivateFileResponse.UploadPrivateFile){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw/UploadPrivateFileResponse.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw/UploadPrivateFileResponse.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.event.raw/UploadPrivateFileResponse.toString|toString(){}[0]
+
+    final class UploadPrivateFile { // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile|null[0]
+        constructor <init>(kotlin/String, kotlin/Int) // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.<init>|<init>(kotlin.String;kotlin.Int){}[0]
+
+        final val message // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.message|{}message[0]
+            final fun <get-message>(): kotlin/String // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.message.<get-message>|<get-message>(){}[0]
+        final val retCode // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.retCode|{}retCode[0]
+            final fun <get-retCode>(): kotlin/Int // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.retCode.<get-retCode>|<get-retCode>(){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.component1|component1(){}[0]
+        final fun component2(): kotlin/Int // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.component2|component2(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/Int = ...): cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.copy|copy(kotlin.String;kotlin.Int){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile> { // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile) // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.event.raw.UploadPrivateFileResponse.UploadPrivateFile){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile> // cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.event.raw/UploadPrivateFileResponse> { // cn.rtast.rob.event.raw/UploadPrivateFileResponse.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.event.raw/UploadPrivateFileResponse.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.event.raw/UploadPrivateFileResponse.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.event.raw/UploadPrivateFileResponse.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.event.raw/UploadPrivateFileResponse // cn.rtast.rob.event.raw/UploadPrivateFileResponse.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.event.raw/UploadPrivateFileResponse) // cn.rtast.rob.event.raw/UploadPrivateFileResponse.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.event.raw.UploadPrivateFileResponse){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.event.raw/UploadPrivateFileResponse.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.event.raw/UploadPrivateFileResponse> // cn.rtast.rob.event.raw/UploadPrivateFileResponse.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final class cn.rtast.rob.exceptions/IllegalDelayException : kotlin/Exception { // cn.rtast.rob.exceptions/IllegalDelayException|null[0]
     constructor <init>(kotlin/String) // cn.rtast.rob.exceptions/IllegalDelayException.<init>|<init>(kotlin.String){}[0]
 
@@ -5142,6 +5337,7 @@ final class cn.rtast.rob.onebot/OneBotAction : cn.rtast.rob/SendAction { // cn.r
     final suspend fun getGroupMemberList(kotlin/Long): kotlin.collections/List<cn.rtast.rob.event.raw/GroupMemberList.MemberInfo> // cn.rtast.rob.onebot/OneBotAction.getGroupMemberList|getGroupMemberList(kotlin.Long){}[0]
     final suspend fun getGroupMessageHistory(kotlin/Long, kotlin/Long, kotlin/Int = ...): cn.rtast.rob.event.raw.lagrange/GroupMessageHistory.MessageHistory // cn.rtast.rob.onebot/OneBotAction.getGroupMessageHistory|getGroupMessageHistory(kotlin.Long;kotlin.Long;kotlin.Int){}[0]
     final suspend fun getGroupNoticeById(kotlin/Long, kotlin/String): cn.rtast.rob.event.raw.lagrange/GroupNotice.GroupNotice? // cn.rtast.rob.onebot/OneBotAction.getGroupNoticeById|getGroupNoticeById(kotlin.Long;kotlin.String){}[0]
+    final suspend fun getGroupRequests(): kotlin.collections/List<cn.rtast.rob.event.raw.lagrange/GetGroupRequests.GroupRequests> // cn.rtast.rob.onebot/OneBotAction.getGroupRequests|getGroupRequests(){}[0]
     final suspend fun getGroupRootFiles(kotlin/Long): cn.rtast.rob.event.raw.lagrange/GetGroupRootFiles.RootFiles // cn.rtast.rob.onebot/OneBotAction.getGroupRootFiles|getGroupRootFiles(kotlin.Long){}[0]
     final suspend fun getLoginInfo(): cn.rtast.rob.event.raw/LoginInfo.LoginInfo // cn.rtast.rob.onebot/OneBotAction.getLoginInfo|getLoginInfo(){}[0]
     final suspend fun getMessage(kotlin/Long): cn.rtast.rob.event.raw/GetMessage.Message // cn.rtast.rob.onebot/OneBotAction.getMessage|getMessage(kotlin.Long){}[0]
@@ -5214,9 +5410,11 @@ final class cn.rtast.rob.onebot/OneBotAction : cn.rtast.rob/SendAction { // cn.r
     final suspend fun setLongNick(kotlin/String) // cn.rtast.rob.onebot/OneBotAction.setLongNick|setLongNick(kotlin.String){}[0]
     final suspend fun setOnlineStatus(cn.rtast.rob.enums/OnlineStatus) // cn.rtast.rob.onebot/OneBotAction.setOnlineStatus|setOnlineStatus(cn.rtast.rob.enums.OnlineStatus){}[0]
     final suspend fun setRestart() // cn.rtast.rob.onebot/OneBotAction.setRestart|setRestart(){}[0]
-    final suspend fun uploadGroupFile(kotlin/Long, kotlin/String, kotlin/String, kotlin/String = ...) // cn.rtast.rob.onebot/OneBotAction.uploadGroupFile|uploadGroupFile(kotlin.Long;kotlin.String;kotlin.String;kotlin.String){}[0]
+    final suspend fun uploadGroupFile(kotlin/Long, kotlin/String, kotlin/String, kotlin/String = ...): cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile // cn.rtast.rob.onebot/OneBotAction.uploadGroupFile|uploadGroupFile(kotlin.Long;kotlin.String;kotlin.String;kotlin.String){}[0]
+    final suspend fun uploadGroupFileAsync(kotlin/Long, kotlin/String, kotlin/String, kotlin/String = ...) // cn.rtast.rob.onebot/OneBotAction.uploadGroupFileAsync|uploadGroupFileAsync(kotlin.Long;kotlin.String;kotlin.String;kotlin.String){}[0]
     final suspend fun uploadImage(kotlin/String, kotlin/Boolean = ...): kotlin/String // cn.rtast.rob.onebot/OneBotAction.uploadImage|uploadImage(kotlin.String;kotlin.Boolean){}[0]
-    final suspend fun uploadPrivateFile(kotlin/Long, kotlin/String, kotlin/String) // cn.rtast.rob.onebot/OneBotAction.uploadPrivateFile|uploadPrivateFile(kotlin.Long;kotlin.String;kotlin.String){}[0]
+    final suspend fun uploadPrivateFile(kotlin/Long, kotlin/String, kotlin/String): cn.rtast.rob.event.raw/UploadPrivateFileResponse.UploadPrivateFile // cn.rtast.rob.onebot/OneBotAction.uploadPrivateFile|uploadPrivateFile(kotlin.Long;kotlin.String;kotlin.String){}[0]
+    final suspend fun uploadPrivateFileAsync(kotlin/Long, kotlin/String, kotlin/String) // cn.rtast.rob.onebot/OneBotAction.uploadPrivateFileAsync|uploadPrivateFileAsync(kotlin.Long;kotlin.String;kotlin.String){}[0]
 }
 
 final class cn.rtast.rob.segment/AT : cn.rtast.rob.segment/Segment { // cn.rtast.rob.segment/AT|null[0]

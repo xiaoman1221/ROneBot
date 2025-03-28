@@ -2855,6 +2855,114 @@ public final class cn/rtast/rob/event/raw/StrangerInfo$StrangerInfo$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class cn/rtast/rob/event/raw/UploadGroupFileResponse {
+	public static final field Companion Lcn/rtast/rob/event/raw/UploadGroupFileResponse$Companion;
+	public fun <init> (Lcn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile;)V
+	public final fun component1 ()Lcn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile;
+	public final fun copy (Lcn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile;)Lcn/rtast/rob/event/raw/UploadGroupFileResponse;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/UploadGroupFileResponse;Lcn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/UploadGroupFileResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Lcn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/UploadGroupFileResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/UploadGroupFileResponse$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/UploadGroupFileResponse;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/UploadGroupFileResponse;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/UploadGroupFileResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile {
+	public static final field Companion Lcn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile$Companion;
+	public fun <init> (Ljava/lang/String;I)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()I
+	public final fun copy (Ljava/lang/String;I)Lcn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile;Ljava/lang/String;IILjava/lang/Object;)Lcn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMessage ()Ljava/lang/String;
+	public final fun getRetCode ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/UploadGroupFileResponse$UploadGroupFile$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/UploadPrivateFileResponse {
+	public static final field Companion Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$Companion;
+	public fun <init> (Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile;)V
+	public final fun component1 ()Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile;
+	public final fun copy (Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile;)Lcn/rtast/rob/event/raw/UploadPrivateFileResponse;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/UploadPrivateFileResponse;Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/UploadPrivateFileResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/UploadPrivateFileResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/UploadPrivateFileResponse;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/UploadPrivateFileResponse;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/UploadPrivateFileResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile {
+	public static final field Companion Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile$Companion;
+	public fun <init> (Ljava/lang/String;I)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()I
+	public final fun copy (Ljava/lang/String;I)Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile;Ljava/lang/String;IILjava/lang/Object;)Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMessage ()Ljava/lang/String;
+	public final fun getRetCode ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/UploadPrivateFileResponse$UploadPrivateFile$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/event/raw/custom/RawBanEvent {
 	public fun <init> (JJIJJLcn/rtast/rob/onebot/OneBotAction;)V
 	public final fun component1 ()J
@@ -3604,6 +3712,73 @@ public final class cn/rtast/rob/event/raw/lagrange/GetGroupFileUrl$FileURL$Compa
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class cn/rtast/rob/event/raw/lagrange/GetGroupRequests {
+	public static final field Companion Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests$Companion;
+	public fun <init> (Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;)Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests;Ljava/util/List;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/lagrange/GetGroupRequests$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/lagrange/GetGroupRequests$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/lagrange/GetGroupRequests$GroupRequests {
+	public static final field Companion Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests$GroupRequests$Companion;
+	public fun <init> (Lcn/rtast/rob/event/raw/lagrange/GroupRequestsType;JJJLjava/lang/String;Ljava/lang/String;JJ)V
+	public synthetic fun <init> (Lcn/rtast/rob/event/raw/lagrange/GroupRequestsType;JJJLjava/lang/String;Ljava/lang/String;JJILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lcn/rtast/rob/event/raw/lagrange/GroupRequestsType;
+	public final fun component2 ()J
+	public final fun component3 ()J
+	public final fun component4 ()J
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()J
+	public final fun component8 ()J
+	public final fun copy (Lcn/rtast/rob/event/raw/lagrange/GroupRequestsType;JJJLjava/lang/String;Ljava/lang/String;JJ)Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests$GroupRequests;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests$GroupRequests;Lcn/rtast/rob/event/raw/lagrange/GroupRequestsType;JJJLjava/lang/String;Ljava/lang/String;JJILjava/lang/Object;)Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests$GroupRequests;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getComment ()Ljava/lang/String;
+	public final fun getFlag ()Ljava/lang/String;
+	public final fun getGroupId ()J
+	public final fun getInvitorId ()J
+	public final fun getSelfId ()J
+	public final fun getTime ()J
+	public final fun getType ()Lcn/rtast/rob/event/raw/lagrange/GroupRequestsType;
+	public final fun getUserId ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/lagrange/GetGroupRequests$GroupRequests$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests$GroupRequests$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests$GroupRequests;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/lagrange/GetGroupRequests$GroupRequests;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/lagrange/GetGroupRequests$GroupRequests$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/event/raw/lagrange/GetGroupRootFiles {
 	public static final field Companion Lcn/rtast/rob/event/raw/lagrange/GetGroupRootFiles$Companion;
 	public fun <init> (Lcn/rtast/rob/event/raw/lagrange/GetGroupRootFiles$RootFiles;)V
@@ -3910,6 +4085,14 @@ public synthetic class cn/rtast/rob/event/raw/lagrange/GroupNotice$Message$$seri
 
 public final class cn/rtast/rob/event/raw/lagrange/GroupNotice$Message$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/lagrange/GroupRequestsType : java/lang/Enum {
+	public static final field add Lcn/rtast/rob/event/raw/lagrange/GroupRequestsType;
+	public static final field invite Lcn/rtast/rob/event/raw/lagrange/GroupRequestsType;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/event/raw/lagrange/GroupRequestsType;
+	public static fun values ()[Lcn/rtast/rob/event/raw/lagrange/GroupRequestsType;
 }
 
 public final class cn/rtast/rob/event/raw/lagrange/HonorInfo {
@@ -4420,22 +4603,20 @@ public final class cn/rtast/rob/event/raw/lagrange/RawFileEvent$File$Companion {
 public final class cn/rtast/rob/event/raw/lagrange/RawPokeEvent {
 	public static final field Companion Lcn/rtast/rob/event/raw/lagrange/RawPokeEvent$Companion;
 	public field action Lcn/rtast/rob/onebot/OneBotAction;
-	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJJLjava/lang/Long;)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJLjava/lang/Long;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
 	public final fun component4 ()J
 	public final fun component5 ()J
-	public final fun component6 ()J
-	public final fun component7 ()Ljava/lang/Long;
-	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJJLjava/lang/Long;)Lcn/rtast/rob/event/raw/lagrange/RawPokeEvent;
-	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/lagrange/RawPokeEvent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJJLjava/lang/Long;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/lagrange/RawPokeEvent;
+	public final fun component6 ()Ljava/lang/Long;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJLjava/lang/Long;)Lcn/rtast/rob/event/raw/lagrange/RawPokeEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/lagrange/RawPokeEvent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JJLjava/lang/Long;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/lagrange/RawPokeEvent;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Lcn/rtast/rob/onebot/OneBotAction;
 	public final fun getActionImgUrl ()Ljava/lang/String;
 	public final fun getGroupId ()Ljava/lang/Long;
 	public final fun getPokeAction ()Ljava/lang/String;
-	public final fun getSenderId ()J
 	public final fun getSuffix ()Ljava/lang/String;
 	public final fun getTargetId ()J
 	public final fun getUserId ()J
@@ -4848,6 +5029,7 @@ public final class cn/rtast/rob/onebot/OneBotAction : cn/rtast/rob/SendAction {
 	public final fun getGroupMessageHistory (JJILkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun getGroupMessageHistory$default (Lcn/rtast/rob/onebot/OneBotAction;JJILkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun getGroupNoticeById (JLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getGroupRequests (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getGroupRootFiles (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getLoginInfo (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getMessage (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -4945,9 +5127,12 @@ public final class cn/rtast/rob/onebot/OneBotAction : cn/rtast/rob/SendAction {
 	public fun toString ()Ljava/lang/String;
 	public final fun uploadGroupFile (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun uploadGroupFile$default (Lcn/rtast/rob/onebot/OneBotAction;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public final fun uploadGroupFileAsync (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun uploadGroupFileAsync$default (Lcn/rtast/rob/onebot/OneBotAction;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun uploadImage (Ljava/lang/String;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun uploadImage$default (Lcn/rtast/rob/onebot/OneBotAction;Ljava/lang/String;ZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun uploadPrivateFile (JLjava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun uploadPrivateFileAsync (JLjava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
 public abstract interface class cn/rtast/rob/onebot/OneBotListener {
