@@ -1,0 +1,7 @@
+public final class cn/rtast/rob/ext/file/FileKt {
+	public static final fun readByteArray (Lkotlinx/io/files/Path;)[B
+	public static final fun readText (Lkotlinx/io/files/Path;)Ljava/lang/String;
+	public static final fun writeByteArray (Lkotlinx/io/files/Path;[B)V
+	public static final fun writeText (Lkotlinx/io/files/Path;Ljava/lang/String;)V
+}
+

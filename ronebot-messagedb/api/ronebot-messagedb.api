@@ -1,0 +1,14 @@
+public final class cn/rtast/rob/messagedb/MessageDB {
+	public fun <init> (Lkotlinx/io/files/Path;)V
+	public final fun getMessage (Lkotlin/uuid/Uuid;)Ljava/lang/Long;
+	public final synthetic fun removeMessage ()Ljava/lang/Void;
+	public final fun saveMessage (Lkotlin/uuid/Uuid;J)V
+	public final fun syncToFile ()V
+}
+
+public final class cn/rtast/rob/messagedb/MessageDBKt {
+	public static final fun createMessageDB (Lcn/rtast/rob/BaseBotInstance;Lkotlinx/io/files/Path;)Lcn/rtast/rob/messagedb/MessageDB;
+	public static synthetic fun createMessageDB$default (Lcn/rtast/rob/BaseBotInstance;Lkotlinx/io/files/Path;ILjava/lang/Object;)Lcn/rtast/rob/messagedb/MessageDB;
+	public static final fun getMessageDB (Lcn/rtast/rob/BaseBotInstance;)Lcn/rtast/rob/messagedb/MessageDB;
+}
+

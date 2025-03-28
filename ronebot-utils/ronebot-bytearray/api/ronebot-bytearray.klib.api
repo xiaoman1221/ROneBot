@@ -1,0 +1,28 @@
+// Klib ABI Dump
+// Targets: [linuxArm64, linuxX64, macosArm64, macosX64, mingwX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <cn.rtast.rob:ronebot-bytearray>
+final class cn.rtast.rob.ext.bytearray/ByteBuffer { // cn.rtast.rob.ext.bytearray/ByteBuffer|null[0]
+    constructor <init>(kotlin/ByteArray) // cn.rtast.rob.ext.bytearray/ByteBuffer.<init>|<init>(kotlin.ByteArray){}[0]
+    constructor <init>(kotlin/Int) // cn.rtast.rob.ext.bytearray/ByteBuffer.<init>|<init>(kotlin.Int){}[0]
+
+    final fun ensureCapacity(kotlin/Int) // cn.rtast.rob.ext.bytearray/ByteBuffer.ensureCapacity|ensureCapacity(kotlin.Int){}[0]
+    final fun getByte(kotlin/Int = ...): kotlin/Byte // cn.rtast.rob.ext.bytearray/ByteBuffer.getByte|getByte(kotlin.Int){}[0]
+    final fun getInt(kotlin/Int = ...): kotlin/Int // cn.rtast.rob.ext.bytearray/ByteBuffer.getInt|getInt(kotlin.Int){}[0]
+    final fun getLong(kotlin/Int = ...): kotlin/Long // cn.rtast.rob.ext.bytearray/ByteBuffer.getLong|getLong(kotlin.Int){}[0]
+    final fun put(kotlin/ByteArray) // cn.rtast.rob.ext.bytearray/ByteBuffer.put|put(kotlin.ByteArray){}[0]
+    final fun putByte(kotlin/Byte) // cn.rtast.rob.ext.bytearray/ByteBuffer.putByte|putByte(kotlin.Byte){}[0]
+    final fun putInt(kotlin/Int) // cn.rtast.rob.ext.bytearray/ByteBuffer.putInt|putInt(kotlin.Int){}[0]
+    final fun putLong(kotlin/Long) // cn.rtast.rob.ext.bytearray/ByteBuffer.putLong|putLong(kotlin.Long){}[0]
+    final fun toByteArray(): kotlin/ByteArray // cn.rtast.rob.ext.bytearray/ByteBuffer.toByteArray|toByteArray(){}[0]
+}
+
+final fun (kotlin/ByteArray).cn.rtast.rob.ext.bytearray/plus(kotlin/ByteArray): kotlin/ByteArray // cn.rtast.rob.ext.bytearray/plus|plus@kotlin.ByteArray(kotlin.ByteArray){}[0]
+final fun (kotlin/ByteArray).cn.rtast.rob.ext.bytearray/toLong(): kotlin/Long // cn.rtast.rob.ext.bytearray/toLong|toLong@kotlin.ByteArray(){}[0]
+final fun (kotlin/ByteArray).cn.rtast.rob.ext.bytearray/toLong(kotlin/Int): kotlin/Long // cn.rtast.rob.ext.bytearray/toLong|toLong@kotlin.ByteArray(kotlin.Int){}[0]
+final fun (kotlin/ByteArray).cn.rtast.rob.ext.bytearray/toUtf8String(): kotlin/String // cn.rtast.rob.ext.bytearray/toUtf8String|toUtf8String@kotlin.ByteArray(){}[0]
+final fun (kotlin/String).cn.rtast.rob.ext.bytearray/toByteArray(): kotlin/ByteArray // cn.rtast.rob.ext.bytearray/toByteArray|toByteArray@kotlin.String(){}[0]

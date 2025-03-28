@@ -1,0 +1,25 @@
+public final class cn/rtast/rob/ext/bytearray/ByteArrayKt {
+	public static final fun plus ([B[B)[B
+	public static final fun toByteArray (Ljava/lang/String;)[B
+	public static final fun toLong ([B)J
+	public static final fun toLong ([BI)J
+	public static final fun toUtf8String ([B)Ljava/lang/String;
+}
+
+public final class cn/rtast/rob/ext/bytearray/ByteBuffer {
+	public fun <init> (I)V
+	public fun <init> ([B)V
+	public final fun ensureCapacity (I)V
+	public final fun getByte (I)B
+	public static synthetic fun getByte$default (Lcn/rtast/rob/ext/bytearray/ByteBuffer;IILjava/lang/Object;)B
+	public final fun getInt (I)I
+	public static synthetic fun getInt$default (Lcn/rtast/rob/ext/bytearray/ByteBuffer;IILjava/lang/Object;)I
+	public final fun getLong (I)J
+	public static synthetic fun getLong$default (Lcn/rtast/rob/ext/bytearray/ByteBuffer;IILjava/lang/Object;)J
+	public final fun put ([B)V
+	public final fun putByte (B)V
+	public final fun putInt (I)V
+	public final fun putLong (J)V
+	public final fun toByteArray ()[B
+}
+
