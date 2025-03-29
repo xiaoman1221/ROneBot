@@ -266,6 +266,8 @@ abstract interface <#A: cn.rtast.rob.entity/IGroupMessage, #B: cn.rtast.rob.enti
     abstract suspend fun (#B).reject(cn.rtast.rob.entity/IMessageChain) // cn.rtast.rob.command/IBaseCommand.reject|reject@1:1(cn.rtast.rob.entity.IMessageChain){}[0]
     abstract suspend fun (#B).skipSession() // cn.rtast.rob.command/IBaseCommand.skipSession|skipSession@1:1(){}[0]
     abstract suspend fun (#B).startSession() // cn.rtast.rob.command/IBaseCommand.startSession|startSession@1:1(){}[0]
+    abstract suspend fun <#A1: kotlin/Any> (#A).startSession(#A1) // cn.rtast.rob.command/IBaseCommand.startSession|startSession@1:0(0:0){0§<kotlin.Any>}[0]
+    abstract suspend fun <#A1: kotlin/Any> (#B).startSession(#A1) // cn.rtast.rob.command/IBaseCommand.startSession|startSession@1:1(0:0){0§<kotlin.Any>}[0]
     abstract suspend fun executeGroup(#A, kotlin.collections/List<kotlin/String>) // cn.rtast.rob.command/IBaseCommand.executeGroup|executeGroup(1:0;kotlin.collections.List<kotlin.String>){}[0]
     abstract suspend fun executeGroup(#A, kotlin.collections/List<kotlin/String>, kotlin/String) // cn.rtast.rob.command/IBaseCommand.executeGroup|executeGroup(1:0;kotlin.collections.List<kotlin.String>;kotlin.String){}[0]
     abstract suspend fun executePrivate(#B, kotlin.collections/List<kotlin/String>) // cn.rtast.rob.command/IBaseCommand.executePrivate|executePrivate(1:1;kotlin.collections.List<kotlin.String>){}[0]
@@ -273,15 +275,21 @@ abstract interface <#A: cn.rtast.rob.entity/IGroupMessage, #B: cn.rtast.rob.enti
     abstract suspend fun handleGroup(#A, kotlin/String) // cn.rtast.rob.command/IBaseCommand.handleGroup|handleGroup(1:0;kotlin.String){}[0]
     abstract suspend fun handlePrivate(#B, kotlin/String) // cn.rtast.rob.command/IBaseCommand.handlePrivate|handlePrivate(1:1;kotlin.String){}[0]
     abstract suspend fun onGroupSession(#A) // cn.rtast.rob.command/IBaseCommand.onGroupSession|onGroupSession(1:0){}[0]
+    abstract suspend fun onGroupSession(#A, kotlin/Any) // cn.rtast.rob.command/IBaseCommand.onGroupSession|onGroupSession(1:0;kotlin.Any){}[0]
     abstract suspend fun onPrivateSession(#B) // cn.rtast.rob.command/IBaseCommand.onPrivateSession|onPrivateSession(1:1){}[0]
+    abstract suspend fun onPrivateSession(#B, kotlin/Any) // cn.rtast.rob.command/IBaseCommand.onPrivateSession|onPrivateSession(1:1;kotlin.Any){}[0]
 }
 
-abstract interface <#A: cn.rtast.rob.entity/IPrivateMessage, #B: cn.rtast.rob.entity/IGroupMessage, #C: cn.rtast.rob.session/IPrivateSession, #D: cn.rtast.rob.session/IGroupSession, #E: cn.rtast.rob.command/IBaseCommand<out cn.rtast.rob.entity/IGroupMessage, out cn.rtast.rob.entity/IPrivateMessage>, #F: cn.rtast.rob.entity/IGroupSender, #G: cn.rtast.rob.entity/IPrivateSender> cn.rtast.rob.session/ISessionManager { // cn.rtast.rob.session/ISessionManager|null[0]
+abstract interface <#A: cn.rtast.rob.entity/IPrivateMessage, #B: cn.rtast.rob.entity/IGroupMessage, #C: cn.rtast.rob.session/IPrivateSession<*>, #D: cn.rtast.rob.session/IGroupSession<*>, #E: cn.rtast.rob.command/IBaseCommand<out cn.rtast.rob.entity/IGroupMessage, out cn.rtast.rob.entity/IPrivateMessage>, #F: cn.rtast.rob.entity/IGroupSender, #G: cn.rtast.rob.entity/IPrivateSender> cn.rtast.rob.session/ISessionManager { // cn.rtast.rob.session/ISessionManager|null[0]
     abstract val groupActiveSessions // cn.rtast.rob.session/ISessionManager.groupActiveSessions|{}groupActiveSessions[0]
-        abstract fun <get-groupActiveSessions>(): kotlin.collections/MutableMap<#F, out cn.rtast.rob.session/IGroupSession> // cn.rtast.rob.session/ISessionManager.groupActiveSessions.<get-groupActiveSessions>|<get-groupActiveSessions>(){}[0]
+        abstract fun <get-groupActiveSessions>(): kotlin.collections/MutableMap<#F, out cn.rtast.rob.session/IGroupSession<*>> // cn.rtast.rob.session/ISessionManager.groupActiveSessions.<get-groupActiveSessions>|<get-groupActiveSessions>(){}[0]
     abstract val privateActiveSessions // cn.rtast.rob.session/ISessionManager.privateActiveSessions|{}privateActiveSessions[0]
-        abstract fun <get-privateActiveSessions>(): kotlin.collections/MutableMap<#G, out cn.rtast.rob.session/IPrivateSession> // cn.rtast.rob.session/ISessionManager.privateActiveSessions.<get-privateActiveSessions>|<get-privateActiveSessions>(){}[0]
+        abstract fun <get-privateActiveSessions>(): kotlin.collections/MutableMap<#G, out cn.rtast.rob.session/IPrivateSession<*>> // cn.rtast.rob.session/ISessionManager.privateActiveSessions.<get-privateActiveSessions>|<get-privateActiveSessions>(){}[0]
 
+    abstract suspend fun <#A1: kotlin/Any> startPrivateSession(#A, #E, #A1): #C // cn.rtast.rob.session/ISessionManager.startPrivateSession|startPrivateSession(1:0;1:4;0:0){0§<kotlin.Any>}[0]
+    abstract suspend fun <#A1: kotlin/Any> starterGroupSession(#B, #E, #A1): #D // cn.rtast.rob.session/ISessionManager.starterGroupSession|starterGroupSession(1:1;1:4;0:0){0§<kotlin.Any>}[0]
+    abstract suspend fun <#A1: kotlin/Any?> getTypedGroupSession(#F): cn.rtast.rob.session/IGroupSession<#A1>? // cn.rtast.rob.session/ISessionManager.getTypedGroupSession|getTypedGroupSession(1:5){0§<kotlin.Any?>}[0]
+    abstract suspend fun <#A1: kotlin/Any?> getTypedPrivateSession(#G): cn.rtast.rob.session/IPrivateSession<#A1>? // cn.rtast.rob.session/ISessionManager.getTypedPrivateSession|getTypedPrivateSession(1:6){0§<kotlin.Any?>}[0]
     abstract suspend fun getGroupSession(#F): #D? // cn.rtast.rob.session/ISessionManager.getGroupSession|getGroupSession(1:5){}[0]
     abstract suspend fun getPrivateSession(#G): #C? // cn.rtast.rob.session/ISessionManager.getPrivateSession|getPrivateSession(1:6){}[0]
     abstract suspend fun startGroupSession(#B, #E): #D // cn.rtast.rob.session/ISessionManager.startGroupSession|startGroupSession(1:1;1:4){}[0]
@@ -333,6 +341,39 @@ abstract interface <#A: kotlin.collections/List<#B>, #B: cn.rtast.rob/BaseBotIns
     }
 }
 
+abstract interface <#A: kotlin/Any?> cn.rtast.rob.session/IGroupSession : cn.rtast.rob.session/ISession<#A> { // cn.rtast.rob.session/IGroupSession|null[0]
+    abstract val message // cn.rtast.rob.session/IGroupSession.message|{}message[0]
+        abstract fun <get-message>(): cn.rtast.rob.entity/IGroupMessage // cn.rtast.rob.session/IGroupSession.message.<get-message>|<get-message>(){}[0]
+    abstract val sender // cn.rtast.rob.session/IGroupSession.sender|{}sender[0]
+        abstract fun <get-sender>(): cn.rtast.rob.entity/IGroupSender // cn.rtast.rob.session/IGroupSession.sender.<get-sender>|<get-sender>(){}[0]
+}
+
+abstract interface <#A: kotlin/Any?> cn.rtast.rob.session/IPrivateSession : cn.rtast.rob.session/ISession<#A> { // cn.rtast.rob.session/IPrivateSession|null[0]
+    abstract val message // cn.rtast.rob.session/IPrivateSession.message|{}message[0]
+        abstract fun <get-message>(): cn.rtast.rob.entity/IPrivateMessage // cn.rtast.rob.session/IPrivateSession.message.<get-message>|<get-message>(){}[0]
+    abstract val sender // cn.rtast.rob.session/IPrivateSession.sender|{}sender[0]
+        abstract fun <get-sender>(): cn.rtast.rob.entity/IPrivateSender // cn.rtast.rob.session/IPrivateSession.sender.<get-sender>|<get-sender>(){}[0]
+}
+
+abstract interface <#A: kotlin/Any?> cn.rtast.rob.session/ISession { // cn.rtast.rob.session/ISession|null[0]
+    abstract val command // cn.rtast.rob.session/ISession.command|{}command[0]
+        abstract fun <get-command>(): cn.rtast.rob.command/IBaseCommand<out cn.rtast.rob.entity/IGroupMessage, out cn.rtast.rob.entity/IPrivateMessage> // cn.rtast.rob.session/ISession.command.<get-command>|<get-command>(){}[0]
+    abstract val id // cn.rtast.rob.session/ISession.id|{}id[0]
+        abstract fun <get-id>(): kotlin.uuid/Uuid // cn.rtast.rob.session/ISession.id.<get-id>|<get-id>(){}[0]
+    abstract val initArgType // cn.rtast.rob.session/ISession.initArgType|{}initArgType[0]
+        abstract fun <get-initArgType>(): #A // cn.rtast.rob.session/ISession.initArgType.<get-initArgType>|<get-initArgType>(){}[0]
+    abstract val message // cn.rtast.rob.session/ISession.message|{}message[0]
+        abstract fun <get-message>(): cn.rtast.rob.entity/IMessage // cn.rtast.rob.session/ISession.message.<get-message>|<get-message>(){}[0]
+    abstract val sender // cn.rtast.rob.session/ISession.sender|{}sender[0]
+        abstract fun <get-sender>(): cn.rtast.rob.entity/ISender // cn.rtast.rob.session/ISession.sender.<get-sender>|<get-sender>(){}[0]
+
+    abstract var active // cn.rtast.rob.session/ISession.active|{}active[0]
+        abstract fun <get-active>(): kotlin/Boolean // cn.rtast.rob.session/ISession.active.<get-active>|<get-active>(){}[0]
+        abstract fun <set-active>(kotlin/Boolean) // cn.rtast.rob.session/ISession.active.<set-active>|<set-active>(kotlin.Boolean){}[0]
+
+    open fun endSession() // cn.rtast.rob.session/ISession.endSession|endSession(){}[0]
+}
+
 abstract interface cn.rtast.rob.entity/IGroupMessage : cn.rtast.rob.entity/IMessage // cn.rtast.rob.entity/IGroupMessage|null[0]
 
 abstract interface cn.rtast.rob.entity/IGroupSender : cn.rtast.rob.entity/ISender // cn.rtast.rob.entity/IGroupSender|null[0]
@@ -358,37 +399,6 @@ abstract interface cn.rtast.rob.scheduler/TaskHandle { // cn.rtast.rob.scheduler
         abstract fun <get-isCancelled>(): kotlin/Boolean // cn.rtast.rob.scheduler/TaskHandle.isCancelled.<get-isCancelled>|<get-isCancelled>(){}[0]
 
     abstract suspend fun cancel(): kotlin/Boolean // cn.rtast.rob.scheduler/TaskHandle.cancel|cancel(){}[0]
-}
-
-abstract interface cn.rtast.rob.session/IGroupSession : cn.rtast.rob.session/ISession { // cn.rtast.rob.session/IGroupSession|null[0]
-    abstract val message // cn.rtast.rob.session/IGroupSession.message|{}message[0]
-        abstract fun <get-message>(): cn.rtast.rob.entity/IGroupMessage // cn.rtast.rob.session/IGroupSession.message.<get-message>|<get-message>(){}[0]
-    abstract val sender // cn.rtast.rob.session/IGroupSession.sender|{}sender[0]
-        abstract fun <get-sender>(): cn.rtast.rob.entity/IGroupSender // cn.rtast.rob.session/IGroupSession.sender.<get-sender>|<get-sender>(){}[0]
-}
-
-abstract interface cn.rtast.rob.session/IPrivateSession : cn.rtast.rob.session/ISession { // cn.rtast.rob.session/IPrivateSession|null[0]
-    abstract val message // cn.rtast.rob.session/IPrivateSession.message|{}message[0]
-        abstract fun <get-message>(): cn.rtast.rob.entity/IPrivateMessage // cn.rtast.rob.session/IPrivateSession.message.<get-message>|<get-message>(){}[0]
-    abstract val sender // cn.rtast.rob.session/IPrivateSession.sender|{}sender[0]
-        abstract fun <get-sender>(): cn.rtast.rob.entity/IPrivateSender // cn.rtast.rob.session/IPrivateSession.sender.<get-sender>|<get-sender>(){}[0]
-}
-
-abstract interface cn.rtast.rob.session/ISession { // cn.rtast.rob.session/ISession|null[0]
-    abstract val command // cn.rtast.rob.session/ISession.command|{}command[0]
-        abstract fun <get-command>(): cn.rtast.rob.command/IBaseCommand<out cn.rtast.rob.entity/IGroupMessage, out cn.rtast.rob.entity/IPrivateMessage> // cn.rtast.rob.session/ISession.command.<get-command>|<get-command>(){}[0]
-    abstract val id // cn.rtast.rob.session/ISession.id|{}id[0]
-        abstract fun <get-id>(): kotlin.uuid/Uuid // cn.rtast.rob.session/ISession.id.<get-id>|<get-id>(){}[0]
-    abstract val message // cn.rtast.rob.session/ISession.message|{}message[0]
-        abstract fun <get-message>(): cn.rtast.rob.entity/IMessage // cn.rtast.rob.session/ISession.message.<get-message>|<get-message>(){}[0]
-    abstract val sender // cn.rtast.rob.session/ISession.sender|{}sender[0]
-        abstract fun <get-sender>(): cn.rtast.rob.entity/ISender // cn.rtast.rob.session/ISession.sender.<get-sender>|<get-sender>(){}[0]
-
-    abstract var active // cn.rtast.rob.session/ISession.active|{}active[0]
-        abstract fun <get-active>(): kotlin/Boolean // cn.rtast.rob.session/ISession.active.<get-active>|<get-active>(){}[0]
-        abstract fun <set-active>(kotlin/Boolean) // cn.rtast.rob.session/ISession.active.<set-active>|<set-active>(kotlin.Boolean){}[0]
-
-    open fun endSession() // cn.rtast.rob.session/ISession.endSession|endSession(){}[0]
 }
 
 abstract interface cn.rtast.rob/BaseBotInstance { // cn.rtast.rob/BaseBotInstance|null[0]

@@ -256,9 +256,13 @@ public abstract class cn/rtast/rob/command/BaseCommand : cn/rtast/rob/command/IB
 	public final fun handleGroup (Lcn/rtast/rob/event/raw/GroupMessage;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public synthetic fun handlePrivate (Lcn/rtast/rob/entity/IPrivateMessage;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun handlePrivate (Lcn/rtast/rob/event/raw/PrivateMessage;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun onGroupSession (Lcn/rtast/rob/entity/IGroupMessage;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public synthetic fun onGroupSession (Lcn/rtast/rob/entity/IGroupMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun onGroupSession (Lcn/rtast/rob/event/raw/GroupMessage;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun onGroupSession (Lcn/rtast/rob/event/raw/GroupMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun onPrivateSession (Lcn/rtast/rob/entity/IPrivateMessage;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public synthetic fun onPrivateSession (Lcn/rtast/rob/entity/IPrivateMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun onPrivateSession (Lcn/rtast/rob/event/raw/PrivateMessage;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun onPrivateSession (Lcn/rtast/rob/event/raw/PrivateMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public synthetic fun reject (Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/entity/IMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public synthetic fun reject (Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/entity/IMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -268,9 +272,13 @@ public abstract class cn/rtast/rob/command/BaseCommand : cn/rtast/rob/command/IB
 	public synthetic fun skipSession (Lcn/rtast/rob/entity/IPrivateMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun skipSession (Lcn/rtast/rob/event/raw/GroupMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun skipSession (Lcn/rtast/rob/event/raw/PrivateMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun startSession (Lcn/rtast/rob/entity/IGroupMessage;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public synthetic fun startSession (Lcn/rtast/rob/entity/IGroupMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun startSession (Lcn/rtast/rob/entity/IPrivateMessage;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public synthetic fun startSession (Lcn/rtast/rob/entity/IPrivateMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun startSession (Lcn/rtast/rob/event/raw/GroupMessage;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun startSession (Lcn/rtast/rob/event/raw/GroupMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun startSession (Lcn/rtast/rob/event/raw/PrivateMessage;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun startSession (Lcn/rtast/rob/event/raw/PrivateMessage;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
@@ -6073,21 +6081,23 @@ public final class cn/rtast/rob/segment/XmlSegment$Companion {
 }
 
 public final class cn/rtast/rob/session/GroupSession : cn/rtast/rob/session/IGroupSession {
-	public fun <init> (Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/GroupMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/GroupSender;Z)V
-	public synthetic fun <init> (Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/GroupMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/GroupSender;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/GroupMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/GroupSender;Ljava/lang/Object;Z)V
+	public synthetic fun <init> (Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/GroupMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/GroupSender;Ljava/lang/Object;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Lkotlin/uuid/Uuid;
 	public final fun component2 ()Lcn/rtast/rob/event/raw/GroupMessage;
 	public final fun component3 ()Lcn/rtast/rob/command/BaseCommand;
 	public final fun component4 ()Lcn/rtast/rob/event/raw/GroupSender;
-	public final fun component5 ()Z
-	public final fun copy (Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/GroupMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/GroupSender;Z)Lcn/rtast/rob/session/GroupSession;
-	public static synthetic fun copy$default (Lcn/rtast/rob/session/GroupSession;Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/GroupMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/GroupSender;ZILjava/lang/Object;)Lcn/rtast/rob/session/GroupSession;
+	public final fun component5 ()Ljava/lang/Object;
+	public final fun component6 ()Z
+	public final fun copy (Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/GroupMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/GroupSender;Ljava/lang/Object;Z)Lcn/rtast/rob/session/GroupSession;
+	public static synthetic fun copy$default (Lcn/rtast/rob/session/GroupSession;Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/GroupMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/GroupSender;Ljava/lang/Object;ZILjava/lang/Object;)Lcn/rtast/rob/session/GroupSession;
 	public fun endSession ()V
 	public fun equals (Ljava/lang/Object;)Z
 	public fun getActive ()Z
 	public fun getCommand ()Lcn/rtast/rob/command/BaseCommand;
 	public synthetic fun getCommand ()Lcn/rtast/rob/command/IBaseCommand;
 	public fun getId ()Lkotlin/uuid/Uuid;
+	public fun getInitArgType ()Ljava/lang/Object;
 	public synthetic fun getMessage ()Lcn/rtast/rob/entity/IGroupMessage;
 	public synthetic fun getMessage ()Lcn/rtast/rob/entity/IMessage;
 	public fun getMessage ()Lcn/rtast/rob/event/raw/GroupMessage;
@@ -6103,21 +6113,23 @@ public final class cn/rtast/rob/session/GroupSession : cn/rtast/rob/session/IGro
 }
 
 public final class cn/rtast/rob/session/PrivateSession : cn/rtast/rob/session/IPrivateSession {
-	public fun <init> (Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/PrivateMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/PrivateSender;Z)V
-	public synthetic fun <init> (Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/PrivateMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/PrivateSender;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/PrivateMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/PrivateSender;Ljava/lang/Object;Z)V
+	public synthetic fun <init> (Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/PrivateMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/PrivateSender;Ljava/lang/Object;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Lkotlin/uuid/Uuid;
 	public final fun component2 ()Lcn/rtast/rob/event/raw/PrivateMessage;
 	public final fun component3 ()Lcn/rtast/rob/command/BaseCommand;
 	public final fun component4 ()Lcn/rtast/rob/event/raw/PrivateSender;
-	public final fun component5 ()Z
-	public final fun copy (Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/PrivateMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/PrivateSender;Z)Lcn/rtast/rob/session/PrivateSession;
-	public static synthetic fun copy$default (Lcn/rtast/rob/session/PrivateSession;Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/PrivateMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/PrivateSender;ZILjava/lang/Object;)Lcn/rtast/rob/session/PrivateSession;
+	public final fun component5 ()Ljava/lang/Object;
+	public final fun component6 ()Z
+	public final fun copy (Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/PrivateMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/PrivateSender;Ljava/lang/Object;Z)Lcn/rtast/rob/session/PrivateSession;
+	public static synthetic fun copy$default (Lcn/rtast/rob/session/PrivateSession;Lkotlin/uuid/Uuid;Lcn/rtast/rob/event/raw/PrivateMessage;Lcn/rtast/rob/command/BaseCommand;Lcn/rtast/rob/event/raw/PrivateSender;Ljava/lang/Object;ZILjava/lang/Object;)Lcn/rtast/rob/session/PrivateSession;
 	public fun endSession ()V
 	public fun equals (Ljava/lang/Object;)Z
 	public fun getActive ()Z
 	public fun getCommand ()Lcn/rtast/rob/command/BaseCommand;
 	public synthetic fun getCommand ()Lcn/rtast/rob/command/IBaseCommand;
 	public fun getId ()Lkotlin/uuid/Uuid;
+	public fun getInitArgType ()Ljava/lang/Object;
 	public synthetic fun getMessage ()Lcn/rtast/rob/entity/IMessage;
 	public synthetic fun getMessage ()Lcn/rtast/rob/entity/IPrivateMessage;
 	public fun getMessage ()Lcn/rtast/rob/event/raw/PrivateMessage;
@@ -6144,10 +6156,18 @@ public final class cn/rtast/rob/session/SessionManager : cn/rtast/rob/session/IS
 	public fun getPrivateActiveSessions ()Ljava/util/Map;
 	public synthetic fun getPrivateSession (Lcn/rtast/rob/entity/IPrivateSender;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun getPrivateSession (Lcn/rtast/rob/event/raw/PrivateSender;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun getTypedGroupSession (Lcn/rtast/rob/entity/IGroupSender;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getTypedGroupSession (Lcn/rtast/rob/event/raw/GroupSender;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun getTypedPrivateSession (Lcn/rtast/rob/entity/IPrivateSender;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getTypedPrivateSession (Lcn/rtast/rob/event/raw/PrivateSender;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public synthetic fun startGroupSession (Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun startGroupSession (Lcn/rtast/rob/event/raw/GroupMessage;Lcn/rtast/rob/command/BaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun startPrivateSession (Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/command/IBaseCommand;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public synthetic fun startPrivateSession (Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun startPrivateSession (Lcn/rtast/rob/event/raw/PrivateMessage;Lcn/rtast/rob/command/BaseCommand;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun startPrivateSession (Lcn/rtast/rob/event/raw/PrivateMessage;Lcn/rtast/rob/command/BaseCommand;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public synthetic fun starterGroupSession (Lcn/rtast/rob/entity/IGroupMessage;Lcn/rtast/rob/command/IBaseCommand;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun starterGroupSession (Lcn/rtast/rob/event/raw/GroupMessage;Lcn/rtast/rob/command/BaseCommand;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
 public final class cn/rtast/rob/util/BotManager : cn/rtast/rob/util/IBotManager {

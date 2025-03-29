@@ -491,6 +491,8 @@ abstract class cn.rtast.rob.command/BaseCommand : cn.rtast.rob.command/IBaseComm
     final suspend fun (cn.rtast.rob.event.raw/PrivateMessage).reject(cn.rtast.rob.entity/IMessageChain) // cn.rtast.rob.command/BaseCommand.reject|reject@cn.rtast.rob.event.raw.PrivateMessage(cn.rtast.rob.entity.IMessageChain){}[0]
     final suspend fun (cn.rtast.rob.event.raw/PrivateMessage).skipSession() // cn.rtast.rob.command/BaseCommand.skipSession|skipSession@cn.rtast.rob.event.raw.PrivateMessage(){}[0]
     final suspend fun (cn.rtast.rob.event.raw/PrivateMessage).startSession() // cn.rtast.rob.command/BaseCommand.startSession|startSession@cn.rtast.rob.event.raw.PrivateMessage(){}[0]
+    final suspend fun <#A1: kotlin/Any> (cn.rtast.rob.event.raw/GroupMessage).startSession(#A1) // cn.rtast.rob.command/BaseCommand.startSession|startSession@cn.rtast.rob.event.raw.GroupMessage(0:0){0§<kotlin.Any>}[0]
+    final suspend fun <#A1: kotlin/Any> (cn.rtast.rob.event.raw/PrivateMessage).startSession(#A1) // cn.rtast.rob.command/BaseCommand.startSession|startSession@cn.rtast.rob.event.raw.PrivateMessage(0:0){0§<kotlin.Any>}[0]
     final suspend fun handleGroup(cn.rtast.rob.event.raw/GroupMessage, kotlin/String) // cn.rtast.rob.command/BaseCommand.handleGroup|handleGroup(cn.rtast.rob.event.raw.GroupMessage;kotlin.String){}[0]
     final suspend fun handlePrivate(cn.rtast.rob.event.raw/PrivateMessage, kotlin/String) // cn.rtast.rob.command/BaseCommand.handlePrivate|handlePrivate(cn.rtast.rob.event.raw.PrivateMessage;kotlin.String){}[0]
     open suspend fun executeGroup(cn.rtast.rob.event.raw/GroupMessage, kotlin.collections/List<kotlin/String>) // cn.rtast.rob.command/BaseCommand.executeGroup|executeGroup(cn.rtast.rob.event.raw.GroupMessage;kotlin.collections.List<kotlin.String>){}[0]
@@ -498,7 +500,9 @@ abstract class cn.rtast.rob.command/BaseCommand : cn.rtast.rob.command/IBaseComm
     open suspend fun executePrivate(cn.rtast.rob.event.raw/PrivateMessage, kotlin.collections/List<kotlin/String>) // cn.rtast.rob.command/BaseCommand.executePrivate|executePrivate(cn.rtast.rob.event.raw.PrivateMessage;kotlin.collections.List<kotlin.String>){}[0]
     open suspend fun executePrivate(cn.rtast.rob.event.raw/PrivateMessage, kotlin.collections/List<kotlin/String>, kotlin/String) // cn.rtast.rob.command/BaseCommand.executePrivate|executePrivate(cn.rtast.rob.event.raw.PrivateMessage;kotlin.collections.List<kotlin.String>;kotlin.String){}[0]
     open suspend fun onGroupSession(cn.rtast.rob.event.raw/GroupMessage) // cn.rtast.rob.command/BaseCommand.onGroupSession|onGroupSession(cn.rtast.rob.event.raw.GroupMessage){}[0]
+    open suspend fun onGroupSession(cn.rtast.rob.event.raw/GroupMessage, kotlin/Any) // cn.rtast.rob.command/BaseCommand.onGroupSession|onGroupSession(cn.rtast.rob.event.raw.GroupMessage;kotlin.Any){}[0]
     open suspend fun onPrivateSession(cn.rtast.rob.event.raw/PrivateMessage) // cn.rtast.rob.command/BaseCommand.onPrivateSession|onPrivateSession(cn.rtast.rob.event.raw.PrivateMessage){}[0]
+    open suspend fun onPrivateSession(cn.rtast.rob.event.raw/PrivateMessage, kotlin/Any) // cn.rtast.rob.command/BaseCommand.onPrivateSession|onPrivateSession(cn.rtast.rob.event.raw.PrivateMessage;kotlin.Any){}[0]
 }
 
 abstract class cn.rtast.rob.interceptor/CommandInterceptor : cn.rtast.rob.interceptor/ICommandInterceptor<cn.rtast.rob.command/BaseCommand, cn.rtast.rob.event.raw/GroupMessage, cn.rtast.rob.event.raw/PrivateMessage> { // cn.rtast.rob.interceptor/CommandInterceptor|null[0]
@@ -506,6 +510,72 @@ abstract class cn.rtast.rob.interceptor/CommandInterceptor : cn.rtast.rob.interc
 
     final suspend fun handleGroupInterceptor(cn.rtast.rob.event.raw/GroupMessage, cn.rtast.rob.command/BaseCommand, kotlin.coroutines/SuspendFunction1<cn.rtast.rob.event.raw/GroupMessage, kotlin/Unit>) // cn.rtast.rob.interceptor/CommandInterceptor.handleGroupInterceptor|handleGroupInterceptor(cn.rtast.rob.event.raw.GroupMessage;cn.rtast.rob.command.BaseCommand;kotlin.coroutines.SuspendFunction1<cn.rtast.rob.event.raw.GroupMessage,kotlin.Unit>){}[0]
     final suspend fun handlePrivateInterceptor(cn.rtast.rob.event.raw/PrivateMessage, cn.rtast.rob.command/BaseCommand, kotlin.coroutines/SuspendFunction1<cn.rtast.rob.event.raw/PrivateMessage, kotlin/Unit>) // cn.rtast.rob.interceptor/CommandInterceptor.handlePrivateInterceptor|handlePrivateInterceptor(cn.rtast.rob.event.raw.PrivateMessage;cn.rtast.rob.command.BaseCommand;kotlin.coroutines.SuspendFunction1<cn.rtast.rob.event.raw.PrivateMessage,kotlin.Unit>){}[0]
+}
+
+final class <#A: kotlin/Any> cn.rtast.rob.session/GroupSession : cn.rtast.rob.session/IGroupSession<#A> { // cn.rtast.rob.session/GroupSession|null[0]
+    constructor <init>(kotlin.uuid/Uuid, cn.rtast.rob.event.raw/GroupMessage, cn.rtast.rob.command/BaseCommand, cn.rtast.rob.event.raw/GroupSender, #A, kotlin/Boolean = ...) // cn.rtast.rob.session/GroupSession.<init>|<init>(kotlin.uuid.Uuid;cn.rtast.rob.event.raw.GroupMessage;cn.rtast.rob.command.BaseCommand;cn.rtast.rob.event.raw.GroupSender;1:0;kotlin.Boolean){}[0]
+
+    final val initArgType // cn.rtast.rob.session/GroupSession.initArgType|{}initArgType[0]
+        final fun <get-initArgType>(): #A // cn.rtast.rob.session/GroupSession.initArgType.<get-initArgType>|<get-initArgType>(){}[0]
+    final val sender // cn.rtast.rob.session/GroupSession.sender|{}sender[0]
+        final fun <get-sender>(): cn.rtast.rob.event.raw/GroupSender // cn.rtast.rob.session/GroupSession.sender.<get-sender>|<get-sender>(){}[0]
+
+    final var active // cn.rtast.rob.session/GroupSession.active|{}active[0]
+        final fun <get-active>(): kotlin/Boolean // cn.rtast.rob.session/GroupSession.active.<get-active>|<get-active>(){}[0]
+        final fun <set-active>(kotlin/Boolean) // cn.rtast.rob.session/GroupSession.active.<set-active>|<set-active>(kotlin.Boolean){}[0]
+    final var command // cn.rtast.rob.session/GroupSession.command|{}command[0]
+        final fun <get-command>(): cn.rtast.rob.command/BaseCommand // cn.rtast.rob.session/GroupSession.command.<get-command>|<get-command>(){}[0]
+        final fun <set-command>(cn.rtast.rob.command/BaseCommand) // cn.rtast.rob.session/GroupSession.command.<set-command>|<set-command>(cn.rtast.rob.command.BaseCommand){}[0]
+    final var id // cn.rtast.rob.session/GroupSession.id|{}id[0]
+        final fun <get-id>(): kotlin.uuid/Uuid // cn.rtast.rob.session/GroupSession.id.<get-id>|<get-id>(){}[0]
+        final fun <set-id>(kotlin.uuid/Uuid) // cn.rtast.rob.session/GroupSession.id.<set-id>|<set-id>(kotlin.uuid.Uuid){}[0]
+    final var message // cn.rtast.rob.session/GroupSession.message|{}message[0]
+        final fun <get-message>(): cn.rtast.rob.event.raw/GroupMessage // cn.rtast.rob.session/GroupSession.message.<get-message>|<get-message>(){}[0]
+        final fun <set-message>(cn.rtast.rob.event.raw/GroupMessage) // cn.rtast.rob.session/GroupSession.message.<set-message>|<set-message>(cn.rtast.rob.event.raw.GroupMessage){}[0]
+
+    final fun component1(): kotlin.uuid/Uuid // cn.rtast.rob.session/GroupSession.component1|component1(){}[0]
+    final fun component2(): cn.rtast.rob.event.raw/GroupMessage // cn.rtast.rob.session/GroupSession.component2|component2(){}[0]
+    final fun component3(): cn.rtast.rob.command/BaseCommand // cn.rtast.rob.session/GroupSession.component3|component3(){}[0]
+    final fun component4(): cn.rtast.rob.event.raw/GroupSender // cn.rtast.rob.session/GroupSession.component4|component4(){}[0]
+    final fun component5(): #A // cn.rtast.rob.session/GroupSession.component5|component5(){}[0]
+    final fun component6(): kotlin/Boolean // cn.rtast.rob.session/GroupSession.component6|component6(){}[0]
+    final fun copy(kotlin.uuid/Uuid = ..., cn.rtast.rob.event.raw/GroupMessage = ..., cn.rtast.rob.command/BaseCommand = ..., cn.rtast.rob.event.raw/GroupSender = ..., #A = ..., kotlin/Boolean = ...): cn.rtast.rob.session/GroupSession<#A> // cn.rtast.rob.session/GroupSession.copy|copy(kotlin.uuid.Uuid;cn.rtast.rob.event.raw.GroupMessage;cn.rtast.rob.command.BaseCommand;cn.rtast.rob.event.raw.GroupSender;1:0;kotlin.Boolean){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.session/GroupSession.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.session/GroupSession.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.session/GroupSession.toString|toString(){}[0]
+}
+
+final class <#A: kotlin/Any> cn.rtast.rob.session/PrivateSession : cn.rtast.rob.session/IPrivateSession<#A> { // cn.rtast.rob.session/PrivateSession|null[0]
+    constructor <init>(kotlin.uuid/Uuid, cn.rtast.rob.event.raw/PrivateMessage, cn.rtast.rob.command/BaseCommand, cn.rtast.rob.event.raw/PrivateSender, #A, kotlin/Boolean = ...) // cn.rtast.rob.session/PrivateSession.<init>|<init>(kotlin.uuid.Uuid;cn.rtast.rob.event.raw.PrivateMessage;cn.rtast.rob.command.BaseCommand;cn.rtast.rob.event.raw.PrivateSender;1:0;kotlin.Boolean){}[0]
+
+    final val initArgType // cn.rtast.rob.session/PrivateSession.initArgType|{}initArgType[0]
+        final fun <get-initArgType>(): #A // cn.rtast.rob.session/PrivateSession.initArgType.<get-initArgType>|<get-initArgType>(){}[0]
+    final val sender // cn.rtast.rob.session/PrivateSession.sender|{}sender[0]
+        final fun <get-sender>(): cn.rtast.rob.event.raw/PrivateSender // cn.rtast.rob.session/PrivateSession.sender.<get-sender>|<get-sender>(){}[0]
+
+    final var active // cn.rtast.rob.session/PrivateSession.active|{}active[0]
+        final fun <get-active>(): kotlin/Boolean // cn.rtast.rob.session/PrivateSession.active.<get-active>|<get-active>(){}[0]
+        final fun <set-active>(kotlin/Boolean) // cn.rtast.rob.session/PrivateSession.active.<set-active>|<set-active>(kotlin.Boolean){}[0]
+    final var command // cn.rtast.rob.session/PrivateSession.command|{}command[0]
+        final fun <get-command>(): cn.rtast.rob.command/BaseCommand // cn.rtast.rob.session/PrivateSession.command.<get-command>|<get-command>(){}[0]
+        final fun <set-command>(cn.rtast.rob.command/BaseCommand) // cn.rtast.rob.session/PrivateSession.command.<set-command>|<set-command>(cn.rtast.rob.command.BaseCommand){}[0]
+    final var id // cn.rtast.rob.session/PrivateSession.id|{}id[0]
+        final fun <get-id>(): kotlin.uuid/Uuid // cn.rtast.rob.session/PrivateSession.id.<get-id>|<get-id>(){}[0]
+        final fun <set-id>(kotlin.uuid/Uuid) // cn.rtast.rob.session/PrivateSession.id.<set-id>|<set-id>(kotlin.uuid.Uuid){}[0]
+    final var message // cn.rtast.rob.session/PrivateSession.message|{}message[0]
+        final fun <get-message>(): cn.rtast.rob.event.raw/PrivateMessage // cn.rtast.rob.session/PrivateSession.message.<get-message>|<get-message>(){}[0]
+        final fun <set-message>(cn.rtast.rob.event.raw/PrivateMessage) // cn.rtast.rob.session/PrivateSession.message.<set-message>|<set-message>(cn.rtast.rob.event.raw.PrivateMessage){}[0]
+
+    final fun component1(): kotlin.uuid/Uuid // cn.rtast.rob.session/PrivateSession.component1|component1(){}[0]
+    final fun component2(): cn.rtast.rob.event.raw/PrivateMessage // cn.rtast.rob.session/PrivateSession.component2|component2(){}[0]
+    final fun component3(): cn.rtast.rob.command/BaseCommand // cn.rtast.rob.session/PrivateSession.component3|component3(){}[0]
+    final fun component4(): cn.rtast.rob.event.raw/PrivateSender // cn.rtast.rob.session/PrivateSession.component4|component4(){}[0]
+    final fun component5(): #A // cn.rtast.rob.session/PrivateSession.component5|component5(){}[0]
+    final fun component6(): kotlin/Boolean // cn.rtast.rob.session/PrivateSession.component6|component6(){}[0]
+    final fun copy(kotlin.uuid/Uuid = ..., cn.rtast.rob.event.raw/PrivateMessage = ..., cn.rtast.rob.command/BaseCommand = ..., cn.rtast.rob.event.raw/PrivateSender = ..., #A = ..., kotlin/Boolean = ...): cn.rtast.rob.session/PrivateSession<#A> // cn.rtast.rob.session/PrivateSession.copy|copy(kotlin.uuid.Uuid;cn.rtast.rob.event.raw.PrivateMessage;cn.rtast.rob.command.BaseCommand;cn.rtast.rob.event.raw.PrivateSender;1:0;kotlin.Boolean){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.session/PrivateSession.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.session/PrivateSession.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.session/PrivateSession.toString|toString(){}[0]
 }
 
 final class cn.rtast.rob.api.get/AIRecordCharacters { // cn.rtast.rob.api.get/AIRecordCharacters|null[0]
@@ -6237,78 +6307,22 @@ final class cn.rtast.rob.segment/XmlSegment : cn.rtast.rob.segment/MessageSegmen
     }
 }
 
-final class cn.rtast.rob.session/GroupSession : cn.rtast.rob.session/IGroupSession { // cn.rtast.rob.session/GroupSession|null[0]
-    constructor <init>(kotlin.uuid/Uuid, cn.rtast.rob.event.raw/GroupMessage, cn.rtast.rob.command/BaseCommand, cn.rtast.rob.event.raw/GroupSender, kotlin/Boolean = ...) // cn.rtast.rob.session/GroupSession.<init>|<init>(kotlin.uuid.Uuid;cn.rtast.rob.event.raw.GroupMessage;cn.rtast.rob.command.BaseCommand;cn.rtast.rob.event.raw.GroupSender;kotlin.Boolean){}[0]
-
-    final val sender // cn.rtast.rob.session/GroupSession.sender|{}sender[0]
-        final fun <get-sender>(): cn.rtast.rob.event.raw/GroupSender // cn.rtast.rob.session/GroupSession.sender.<get-sender>|<get-sender>(){}[0]
-
-    final var active // cn.rtast.rob.session/GroupSession.active|{}active[0]
-        final fun <get-active>(): kotlin/Boolean // cn.rtast.rob.session/GroupSession.active.<get-active>|<get-active>(){}[0]
-        final fun <set-active>(kotlin/Boolean) // cn.rtast.rob.session/GroupSession.active.<set-active>|<set-active>(kotlin.Boolean){}[0]
-    final var command // cn.rtast.rob.session/GroupSession.command|{}command[0]
-        final fun <get-command>(): cn.rtast.rob.command/BaseCommand // cn.rtast.rob.session/GroupSession.command.<get-command>|<get-command>(){}[0]
-        final fun <set-command>(cn.rtast.rob.command/BaseCommand) // cn.rtast.rob.session/GroupSession.command.<set-command>|<set-command>(cn.rtast.rob.command.BaseCommand){}[0]
-    final var id // cn.rtast.rob.session/GroupSession.id|{}id[0]
-        final fun <get-id>(): kotlin.uuid/Uuid // cn.rtast.rob.session/GroupSession.id.<get-id>|<get-id>(){}[0]
-        final fun <set-id>(kotlin.uuid/Uuid) // cn.rtast.rob.session/GroupSession.id.<set-id>|<set-id>(kotlin.uuid.Uuid){}[0]
-    final var message // cn.rtast.rob.session/GroupSession.message|{}message[0]
-        final fun <get-message>(): cn.rtast.rob.event.raw/GroupMessage // cn.rtast.rob.session/GroupSession.message.<get-message>|<get-message>(){}[0]
-        final fun <set-message>(cn.rtast.rob.event.raw/GroupMessage) // cn.rtast.rob.session/GroupSession.message.<set-message>|<set-message>(cn.rtast.rob.event.raw.GroupMessage){}[0]
-
-    final fun component1(): kotlin.uuid/Uuid // cn.rtast.rob.session/GroupSession.component1|component1(){}[0]
-    final fun component2(): cn.rtast.rob.event.raw/GroupMessage // cn.rtast.rob.session/GroupSession.component2|component2(){}[0]
-    final fun component3(): cn.rtast.rob.command/BaseCommand // cn.rtast.rob.session/GroupSession.component3|component3(){}[0]
-    final fun component4(): cn.rtast.rob.event.raw/GroupSender // cn.rtast.rob.session/GroupSession.component4|component4(){}[0]
-    final fun component5(): kotlin/Boolean // cn.rtast.rob.session/GroupSession.component5|component5(){}[0]
-    final fun copy(kotlin.uuid/Uuid = ..., cn.rtast.rob.event.raw/GroupMessage = ..., cn.rtast.rob.command/BaseCommand = ..., cn.rtast.rob.event.raw/GroupSender = ..., kotlin/Boolean = ...): cn.rtast.rob.session/GroupSession // cn.rtast.rob.session/GroupSession.copy|copy(kotlin.uuid.Uuid;cn.rtast.rob.event.raw.GroupMessage;cn.rtast.rob.command.BaseCommand;cn.rtast.rob.event.raw.GroupSender;kotlin.Boolean){}[0]
-    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.session/GroupSession.equals|equals(kotlin.Any?){}[0]
-    final fun hashCode(): kotlin/Int // cn.rtast.rob.session/GroupSession.hashCode|hashCode(){}[0]
-    final fun toString(): kotlin/String // cn.rtast.rob.session/GroupSession.toString|toString(){}[0]
-}
-
-final class cn.rtast.rob.session/PrivateSession : cn.rtast.rob.session/IPrivateSession { // cn.rtast.rob.session/PrivateSession|null[0]
-    constructor <init>(kotlin.uuid/Uuid, cn.rtast.rob.event.raw/PrivateMessage, cn.rtast.rob.command/BaseCommand, cn.rtast.rob.event.raw/PrivateSender, kotlin/Boolean = ...) // cn.rtast.rob.session/PrivateSession.<init>|<init>(kotlin.uuid.Uuid;cn.rtast.rob.event.raw.PrivateMessage;cn.rtast.rob.command.BaseCommand;cn.rtast.rob.event.raw.PrivateSender;kotlin.Boolean){}[0]
-
-    final val sender // cn.rtast.rob.session/PrivateSession.sender|{}sender[0]
-        final fun <get-sender>(): cn.rtast.rob.event.raw/PrivateSender // cn.rtast.rob.session/PrivateSession.sender.<get-sender>|<get-sender>(){}[0]
-
-    final var active // cn.rtast.rob.session/PrivateSession.active|{}active[0]
-        final fun <get-active>(): kotlin/Boolean // cn.rtast.rob.session/PrivateSession.active.<get-active>|<get-active>(){}[0]
-        final fun <set-active>(kotlin/Boolean) // cn.rtast.rob.session/PrivateSession.active.<set-active>|<set-active>(kotlin.Boolean){}[0]
-    final var command // cn.rtast.rob.session/PrivateSession.command|{}command[0]
-        final fun <get-command>(): cn.rtast.rob.command/BaseCommand // cn.rtast.rob.session/PrivateSession.command.<get-command>|<get-command>(){}[0]
-        final fun <set-command>(cn.rtast.rob.command/BaseCommand) // cn.rtast.rob.session/PrivateSession.command.<set-command>|<set-command>(cn.rtast.rob.command.BaseCommand){}[0]
-    final var id // cn.rtast.rob.session/PrivateSession.id|{}id[0]
-        final fun <get-id>(): kotlin.uuid/Uuid // cn.rtast.rob.session/PrivateSession.id.<get-id>|<get-id>(){}[0]
-        final fun <set-id>(kotlin.uuid/Uuid) // cn.rtast.rob.session/PrivateSession.id.<set-id>|<set-id>(kotlin.uuid.Uuid){}[0]
-    final var message // cn.rtast.rob.session/PrivateSession.message|{}message[0]
-        final fun <get-message>(): cn.rtast.rob.event.raw/PrivateMessage // cn.rtast.rob.session/PrivateSession.message.<get-message>|<get-message>(){}[0]
-        final fun <set-message>(cn.rtast.rob.event.raw/PrivateMessage) // cn.rtast.rob.session/PrivateSession.message.<set-message>|<set-message>(cn.rtast.rob.event.raw.PrivateMessage){}[0]
-
-    final fun component1(): kotlin.uuid/Uuid // cn.rtast.rob.session/PrivateSession.component1|component1(){}[0]
-    final fun component2(): cn.rtast.rob.event.raw/PrivateMessage // cn.rtast.rob.session/PrivateSession.component2|component2(){}[0]
-    final fun component3(): cn.rtast.rob.command/BaseCommand // cn.rtast.rob.session/PrivateSession.component3|component3(){}[0]
-    final fun component4(): cn.rtast.rob.event.raw/PrivateSender // cn.rtast.rob.session/PrivateSession.component4|component4(){}[0]
-    final fun component5(): kotlin/Boolean // cn.rtast.rob.session/PrivateSession.component5|component5(){}[0]
-    final fun copy(kotlin.uuid/Uuid = ..., cn.rtast.rob.event.raw/PrivateMessage = ..., cn.rtast.rob.command/BaseCommand = ..., cn.rtast.rob.event.raw/PrivateSender = ..., kotlin/Boolean = ...): cn.rtast.rob.session/PrivateSession // cn.rtast.rob.session/PrivateSession.copy|copy(kotlin.uuid.Uuid;cn.rtast.rob.event.raw.PrivateMessage;cn.rtast.rob.command.BaseCommand;cn.rtast.rob.event.raw.PrivateSender;kotlin.Boolean){}[0]
-    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.session/PrivateSession.equals|equals(kotlin.Any?){}[0]
-    final fun hashCode(): kotlin/Int // cn.rtast.rob.session/PrivateSession.hashCode|hashCode(){}[0]
-    final fun toString(): kotlin/String // cn.rtast.rob.session/PrivateSession.toString|toString(){}[0]
-}
-
-final class cn.rtast.rob.session/SessionManager : cn.rtast.rob.session/ISessionManager<cn.rtast.rob.event.raw/PrivateMessage, cn.rtast.rob.event.raw/GroupMessage, cn.rtast.rob.session/PrivateSession, cn.rtast.rob.session/GroupSession, cn.rtast.rob.command/BaseCommand, cn.rtast.rob.event.raw/GroupSender, cn.rtast.rob.event.raw/PrivateSender> { // cn.rtast.rob.session/SessionManager|null[0]
+final class cn.rtast.rob.session/SessionManager : cn.rtast.rob.session/ISessionManager<cn.rtast.rob.event.raw/PrivateMessage, cn.rtast.rob.event.raw/GroupMessage, cn.rtast.rob.session/PrivateSession<*>, cn.rtast.rob.session/GroupSession<*>, cn.rtast.rob.command/BaseCommand, cn.rtast.rob.event.raw/GroupSender, cn.rtast.rob.event.raw/PrivateSender> { // cn.rtast.rob.session/SessionManager|null[0]
     constructor <init>() // cn.rtast.rob.session/SessionManager.<init>|<init>(){}[0]
 
     final val groupActiveSessions // cn.rtast.rob.session/SessionManager.groupActiveSessions|{}groupActiveSessions[0]
-        final fun <get-groupActiveSessions>(): kotlin.collections/MutableMap<cn.rtast.rob.event.raw/GroupSender, cn.rtast.rob.session/GroupSession> // cn.rtast.rob.session/SessionManager.groupActiveSessions.<get-groupActiveSessions>|<get-groupActiveSessions>(){}[0]
+        final fun <get-groupActiveSessions>(): kotlin.collections/MutableMap<cn.rtast.rob.event.raw/GroupSender, cn.rtast.rob.session/GroupSession<*>> // cn.rtast.rob.session/SessionManager.groupActiveSessions.<get-groupActiveSessions>|<get-groupActiveSessions>(){}[0]
     final val privateActiveSessions // cn.rtast.rob.session/SessionManager.privateActiveSessions|{}privateActiveSessions[0]
-        final fun <get-privateActiveSessions>(): kotlin.collections/MutableMap<cn.rtast.rob.event.raw/PrivateSender, cn.rtast.rob.session/PrivateSession> // cn.rtast.rob.session/SessionManager.privateActiveSessions.<get-privateActiveSessions>|<get-privateActiveSessions>(){}[0]
+        final fun <get-privateActiveSessions>(): kotlin.collections/MutableMap<cn.rtast.rob.event.raw/PrivateSender, cn.rtast.rob.session/PrivateSession<*>> // cn.rtast.rob.session/SessionManager.privateActiveSessions.<get-privateActiveSessions>|<get-privateActiveSessions>(){}[0]
 
-    final suspend fun getGroupSession(cn.rtast.rob.event.raw/GroupSender): cn.rtast.rob.session/GroupSession? // cn.rtast.rob.session/SessionManager.getGroupSession|getGroupSession(cn.rtast.rob.event.raw.GroupSender){}[0]
-    final suspend fun getPrivateSession(cn.rtast.rob.event.raw/PrivateSender): cn.rtast.rob.session/PrivateSession? // cn.rtast.rob.session/SessionManager.getPrivateSession|getPrivateSession(cn.rtast.rob.event.raw.PrivateSender){}[0]
-    final suspend fun startGroupSession(cn.rtast.rob.event.raw/GroupMessage, cn.rtast.rob.command/BaseCommand): cn.rtast.rob.session/GroupSession // cn.rtast.rob.session/SessionManager.startGroupSession|startGroupSession(cn.rtast.rob.event.raw.GroupMessage;cn.rtast.rob.command.BaseCommand){}[0]
-    final suspend fun startPrivateSession(cn.rtast.rob.event.raw/PrivateMessage, cn.rtast.rob.command/BaseCommand): cn.rtast.rob.session/PrivateSession // cn.rtast.rob.session/SessionManager.startPrivateSession|startPrivateSession(cn.rtast.rob.event.raw.PrivateMessage;cn.rtast.rob.command.BaseCommand){}[0]
+    final suspend fun <#A1: kotlin/Any> startPrivateSession(cn.rtast.rob.event.raw/PrivateMessage, cn.rtast.rob.command/BaseCommand, #A1): cn.rtast.rob.session/PrivateSession<#A1> // cn.rtast.rob.session/SessionManager.startPrivateSession|startPrivateSession(cn.rtast.rob.event.raw.PrivateMessage;cn.rtast.rob.command.BaseCommand;0:0){0§<kotlin.Any>}[0]
+    final suspend fun <#A1: kotlin/Any> starterGroupSession(cn.rtast.rob.event.raw/GroupMessage, cn.rtast.rob.command/BaseCommand, #A1): cn.rtast.rob.session/GroupSession<#A1> // cn.rtast.rob.session/SessionManager.starterGroupSession|starterGroupSession(cn.rtast.rob.event.raw.GroupMessage;cn.rtast.rob.command.BaseCommand;0:0){0§<kotlin.Any>}[0]
+    final suspend fun <#A1: kotlin/Any?> getTypedGroupSession(cn.rtast.rob.event.raw/GroupSender): cn.rtast.rob.session/IGroupSession<#A1>? // cn.rtast.rob.session/SessionManager.getTypedGroupSession|getTypedGroupSession(cn.rtast.rob.event.raw.GroupSender){0§<kotlin.Any?>}[0]
+    final suspend fun <#A1: kotlin/Any?> getTypedPrivateSession(cn.rtast.rob.event.raw/PrivateSender): cn.rtast.rob.session/IPrivateSession<#A1>? // cn.rtast.rob.session/SessionManager.getTypedPrivateSession|getTypedPrivateSession(cn.rtast.rob.event.raw.PrivateSender){0§<kotlin.Any?>}[0]
+    final suspend fun getGroupSession(cn.rtast.rob.event.raw/GroupSender): cn.rtast.rob.session/GroupSession<*>? // cn.rtast.rob.session/SessionManager.getGroupSession|getGroupSession(cn.rtast.rob.event.raw.GroupSender){}[0]
+    final suspend fun getPrivateSession(cn.rtast.rob.event.raw/PrivateSender): cn.rtast.rob.session/PrivateSession<*>? // cn.rtast.rob.session/SessionManager.getPrivateSession|getPrivateSession(cn.rtast.rob.event.raw.PrivateSender){}[0]
+    final suspend fun startGroupSession(cn.rtast.rob.event.raw/GroupMessage, cn.rtast.rob.command/BaseCommand): cn.rtast.rob.session/GroupSession<*> // cn.rtast.rob.session/SessionManager.startGroupSession|startGroupSession(cn.rtast.rob.event.raw.GroupMessage;cn.rtast.rob.command.BaseCommand){}[0]
+    final suspend fun startPrivateSession(cn.rtast.rob.event.raw/PrivateMessage, cn.rtast.rob.command/BaseCommand): cn.rtast.rob.session/PrivateSession<*> // cn.rtast.rob.session/SessionManager.startPrivateSession|startPrivateSession(cn.rtast.rob.event.raw.PrivateMessage;cn.rtast.rob.command.BaseCommand){}[0]
 }
 
 final class cn.rtast.rob.util.ws/WebsocketSession { // cn.rtast.rob.util.ws/WebsocketSession|null[0]
