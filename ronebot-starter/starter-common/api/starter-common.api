@@ -1,3 +1,20 @@
+public final class cn/rtast/rob/starter/common/ExtraFeature : java/lang/Enum {
+	public static final field Companion Lcn/rtast/rob/starter/common/ExtraFeature$Companion;
+	public static final field MessageDatabase Lcn/rtast/rob/starter/common/ExtraFeature;
+	public static final field Permission Lcn/rtast/rob/starter/common/ExtraFeature;
+	public static final field StringFormat Lcn/rtast/rob/starter/common/ExtraFeature;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getFeatureName ()Ljava/lang/String;
+	public final fun getFeatureString ()Ljava/lang/String;
+	public final fun getReplacement ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/starter/common/ExtraFeature;
+	public static fun values ()[Lcn/rtast/rob/starter/common/ExtraFeature;
+}
+
+public final class cn/rtast/rob/starter/common/ExtraFeature$Companion {
+	public final fun fromList (Ljava/lang/String;)Lcn/rtast/rob/starter/common/ExtraFeature;
+}
+
 public final class cn/rtast/rob/starter/common/ROneBotTarget : java/lang/Enum {
 	public static final field Companion Lcn/rtast/rob/starter/common/ROneBotTarget$Companion;
 	public static final field Jvm Lcn/rtast/rob/starter/common/ROneBotTarget;

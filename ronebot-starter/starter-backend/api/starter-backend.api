@@ -27,22 +27,6 @@ public final class cn/rtast/rob/starter/backend/entity/LatestVersion {
 	public fun toString ()Ljava/lang/String;
 }
 
-public final class cn/rtast/rob/starter/backend/enums/ExtraFeature : java/lang/Enum {
-	public static final field Companion Lcn/rtast/rob/starter/backend/enums/ExtraFeature$Companion;
-	public static final field Permission Lcn/rtast/rob/starter/backend/enums/ExtraFeature;
-	public static final field StringFormat Lcn/rtast/rob/starter/backend/enums/ExtraFeature;
-	public static fun getEntries ()Lkotlin/enums/EnumEntries;
-	public final fun getFeatureName ()Ljava/lang/String;
-	public final fun getFeatureString ()Ljava/lang/String;
-	public final fun getReplacement ()Ljava/lang/String;
-	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/starter/backend/enums/ExtraFeature;
-	public static fun values ()[Lcn/rtast/rob/starter/backend/enums/ExtraFeature;
-}
-
-public final class cn/rtast/rob/starter/backend/enums/ExtraFeature$Companion {
-	public final fun fromList (Ljava/lang/String;)Lcn/rtast/rob/starter/backend/enums/ExtraFeature;
-}
-
 public final class cn/rtast/rob/starter/backend/enums/ProjectType : java/lang/Enum {
 	public static final field Companion Lcn/rtast/rob/starter/backend/enums/ProjectType$Companion;
 	public static final field OneBot11 Lcn/rtast/rob/starter/backend/enums/ProjectType;

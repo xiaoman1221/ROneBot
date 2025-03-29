@@ -6,6 +6,28 @@
 // - Show declarations: true
 
 // Library unique name: <cn.rtast.rob:starter-common>
+final enum class cn.rtast.rob.starter.common/ExtraFeature : kotlin/Enum<cn.rtast.rob.starter.common/ExtraFeature> { // cn.rtast.rob.starter.common/ExtraFeature|null[0]
+    enum entry MessageDatabase // cn.rtast.rob.starter.common/ExtraFeature.MessageDatabase|null[0]
+    enum entry Permission // cn.rtast.rob.starter.common/ExtraFeature.Permission|null[0]
+    enum entry StringFormat // cn.rtast.rob.starter.common/ExtraFeature.StringFormat|null[0]
+
+    final val entries // cn.rtast.rob.starter.common/ExtraFeature.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.starter.common/ExtraFeature> // cn.rtast.rob.starter.common/ExtraFeature.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val featureName // cn.rtast.rob.starter.common/ExtraFeature.featureName|{}featureName[0]
+        final fun <get-featureName>(): kotlin/String // cn.rtast.rob.starter.common/ExtraFeature.featureName.<get-featureName>|<get-featureName>(){}[0]
+    final val featureString // cn.rtast.rob.starter.common/ExtraFeature.featureString|{}featureString[0]
+        final fun <get-featureString>(): kotlin/String // cn.rtast.rob.starter.common/ExtraFeature.featureString.<get-featureString>|<get-featureString>(){}[0]
+    final val replacement // cn.rtast.rob.starter.common/ExtraFeature.replacement|{}replacement[0]
+        final fun <get-replacement>(): kotlin/String // cn.rtast.rob.starter.common/ExtraFeature.replacement.<get-replacement>|<get-replacement>(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.starter.common/ExtraFeature // cn.rtast.rob.starter.common/ExtraFeature.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.starter.common/ExtraFeature> // cn.rtast.rob.starter.common/ExtraFeature.values|values#static(){}[0]
+
+    final object Companion { // cn.rtast.rob.starter.common/ExtraFeature.Companion|null[0]
+        final fun fromList(kotlin/String): cn.rtast.rob.starter.common/ExtraFeature? // cn.rtast.rob.starter.common/ExtraFeature.Companion.fromList|fromList(kotlin.String){}[0]
+    }
+}
+
 final enum class cn.rtast.rob.starter.common/ROneBotTarget : kotlin/Enum<cn.rtast.rob.starter.common/ROneBotTarget> { // cn.rtast.rob.starter.common/ROneBotTarget|null[0]
     enum entry Jvm // cn.rtast.rob.starter.common/ROneBotTarget.Jvm|null[0]
     enum entry LinuxArm64 // cn.rtast.rob.starter.common/ROneBotTarget.LinuxArm64|null[0]

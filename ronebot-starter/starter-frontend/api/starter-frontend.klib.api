@@ -6,21 +6,6 @@
 // - Show declarations: true
 
 // Library unique name: <cn.rtast.rob:starter-frontend>
-final enum class cn.rtast.rob.starter.frontend.enums/ExtraFeature : kotlin/Enum<cn.rtast.rob.starter.frontend.enums/ExtraFeature> { // cn.rtast.rob.starter.frontend.enums/ExtraFeature|null[0]
-    enum entry Permission // cn.rtast.rob.starter.frontend.enums/ExtraFeature.Permission|null[0]
-    enum entry StringFormat // cn.rtast.rob.starter.frontend.enums/ExtraFeature.StringFormat|null[0]
-
-    final val entries // cn.rtast.rob.starter.frontend.enums/ExtraFeature.entries|#static{}entries[0]
-        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.starter.frontend.enums/ExtraFeature> // cn.rtast.rob.starter.frontend.enums/ExtraFeature.entries.<get-entries>|<get-entries>#static(){}[0]
-    final val featureName // cn.rtast.rob.starter.frontend.enums/ExtraFeature.featureName|{}featureName[0]
-        final fun <get-featureName>(): kotlin/String // cn.rtast.rob.starter.frontend.enums/ExtraFeature.featureName.<get-featureName>|<get-featureName>(){}[0]
-    final val featureString // cn.rtast.rob.starter.frontend.enums/ExtraFeature.featureString|{}featureString[0]
-        final fun <get-featureString>(): kotlin/String // cn.rtast.rob.starter.frontend.enums/ExtraFeature.featureString.<get-featureString>|<get-featureString>(){}[0]
-
-    final fun valueOf(kotlin/String): cn.rtast.rob.starter.frontend.enums/ExtraFeature // cn.rtast.rob.starter.frontend.enums/ExtraFeature.valueOf|valueOf#static(kotlin.String){}[0]
-    final fun values(): kotlin/Array<cn.rtast.rob.starter.frontend.enums/ExtraFeature> // cn.rtast.rob.starter.frontend.enums/ExtraFeature.values|values#static(){}[0]
-}
-
 final enum class cn.rtast.rob.starter.frontend.enums/PlatformType : kotlin/Enum<cn.rtast.rob.starter.frontend.enums/PlatformType> { // cn.rtast.rob.starter.frontend.enums/PlatformType|null[0]
     enum entry OneBot11 // cn.rtast.rob.starter.frontend.enums/PlatformType.OneBot11|null[0]
     enum entry QQBot // cn.rtast.rob.starter.frontend.enums/PlatformType.QQBot|null[0]
@@ -34,6 +19,32 @@ final enum class cn.rtast.rob.starter.frontend.enums/PlatformType : kotlin/Enum<
 
     final fun valueOf(kotlin/String): cn.rtast.rob.starter.frontend.enums/PlatformType // cn.rtast.rob.starter.frontend.enums/PlatformType.valueOf|valueOf#static(kotlin.String){}[0]
     final fun values(): kotlin/Array<cn.rtast.rob.starter.frontend.enums/PlatformType> // cn.rtast.rob.starter.frontend.enums/PlatformType.values|values#static(){}[0]
+}
+
+final class cn.rtast.rob.starter.frontend.api/GithubRepositoryContent { // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent|null[0]
+    constructor <init>(kotlin/String) // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.<init>|<init>(kotlin.String){}[0]
+
+    final val content // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.content|{}content[0]
+        final fun <get-content>(): kotlin/String // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.content.<get-content>|<get-content>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.component1|component1(){}[0]
+    final fun copy(kotlin/String = ...): cn.rtast.rob.starter.frontend.api/GithubRepositoryContent // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.copy|copy(kotlin.String){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.starter.frontend.api/GithubRepositoryContent> { // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.starter.frontend.api/GithubRepositoryContent // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.starter.frontend.api/GithubRepositoryContent) // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.starter.frontend.api.GithubRepositoryContent){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.starter.frontend.api/GithubRepositoryContent> // cn.rtast.rob.starter.frontend.api/GithubRepositoryContent.Companion.serializer|serializer(){}[0]
+    }
 }
 
 final class cn.rtast.rob.starter.frontend.api/GradleVersion { // cn.rtast.rob.starter.frontend.api/GradleVersion|null[0]
@@ -88,35 +99,6 @@ final class cn.rtast.rob.starter.frontend.api/KotlinVersion { // cn.rtast.rob.st
     }
 }
 
-final class cn.rtast.rob.starter.frontend.api/Version { // cn.rtast.rob.starter.frontend.api/Version|null[0]
-    constructor <init>(kotlin/Boolean, kotlin/String) // cn.rtast.rob.starter.frontend.api/Version.<init>|<init>(kotlin.Boolean;kotlin.String){}[0]
-
-    final val isSnapshot // cn.rtast.rob.starter.frontend.api/Version.isSnapshot|{}isSnapshot[0]
-        final fun <get-isSnapshot>(): kotlin/Boolean // cn.rtast.rob.starter.frontend.api/Version.isSnapshot.<get-isSnapshot>|<get-isSnapshot>(){}[0]
-    final val version // cn.rtast.rob.starter.frontend.api/Version.version|{}version[0]
-        final fun <get-version>(): kotlin/String // cn.rtast.rob.starter.frontend.api/Version.version.<get-version>|<get-version>(){}[0]
-
-    final fun component1(): kotlin/Boolean // cn.rtast.rob.starter.frontend.api/Version.component1|component1(){}[0]
-    final fun component2(): kotlin/String // cn.rtast.rob.starter.frontend.api/Version.component2|component2(){}[0]
-    final fun copy(kotlin/Boolean = ..., kotlin/String = ...): cn.rtast.rob.starter.frontend.api/Version // cn.rtast.rob.starter.frontend.api/Version.copy|copy(kotlin.Boolean;kotlin.String){}[0]
-    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.starter.frontend.api/Version.equals|equals(kotlin.Any?){}[0]
-    final fun hashCode(): kotlin/Int // cn.rtast.rob.starter.frontend.api/Version.hashCode|hashCode(){}[0]
-    final fun toString(): kotlin/String // cn.rtast.rob.starter.frontend.api/Version.toString|toString(){}[0]
-
-    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.starter.frontend.api/Version> { // cn.rtast.rob.starter.frontend.api/Version.$serializer|null[0]
-        final val descriptor // cn.rtast.rob.starter.frontend.api/Version.$serializer.descriptor|{}descriptor[0]
-            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.starter.frontend.api/Version.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
-
-        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.starter.frontend.api/Version.$serializer.childSerializers|childSerializers(){}[0]
-        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.starter.frontend.api/Version // cn.rtast.rob.starter.frontend.api/Version.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
-        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.starter.frontend.api/Version) // cn.rtast.rob.starter.frontend.api/Version.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.starter.frontend.api.Version){}[0]
-    }
-
-    final object Companion { // cn.rtast.rob.starter.frontend.api/Version.Companion|null[0]
-        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.starter.frontend.api/Version> // cn.rtast.rob.starter.frontend.api/Version.Companion.serializer|serializer(){}[0]
-    }
-}
-
 final class cn.rtast.rob.starter.frontend.util/Config { // cn.rtast.rob.starter.frontend.util/Config|null[0]
     constructor <init>(kotlin/String, kotlin/String) // cn.rtast.rob.starter.frontend.util/Config.<init>|<init>(kotlin.String;kotlin.String){}[0]
 
@@ -146,12 +128,19 @@ final class cn.rtast.rob.starter.frontend.util/Config { // cn.rtast.rob.starter.
     }
 }
 
+final const val cn.rtast.rob.starter.frontend/defaultGradleVersion // cn.rtast.rob.starter.frontend/defaultGradleVersion|{}defaultGradleVersion[0]
+    final fun <get-defaultGradleVersion>(): kotlin/String // cn.rtast.rob.starter.frontend/defaultGradleVersion.<get-defaultGradleVersion>|<get-defaultGradleVersion>(){}[0]
+final const val cn.rtast.rob.starter.frontend/defaultKotlinVersion // cn.rtast.rob.starter.frontend/defaultKotlinVersion|{}defaultKotlinVersion[0]
+    final fun <get-defaultKotlinVersion>(): kotlin/String // cn.rtast.rob.starter.frontend/defaultKotlinVersion.<get-defaultKotlinVersion>|<get-defaultKotlinVersion>(){}[0]
+final const val cn.rtast.rob.starter.frontend/defaultROBVersion // cn.rtast.rob.starter.frontend/defaultROBVersion|{}defaultROBVersion[0]
+    final fun <get-defaultROBVersion>(): kotlin/String // cn.rtast.rob.starter.frontend/defaultROBVersion.<get-defaultROBVersion>|<get-defaultROBVersion>(){}[0]
+
+final val cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GithubRepositoryContent$stableprop // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GithubRepositoryContent$stableprop|#static{}cn_rtast_rob_starter_frontend_api_GithubRepositoryContent$stableprop[0]
+final val cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GithubRepositoryContent_$serializer$stableprop // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GithubRepositoryContent_$serializer$stableprop|#static{}cn_rtast_rob_starter_frontend_api_GithubRepositoryContent_$serializer$stableprop[0]
 final val cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GradleVersion$stableprop // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GradleVersion$stableprop|#static{}cn_rtast_rob_starter_frontend_api_GradleVersion$stableprop[0]
 final val cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GradleVersion_$serializer$stableprop // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GradleVersion_$serializer$stableprop|#static{}cn_rtast_rob_starter_frontend_api_GradleVersion_$serializer$stableprop[0]
 final val cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_KotlinVersion$stableprop // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_KotlinVersion$stableprop|#static{}cn_rtast_rob_starter_frontend_api_KotlinVersion$stableprop[0]
 final val cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_KotlinVersion_$serializer$stableprop // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_KotlinVersion_$serializer$stableprop|#static{}cn_rtast_rob_starter_frontend_api_KotlinVersion_$serializer$stableprop[0]
-final val cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_Version$stableprop // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_Version$stableprop|#static{}cn_rtast_rob_starter_frontend_api_Version$stableprop[0]
-final val cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_Version_$serializer$stableprop // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_Version_$serializer$stableprop|#static{}cn_rtast_rob_starter_frontend_api_Version_$serializer$stableprop[0]
 final val cn.rtast.rob.starter.frontend.resources/cn_rtast_rob_starter_frontend_resources_Res$stableprop // cn.rtast.rob.starter.frontend.resources/cn_rtast_rob_starter_frontend_resources_Res$stableprop|#static{}cn_rtast_rob_starter_frontend_resources_Res$stableprop[0]
 final val cn.rtast.rob.starter.frontend.resources/cn_rtast_rob_starter_frontend_resources_Res_array$stableprop // cn.rtast.rob.starter.frontend.resources/cn_rtast_rob_starter_frontend_resources_Res_array$stableprop|#static{}cn_rtast_rob_starter_frontend_resources_Res_array$stableprop[0]
 final val cn.rtast.rob.starter.frontend.resources/cn_rtast_rob_starter_frontend_resources_Res_drawable$stableprop // cn.rtast.rob.starter.frontend.resources/cn_rtast_rob_starter_frontend_resources_Res_drawable$stableprop|#static{}cn_rtast_rob_starter_frontend_resources_Res_drawable$stableprop[0]
@@ -160,18 +149,20 @@ final val cn.rtast.rob.starter.frontend.resources/cn_rtast_rob_starter_frontend_
 final val cn.rtast.rob.starter.frontend.resources/cn_rtast_rob_starter_frontend_resources_Res_string$stableprop // cn.rtast.rob.starter.frontend.resources/cn_rtast_rob_starter_frontend_resources_Res_string$stableprop|#static{}cn_rtast_rob_starter_frontend_resources_Res_string$stableprop[0]
 final val cn.rtast.rob.starter.frontend.util/cn_rtast_rob_starter_frontend_util_Config$stableprop // cn.rtast.rob.starter.frontend.util/cn_rtast_rob_starter_frontend_util_Config$stableprop|#static{}cn_rtast_rob_starter_frontend_util_Config$stableprop[0]
 final val cn.rtast.rob.starter.frontend.util/cn_rtast_rob_starter_frontend_util_Config_$serializer$stableprop // cn.rtast.rob.starter.frontend.util/cn_rtast_rob_starter_frontend_util_Config_$serializer$stableprop|#static{}cn_rtast_rob_starter_frontend_util_Config_$serializer$stableprop[0]
+final val cn.rtast.rob.starter.frontend.util/json // cn.rtast.rob.starter.frontend.util/json|{}json[0]
+    final fun <get-json>(): kotlinx.serialization.json/Json // cn.rtast.rob.starter.frontend.util/json.<get-json>|<get-json>(){}[0]
 final val cn.rtast.rob.starter.frontend/client // cn.rtast.rob.starter.frontend/client|{}client[0]
     final fun <get-client>(): io.ktor.client/HttpClient // cn.rtast.rob.starter.frontend/client.<get-client>|<get-client>(){}[0]
 
 final fun (org.khronos.webgl/ArrayBuffer).cn.rtast.rob.starter.frontend.util/toByteArray(): kotlin/ByteArray // cn.rtast.rob.starter.frontend.util/toByteArray|toByteArray@org.khronos.webgl.ArrayBuffer(){}[0]
+final fun cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GithubRepositoryContent$stableprop_getter(): kotlin/Int // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GithubRepositoryContent$stableprop_getter|cn_rtast_rob_starter_frontend_api_GithubRepositoryContent$stableprop_getter(){}[0]
+final fun cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GithubRepositoryContent_$serializer$stableprop_getter(): kotlin/Int // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GithubRepositoryContent_$serializer$stableprop_getter|cn_rtast_rob_starter_frontend_api_GithubRepositoryContent_$serializer$stableprop_getter(){}[0]
 final fun cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GradleVersion$stableprop_getter(): kotlin/Int // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GradleVersion$stableprop_getter|cn_rtast_rob_starter_frontend_api_GradleVersion$stableprop_getter(){}[0]
 final fun cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GradleVersion_$serializer$stableprop_getter(): kotlin/Int // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_GradleVersion_$serializer$stableprop_getter|cn_rtast_rob_starter_frontend_api_GradleVersion_$serializer$stableprop_getter(){}[0]
 final fun cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_KotlinVersion$stableprop_getter(): kotlin/Int // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_KotlinVersion$stableprop_getter|cn_rtast_rob_starter_frontend_api_KotlinVersion$stableprop_getter(){}[0]
 final fun cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_KotlinVersion_$serializer$stableprop_getter(): kotlin/Int // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_KotlinVersion_$serializer$stableprop_getter|cn_rtast_rob_starter_frontend_api_KotlinVersion_$serializer$stableprop_getter(){}[0]
-final fun cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_Version$stableprop_getter(): kotlin/Int // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_Version$stableprop_getter|cn_rtast_rob_starter_frontend_api_Version$stableprop_getter(){}[0]
-final fun cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_Version_$serializer$stableprop_getter(): kotlin/Int // cn.rtast.rob.starter.frontend.api/cn_rtast_rob_starter_frontend_api_Version_$serializer$stableprop_getter|cn_rtast_rob_starter_frontend_api_Version_$serializer$stableprop_getter(){}[0]
 final fun cn.rtast.rob.starter.frontend.api/submitFormData(kotlin/String, kotlin.collections/Map<kotlin/String, kotlin/String>, kotlin/Function1<org.w3c.xhr/XMLHttpRequest, kotlin/Unit>) // cn.rtast.rob.starter.frontend.api/submitFormData|submitFormData(kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>;kotlin.Function1<org.w3c.xhr.XMLHttpRequest,kotlin.Unit>){}[0]
-final fun cn.rtast.rob.starter.frontend.composable/Chip(cn.rtast.rob.starter.frontend.enums/ExtraFeature, kotlin/Boolean, kotlin/Function1<kotlin/Boolean, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int) // cn.rtast.rob.starter.frontend.composable/Chip|Chip(cn.rtast.rob.starter.frontend.enums.ExtraFeature;kotlin.Boolean;kotlin.Function1<kotlin.Boolean,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int){}[0]
+final fun cn.rtast.rob.starter.frontend.composable/Chip(cn.rtast.rob.starter.common/ExtraFeature, kotlin/Boolean, kotlin/Function1<kotlin/Boolean, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int) // cn.rtast.rob.starter.frontend.composable/Chip|Chip(cn.rtast.rob.starter.common.ExtraFeature;kotlin.Boolean;kotlin.Function1<kotlin.Boolean,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int){}[0]
 final fun cn.rtast.rob.starter.frontend.composable/DividerSplit(kotlin/Int, kotlin/Int, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // cn.rtast.rob.starter.frontend.composable/DividerSplit|DividerSplit(kotlin.Int;kotlin.Int;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
 final fun cn.rtast.rob.starter.frontend.composable/Footer(androidx.compose.runtime/Composer?, kotlin/Int) // cn.rtast.rob.starter.frontend.composable/Footer|Footer(androidx.compose.runtime.Composer?;kotlin.Int){}[0]
 final fun cn.rtast.rob.starter.frontend.composable/TargetChip(cn.rtast.rob.starter.common/ROneBotTarget, kotlin/Boolean, kotlin/Function1<kotlin/Boolean, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int) // cn.rtast.rob.starter.frontend.composable/TargetChip|TargetChip(cn.rtast.rob.starter.common.ROneBotTarget;kotlin.Boolean;kotlin.Function1<kotlin.Boolean,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int){}[0]
@@ -189,6 +180,7 @@ final fun cn.rtast.rob.starter.frontend/main() // cn.rtast.rob.starter.frontend/
 final inline fun <#A: reified kotlin/Any?> (kotlin.js/JsString).cn.rtast.rob.starter.frontend.util/fromJson(): #A // cn.rtast.rob.starter.frontend.util/fromJson|fromJson@kotlin.js.JsString(){0§<kotlin.Any?>}[0]
 final inline fun <#A: reified kotlin/Any?> (kotlin/String).cn.rtast.rob.starter.frontend.util/fromJson(): #A // cn.rtast.rob.starter.frontend.util/fromJson|fromJson@kotlin.String(){0§<kotlin.Any?>}[0]
 final suspend fun cn.rtast.rob.starter.frontend.api/fetchLatestROBVersion(): kotlin/String // cn.rtast.rob.starter.frontend.api/fetchLatestROBVersion|fetchLatestROBVersion(){}[0]
+final suspend fun cn.rtast.rob.starter.frontend.api/fetchLatestROBVersionContent(): kotlin/String // cn.rtast.rob.starter.frontend.api/fetchLatestROBVersionContent|fetchLatestROBVersionContent(){}[0]
 final suspend fun cn.rtast.rob.starter.frontend.api/getLatestGradleVersion(): kotlin/String // cn.rtast.rob.starter.frontend.api/getLatestGradleVersion|getLatestGradleVersion(){}[0]
 final suspend fun cn.rtast.rob.starter.frontend.api/getLatestKotlinVersion(): kotlin/String // cn.rtast.rob.starter.frontend.api/getLatestKotlinVersion|getLatestKotlinVersion(){}[0]
 final suspend fun cn.rtast.rob.starter.frontend.util/loadConfig(): cn.rtast.rob.starter.frontend.util/Config // cn.rtast.rob.starter.frontend.util/loadConfig|loadConfig(){}[0]
