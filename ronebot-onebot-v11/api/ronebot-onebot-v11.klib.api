@@ -6,6 +6,10 @@
 // - Show declarations: true
 
 // Library unique name: <cn.rtast.rob:ronebot-onebot-v11>
+open annotation class cn.rtast.rob.annotations/OneBot11CompatibilityApi : kotlin/Annotation { // cn.rtast.rob.annotations/OneBot11CompatibilityApi|null[0]
+    constructor <init>() // cn.rtast.rob.annotations/OneBot11CompatibilityApi.<init>|<init>(){}[0]
+}
+
 open annotation class cn.rtast.rob.onebot.dsl/MessageChainDsl : kotlin/Annotation { // cn.rtast.rob.onebot.dsl/MessageChainDsl|null[0]
     constructor <init>() // cn.rtast.rob.onebot.dsl/MessageChainDsl.<init>|<init>(){}[0]
 }
@@ -377,13 +381,11 @@ abstract interface cn.rtast.rob.actionable/GroupUserActionable : cn.rtast.rob.ac
 
 abstract interface cn.rtast.rob.actionable/MessageActionable { // cn.rtast.rob.actionable/MessageActionable|null[0]
     abstract suspend fun markAsRead() // cn.rtast.rob.actionable/MessageActionable.markAsRead|markAsRead(){}[0]
-    abstract suspend fun reply(cn.rtast.rob.onebot/CQMessageChain): kotlin/Long? // cn.rtast.rob.actionable/MessageActionable.reply|reply(cn.rtast.rob.onebot.CQMessageChain){}[0]
     abstract suspend fun reply(cn.rtast.rob.onebot/MessageChain): kotlin/Long? // cn.rtast.rob.actionable/MessageActionable.reply|reply(cn.rtast.rob.onebot.MessageChain){}[0]
     abstract suspend fun reply(cn.rtast.rob.onebot/NodeMessageChain): cn.rtast.rob.event.raw.lagrange/ForwardMessageId.ForwardMessageId? // cn.rtast.rob.actionable/MessageActionable.reply|reply(cn.rtast.rob.onebot.NodeMessageChain){}[0]
     abstract suspend fun reply(cn.rtast.rob.segment/Segment): kotlin/Long? // cn.rtast.rob.actionable/MessageActionable.reply|reply(cn.rtast.rob.segment.Segment){}[0]
     abstract suspend fun reply(kotlin.collections/List<cn.rtast.rob.segment/Segment>): kotlin/Long? // cn.rtast.rob.actionable/MessageActionable.reply|reply(kotlin.collections.List<cn.rtast.rob.segment.Segment>){}[0]
     abstract suspend fun reply(kotlin/String): kotlin/Long? // cn.rtast.rob.actionable/MessageActionable.reply|reply(kotlin.String){}[0]
-    abstract suspend fun replyAsync(cn.rtast.rob.onebot/CQMessageChain) // cn.rtast.rob.actionable/MessageActionable.replyAsync|replyAsync(cn.rtast.rob.onebot.CQMessageChain){}[0]
     abstract suspend fun replyAsync(cn.rtast.rob.onebot/MessageChain) // cn.rtast.rob.actionable/MessageActionable.replyAsync|replyAsync(cn.rtast.rob.onebot.MessageChain){}[0]
     abstract suspend fun replyAsync(cn.rtast.rob.onebot/NodeMessageChain) // cn.rtast.rob.actionable/MessageActionable.replyAsync|replyAsync(cn.rtast.rob.onebot.NodeMessageChain){}[0]
     abstract suspend fun replyAsync(cn.rtast.rob.segment/Segment) // cn.rtast.rob.actionable/MessageActionable.replyAsync|replyAsync(cn.rtast.rob.segment.Segment){}[0]
@@ -3228,7 +3230,7 @@ final class cn.rtast.rob.event.raw.metadata/RawHeartBeatEvent { // cn.rtast.rob.
     final fun toString(): kotlin/String // cn.rtast.rob.event.raw.metadata/RawHeartBeatEvent.toString|toString(){}[0]
 
     final class Status { // cn.rtast.rob.event.raw.metadata/RawHeartBeatEvent.Status|null[0]
-        constructor <init>(kotlin/Boolean, kotlin/Boolean, kotlin/Boolean, kotlin/Boolean, kotlin/Boolean) // cn.rtast.rob.event.raw.metadata/RawHeartBeatEvent.Status.<init>|<init>(kotlin.Boolean;kotlin.Boolean;kotlin.Boolean;kotlin.Boolean;kotlin.Boolean){}[0]
+        constructor <init>(kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Boolean, kotlin/Boolean) // cn.rtast.rob.event.raw.metadata/RawHeartBeatEvent.Status.<init>|<init>(kotlin.Boolean;kotlin.Boolean;kotlin.Boolean;kotlin.Boolean;kotlin.Boolean){}[0]
 
         final val appEnabled // cn.rtast.rob.event.raw.metadata/RawHeartBeatEvent.Status.appEnabled|{}appEnabled[0]
             final fun <get-appEnabled>(): kotlin/Boolean // cn.rtast.rob.event.raw.metadata/RawHeartBeatEvent.Status.appEnabled.<get-appEnabled>|<get-appEnabled>(){}[0]
@@ -3318,6 +3320,148 @@ final class cn.rtast.rob.event.raw/AddFriendRequestEvent : cn.rtast.rob.actionab
 
     final object Companion { // cn.rtast.rob.event.raw/AddFriendRequestEvent.Companion|null[0]
         final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.event.raw/AddFriendRequestEvent> // cn.rtast.rob.event.raw/AddFriendRequestEvent.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.event.raw/ArkShareGroupResponse { // cn.rtast.rob.event.raw/ArkShareGroupResponse|null[0]
+    constructor <init>(kotlin/String) // cn.rtast.rob.event.raw/ArkShareGroupResponse.<init>|<init>(kotlin.String){}[0]
+
+    final val data // cn.rtast.rob.event.raw/ArkShareGroupResponse.data|{}data[0]
+        final fun <get-data>(): kotlin/String // cn.rtast.rob.event.raw/ArkShareGroupResponse.data.<get-data>|<get-data>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.event.raw/ArkShareGroupResponse.component1|component1(){}[0]
+    final fun copy(kotlin/String = ...): cn.rtast.rob.event.raw/ArkShareGroupResponse // cn.rtast.rob.event.raw/ArkShareGroupResponse.copy|copy(kotlin.String){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw/ArkShareGroupResponse.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw/ArkShareGroupResponse.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.event.raw/ArkShareGroupResponse.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.event.raw/ArkShareGroupResponse> { // cn.rtast.rob.event.raw/ArkShareGroupResponse.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.event.raw/ArkShareGroupResponse.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.event.raw/ArkShareGroupResponse.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.event.raw/ArkShareGroupResponse.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.event.raw/ArkShareGroupResponse // cn.rtast.rob.event.raw/ArkShareGroupResponse.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.event.raw/ArkShareGroupResponse) // cn.rtast.rob.event.raw/ArkShareGroupResponse.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.event.raw.ArkShareGroupResponse){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.event.raw/ArkShareGroupResponse.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.event.raw/ArkShareGroupResponse> // cn.rtast.rob.event.raw/ArkShareGroupResponse.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.event.raw/ArkSharePeerFriendResponse { // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse|null[0]
+    constructor <init>(cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend) // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.<init>|<init>(cn.rtast.rob.event.raw.ArkSharePeerFriendResponse.ArkSharePeerFriend){}[0]
+
+    final val data // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.data|{}data[0]
+        final fun <get-data>(): cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.data.<get-data>|<get-data>(){}[0]
+
+    final fun component1(): cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.component1|component1(){}[0]
+    final fun copy(cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend = ...): cn.rtast.rob.event.raw/ArkSharePeerFriendResponse // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.copy|copy(cn.rtast.rob.event.raw.ArkSharePeerFriendResponse.ArkSharePeerFriend){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.toString|toString(){}[0]
+
+    final class ArkSharePeerFriend { // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend|null[0]
+        constructor <init>(kotlin/Int, kotlin/String, kotlin/String) // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.<init>|<init>(kotlin.Int;kotlin.String;kotlin.String){}[0]
+
+        final val arkMsg // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.arkMsg|{}arkMsg[0]
+            final fun <get-arkMsg>(): kotlin/String // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.arkMsg.<get-arkMsg>|<get-arkMsg>(){}[0]
+        final val errCode // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.errCode|{}errCode[0]
+            final fun <get-errCode>(): kotlin/Int // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.errCode.<get-errCode>|<get-errCode>(){}[0]
+        final val errMsg // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.errMsg|{}errMsg[0]
+            final fun <get-errMsg>(): kotlin/String // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.errMsg.<get-errMsg>|<get-errMsg>(){}[0]
+
+        final fun component1(): kotlin/Int // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.component2|component2(){}[0]
+        final fun component3(): kotlin/String // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.component3|component3(){}[0]
+        final fun copy(kotlin/Int = ..., kotlin/String = ..., kotlin/String = ...): cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.copy|copy(kotlin.Int;kotlin.String;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend> { // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend) // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.event.raw.ArkSharePeerFriendResponse.ArkSharePeerFriend){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend> // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.event.raw/ArkSharePeerFriendResponse> { // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.event.raw/ArkSharePeerFriendResponse // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.event.raw/ArkSharePeerFriendResponse) // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.event.raw.ArkSharePeerFriendResponse){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.event.raw/ArkSharePeerFriendResponse> // cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.event.raw/ArkSharePeerResponse { // cn.rtast.rob.event.raw/ArkSharePeerResponse|null[0]
+    constructor <init>(cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer) // cn.rtast.rob.event.raw/ArkSharePeerResponse.<init>|<init>(cn.rtast.rob.event.raw.ArkSharePeerResponse.ArkSharePeer){}[0]
+
+    final val data // cn.rtast.rob.event.raw/ArkSharePeerResponse.data|{}data[0]
+        final fun <get-data>(): cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer // cn.rtast.rob.event.raw/ArkSharePeerResponse.data.<get-data>|<get-data>(){}[0]
+
+    final fun component1(): cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer // cn.rtast.rob.event.raw/ArkSharePeerResponse.component1|component1(){}[0]
+    final fun copy(cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer = ...): cn.rtast.rob.event.raw/ArkSharePeerResponse // cn.rtast.rob.event.raw/ArkSharePeerResponse.copy|copy(cn.rtast.rob.event.raw.ArkSharePeerResponse.ArkSharePeer){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw/ArkSharePeerResponse.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw/ArkSharePeerResponse.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.event.raw/ArkSharePeerResponse.toString|toString(){}[0]
+
+    final class ArkSharePeer { // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer|null[0]
+        constructor <init>(kotlin/Int, kotlin/String, kotlin/String) // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.<init>|<init>(kotlin.Int;kotlin.String;kotlin.String){}[0]
+
+        final val arkJson // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.arkJson|{}arkJson[0]
+            final fun <get-arkJson>(): kotlin/String // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.arkJson.<get-arkJson>|<get-arkJson>(){}[0]
+        final val errCode // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.errCode|{}errCode[0]
+            final fun <get-errCode>(): kotlin/Int // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.errCode.<get-errCode>|<get-errCode>(){}[0]
+        final val errMsg // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.errMsg|{}errMsg[0]
+            final fun <get-errMsg>(): kotlin/String // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.errMsg.<get-errMsg>|<get-errMsg>(){}[0]
+
+        final fun component1(): kotlin/Int // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.component2|component2(){}[0]
+        final fun component3(): kotlin/String // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.component3|component3(){}[0]
+        final fun copy(kotlin/Int = ..., kotlin/String = ..., kotlin/String = ...): cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.copy|copy(kotlin.Int;kotlin.String;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer> { // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer) // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.event.raw.ArkSharePeerResponse.ArkSharePeer){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer> // cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.event.raw/ArkSharePeerResponse> { // cn.rtast.rob.event.raw/ArkSharePeerResponse.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.event.raw/ArkSharePeerResponse.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.event.raw/ArkSharePeerResponse.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.event.raw/ArkSharePeerResponse.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.event.raw/ArkSharePeerResponse // cn.rtast.rob.event.raw/ArkSharePeerResponse.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.event.raw/ArkSharePeerResponse) // cn.rtast.rob.event.raw/ArkSharePeerResponse.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.event.raw.ArkSharePeerResponse){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.event.raw/ArkSharePeerResponse.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.event.raw/ArkSharePeerResponse> // cn.rtast.rob.event.raw/ArkSharePeerResponse.Companion.serializer|serializer(){}[0]
     }
 }
 
@@ -4325,13 +4469,11 @@ final class cn.rtast.rob.event.raw/GroupMessage : cn.rtast.rob.actionable/GroupM
     final suspend fun deleteEssence() // cn.rtast.rob.event.raw/GroupMessage.deleteEssence|deleteEssence(){}[0]
     final suspend fun markAsRead() // cn.rtast.rob.event.raw/GroupMessage.markAsRead|markAsRead(){}[0]
     final suspend fun reaction(kotlin/String) // cn.rtast.rob.event.raw/GroupMessage.reaction|reaction(kotlin.String){}[0]
-    final suspend fun reply(cn.rtast.rob.onebot/CQMessageChain): kotlin/Long? // cn.rtast.rob.event.raw/GroupMessage.reply|reply(cn.rtast.rob.onebot.CQMessageChain){}[0]
     final suspend fun reply(cn.rtast.rob.onebot/MessageChain): kotlin/Long? // cn.rtast.rob.event.raw/GroupMessage.reply|reply(cn.rtast.rob.onebot.MessageChain){}[0]
     final suspend fun reply(cn.rtast.rob.onebot/NodeMessageChain): cn.rtast.rob.event.raw.lagrange/ForwardMessageId.ForwardMessageId? // cn.rtast.rob.event.raw/GroupMessage.reply|reply(cn.rtast.rob.onebot.NodeMessageChain){}[0]
     final suspend fun reply(cn.rtast.rob.segment/Segment): kotlin/Long? // cn.rtast.rob.event.raw/GroupMessage.reply|reply(cn.rtast.rob.segment.Segment){}[0]
     final suspend fun reply(kotlin.collections/List<cn.rtast.rob.segment/Segment>): kotlin/Long? // cn.rtast.rob.event.raw/GroupMessage.reply|reply(kotlin.collections.List<cn.rtast.rob.segment.Segment>){}[0]
     final suspend fun reply(kotlin/String): kotlin/Long? // cn.rtast.rob.event.raw/GroupMessage.reply|reply(kotlin.String){}[0]
-    final suspend fun replyAsync(cn.rtast.rob.onebot/CQMessageChain) // cn.rtast.rob.event.raw/GroupMessage.replyAsync|replyAsync(cn.rtast.rob.onebot.CQMessageChain){}[0]
     final suspend fun replyAsync(cn.rtast.rob.onebot/MessageChain) // cn.rtast.rob.event.raw/GroupMessage.replyAsync|replyAsync(cn.rtast.rob.onebot.MessageChain){}[0]
     final suspend fun replyAsync(cn.rtast.rob.onebot/NodeMessageChain) // cn.rtast.rob.event.raw/GroupMessage.replyAsync|replyAsync(cn.rtast.rob.onebot.NodeMessageChain){}[0]
     final suspend fun replyAsync(cn.rtast.rob.segment/Segment) // cn.rtast.rob.event.raw/GroupMessage.replyAsync|replyAsync(cn.rtast.rob.segment.Segment){}[0]
@@ -4369,7 +4511,7 @@ final class cn.rtast.rob.event.raw/GroupMessage : cn.rtast.rob.actionable/GroupM
 }
 
 final class cn.rtast.rob.event.raw/GroupSender : cn.rtast.rob.actionable/GroupUserActionable, cn.rtast.rob.entity/IGroupSender { // cn.rtast.rob.event.raw/GroupSender|null[0]
-    constructor <init>(kotlin/Long, kotlin/String, cn.rtast.rob.enums/UserSex?, cn.rtast.rob.enums/UserRole, kotlin/String?, kotlin/String?, kotlin/Int, kotlin/String?, kotlin/Long = ...) // cn.rtast.rob.event.raw/GroupSender.<init>|<init>(kotlin.Long;kotlin.String;cn.rtast.rob.enums.UserSex?;cn.rtast.rob.enums.UserRole;kotlin.String?;kotlin.String?;kotlin.Int;kotlin.String?;kotlin.Long){}[0]
+    constructor <init>(kotlin/Long, kotlin/String, cn.rtast.rob.enums/UserSex?, cn.rtast.rob.enums/UserRole, kotlin/String?, kotlin/String?, kotlin/Int = ..., kotlin/String?, kotlin/Long = ...) // cn.rtast.rob.event.raw/GroupSender.<init>|<init>(kotlin.Long;kotlin.String;cn.rtast.rob.enums.UserSex?;cn.rtast.rob.enums.UserRole;kotlin.String?;kotlin.String?;kotlin.Int;kotlin.String?;kotlin.Long){}[0]
 
     final val age // cn.rtast.rob.event.raw/GroupSender.age|{}age[0]
         final fun <get-age>(): kotlin/Int // cn.rtast.rob.event.raw/GroupSender.age.<get-age>|<get-age>(){}[0]
@@ -4693,13 +4835,11 @@ final class cn.rtast.rob.event.raw/PrivateMessage : cn.rtast.rob.actionable/Mess
     final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw/PrivateMessage.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // cn.rtast.rob.event.raw/PrivateMessage.toString|toString(){}[0]
     final suspend fun markAsRead() // cn.rtast.rob.event.raw/PrivateMessage.markAsRead|markAsRead(){}[0]
-    final suspend fun reply(cn.rtast.rob.onebot/CQMessageChain): kotlin/Long? // cn.rtast.rob.event.raw/PrivateMessage.reply|reply(cn.rtast.rob.onebot.CQMessageChain){}[0]
     final suspend fun reply(cn.rtast.rob.onebot/MessageChain): kotlin/Long? // cn.rtast.rob.event.raw/PrivateMessage.reply|reply(cn.rtast.rob.onebot.MessageChain){}[0]
     final suspend fun reply(cn.rtast.rob.onebot/NodeMessageChain): cn.rtast.rob.event.raw.lagrange/ForwardMessageId.ForwardMessageId? // cn.rtast.rob.event.raw/PrivateMessage.reply|reply(cn.rtast.rob.onebot.NodeMessageChain){}[0]
     final suspend fun reply(cn.rtast.rob.segment/Segment): kotlin/Long? // cn.rtast.rob.event.raw/PrivateMessage.reply|reply(cn.rtast.rob.segment.Segment){}[0]
     final suspend fun reply(kotlin.collections/List<cn.rtast.rob.segment/Segment>): kotlin/Long? // cn.rtast.rob.event.raw/PrivateMessage.reply|reply(kotlin.collections.List<cn.rtast.rob.segment.Segment>){}[0]
     final suspend fun reply(kotlin/String): kotlin/Long? // cn.rtast.rob.event.raw/PrivateMessage.reply|reply(kotlin.String){}[0]
-    final suspend fun replyAsync(cn.rtast.rob.onebot/CQMessageChain) // cn.rtast.rob.event.raw/PrivateMessage.replyAsync|replyAsync(cn.rtast.rob.onebot.CQMessageChain){}[0]
     final suspend fun replyAsync(cn.rtast.rob.onebot/MessageChain) // cn.rtast.rob.event.raw/PrivateMessage.replyAsync|replyAsync(cn.rtast.rob.onebot.MessageChain){}[0]
     final suspend fun replyAsync(cn.rtast.rob.onebot/NodeMessageChain) // cn.rtast.rob.event.raw/PrivateMessage.replyAsync|replyAsync(cn.rtast.rob.onebot.NodeMessageChain){}[0]
     final suspend fun replyAsync(cn.rtast.rob.segment/Segment) // cn.rtast.rob.event.raw/PrivateMessage.replyAsync|replyAsync(cn.rtast.rob.segment.Segment){}[0]
@@ -4735,10 +4875,10 @@ final class cn.rtast.rob.event.raw/PrivateMessage : cn.rtast.rob.actionable/Mess
 }
 
 final class cn.rtast.rob.event.raw/PrivateSender : cn.rtast.rob.actionable/UserActionable, cn.rtast.rob.entity/IPrivateSender { // cn.rtast.rob.event.raw/PrivateSender|null[0]
-    constructor <init>(kotlin/Long, kotlin/String, cn.rtast.rob.enums/UserSex, kotlin/Int? = ...) // cn.rtast.rob.event.raw/PrivateSender.<init>|<init>(kotlin.Long;kotlin.String;cn.rtast.rob.enums.UserSex;kotlin.Int?){}[0]
+    constructor <init>(kotlin/Long, kotlin/String, cn.rtast.rob.enums/UserSex, kotlin/Int = ...) // cn.rtast.rob.event.raw/PrivateSender.<init>|<init>(kotlin.Long;kotlin.String;cn.rtast.rob.enums.UserSex;kotlin.Int){}[0]
 
     final val age // cn.rtast.rob.event.raw/PrivateSender.age|{}age[0]
-        final fun <get-age>(): kotlin/Int? // cn.rtast.rob.event.raw/PrivateSender.age.<get-age>|<get-age>(){}[0]
+        final fun <get-age>(): kotlin/Int // cn.rtast.rob.event.raw/PrivateSender.age.<get-age>|<get-age>(){}[0]
     final val nickname // cn.rtast.rob.event.raw/PrivateSender.nickname|{}nickname[0]
         final fun <get-nickname>(): kotlin/String // cn.rtast.rob.event.raw/PrivateSender.nickname.<get-nickname>|<get-nickname>(){}[0]
     final val sex // cn.rtast.rob.event.raw/PrivateSender.sex|{}sex[0]
@@ -4753,8 +4893,8 @@ final class cn.rtast.rob.event.raw/PrivateSender : cn.rtast.rob.actionable/UserA
     final fun component1(): kotlin/Long // cn.rtast.rob.event.raw/PrivateSender.component1|component1(){}[0]
     final fun component2(): kotlin/String // cn.rtast.rob.event.raw/PrivateSender.component2|component2(){}[0]
     final fun component3(): cn.rtast.rob.enums/UserSex // cn.rtast.rob.event.raw/PrivateSender.component3|component3(){}[0]
-    final fun component4(): kotlin/Int? // cn.rtast.rob.event.raw/PrivateSender.component4|component4(){}[0]
-    final fun copy(kotlin/Long = ..., kotlin/String = ..., cn.rtast.rob.enums/UserSex = ..., kotlin/Int? = ...): cn.rtast.rob.event.raw/PrivateSender // cn.rtast.rob.event.raw/PrivateSender.copy|copy(kotlin.Long;kotlin.String;cn.rtast.rob.enums.UserSex;kotlin.Int?){}[0]
+    final fun component4(): kotlin/Int // cn.rtast.rob.event.raw/PrivateSender.component4|component4(){}[0]
+    final fun copy(kotlin/Long = ..., kotlin/String = ..., cn.rtast.rob.enums/UserSex = ..., kotlin/Int = ...): cn.rtast.rob.event.raw/PrivateSender // cn.rtast.rob.event.raw/PrivateSender.copy|copy(kotlin.Long;kotlin.String;cn.rtast.rob.enums.UserSex;kotlin.Int){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw/PrivateSender.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw/PrivateSender.hashCode|hashCode(){}[0]
     final fun invoke(): kotlin/Long // cn.rtast.rob.event.raw/PrivateSender.invoke|invoke(){}[0]
@@ -5127,6 +5267,34 @@ final class cn.rtast.rob.event.raw/StrangerInfo { // cn.rtast.rob.event.raw/Stra
     }
 }
 
+final class cn.rtast.rob.event.raw/TranslateEN2ZHResponse { // cn.rtast.rob.event.raw/TranslateEN2ZHResponse|null[0]
+    constructor <init>(kotlin.collections/List<kotlin/String>) // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.<init>|<init>(kotlin.collections.List<kotlin.String>){}[0]
+
+    final val data // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.data|{}data[0]
+        final fun <get-data>(): kotlin.collections/List<kotlin/String> // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.data.<get-data>|<get-data>(){}[0]
+
+    final fun component1(): kotlin.collections/List<kotlin/String> // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.component1|component1(){}[0]
+    final fun copy(kotlin.collections/List<kotlin/String> = ...): cn.rtast.rob.event.raw/TranslateEN2ZHResponse // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.copy|copy(kotlin.collections.List<kotlin.String>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.event.raw/TranslateEN2ZHResponse> { // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.event.raw/TranslateEN2ZHResponse // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.event.raw/TranslateEN2ZHResponse) // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.event.raw.TranslateEN2ZHResponse){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.Companion|null[0]
+        final val $childSerializers // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.event.raw/TranslateEN2ZHResponse> // cn.rtast.rob.event.raw/TranslateEN2ZHResponse.Companion.serializer|serializer(){}[0]
+    }
+}
+
 final class cn.rtast.rob.event.raw/UploadGroupFileResponse { // cn.rtast.rob.event.raw/UploadGroupFileResponse|null[0]
     constructor <init>(cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile) // cn.rtast.rob.event.raw/UploadGroupFileResponse.<init>|<init>(cn.rtast.rob.event.raw.UploadGroupFileResponse.UploadGroupFile){}[0]
 
@@ -5258,40 +5426,6 @@ final class cn.rtast.rob.exceptions/IllegalLikeTimesException : kotlin/Exception
         final fun <get-message>(): kotlin/String // cn.rtast.rob.exceptions/IllegalLikeTimesException.message.<get-message>|<get-message>(){}[0]
 }
 
-final class cn.rtast.rob.onebot/CQMessageChain { // cn.rtast.rob.onebot/CQMessageChain|null[0]
-    final val finalString // cn.rtast.rob.onebot/CQMessageChain.finalString|{}finalString[0]
-        final fun <get-finalString>(): kotlin/String // cn.rtast.rob.onebot/CQMessageChain.finalString.<get-finalString>|<get-finalString>(){}[0]
-
-    final class Builder { // cn.rtast.rob.onebot/CQMessageChain.Builder|null[0]
-        constructor <init>() // cn.rtast.rob.onebot/CQMessageChain.Builder.<init>|<init>(){}[0]
-
-        final fun addAt(kotlin/Long): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addAt|addAt(kotlin.Long){}[0]
-        final fun addContactGroup(kotlin/Long): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addContactGroup|addContactGroup(kotlin.Long){}[0]
-        final fun addContactUser(kotlin/Long): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addContactUser|addContactUser(kotlin.Long){}[0]
-        final fun addCustomMusicShare(kotlin/String, kotlin/String, kotlin/String, kotlin/String? = ..., kotlin/String? = ...): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addCustomMusicShare|addCustomMusicShare(kotlin.String;kotlin.String;kotlin.String;kotlin.String?;kotlin.String?){}[0]
-        final fun addDice(): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addDice|addDice(){}[0]
-        final fun addFace(cn.rtast.rob.enums/QQFace): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addFace|addFace(cn.rtast.rob.enums.QQFace){}[0]
-        final fun addFace(kotlin/Int): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addFace|addFace(kotlin.Int){}[0]
-        final fun addForwardMessage(kotlin/String): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addForwardMessage|addForwardMessage(kotlin.String){}[0]
-        final fun addForwardNodeMessage(kotlin/String): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addForwardNodeMessage|addForwardNodeMessage(kotlin.String){}[0]
-        final fun addImage(kotlin/String): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addImage|addImage(kotlin.String){}[0]
-        final fun addJsonMessage(kotlin/String): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addJsonMessage|addJsonMessage(kotlin.String){}[0]
-        final fun addLocation(kotlin/Double, kotlin/Double, kotlin/String? = ..., kotlin/String? = ...): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addLocation|addLocation(kotlin.Double;kotlin.Double;kotlin.String?;kotlin.String?){}[0]
-        final fun addMusicShare(cn.rtast.rob.enums/MusicShareType, kotlin/String): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addMusicShare|addMusicShare(cn.rtast.rob.enums.MusicShareType;kotlin.String){}[0]
-        final fun addNewLine(kotlin/Int = ...): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addNewLine|addNewLine(kotlin.Int){}[0]
-        final fun addPoke(cn.rtast.rob.enums/PokeMessage): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addPoke|addPoke(cn.rtast.rob.enums.PokeMessage){}[0]
-        final fun addRPS(): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addRPS|addRPS(){}[0]
-        final fun addRecord(kotlin/String): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addRecord|addRecord(kotlin.String){}[0]
-        final fun addReply(kotlin/Long): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addReply|addReply(kotlin.Long){}[0]
-        final fun addShake(): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addShake|addShake(){}[0]
-        final fun addShare(kotlin/String, kotlin/String): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addShare|addShare(kotlin.String;kotlin.String){}[0]
-        final fun addText(kotlin/String): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addText|addText(kotlin.String){}[0]
-        final fun addVideo(kotlin/String): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addVideo|addVideo(kotlin.String){}[0]
-        final fun addXMLMessage(kotlin/String): cn.rtast.rob.onebot/CQMessageChain.Builder // cn.rtast.rob.onebot/CQMessageChain.Builder.addXMLMessage|addXMLMessage(kotlin.String){}[0]
-        final fun build(): cn.rtast.rob.onebot/CQMessageChain // cn.rtast.rob.onebot/CQMessageChain.Builder.build|build(){}[0]
-    }
-}
-
 final class cn.rtast.rob.onebot/MessageChain : cn.rtast.rob.entity/IMessageChain { // cn.rtast.rob.onebot/MessageChain|null[0]
     final val isEmpty // cn.rtast.rob.onebot/MessageChain.isEmpty|{}isEmpty[0]
         final fun <get-isEmpty>(): kotlin/Boolean // cn.rtast.rob.onebot/MessageChain.isEmpty.<get-isEmpty>|<get-isEmpty>(){}[0]
@@ -5364,10 +5498,11 @@ final class cn.rtast.rob.onebot/NodeMessageChain : cn.rtast.rob.entity/IMessageC
 
 final class cn.rtast.rob.onebot/OneBotAction : cn.rtast.rob/SendAction { // cn.rtast.rob.onebot/OneBotAction|null[0]
     final fun toString(): kotlin/String // cn.rtast.rob.onebot/OneBotAction.toString|toString(){}[0]
-    final suspend fun broadcastMessage(cn.rtast.rob.onebot/CQMessageChain) // cn.rtast.rob.onebot/OneBotAction.broadcastMessage|broadcastMessage(cn.rtast.rob.onebot.CQMessageChain){}[0]
+    final suspend fun arkShareGroup(kotlin/Long): kotlin/String // cn.rtast.rob.onebot/OneBotAction.arkShareGroup|arkShareGroup(kotlin.Long){}[0]
+    final suspend fun arkSharePeerFriend(kotlin/Long): cn.rtast.rob.event.raw/ArkSharePeerFriendResponse.ArkSharePeerFriend // cn.rtast.rob.onebot/OneBotAction.arkSharePeerFriend|arkSharePeerFriend(kotlin.Long){}[0]
+    final suspend fun arkSharePeerGroup(kotlin/Long): cn.rtast.rob.event.raw/ArkSharePeerResponse.ArkSharePeer // cn.rtast.rob.onebot/OneBotAction.arkSharePeerGroup|arkSharePeerGroup(kotlin.Long){}[0]
     final suspend fun broadcastMessage(cn.rtast.rob.onebot/MessageChain) // cn.rtast.rob.onebot/OneBotAction.broadcastMessage|broadcastMessage(cn.rtast.rob.onebot.MessageChain){}[0]
     final suspend fun broadcastMessage(kotlin/String) // cn.rtast.rob.onebot/OneBotAction.broadcastMessage|broadcastMessage(kotlin.String){}[0]
-    final suspend fun broadcastMessageListening(cn.rtast.rob.onebot/CQMessageChain) // cn.rtast.rob.onebot/OneBotAction.broadcastMessageListening|broadcastMessageListening(cn.rtast.rob.onebot.CQMessageChain){}[0]
     final suspend fun broadcastMessageListening(cn.rtast.rob.onebot/MessageChain) // cn.rtast.rob.onebot/OneBotAction.broadcastMessageListening|broadcastMessageListening(cn.rtast.rob.onebot.MessageChain){}[0]
     final suspend fun broadcastMessageListening(cn.rtast.rob.segment/Segment) // cn.rtast.rob.onebot/OneBotAction.broadcastMessageListening|broadcastMessageListening(cn.rtast.rob.segment.Segment){}[0]
     final suspend fun broadcastMessageListening(kotlin.collections/List<cn.rtast.rob.segment/Segment>) // cn.rtast.rob.onebot/OneBotAction.broadcastMessageListening|broadcastMessageListening(kotlin.collections.List<cn.rtast.rob.segment.Segment>){}[0]
@@ -5385,6 +5520,8 @@ final class cn.rtast.rob.onebot/OneBotAction : cn.rtast.rob/SendAction { // cn.r
     final suspend fun deleteGroupNotice(kotlin/Long, kotlin/String) // cn.rtast.rob.onebot/OneBotAction.deleteGroupNotice|deleteGroupNotice(kotlin.Long;kotlin.String){}[0]
     final suspend fun fetchCustomFace(): kotlin.collections/List<kotlin/String> // cn.rtast.rob.onebot/OneBotAction.fetchCustomFace|fetchCustomFace(){}[0]
     final suspend fun fetchMFaceKey(kotlin.collections/List<kotlin/String>): kotlin.collections/List<kotlin/String> // cn.rtast.rob.onebot/OneBotAction.fetchMFaceKey|fetchMFaceKey(kotlin.collections.List<kotlin.String>){}[0]
+    final suspend fun forwardFriendSingleMessage(kotlin/Long, kotlin/Long) // cn.rtast.rob.onebot/OneBotAction.forwardFriendSingleMessage|forwardFriendSingleMessage(kotlin.Long;kotlin.Long){}[0]
+    final suspend fun forwardGroupSingleMessage(kotlin/Long, kotlin/Long) // cn.rtast.rob.onebot/OneBotAction.forwardGroupSingleMessage|forwardGroupSingleMessage(kotlin.Long;kotlin.Long){}[0]
     final suspend fun getAIRecord(kotlin/Long, cn.rtast.rob.enums/AIRecordCharacter, kotlin/String, kotlin/UInt = ...): kotlin/String? // cn.rtast.rob.onebot/OneBotAction.getAIRecord|getAIRecord(kotlin.Long;cn.rtast.rob.enums.AIRecordCharacter;kotlin.String;kotlin.UInt){}[0]
     final suspend fun getAIRecord(kotlin/Long, kotlin/String, kotlin/String, kotlin/UInt = ...): kotlin/String? // cn.rtast.rob.onebot/OneBotAction.getAIRecord|getAIRecord(kotlin.Long;kotlin.String;kotlin.String;kotlin.UInt){}[0]
     final suspend fun getAIRecordCharacters(kotlin/Long, kotlin/UInt = ...): cn.rtast.rob.api.get/AIRecordCharacters // cn.rtast.rob.onebot/OneBotAction.getAIRecordCharacters|getAIRecordCharacters(kotlin.Long;kotlin.UInt){}[0]
@@ -5435,13 +5572,11 @@ final class cn.rtast.rob.onebot/OneBotAction : cn.rtast.rob/SendAction { // cn.r
     final suspend fun sendGroupAIRecord(kotlin/Long, kotlin/String, kotlin/String, kotlin/UInt = ...) // cn.rtast.rob.onebot/OneBotAction.sendGroupAIRecord|sendGroupAIRecord(kotlin.Long;kotlin.String;kotlin.String;kotlin.UInt){}[0]
     final suspend fun sendGroupForwardMsg(kotlin/Long, cn.rtast.rob.onebot/NodeMessageChain): cn.rtast.rob.event.raw.lagrange/ForwardMessageId.ForwardMessageId // cn.rtast.rob.onebot/OneBotAction.sendGroupForwardMsg|sendGroupForwardMsg(kotlin.Long;cn.rtast.rob.onebot.NodeMessageChain){}[0]
     final suspend fun sendGroupForwardMsgAsync(kotlin/Long, cn.rtast.rob.onebot/NodeMessageChain) // cn.rtast.rob.onebot/OneBotAction.sendGroupForwardMsgAsync|sendGroupForwardMsgAsync(kotlin.Long;cn.rtast.rob.onebot.NodeMessageChain){}[0]
-    final suspend fun sendGroupMessage(kotlin/Long, cn.rtast.rob.onebot/CQMessageChain): kotlin/Long? // cn.rtast.rob.onebot/OneBotAction.sendGroupMessage|sendGroupMessage(kotlin.Long;cn.rtast.rob.onebot.CQMessageChain){}[0]
     final suspend fun sendGroupMessage(kotlin/Long, cn.rtast.rob.onebot/MessageChain): kotlin/Long? // cn.rtast.rob.onebot/OneBotAction.sendGroupMessage|sendGroupMessage(kotlin.Long;cn.rtast.rob.onebot.MessageChain){}[0]
     final suspend fun sendGroupMessage(kotlin/Long, cn.rtast.rob.onebot/NodeMessageChain): cn.rtast.rob.event.raw.lagrange/ForwardMessageId.ForwardMessageId // cn.rtast.rob.onebot/OneBotAction.sendGroupMessage|sendGroupMessage(kotlin.Long;cn.rtast.rob.onebot.NodeMessageChain){}[0]
     final suspend fun sendGroupMessage(kotlin/Long, cn.rtast.rob.segment/Segment): kotlin/Long? // cn.rtast.rob.onebot/OneBotAction.sendGroupMessage|sendGroupMessage(kotlin.Long;cn.rtast.rob.segment.Segment){}[0]
     final suspend fun sendGroupMessage(kotlin/Long, kotlin.collections/List<cn.rtast.rob.event.raw/ArrayMessage>): kotlin/Long? // cn.rtast.rob.onebot/OneBotAction.sendGroupMessage|sendGroupMessage(kotlin.Long;kotlin.collections.List<cn.rtast.rob.event.raw.ArrayMessage>){}[0]
     final suspend fun sendGroupMessage(kotlin/Long, kotlin/String): kotlin/Long? // cn.rtast.rob.onebot/OneBotAction.sendGroupMessage|sendGroupMessage(kotlin.Long;kotlin.String){}[0]
-    final suspend fun sendGroupMessageAsync(kotlin/Long, cn.rtast.rob.onebot/CQMessageChain) // cn.rtast.rob.onebot/OneBotAction.sendGroupMessageAsync|sendGroupMessageAsync(kotlin.Long;cn.rtast.rob.onebot.CQMessageChain){}[0]
     final suspend fun sendGroupMessageAsync(kotlin/Long, cn.rtast.rob.onebot/MessageChain) // cn.rtast.rob.onebot/OneBotAction.sendGroupMessageAsync|sendGroupMessageAsync(kotlin.Long;cn.rtast.rob.onebot.MessageChain){}[0]
     final suspend fun sendGroupMessageAsync(kotlin/Long, cn.rtast.rob.onebot/NodeMessageChain) // cn.rtast.rob.onebot/OneBotAction.sendGroupMessageAsync|sendGroupMessageAsync(kotlin.Long;cn.rtast.rob.onebot.NodeMessageChain){}[0]
     final suspend fun sendGroupMessageAsync(kotlin/Long, cn.rtast.rob.segment/Segment) // cn.rtast.rob.onebot/OneBotAction.sendGroupMessageAsync|sendGroupMessageAsync(kotlin.Long;cn.rtast.rob.segment.Segment){}[0]
@@ -5451,13 +5586,11 @@ final class cn.rtast.rob.onebot/OneBotAction : cn.rtast.rob/SendAction { // cn.r
     final suspend fun sendLike(kotlin/Long, kotlin/Int = ...) // cn.rtast.rob.onebot/OneBotAction.sendLike|sendLike(kotlin.Long;kotlin.Int){}[0]
     final suspend fun sendPrivateForwardMsg(kotlin/Long, cn.rtast.rob.onebot/NodeMessageChain): cn.rtast.rob.event.raw.lagrange/ForwardMessageId.ForwardMessageId // cn.rtast.rob.onebot/OneBotAction.sendPrivateForwardMsg|sendPrivateForwardMsg(kotlin.Long;cn.rtast.rob.onebot.NodeMessageChain){}[0]
     final suspend fun sendPrivateForwardMsgAsync(kotlin/Long, cn.rtast.rob.onebot/NodeMessageChain) // cn.rtast.rob.onebot/OneBotAction.sendPrivateForwardMsgAsync|sendPrivateForwardMsgAsync(kotlin.Long;cn.rtast.rob.onebot.NodeMessageChain){}[0]
-    final suspend fun sendPrivateMessage(kotlin/Long, cn.rtast.rob.onebot/CQMessageChain): kotlin/Long? // cn.rtast.rob.onebot/OneBotAction.sendPrivateMessage|sendPrivateMessage(kotlin.Long;cn.rtast.rob.onebot.CQMessageChain){}[0]
     final suspend fun sendPrivateMessage(kotlin/Long, cn.rtast.rob.onebot/MessageChain): kotlin/Long? // cn.rtast.rob.onebot/OneBotAction.sendPrivateMessage|sendPrivateMessage(kotlin.Long;cn.rtast.rob.onebot.MessageChain){}[0]
     final suspend fun sendPrivateMessage(kotlin/Long, cn.rtast.rob.onebot/NodeMessageChain): cn.rtast.rob.event.raw.lagrange/ForwardMessageId.ForwardMessageId // cn.rtast.rob.onebot/OneBotAction.sendPrivateMessage|sendPrivateMessage(kotlin.Long;cn.rtast.rob.onebot.NodeMessageChain){}[0]
     final suspend fun sendPrivateMessage(kotlin/Long, cn.rtast.rob.segment/Segment): kotlin/Long? // cn.rtast.rob.onebot/OneBotAction.sendPrivateMessage|sendPrivateMessage(kotlin.Long;cn.rtast.rob.segment.Segment){}[0]
     final suspend fun sendPrivateMessage(kotlin/Long, kotlin.collections/List<cn.rtast.rob.event.raw/ArrayMessage>): kotlin/Long? // cn.rtast.rob.onebot/OneBotAction.sendPrivateMessage|sendPrivateMessage(kotlin.Long;kotlin.collections.List<cn.rtast.rob.event.raw.ArrayMessage>){}[0]
     final suspend fun sendPrivateMessage(kotlin/Long, kotlin/String): kotlin/Long? // cn.rtast.rob.onebot/OneBotAction.sendPrivateMessage|sendPrivateMessage(kotlin.Long;kotlin.String){}[0]
-    final suspend fun sendPrivateMessageAsync(kotlin/Long, cn.rtast.rob.onebot/CQMessageChain) // cn.rtast.rob.onebot/OneBotAction.sendPrivateMessageAsync|sendPrivateMessageAsync(kotlin.Long;cn.rtast.rob.onebot.CQMessageChain){}[0]
     final suspend fun sendPrivateMessageAsync(kotlin/Long, cn.rtast.rob.onebot/MessageChain) // cn.rtast.rob.onebot/OneBotAction.sendPrivateMessageAsync|sendPrivateMessageAsync(kotlin.Long;cn.rtast.rob.onebot.MessageChain){}[0]
     final suspend fun sendPrivateMessageAsync(kotlin/Long, cn.rtast.rob.onebot/NodeMessageChain) // cn.rtast.rob.onebot/OneBotAction.sendPrivateMessageAsync|sendPrivateMessageAsync(kotlin.Long;cn.rtast.rob.onebot.NodeMessageChain){}[0]
     final suspend fun sendPrivateMessageAsync(kotlin/Long, cn.rtast.rob.segment/Segment) // cn.rtast.rob.onebot/OneBotAction.sendPrivateMessageAsync|sendPrivateMessageAsync(kotlin.Long;cn.rtast.rob.segment.Segment){}[0]
@@ -5476,10 +5609,12 @@ final class cn.rtast.rob.onebot/OneBotAction : cn.rtast.rob/SendAction { // cn.r
     final suspend fun setGroupMemberSpecialTitle(kotlin/Long, kotlin/Long, kotlin/String = ..., kotlin/Int = ...) // cn.rtast.rob.onebot/OneBotAction.setGroupMemberSpecialTitle|setGroupMemberSpecialTitle(kotlin.Long;kotlin.Long;kotlin.String;kotlin.Int){}[0]
     final suspend fun setGroupName(kotlin/Long, kotlin/String) // cn.rtast.rob.onebot/OneBotAction.setGroupName|setGroupName(kotlin.Long;kotlin.String){}[0]
     final suspend fun setGroupRequest(kotlin/String, kotlin/String, kotlin/Boolean = ..., kotlin/String = ...) // cn.rtast.rob.onebot/OneBotAction.setGroupRequest|setGroupRequest(kotlin.String;kotlin.String;kotlin.Boolean;kotlin.String){}[0]
+    final suspend fun setGroupSign(kotlin/Long) // cn.rtast.rob.onebot/OneBotAction.setGroupSign|setGroupSign(kotlin.Long){}[0]
     final suspend fun setGroupWholeBan(kotlin/Long, kotlin/Boolean = ...) // cn.rtast.rob.onebot/OneBotAction.setGroupWholeBan|setGroupWholeBan(kotlin.Long;kotlin.Boolean){}[0]
     final suspend fun setLongNick(kotlin/String) // cn.rtast.rob.onebot/OneBotAction.setLongNick|setLongNick(kotlin.String){}[0]
     final suspend fun setOnlineStatus(cn.rtast.rob.enums/OnlineStatus) // cn.rtast.rob.onebot/OneBotAction.setOnlineStatus|setOnlineStatus(cn.rtast.rob.enums.OnlineStatus){}[0]
     final suspend fun setRestart() // cn.rtast.rob.onebot/OneBotAction.setRestart|setRestart(){}[0]
+    final suspend fun translateEN2ZH(kotlin.collections/List<kotlin/String>): kotlin.collections/List<kotlin/String> // cn.rtast.rob.onebot/OneBotAction.translateEN2ZH|translateEN2ZH(kotlin.collections.List<kotlin.String>){}[0]
     final suspend fun uploadGroupFile(kotlin/Long, kotlin/String, kotlin/String, kotlin/String = ...): cn.rtast.rob.event.raw/UploadGroupFileResponse.UploadGroupFile // cn.rtast.rob.onebot/OneBotAction.uploadGroupFile|uploadGroupFile(kotlin.Long;kotlin.String;kotlin.String;kotlin.String){}[0]
     final suspend fun uploadGroupFileAsync(kotlin/Long, kotlin/String, kotlin/String, kotlin/String = ...) // cn.rtast.rob.onebot/OneBotAction.uploadGroupFileAsync|uploadGroupFileAsync(kotlin.Long;kotlin.String;kotlin.String;kotlin.String){}[0]
     final suspend fun uploadImage(kotlin/String, kotlin/Boolean = ...): kotlin/String // cn.rtast.rob.onebot/OneBotAction.uploadImage|uploadImage(kotlin.String;kotlin.Boolean){}[0]
@@ -6692,7 +6827,6 @@ final inline fun (cn.rtast.rob.onebot/MessageChain.Builder).cn.rtast.rob.onebot.
 final inline fun (cn.rtast.rob.onebot/MessageChain.Builder).cn.rtast.rob.onebot.dsl/textLine(kotlin/Function1<cn.rtast.rob.segment/Text, kotlin/Unit>) // cn.rtast.rob.onebot.dsl/textLine|textLine@cn.rtast.rob.onebot.MessageChain.Builder(kotlin.Function1<cn.rtast.rob.segment.Text,kotlin.Unit>){}[0]
 final inline fun (cn.rtast.rob.onebot/MessageChain.Builder).cn.rtast.rob.onebot.dsl/video(kotlin/Function1<cn.rtast.rob.segment/Video, kotlin/Unit>): cn.rtast.rob.onebot/MessageChain.Builder // cn.rtast.rob.onebot.dsl/video|video@cn.rtast.rob.onebot.MessageChain.Builder(kotlin.Function1<cn.rtast.rob.segment.Video,kotlin.Unit>){}[0]
 final inline fun (cn.rtast.rob.onebot/MessageChain.Builder).cn.rtast.rob.onebot.dsl/xml(kotlin/Function1<cn.rtast.rob.segment/XML, kotlin/Unit>): cn.rtast.rob.onebot/MessageChain.Builder // cn.rtast.rob.onebot.dsl/xml|xml@cn.rtast.rob.onebot.MessageChain.Builder(kotlin.Function1<cn.rtast.rob.segment.XML,kotlin.Unit>){}[0]
-final inline fun cn.rtast.rob.onebot.dsl/cqMessageChain(kotlin/Function1<cn.rtast.rob.onebot/CQMessageChain.Builder, kotlin/Unit>): cn.rtast.rob.onebot/CQMessageChain // cn.rtast.rob.onebot.dsl/cqMessageChain|cqMessageChain(kotlin.Function1<cn.rtast.rob.onebot.CQMessageChain.Builder,kotlin.Unit>){}[0]
 final inline fun cn.rtast.rob.onebot.dsl/messageChain(kotlin/Function1<cn.rtast.rob.onebot/MessageChain.Builder, kotlin/Unit>): cn.rtast.rob.onebot/MessageChain // cn.rtast.rob.onebot.dsl/messageChain|messageChain(kotlin.Function1<cn.rtast.rob.onebot.MessageChain.Builder,kotlin.Unit>){}[0]
 final inline fun cn.rtast.rob.onebot.dsl/nodeMessageChain(kotlin/Function1<cn.rtast.rob.onebot/NodeMessageChain.Builder, kotlin/Unit>): cn.rtast.rob.onebot/NodeMessageChain // cn.rtast.rob.onebot.dsl/nodeMessageChain|nodeMessageChain(kotlin.Function1<cn.rtast.rob.onebot.NodeMessageChain.Builder,kotlin.Unit>){}[0]
 final suspend fun (kotlin/Long).cn.rtast.rob.event.raw/getStranger(cn.rtast.rob.onebot/OneBotAction): cn.rtast.rob.event.raw/StrangerInfo.StrangerInfo // cn.rtast.rob.event.raw/getStranger|getStranger@kotlin.Long(cn.rtast.rob.onebot.OneBotAction){}[0]

@@ -94,13 +94,11 @@ public final class cn/rtast/rob/actionable/GroupUserActionable$DefaultImpls {
 
 public abstract interface class cn/rtast/rob/actionable/MessageActionable {
 	public abstract fun markAsRead (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun reply (Lcn/rtast/rob/onebot/CQMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun reply (Lcn/rtast/rob/onebot/MessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun reply (Lcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun reply (Lcn/rtast/rob/segment/Segment;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun reply (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun reply (Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public abstract fun replyAsync (Lcn/rtast/rob/onebot/CQMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun replyAsync (Lcn/rtast/rob/onebot/MessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun replyAsync (Lcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public abstract fun replyAsync (Lcn/rtast/rob/segment/Segment;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -152,6 +150,9 @@ public abstract interface class cn/rtast/rob/actionable/UserActionable {
 
 public final class cn/rtast/rob/actionable/UserActionable$DefaultImpls {
 	public static fun sendLike (Lcn/rtast/rob/actionable/UserActionable;ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface annotation class cn/rtast/rob/annotations/OneBot11CompatibilityApi : java/lang/annotation/Annotation {
 }
 
 public final class cn/rtast/rob/api/get/AIRecordCharacters {
@@ -1060,6 +1061,144 @@ public synthetic class cn/rtast/rob/event/raw/AddFriendRequestEvent$$serializer 
 }
 
 public final class cn/rtast/rob/event/raw/AddFriendRequestEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/ArkShareGroupResponse {
+	public static final field Companion Lcn/rtast/rob/event/raw/ArkShareGroupResponse$Companion;
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lcn/rtast/rob/event/raw/ArkShareGroupResponse;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/ArkShareGroupResponse;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/ArkShareGroupResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/ArkShareGroupResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/ArkShareGroupResponse$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/ArkShareGroupResponse;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/ArkShareGroupResponse;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/ArkShareGroupResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/ArkSharePeerFriendResponse {
+	public static final field Companion Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$Companion;
+	public fun <init> (Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend;)V
+	public final fun component1 ()Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend;
+	public final fun copy (Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend;)Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse;Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/ArkSharePeerFriendResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend {
+	public static final field Companion Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend$Companion;
+	public fun <init> (ILjava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (ILjava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend;ILjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getArkMsg ()Ljava/lang/String;
+	public final fun getErrCode ()I
+	public final fun getErrMsg ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/ArkSharePeerFriendResponse$ArkSharePeerFriend$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/ArkSharePeerFriendResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/ArkSharePeerResponse {
+	public static final field Companion Lcn/rtast/rob/event/raw/ArkSharePeerResponse$Companion;
+	public fun <init> (Lcn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer;)V
+	public final fun component1 ()Lcn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer;
+	public final fun copy (Lcn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer;)Lcn/rtast/rob/event/raw/ArkSharePeerResponse;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/ArkSharePeerResponse;Lcn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/ArkSharePeerResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Lcn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/ArkSharePeerResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/ArkSharePeerResponse$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/ArkSharePeerResponse;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/ArkSharePeerResponse;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer {
+	public static final field Companion Lcn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer$Companion;
+	public fun <init> (ILjava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (ILjava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer;ILjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getArkJson ()Ljava/lang/String;
+	public final fun getErrCode ()I
+	public final fun getErrMsg ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/ArkSharePeerResponse$ArkSharePeer$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/ArkSharePeerResponse$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
@@ -1976,13 +2115,11 @@ public final class cn/rtast/rob/event/raw/GroupMessage : cn/rtast/rob/event/raw/
 	public fun markAsRead (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun reaction (Lcn/rtast/rob/enums/QQFace;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun reaction (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public fun reply (Lcn/rtast/rob/onebot/CQMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun reply (Lcn/rtast/rob/onebot/MessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun reply (Lcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun reply (Lcn/rtast/rob/segment/Segment;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun reply (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun reply (Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public fun replyAsync (Lcn/rtast/rob/onebot/CQMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun replyAsync (Lcn/rtast/rob/onebot/MessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun replyAsync (Lcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun replyAsync (Lcn/rtast/rob/segment/Segment;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -2461,13 +2598,11 @@ public final class cn/rtast/rob/event/raw/PrivateMessage : cn/rtast/rob/event/ra
 	public fun getSessionId ()Lkotlin/uuid/Uuid;
 	public fun hashCode ()I
 	public fun markAsRead (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public fun reply (Lcn/rtast/rob/onebot/CQMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun reply (Lcn/rtast/rob/onebot/MessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun reply (Lcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun reply (Lcn/rtast/rob/segment/Segment;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun reply (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun reply (Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public fun replyAsync (Lcn/rtast/rob/onebot/CQMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun replyAsync (Lcn/rtast/rob/onebot/MessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun replyAsync (Lcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun replyAsync (Lcn/rtast/rob/segment/Segment;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -2509,19 +2644,19 @@ public final class cn/rtast/rob/event/raw/PrivateMessage$Companion {
 public final class cn/rtast/rob/event/raw/PrivateSender : cn/rtast/rob/actionable/UserActionable, cn/rtast/rob/entity/IPrivateSender {
 	public static final field Companion Lcn/rtast/rob/event/raw/PrivateSender$Companion;
 	public field action Lcn/rtast/rob/onebot/OneBotAction;
-	public fun <init> (JLjava/lang/String;Lcn/rtast/rob/enums/UserSex;Ljava/lang/Integer;)V
-	public synthetic fun <init> (JLjava/lang/String;Lcn/rtast/rob/enums/UserSex;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (JLjava/lang/String;Lcn/rtast/rob/enums/UserSex;I)V
+	public synthetic fun <init> (JLjava/lang/String;Lcn/rtast/rob/enums/UserSex;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()J
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Lcn/rtast/rob/enums/UserSex;
-	public final fun component4 ()Ljava/lang/Integer;
-	public final fun copy (JLjava/lang/String;Lcn/rtast/rob/enums/UserSex;Ljava/lang/Integer;)Lcn/rtast/rob/event/raw/PrivateSender;
-	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/PrivateSender;JLjava/lang/String;Lcn/rtast/rob/enums/UserSex;Ljava/lang/Integer;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/PrivateSender;
+	public final fun component4 ()I
+	public final fun copy (JLjava/lang/String;Lcn/rtast/rob/enums/UserSex;I)Lcn/rtast/rob/event/raw/PrivateSender;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/PrivateSender;JLjava/lang/String;Lcn/rtast/rob/enums/UserSex;IILjava/lang/Object;)Lcn/rtast/rob/event/raw/PrivateSender;
 	public fun deleteFriend (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun deleteFriend (ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Lcn/rtast/rob/onebot/OneBotAction;
-	public final fun getAge ()Ljava/lang/Integer;
+	public final fun getAge ()I
 	public final fun getNickname ()Ljava/lang/String;
 	public final fun getSex ()Lcn/rtast/rob/enums/UserSex;
 	public fun getStrangerInfo (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -2860,6 +2995,32 @@ public synthetic class cn/rtast/rob/event/raw/StrangerInfo$StrangerInfo$$seriali
 }
 
 public final class cn/rtast/rob/event/raw/StrangerInfo$StrangerInfo$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/TranslateEN2ZHResponse {
+	public static final field Companion Lcn/rtast/rob/event/raw/TranslateEN2ZHResponse$Companion;
+	public fun <init> (Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;)Lcn/rtast/rob/event/raw/TranslateEN2ZHResponse;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/TranslateEN2ZHResponse;Ljava/util/List;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/TranslateEN2ZHResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/TranslateEN2ZHResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/TranslateEN2ZHResponse$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/TranslateEN2ZHResponse;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/TranslateEN2ZHResponse;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/TranslateEN2ZHResponse$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
@@ -4810,6 +4971,7 @@ public final class cn/rtast/rob/event/raw/metadata/RawHeartBeatEvent$Companion {
 public final class cn/rtast/rob/event/raw/metadata/RawHeartBeatEvent$Status {
 	public static final field Companion Lcn/rtast/rob/event/raw/metadata/RawHeartBeatEvent$Status$Companion;
 	public fun <init> (ZZZZZ)V
+	public synthetic fun <init> (ZZZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Z
 	public final fun component2 ()Z
 	public final fun component3 ()Z
@@ -4870,41 +5032,6 @@ public abstract class cn/rtast/rob/interceptor/CommandInterceptor : cn/rtast/rob
 	public final fun handleGroupInterceptor (Lcn/rtast/rob/event/raw/GroupMessage;Lcn/rtast/rob/command/BaseCommand;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public synthetic fun handlePrivateInterceptor (Lcn/rtast/rob/entity/IPrivateMessage;Lcn/rtast/rob/command/IBaseCommand;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun handlePrivateInterceptor (Lcn/rtast/rob/event/raw/PrivateMessage;Lcn/rtast/rob/command/BaseCommand;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-}
-
-public final class cn/rtast/rob/onebot/CQMessageChain {
-	public final fun getFinalString ()Ljava/lang/String;
-}
-
-public final class cn/rtast/rob/onebot/CQMessageChain$Builder {
-	public fun <init> ()V
-	public final fun addAt (J)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addContactGroup (J)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addContactUser (J)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addCustomMusicShare (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public static synthetic fun addCustomMusicShare$default (Lcn/rtast/rob/onebot/CQMessageChain$Builder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addDice ()Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addFace (I)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addFace (Lcn/rtast/rob/enums/QQFace;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addForwardMessage (Ljava/lang/String;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addForwardNodeMessage (Ljava/lang/String;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addImage (Ljava/lang/String;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addJsonMessage (Ljava/lang/String;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addLocation (DDLjava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public static synthetic fun addLocation$default (Lcn/rtast/rob/onebot/CQMessageChain$Builder;DDLjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addMusicShare (Lcn/rtast/rob/enums/MusicShareType;Ljava/lang/String;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addNewLine (I)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public static synthetic fun addNewLine$default (Lcn/rtast/rob/onebot/CQMessageChain$Builder;IILjava/lang/Object;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addPoke (Lcn/rtast/rob/enums/PokeMessage;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addRPS ()Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addRecord (Ljava/lang/String;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addReply (J)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addShake ()Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addShare (Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addText (Ljava/lang/String;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addVideo (Ljava/lang/String;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun addXMLMessage (Ljava/lang/String;)Lcn/rtast/rob/onebot/CQMessageChain$Builder;
-	public final fun build ()Lcn/rtast/rob/onebot/CQMessageChain;
 }
 
 public final class cn/rtast/rob/onebot/MessageChain : cn/rtast/rob/entity/IMessageChain {
@@ -4986,10 +5113,11 @@ public final class cn/rtast/rob/onebot/NodeMessageChain$Builder {
 }
 
 public final class cn/rtast/rob/onebot/OneBotAction : cn/rtast/rob/SendAction {
-	public final fun broadcastMessage (Lcn/rtast/rob/onebot/CQMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun arkShareGroup (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun arkSharePeerFriend (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun arkSharePeerGroup (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun broadcastMessage (Lcn/rtast/rob/onebot/MessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun broadcastMessage (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun broadcastMessageListening (Lcn/rtast/rob/onebot/CQMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun broadcastMessageListening (Lcn/rtast/rob/onebot/MessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun broadcastMessageListening (Lcn/rtast/rob/segment/Segment;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun broadcastMessageListening (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -5009,6 +5137,8 @@ public final class cn/rtast/rob/onebot/OneBotAction : cn/rtast/rob/SendAction {
 	public final fun deleteGroupNotice (JLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun fetchCustomFace (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun fetchMFaceKey (Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun forwardFriendSingleMessage (JJLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun forwardGroupSingleMessage (JJLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getAIRecord-dZZXe8Y (JLcn/rtast/rob/enums/AIRecordCharacter;Ljava/lang/String;ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getAIRecord-dZZXe8Y (JLjava/lang/String;Ljava/lang/String;ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun getAIRecord-dZZXe8Y$default (Lcn/rtast/rob/onebot/OneBotAction;JLcn/rtast/rob/enums/AIRecordCharacter;Ljava/lang/String;ILkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
@@ -5076,13 +5206,11 @@ public final class cn/rtast/rob/onebot/OneBotAction : cn/rtast/rob/SendAction {
 	public static synthetic fun sendGroupAIRecord-dZZXe8Y$default (Lcn/rtast/rob/onebot/OneBotAction;JLjava/lang/String;Ljava/lang/String;ILkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun sendGroupForwardMsg (JLcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendGroupForwardMsgAsync (JLcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun sendGroupMessage (JLcn/rtast/rob/onebot/CQMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendGroupMessage (JLcn/rtast/rob/onebot/MessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendGroupMessage (JLcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendGroupMessage (JLcn/rtast/rob/segment/Segment;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendGroupMessage (JLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendGroupMessage (JLjava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun sendGroupMessageAsync (JLcn/rtast/rob/onebot/CQMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendGroupMessageAsync (JLcn/rtast/rob/onebot/MessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendGroupMessageAsync (JLcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendGroupMessageAsync (JLcn/rtast/rob/segment/Segment;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -5093,13 +5221,11 @@ public final class cn/rtast/rob/onebot/OneBotAction : cn/rtast/rob/SendAction {
 	public static synthetic fun sendLike$default (Lcn/rtast/rob/onebot/OneBotAction;JILkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun sendPrivateForwardMsg (JLcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendPrivateForwardMsgAsync (JLcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun sendPrivateMessage (JLcn/rtast/rob/onebot/CQMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendPrivateMessage (JLcn/rtast/rob/onebot/MessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendPrivateMessage (JLcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendPrivateMessage (JLcn/rtast/rob/segment/Segment;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendPrivateMessage (JLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendPrivateMessage (JLjava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public final fun sendPrivateMessageAsync (JLcn/rtast/rob/onebot/CQMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendPrivateMessageAsync (JLcn/rtast/rob/onebot/MessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendPrivateMessageAsync (JLcn/rtast/rob/onebot/NodeMessageChain;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendPrivateMessageAsync (JLcn/rtast/rob/segment/Segment;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -5127,12 +5253,14 @@ public final class cn/rtast/rob/onebot/OneBotAction : cn/rtast/rob/SendAction {
 	public final fun setGroupName (JLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun setGroupRequest (Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun setGroupRequest$default (Lcn/rtast/rob/onebot/OneBotAction;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public final fun setGroupSign (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun setGroupWholeBan (JZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun setGroupWholeBan$default (Lcn/rtast/rob/onebot/OneBotAction;JZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun setLongNick (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun setOnlineStatus (Lcn/rtast/rob/enums/OnlineStatus;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun setRestart (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun toString ()Ljava/lang/String;
+	public final fun translateEN2ZH (Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun uploadGroupFile (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun uploadGroupFile$default (Lcn/rtast/rob/onebot/OneBotAction;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun uploadGroupFileAsync (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -5221,10 +5349,6 @@ public final class cn/rtast/rob/onebot/OneBotListener$DefaultImpls {
 	public static fun onWebsocketOpenEvent (Lcn/rtast/rob/onebot/OneBotListener;Lcn/rtast/rob/onebot/OneBotAction;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static fun onWebsocketServerClosedEvent (Lcn/rtast/rob/onebot/OneBotListener;Lcn/rtast/rob/onebot/OneBotAction;ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static fun onWebsocketServerStartedEvent (Lcn/rtast/rob/onebot/OneBotListener;Lcn/rtast/rob/onebot/OneBotAction;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-}
-
-public final class cn/rtast/rob/onebot/dsl/CQMessageChainDSLKt {
-	public static final fun cqMessageChain (Lkotlin/jvm/functions/Function1;)Lcn/rtast/rob/onebot/CQMessageChain;
 }
 
 public final class cn/rtast/rob/onebot/dsl/MessageChainDSLKt {
