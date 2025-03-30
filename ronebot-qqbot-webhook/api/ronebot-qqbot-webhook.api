@@ -717,3 +717,9 @@ public final class cn/rtast/rob/qqbot/util/HttpServer {
 	public final fun startHttpServer ()Lio/ktor/server/engine/EmbeddedServer;
 }
 
+public final class cn/rtast/rob/qqbot/util/JsonKt {
+	public static final fun getRtastUtilGson ()Lcom/google/gson/Gson;
+	public static final fun setRtastUtilGson (Lcom/google/gson/Gson;)V
+	public static final fun toJson (Ljava/lang/Object;)Ljava/lang/String;
+}
+
