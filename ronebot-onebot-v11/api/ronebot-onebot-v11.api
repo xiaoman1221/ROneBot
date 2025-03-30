@@ -1422,6 +1422,67 @@ public final class cn/rtast/rob/event/raw/FriendList$Group$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class cn/rtast/rob/event/raw/GetFileResponse {
+	public static final field Companion Lcn/rtast/rob/event/raw/GetFileResponse$Companion;
+	public fun <init> (Lcn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo;)V
+	public final fun component1 ()Lcn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo;
+	public final fun copy (Lcn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo;)Lcn/rtast/rob/event/raw/GetFileResponse;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/GetFileResponse;Lcn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/GetFileResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Lcn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/GetFileResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/GetFileResponse$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/GetFileResponse;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/GetFileResponse;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/GetFileResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo {
+	public static final field Companion Lcn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBase64 ()Ljava/lang/String;
+	public final fun getFile ()Ljava/lang/String;
+	public final fun getFileSize ()Ljava/lang/String;
+	public final fun getFilename ()Ljava/lang/String;
+	public final fun getUrl ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/GetFileResponse$GetFileResponseInfo$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/event/raw/GetFriendWithCategory {
 	public static final field Companion Lcn/rtast/rob/event/raw/GetFriendWithCategory$Companion;
 	public fun <init> (Ljava/util/List;)V
@@ -2234,6 +2295,132 @@ public synthetic class cn/rtast/rob/event/raw/GroupSender$$serializer : kotlinx/
 }
 
 public final class cn/rtast/rob/event/raw/GroupSender$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/GroupShutListResponse {
+	public static final field Companion Lcn/rtast/rob/event/raw/GroupShutListResponse$Companion;
+	public fun <init> (Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;)Lcn/rtast/rob/event/raw/GroupShutListResponse;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/GroupShutListResponse;Ljava/util/List;ILjava/lang/Object;)Lcn/rtast/rob/event/raw/GroupShutListResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getData ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/GroupShutListResponse$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/GroupShutListResponse$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/GroupShutListResponse;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/GroupShutListResponse;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/GroupShutListResponse$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/event/raw/GroupShutListResponse$GroupShutListUser {
+	public static final field Companion Lcn/rtast/rob/event/raw/GroupShutListResponse$GroupShutListUser$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;JZZZZLjava/util/Map;IIIIILjava/lang/String;Ljava/lang/String;IIIIIILjava/lang/String;IJJIIIIZI)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()J
+	public final fun component11 ()Z
+	public final fun component12 ()Z
+	public final fun component13 ()Z
+	public final fun component14 ()Z
+	public final fun component15 ()Ljava/util/Map;
+	public final fun component16 ()I
+	public final fun component17 ()I
+	public final fun component18 ()I
+	public final fun component19 ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component20 ()I
+	public final fun component21 ()Ljava/lang/String;
+	public final fun component22 ()Ljava/lang/String;
+	public final fun component23 ()I
+	public final fun component24 ()I
+	public final fun component25 ()I
+	public final fun component26 ()I
+	public final fun component27 ()I
+	public final fun component28 ()I
+	public final fun component29 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component30 ()I
+	public final fun component31 ()J
+	public final fun component32 ()J
+	public final fun component33 ()I
+	public final fun component34 ()I
+	public final fun component35 ()I
+	public final fun component36 ()I
+	public final fun component37 ()Z
+	public final fun component38 ()I
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()I
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()I
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;JZZZZLjava/util/Map;IIIIILjava/lang/String;Ljava/lang/String;IIIIIILjava/lang/String;IJJIIIIZI)Lcn/rtast/rob/event/raw/GroupShutListResponse$GroupShutListUser;
+	public static synthetic fun copy$default (Lcn/rtast/rob/event/raw/GroupShutListResponse$GroupShutListUser;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;JZZZZLjava/util/Map;IIIIILjava/lang/String;Ljava/lang/String;IIIIIILjava/lang/String;IJJIIIIZIIILjava/lang/Object;)Lcn/rtast/rob/event/raw/GroupShutListResponse$GroupShutListUser;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAutoRemark ()Ljava/lang/String;
+	public final fun getAvatarPath ()Ljava/lang/String;
+	public final fun getBigClubFlag ()I
+	public final fun getBigClubLevel ()I
+	public final fun getCardName ()Ljava/lang/String;
+	public final fun getCardNameId ()I
+	public final fun getCardType ()I
+	public final fun getCreditLevel ()I
+	public final fun getGlobalGroupLevel ()I
+	public final fun getGlobalGroupPoint ()I
+	public final fun getGroupHonor ()Ljava/util/Map;
+	public final fun getJoinTime ()J
+	public final fun getLastSpeakTime ()J
+	public final fun getMemberFlag ()I
+	public final fun getMemberFlagExt ()I
+	public final fun getMemberFlagExt2 ()I
+	public final fun getMemberLevel ()I
+	public final fun getMemberMobileFlag ()I
+	public final fun getMemberRealLevel ()I
+	public final fun getMemberSpecialTitle ()Ljava/lang/String;
+	public final fun getMemberTitleId ()I
+	public final fun getMssVipType ()I
+	public final fun getNick ()Ljava/lang/String;
+	public final fun getQid ()Ljava/lang/String;
+	public final fun getRemark ()Ljava/lang/String;
+	public final fun getRichFlag ()I
+	public final fun getRole ()I
+	public final fun getShutUpTime ()J
+	public final fun getSpecialTitleExpireTime ()Ljava/lang/String;
+	public final fun getUid ()Ljava/lang/String;
+	public final fun getUin ()Ljava/lang/String;
+	public final fun getUserShowFlag ()I
+	public final fun getUserShowFlagNew ()I
+	public fun hashCode ()I
+	public final fun isDelete ()Z
+	public final fun isRobot ()Z
+	public final fun isSpecialConcerned ()Z
+	public final fun isSpecialShield ()Z
+	public final fun isSpecialShielded ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/event/raw/GroupShutListResponse$GroupShutListUser$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/event/raw/GroupShutListResponse$GroupShutListUser$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/event/raw/GroupShutListResponse$GroupShutListUser;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/event/raw/GroupShutListResponse$GroupShutListUser;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/event/raw/GroupShutListResponse$GroupShutListUser$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
@@ -5149,6 +5336,7 @@ public final class cn/rtast/rob/onebot/OneBotAction : cn/rtast/rob/SendAction {
 	public final fun getCSRFToken (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getCookies (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getEssenceMessageList (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getFile (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getForwardMessage (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getFriendList (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getFriendsWithCategory (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -5169,6 +5357,7 @@ public final class cn/rtast/rob/onebot/OneBotAction : cn/rtast/rob/SendAction {
 	public final fun getGroupNoticeById (JLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getGroupRequests (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getGroupRootFiles (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getGroupShutList (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getLoginInfo (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getMessage (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun getMiniAppArk (Lcn/rtast/rob/enums/MiniAppArkType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -5234,6 +5423,9 @@ public final class cn/rtast/rob/onebot/OneBotAction : cn/rtast/rob/SendAction {
 	public final fun setBotAvatar (Ljava/lang/String;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun setBotAvatar$default (Lcn/rtast/rob/onebot/OneBotAction;Ljava/lang/String;ZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun setEssenceMessage (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setFriendCategory (JLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setFriendRemark (JLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun setFriendRemark$default (Lcn/rtast/rob/onebot/OneBotAction;JLjava/lang/String;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun setFriendRequest (Ljava/lang/String;ZLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun setFriendRequest$default (Lcn/rtast/rob/onebot/OneBotAction;Ljava/lang/String;ZLjava/lang/String;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun setGroupAdmin (JJZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -5251,12 +5443,15 @@ public final class cn/rtast/rob/onebot/OneBotAction : cn/rtast/rob/SendAction {
 	public final fun setGroupMemberSpecialTitle (JJLjava/lang/String;ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun setGroupMemberSpecialTitle$default (Lcn/rtast/rob/onebot/OneBotAction;JJLjava/lang/String;ILkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun setGroupName (JLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setGroupRemark (JLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun setGroupRequest (Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun setGroupRequest$default (Lcn/rtast/rob/onebot/OneBotAction;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun setGroupSign (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun setGroupWholeBan (JZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static synthetic fun setGroupWholeBan$default (Lcn/rtast/rob/onebot/OneBotAction;JZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 	public final fun setLongNick (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setMessageEmojiLike (JILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setMessageEmojiLike (JLcn/rtast/rob/enums/QQFace;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun setOnlineStatus (Lcn/rtast/rob/enums/OnlineStatus;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun setRestart (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun toString ()Ljava/lang/String;
