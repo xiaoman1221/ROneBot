@@ -6190,6 +6190,11 @@ public final class cn/rtast/rob/util/BotManager : cn/rtast/rob/util/IBotManager 
 	public fun removeBotInstance (Lcn/rtast/rob/BotInstance;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
+public final class cn/rtast/rob/util/ws/WebsocketKt {
+	public static final fun createClient-GajXJrc (Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/onebot/OneBotListener;ZLcn/rtast/rob/BotInstance;JJLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun createServer-x2RqbK4 (ILjava/lang/String;Lcn/rtast/rob/onebot/OneBotListener;Lcn/rtast/rob/BotInstance;Ljava/lang/String;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
 public final class cn/rtast/rob/util/ws/WebsocketSession {
 	public fun <init> ()V
 	public final fun closeClient (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -6198,10 +6203,5 @@ public final class cn/rtast/rob/util/ws/WebsocketSession {
 	public final fun createServer-x2RqbK4 (ILjava/lang/String;Lcn/rtast/rob/onebot/OneBotListener;Lcn/rtast/rob/BotInstance;Ljava/lang/String;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendToClient (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public final fun sendToServer (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-}
-
-public final class cn/rtast/rob/util/ws/Websocket_jvmKt {
-	public static final fun createClient-GajXJrc (Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/onebot/OneBotListener;ZLcn/rtast/rob/BotInstance;JJLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static final fun createServer-x2RqbK4 (ILjava/lang/String;Lcn/rtast/rob/onebot/OneBotListener;Lcn/rtast/rob/BotInstance;Ljava/lang/String;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 

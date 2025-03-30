@@ -15,7 +15,4 @@ final class cn.rtast.rob.messagedb/MessageDB { // cn.rtast.rob.messagedb/Message
     final fun syncToFile() // cn.rtast.rob.messagedb/MessageDB.syncToFile|syncToFile(){}[0]
 }
 
-final val cn.rtast.rob.messagedb/messageDB // cn.rtast.rob.messagedb/messageDB|@cn.rtast.rob.BaseBotInstance{}messageDB[0]
-    final fun (cn.rtast.rob/BaseBotInstance).<get-messageDB>(): cn.rtast.rob.messagedb/MessageDB // cn.rtast.rob.messagedb/messageDB.<get-messageDB>|<get-messageDB>@cn.rtast.rob.BaseBotInstance(){}[0]
-
-final fun (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.messagedb/createMessageDB(kotlinx.io.files/Path = ...): cn.rtast.rob.messagedb/MessageDB // cn.rtast.rob.messagedb/createMessageDB|createMessageDB@cn.rtast.rob.BaseBotInstance(kotlinx.io.files.Path){}[0]
+final fun cn.rtast.rob.messagedb/createMessageDB(kotlinx.io.files/Path = ...): cn.rtast.rob.messagedb/MessageDB // cn.rtast.rob.messagedb/createMessageDB|createMessageDB(kotlinx.io.files.Path){}[0]

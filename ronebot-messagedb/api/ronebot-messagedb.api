@@ -7,8 +7,7 @@ public final class cn/rtast/rob/messagedb/MessageDB {
 }
 
 public final class cn/rtast/rob/messagedb/MessageDBKt {
-	public static final fun createMessageDB (Lcn/rtast/rob/BaseBotInstance;Lkotlinx/io/files/Path;)Lcn/rtast/rob/messagedb/MessageDB;
-	public static synthetic fun createMessageDB$default (Lcn/rtast/rob/BaseBotInstance;Lkotlinx/io/files/Path;ILjava/lang/Object;)Lcn/rtast/rob/messagedb/MessageDB;
-	public static final fun getMessageDB (Lcn/rtast/rob/BaseBotInstance;)Lcn/rtast/rob/messagedb/MessageDB;
+	public static final fun createMessageDB (Lkotlinx/io/files/Path;)Lcn/rtast/rob/messagedb/MessageDB;
+	public static synthetic fun createMessageDB$default (Lkotlinx/io/files/Path;ILjava/lang/Object;)Lcn/rtast/rob/messagedb/MessageDB;
 }
 

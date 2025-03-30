@@ -227,6 +227,25 @@ final enum class cn.rtast.rob.interceptor/CommandExecutionResult : kotlin/Enum<c
     final fun values(): kotlin/Array<cn.rtast.rob.interceptor/CommandExecutionResult> // cn.rtast.rob.interceptor/CommandExecutionResult.values|values#static(){}[0]
 }
 
+final enum class cn.rtast.rob.permission.enums/BasicPermission : kotlin/Enum<cn.rtast.rob.permission.enums/BasicPermission> { // cn.rtast.rob.permission.enums/BasicPermission|null[0]
+    enum entry Admin // cn.rtast.rob.permission.enums/BasicPermission.Admin|null[0]
+    enum entry Other // cn.rtast.rob.permission.enums/BasicPermission.Other|null[0]
+    enum entry Owner // cn.rtast.rob.permission.enums/BasicPermission.Owner|null[0]
+    enum entry User // cn.rtast.rob.permission.enums/BasicPermission.User|null[0]
+
+    final val entries // cn.rtast.rob.permission.enums/BasicPermission.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.permission.enums/BasicPermission> // cn.rtast.rob.permission.enums/BasicPermission.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val level // cn.rtast.rob.permission.enums/BasicPermission.level|{}level[0]
+        final fun <get-level>(): kotlin/Int // cn.rtast.rob.permission.enums/BasicPermission.level.<get-level>|<get-level>(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.permission.enums/BasicPermission // cn.rtast.rob.permission.enums/BasicPermission.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.permission.enums/BasicPermission> // cn.rtast.rob.permission.enums/BasicPermission.values|values#static(){}[0]
+
+    final object Companion { // cn.rtast.rob.permission.enums/BasicPermission.Companion|null[0]
+        final fun fromLevel(kotlin/Int): cn.rtast.rob.permission.enums/BasicPermission // cn.rtast.rob.permission.enums/BasicPermission.Companion.fromLevel|fromLevel(kotlin.Int){}[0]
+    }
+}
+
 abstract interface <#A: cn.rtast.rob.command/IBaseCommand<out cn.rtast.rob.entity/IGroupMessage, out cn.rtast.rob.entity/IPrivateMessage>, #B: cn.rtast.rob.entity/IGroupMessage, #C: cn.rtast.rob.entity/IPrivateMessage> cn.rtast.rob.command/CommandManager { // cn.rtast.rob.command/CommandManager|null[0]
     abstract val commands // cn.rtast.rob.command/CommandManager.commands|{}commands[0]
         abstract fun <get-commands>(): kotlin.collections/MutableList<#A> // cn.rtast.rob.command/CommandManager.commands.<get-commands>|<get-commands>(){}[0]
@@ -473,6 +492,16 @@ final class cn.rtast.rob.exceptions/WebsocketProtocolNotSupportedException : kot
     constructor <init>(kotlin/String) // cn.rtast.rob.exceptions/WebsocketProtocolNotSupportedException.<init>|<init>(kotlin.String){}[0]
 }
 
+final class cn.rtast.rob.permission/PermissionManager { // cn.rtast.rob.permission/PermissionManager|null[0]
+    constructor <init>() // cn.rtast.rob.permission/PermissionManager.<init>|<init>(){}[0]
+
+    final fun revokeUserPermission(kotlin/String): kotlin/Boolean // cn.rtast.rob.permission/PermissionManager.revokeUserPermission|revokeUserPermission(kotlin.String){}[0]
+    final fun revokeUserPermission(kotlin/String, kotlin/String): kotlin/Boolean // cn.rtast.rob.permission/PermissionManager.revokeUserPermission|revokeUserPermission(kotlin.String;kotlin.String){}[0]
+    final fun setUserPermission(kotlin/String, cn.rtast.rob.permission.enums/BasicPermission) // cn.rtast.rob.permission/PermissionManager.setUserPermission|setUserPermission(kotlin.String;cn.rtast.rob.permission.enums.BasicPermission){}[0]
+    final fun setUserPermission(kotlin/String, kotlin/Int) // cn.rtast.rob.permission/PermissionManager.setUserPermission|setUserPermission(kotlin.String;kotlin.Int){}[0]
+    final fun setUserPermission(kotlin/String, kotlin/String) // cn.rtast.rob.permission/PermissionManager.setUserPermission|setUserPermission(kotlin.String;kotlin.String){}[0]
+}
+
 final class cn.rtast.rob.scheduler/CoroutineTaskHandle : cn.rtast.rob.scheduler/TaskHandle { // cn.rtast.rob.scheduler/CoroutineTaskHandle|null[0]
     constructor <init>(kotlinx.coroutines/Job) // cn.rtast.rob.scheduler/CoroutineTaskHandle.<init>|<init>(kotlinx.coroutines.Job){}[0]
 
@@ -486,6 +515,8 @@ final val cn.rtast.rob.event/eventHandlers // cn.rtast.rob.event/eventHandlers|{
     final fun <get-eventHandlers>(): kotlin.collections/MutableMap<cn.rtast.rob/BaseBotInstance, kotlin.collections/MutableMap<kotlin.reflect/KClass<out cn.rtast.rob.event/BaseDispatchEvent<*>>, kotlin.coroutines/SuspendFunction1<cn.rtast.rob.event/BaseDispatchEvent<*>, kotlin/Unit>>> // cn.rtast.rob.event/eventHandlers.<get-eventHandlers>|<get-eventHandlers>(){}[0]
 final val cn.rtast.rob.event/flowEventChannel // cn.rtast.rob.event/flowEventChannel|{}flowEventChannel[0]
     final fun <get-flowEventChannel>(): kotlin.collections/MutableMap<cn.rtast.rob/BaseBotInstance, kotlinx.coroutines.channels/Channel<cn.rtast.rob.event/BaseDispatchEvent<out cn.rtast.rob/SendAction>>> // cn.rtast.rob.event/flowEventChannel.<get-flowEventChannel>|<get-flowEventChannel>(){}[0]
+final val cn.rtast.rob.permission/permissionManager // cn.rtast.rob.permission/permissionManager|{}permissionManager[0]
+    final fun <get-permissionManager>(): cn.rtast.rob.permission/PermissionManager // cn.rtast.rob.permission/permissionManager.<get-permissionManager>|<get-permissionManager>(){}[0]
 final val cn.rtast.rob.util/ID // cn.rtast.rob.util/ID|@kotlin.Int{}ID[0]
     final fun (kotlin/Int).<get-ID>(): cn.rtast.rob.util/IBotManager.ID // cn.rtast.rob.util/ID.<get-ID>|<get-ID>@kotlin.Int(){}[0]
 final val cn.rtast.rob.util/ID // cn.rtast.rob.util/ID|@kotlin.Long{}ID[0]
@@ -494,6 +525,10 @@ final val cn.rtast.rob.util/ID // cn.rtast.rob.util/ID|@kotlin.String{}ID[0]
     final fun (kotlin/String).<get-ID>(): cn.rtast.rob.util/IBotManager.ID // cn.rtast.rob.util/ID.<get-ID>|<get-ID>@kotlin.String(){}[0]
 final val cn.rtast.rob/commonCoroutineScope // cn.rtast.rob/commonCoroutineScope|{}commonCoroutineScope[0]
     final fun <get-commonCoroutineScope>(): kotlinx.coroutines/CoroutineScope // cn.rtast.rob/commonCoroutineScope.<get-commonCoroutineScope>|<get-commonCoroutineScope>(){}[0]
+final val cn.rtast.rob/logger // cn.rtast.rob/logger|{}logger[0]
+    final fun <get-logger>(): cn.rtast.rob.util/Logger // cn.rtast.rob/logger.<get-logger>|<get-logger>(){}[0]
+final val cn.rtast.rob/platformName // cn.rtast.rob/platformName|{}platformName[0]
+    final fun <get-platformName>(): kotlin/String // cn.rtast.rob/platformName.<get-platformName>|<get-platformName>(){}[0]
 
 final fun (cn.rtast.rob.entity/Resource).cn.rtast.rob.entity/toByteArray(): kotlin/ByteArray // cn.rtast.rob.entity/toByteArray|toByteArray@cn.rtast.rob.entity.Resource(){}[0]
 final fun (cn.rtast.rob.entity/Resource).cn.rtast.rob.entity/toByteArraySafely(): kotlin/ByteArray? // cn.rtast.rob.entity/toByteArraySafely|toByteArraySafely@cn.rtast.rob.entity.Resource(){}[0]
@@ -506,6 +541,23 @@ final fun (kotlin/String).cn.rtast.rob.util/decodeToBase64(): kotlin/String // c
 final fun (kotlin/String).cn.rtast.rob.util/decodeToByteArrayBase64(): kotlin/ByteArray // cn.rtast.rob.util/decodeToByteArrayBase64|decodeToByteArrayBase64@kotlin.String(){}[0]
 final fun (kotlin/String).cn.rtast.rob.util/encodeToBase64(): kotlin/String // cn.rtast.rob.util/encodeToBase64|encodeToBase64@kotlin.String(){}[0]
 final fun (kotlinx.io.files/Path).cn.rtast.rob.entity/toResource(): cn.rtast.rob.entity/Resource // cn.rtast.rob.entity/toResource|toResource@kotlinx.io.files.Path(){}[0]
+final fun <#A: cn.rtast.rob.command/IBaseCommand<cn.rtast.rob.entity/IGroupMessage, cn.rtast.rob.entity/IPrivateMessage>> (#A).cn.rtast.rob.permission/hasPermission(kotlin/String, cn.rtast.rob.permission.enums/BasicPermission): kotlin/Boolean // cn.rtast.rob.permission/hasPermission|hasPermission@0:0(kotlin.String;cn.rtast.rob.permission.enums.BasicPermission){0§<cn.rtast.rob.command.IBaseCommand<cn.rtast.rob.entity.IGroupMessage,cn.rtast.rob.entity.IPrivateMessage>>}[0]
+final fun <#A: cn.rtast.rob.command/IBaseCommand<cn.rtast.rob.entity/IGroupMessage, cn.rtast.rob.entity/IPrivateMessage>> (#A).cn.rtast.rob.permission/hasPermission(kotlin/String, kotlin/Int): kotlin/Boolean // cn.rtast.rob.permission/hasPermission|hasPermission@0:0(kotlin.String;kotlin.Int){0§<cn.rtast.rob.command.IBaseCommand<cn.rtast.rob.entity.IGroupMessage,cn.rtast.rob.entity.IPrivateMessage>>}[0]
+final fun <#A: cn.rtast.rob.command/IBaseCommand<cn.rtast.rob.entity/IGroupMessage, cn.rtast.rob.entity/IPrivateMessage>> (#A).cn.rtast.rob.permission/hasPermission(kotlin/String, kotlin/String): kotlin/Boolean // cn.rtast.rob.permission/hasPermission|hasPermission@0:0(kotlin.String;kotlin.String){0§<cn.rtast.rob.command.IBaseCommand<cn.rtast.rob.entity.IGroupMessage,cn.rtast.rob.entity.IPrivateMessage>>}[0]
+final fun <#A: cn.rtast.rob.command/IBaseCommand<cn.rtast.rob.entity/IGroupMessage, cn.rtast.rob.entity/IPrivateMessage>> (#A).cn.rtast.rob.permission/revokePermission(kotlin/String) // cn.rtast.rob.permission/revokePermission|revokePermission@0:0(kotlin.String){0§<cn.rtast.rob.command.IBaseCommand<cn.rtast.rob.entity.IGroupMessage,cn.rtast.rob.entity.IPrivateMessage>>}[0]
+final fun <#A: cn.rtast.rob.command/IBaseCommand<cn.rtast.rob.entity/IGroupMessage, cn.rtast.rob.entity/IPrivateMessage>> (#A).cn.rtast.rob.permission/revokePermission(kotlin/String, kotlin/String) // cn.rtast.rob.permission/revokePermission|revokePermission@0:0(kotlin.String;kotlin.String){0§<cn.rtast.rob.command.IBaseCommand<cn.rtast.rob.entity.IGroupMessage,cn.rtast.rob.entity.IPrivateMessage>>}[0]
+final fun <#A: cn.rtast.rob.command/IBaseCommand<cn.rtast.rob.entity/IGroupMessage, cn.rtast.rob.entity/IPrivateMessage>> (#A).cn.rtast.rob.permission/setPermission(kotlin/String, cn.rtast.rob.permission.enums/BasicPermission) // cn.rtast.rob.permission/setPermission|setPermission@0:0(kotlin.String;cn.rtast.rob.permission.enums.BasicPermission){0§<cn.rtast.rob.command.IBaseCommand<cn.rtast.rob.entity.IGroupMessage,cn.rtast.rob.entity.IPrivateMessage>>}[0]
+final fun <#A: cn.rtast.rob.command/IBaseCommand<cn.rtast.rob.entity/IGroupMessage, cn.rtast.rob.entity/IPrivateMessage>> (#A).cn.rtast.rob.permission/setPermission(kotlin/String, kotlin/Int) // cn.rtast.rob.permission/setPermission|setPermission@0:0(kotlin.String;kotlin.Int){0§<cn.rtast.rob.command.IBaseCommand<cn.rtast.rob.entity.IGroupMessage,cn.rtast.rob.entity.IPrivateMessage>>}[0]
+final fun <#A: cn.rtast.rob.command/IBaseCommand<cn.rtast.rob.entity/IGroupMessage, cn.rtast.rob.entity/IPrivateMessage>> (#A).cn.rtast.rob.permission/setPermission(kotlin/String, kotlin/String) // cn.rtast.rob.permission/setPermission|setPermission@0:0(kotlin.String;kotlin.String){0§<cn.rtast.rob.command.IBaseCommand<cn.rtast.rob.entity.IGroupMessage,cn.rtast.rob.entity.IPrivateMessage>>}[0]
+final fun <#A: cn.rtast.rob.entity/ISender> (#A).cn.rtast.rob.permission/hasPermission(cn.rtast.rob.permission.enums/BasicPermission): kotlin/Boolean // cn.rtast.rob.permission/hasPermission|hasPermission@0:0(cn.rtast.rob.permission.enums.BasicPermission){0§<cn.rtast.rob.entity.ISender>}[0]
+final fun <#A: cn.rtast.rob.entity/ISender> (#A).cn.rtast.rob.permission/hasPermission(kotlin/Int): kotlin/Boolean // cn.rtast.rob.permission/hasPermission|hasPermission@0:0(kotlin.Int){0§<cn.rtast.rob.entity.ISender>}[0]
+final fun <#A: cn.rtast.rob.entity/ISender> (#A).cn.rtast.rob.permission/hasPermission(kotlin/String): kotlin/Boolean // cn.rtast.rob.permission/hasPermission|hasPermission@0:0(kotlin.String){0§<cn.rtast.rob.entity.ISender>}[0]
+final fun <#A: cn.rtast.rob.entity/ISender> (#A).cn.rtast.rob.permission/revokePermission() // cn.rtast.rob.permission/revokePermission|revokePermission@0:0(){0§<cn.rtast.rob.entity.ISender>}[0]
+final fun <#A: cn.rtast.rob.entity/ISender> (#A).cn.rtast.rob.permission/revokePermission(kotlin/String) // cn.rtast.rob.permission/revokePermission|revokePermission@0:0(kotlin.String){0§<cn.rtast.rob.entity.ISender>}[0]
+final fun <#A: cn.rtast.rob.entity/ISender> (#A).cn.rtast.rob.permission/setPermission(cn.rtast.rob.permission.enums/BasicPermission) // cn.rtast.rob.permission/setPermission|setPermission@0:0(cn.rtast.rob.permission.enums.BasicPermission){0§<cn.rtast.rob.entity.ISender>}[0]
+final fun <#A: cn.rtast.rob.entity/ISender> (#A).cn.rtast.rob.permission/setPermission(kotlin/Int) // cn.rtast.rob.permission/setPermission|setPermission@0:0(kotlin.Int){0§<cn.rtast.rob.entity.ISender>}[0]
+final fun <#A: cn.rtast.rob.entity/ISender> (#A).cn.rtast.rob.permission/setPermission(kotlin/String) // cn.rtast.rob.permission/setPermission|setPermission@0:0(kotlin.String){0§<cn.rtast.rob.entity.ISender>}[0]
+final fun <#A: cn.rtast.rob/BotFactory> (#A).cn.rtast.rob.permission/getPermissionManager(): cn.rtast.rob.permission/PermissionManager // cn.rtast.rob.permission/getPermissionManager|getPermissionManager@0:0(){0§<cn.rtast.rob.BotFactory>}[0]
 final inline fun <#A: reified cn.rtast.rob.event/BaseDispatchEvent<*>> (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.event/flowEvent(crossinline kotlin.coroutines/SuspendFunction1<kotlinx.coroutines.flow/Flow<#A>, kotlin/Unit>) // cn.rtast.rob.event/flowEvent|flowEvent@cn.rtast.rob.BaseBotInstance(kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.flow.Flow<0:0>,kotlin.Unit>){0§<cn.rtast.rob.event.BaseDispatchEvent<*>>}[0]
 final inline fun <#A: reified cn.rtast.rob.event/BaseDispatchEvent<*>> (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.event/onEvent(crossinline kotlin.coroutines/SuspendFunction1<#A, kotlin/Unit>) // cn.rtast.rob.event/onEvent|onEvent@cn.rtast.rob.BaseBotInstance(kotlin.coroutines.SuspendFunction1<0:0,kotlin.Unit>){0§<cn.rtast.rob.event.BaseDispatchEvent<*>>}[0]
 final inline fun <#A: reified cn.rtast.rob.event/BaseDispatchEvent<*>> (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.event/subscribe(crossinline kotlin.coroutines/SuspendFunction1<#A, kotlin/Unit>) // cn.rtast.rob.event/subscribe|subscribe@cn.rtast.rob.BaseBotInstance(kotlin.coroutines.SuspendFunction1<0:0,kotlin.Unit>){0§<cn.rtast.rob.event.BaseDispatchEvent<*>>}[0]
