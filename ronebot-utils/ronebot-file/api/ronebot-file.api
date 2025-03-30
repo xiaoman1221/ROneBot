@@ -5,3 +5,8 @@ public final class cn/rtast/rob/ext/file/FileKt {
 	public static final fun writeText (Lkotlinx/io/files/Path;Ljava/lang/String;)V
 }
 
+public final class cn/rtast/rob/ext/file/File_jvmKt {
+	public static final fun createFile (Lkotlinx/io/files/Path;)V
+	public static final fun mkdirs (Lkotlinx/io/files/Path;)V
+}
+

@@ -7,12 +7,13 @@
 
 // Library unique name: <cn.rtast.rob:ronebot-messagedb>
 final class cn.rtast.rob.messagedb/MessageDB { // cn.rtast.rob.messagedb/MessageDB|null[0]
-    constructor <init>(kotlinx.io.files/Path) // cn.rtast.rob.messagedb/MessageDB.<init>|<init>(kotlinx.io.files.Path){}[0]
+    constructor <init>() // cn.rtast.rob.messagedb/MessageDB.<init>|<init>(){}[0]
 
-    final fun getMessage(kotlin.uuid/Uuid): kotlin/Long? // cn.rtast.rob.messagedb/MessageDB.getMessage|getMessage(kotlin.uuid.Uuid){}[0]
+    final fun deserialize(): kotlin/String // cn.rtast.rob.messagedb/MessageDB.deserialize|deserialize(){}[0]
+    final fun getMessage(kotlin.uuid/Uuid): kotlin/String? // cn.rtast.rob.messagedb/MessageDB.getMessage|getMessage(kotlin.uuid.Uuid){}[0]
     final fun removeMessage(): kotlin/Nothing // cn.rtast.rob.messagedb/MessageDB.removeMessage|removeMessage(){}[0]
-    final fun saveMessage(kotlin.uuid/Uuid, kotlin/Long) // cn.rtast.rob.messagedb/MessageDB.saveMessage|saveMessage(kotlin.uuid.Uuid;kotlin.Long){}[0]
-    final fun syncToFile() // cn.rtast.rob.messagedb/MessageDB.syncToFile|syncToFile(){}[0]
+    final fun saveMessage(kotlin.uuid/Uuid, kotlin/String) // cn.rtast.rob.messagedb/MessageDB.saveMessage|saveMessage(kotlin.uuid.Uuid;kotlin.String){}[0]
+    final fun serialize(kotlin/String): kotlin.collections/MutableMap<kotlin.uuid/Uuid, kotlin/String> // cn.rtast.rob.messagedb/MessageDB.serialize|serialize(kotlin.String){}[0]
 }
 
-final fun cn.rtast.rob.messagedb/createMessageDB(kotlinx.io.files/Path = ...): cn.rtast.rob.messagedb/MessageDB // cn.rtast.rob.messagedb/createMessageDB|createMessageDB(kotlinx.io.files.Path){}[0]
+final fun cn.rtast.rob.messagedb/createMessageDB(): cn.rtast.rob.messagedb/MessageDB // cn.rtast.rob.messagedb/createMessageDB|createMessageDB(){}[0]
