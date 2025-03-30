@@ -4956,6 +4956,10 @@ public final class cn/rtast/rob/event/raw/lagrange/RawFileEvent$File$Companion {
 	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
+public final class cn/rtast/rob/event/raw/lagrange/RawFileEvent_jvmKt {
+	public static final fun saveFile (Lkotlinx/io/files/Path;[BLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
 public final class cn/rtast/rob/event/raw/lagrange/RawPokeEvent {
 	public static final field Companion Lcn/rtast/rob/event/raw/lagrange/RawPokeEvent$Companion;
 	public field action Lcn/rtast/rob/onebot/OneBotAction;
