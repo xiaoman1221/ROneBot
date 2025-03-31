@@ -79,14 +79,6 @@ final class cn.rtast.rob.starter.backend.entity/LatestVersion { // cn.rtast.rob.
     }
 }
 
-final class cn.rtast.rob.starter.backend.resources/AbstractResource { // cn.rtast.rob.starter.backend.resources/AbstractResource|null[0]
-    constructor <init>(kotlin/UByteArray) // cn.rtast.rob.starter.backend.resources/AbstractResource.<init>|<init>(kotlin.UByteArray){}[0]
-
-    final fun asByteArray(): kotlin/ByteArray // cn.rtast.rob.starter.backend.resources/AbstractResource.asByteArray|asByteArray(){}[0]
-    final fun asString(): kotlin/String // cn.rtast.rob.starter.backend.resources/AbstractResource.asString|asString(){}[0]
-    final fun saveTo(kotlinx.io.files/Path) // cn.rtast.rob.starter.backend.resources/AbstractResource.saveTo|saveTo(kotlinx.io.files.Path){}[0]
-}
-
 final object cn.rtast.rob.starter.backend.util/Http { // cn.rtast.rob.starter.backend.util/Http|null[0]
     final val client // cn.rtast.rob.starter.backend.util/Http.client|{}client[0]
         final fun <get-client>(): io.ktor.client/HttpClient // cn.rtast.rob.starter.backend.util/Http.client.<get-client>|<get-client>(){}[0]
@@ -100,6 +92,8 @@ final object cn.rtast.rob.starter.backend.util/Resources { // cn.rtast.rob.start
     final fun loadConfig(): cn.rtast.rob.starter.backend.entity/Config // cn.rtast.rob.starter.backend.util/Resources.loadConfig|loadConfig(){}[0]
 }
 
+final val cn.rtast.rob.starter.backend.resources/GeneratedResource // cn.rtast.rob.starter.backend.resources/GeneratedResource|{}GeneratedResource[0]
+    final fun <get-GeneratedResource>(): kotlin.collections/Map<kotlin/String, cn.rtast.rkmbed.runtime/Resource> // cn.rtast.rob.starter.backend.resources/GeneratedResource.<get-GeneratedResource>|<get-GeneratedResource>(){}[0]
 final val cn.rtast.rob.starter.backend.util/json // cn.rtast.rob.starter.backend.util/json|{}json[0]
     final fun <get-json>(): kotlinx.serialization.json/Json // cn.rtast.rob.starter.backend.util/json.<get-json>|<get-json>(){}[0]
 final val cn.rtast.rob.starter.backend/config // cn.rtast.rob.starter.backend/config|{}config[0]
@@ -115,7 +109,6 @@ final fun (kotlinx.io.files/Path).cn.rtast.rob.starter.backend.util/readBytes():
 final fun (kotlinx.io.files/Path).cn.rtast.rob.starter.backend.util/readText(): kotlin/String // cn.rtast.rob.starter.backend.util/readText|readText@kotlinx.io.files.Path(){}[0]
 final fun (kotlinx.io.files/Path).cn.rtast.rob.starter.backend.util/writeBytes(kotlin/ByteArray) // cn.rtast.rob.starter.backend.util/writeBytes|writeBytes@kotlinx.io.files.Path(kotlin.ByteArray){}[0]
 final fun (kotlinx.io.files/Path).cn.rtast.rob.starter.backend.util/writeText(kotlin/String) // cn.rtast.rob.starter.backend.util/writeText|writeText@kotlinx.io.files.Path(kotlin.String){}[0]
-final fun cn.rtast.rob.starter.backend.resources/getResources(kotlin/String): cn.rtast.rob.starter.backend.resources/AbstractResource // cn.rtast.rob.starter.backend.resources/getResources|getResources(kotlin.String){}[0]
 final fun cn.rtast.rob.starter.backend.util/generateProject(cn.rtast.rob.starter.backend.enums/ProjectType, kotlin/String, kotlin/String, kotlin/String, kotlin/String, kotlin/String, kotlin/String, kotlin.collections/List<cn.rtast.rob.starter.common/ExtraFeature>, kotlin.collections/List<cn.rtast.rob.starter.common/ROneBotTarget>): kotlin/ByteArray // cn.rtast.rob.starter.backend.util/generateProject|generateProject(cn.rtast.rob.starter.backend.enums.ProjectType;kotlin.String;kotlin.String;kotlin.String;kotlin.String;kotlin.String;kotlin.String;kotlin.collections.List<cn.rtast.rob.starter.common.ExtraFeature>;kotlin.collections.List<cn.rtast.rob.starter.common.ROneBotTarget>){}[0]
 final fun cn.rtast.rob.starter.backend.util/zipDirectory(kotlinx.io.files/Path, kotlinx.io.files/Path) // cn.rtast.rob.starter.backend.util/zipDirectory|zipDirectory(kotlinx.io.files.Path;kotlinx.io.files.Path){}[0]
 final fun cn.rtast.rob.starter.backend/main() // cn.rtast.rob.starter.backend/main|main(){}[0]
