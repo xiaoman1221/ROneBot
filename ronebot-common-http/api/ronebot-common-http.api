@@ -2,7 +2,6 @@ public final class cn/rtast/rob/common/http/Http {
 	public static final field INSTANCE Lcn/rtast/rob/common/http/Http;
 	public final fun addHeaders (Lokhttp3/Request$Builder;Ljava/util/Map;)Lokhttp3/Request$Builder;
 	public final fun buildDeleteRequest (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)Lokhttp3/Request;
-	public static synthetic fun buildDeleteRequest$default (Lcn/rtast/rob/common/http/Http;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;ILjava/lang/Object;)Lokhttp3/Request;
 	public final fun buildParams (Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
 	public final fun delete (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)Ljava/lang/String;
 	public static synthetic fun delete$default (Lcn/rtast/rob/common/http/Http;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;ILjava/lang/Object;)Ljava/lang/String;

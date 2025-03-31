@@ -1,6 +1,8 @@
 public final class cn/rtast/rob/ext/bytearray/ByteArrayKt {
 	public static final fun plus ([B[B)[B
 	public static final fun toByteArray (Ljava/lang/String;)[B
+	public static final fun toHexByteArray (Ljava/lang/String;)[B
+	public static final fun toHexString ([B)Ljava/lang/String;
 	public static final fun toLong ([B)J
 	public static final fun toLong ([BI)J
 	public static final fun toUtf8String ([B)Ljava/lang/String;

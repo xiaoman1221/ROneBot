@@ -1,0 +1,29 @@
+// Klib ABI Dump
+// Targets: [linuxArm64, linuxX64, macosArm64, macosX64, mingwX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <cn.rtast.rob:ronebot-common-http>
+abstract interface cn.rtast.rob.common.http/SendActionExt : cn.rtast.rob/SendAction { // cn.rtast.rob.common.http/SendActionExt|null[0]
+    abstract suspend fun <#A1: kotlin/Any?> send(kotlin/String, #A1?): kotlin/String // cn.rtast.rob.common.http/SendActionExt.send|send(kotlin.String;0:0?){0§<kotlin.Any?>}[0]
+    open suspend fun send(kotlin/String) // cn.rtast.rob.common.http/SendActionExt.send|send(kotlin.String){}[0]
+}
+
+final object cn.rtast.rob.common.http/Http { // cn.rtast.rob.common.http/Http|null[0]
+    final val client // cn.rtast.rob.common.http/Http.client|{}client[0]
+        final fun <get-client>(): io.ktor.client/HttpClient // cn.rtast.rob.common.http/Http.client.<get-client>|<get-client>(){}[0]
+
+    final fun (io.ktor.client.request/HttpRequestBuilder).buildHeaders(kotlin.collections/Map<kotlin/String, kotlin/String>?) // cn.rtast.rob.common.http/Http.buildHeaders|buildHeaders@io.ktor.client.request.HttpRequestBuilder(kotlin.collections.Map<kotlin.String,kotlin.String>?){}[0]
+    final fun (io.ktor.client.request/HttpRequestBuilder).buildParams(kotlin.collections/Map<kotlin/String, kotlin/Any>?) // cn.rtast.rob.common.http/Http.buildParams|buildParams@io.ktor.client.request.HttpRequestBuilder(kotlin.collections.Map<kotlin.String,kotlin.Any>?){}[0]
+    final fun delete(kotlin/String, kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/Map<kotlin/String, kotlin/Any>? = ...): kotlin/String // cn.rtast.rob.common.http/Http.delete|delete(kotlin.String;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.Map<kotlin.String,kotlin.Any>?){}[0]
+    final fun get(kotlin/String, kotlin.collections/Map<kotlin/String, kotlin/Any>? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ...): kotlin/String // cn.rtast.rob.common.http/Http.get|get(kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.Any>?;kotlin.collections.Map<kotlin.String,kotlin.String>?){}[0]
+    final fun post(kotlin/String, kotlin/String, kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/Map<kotlin/String, kotlin/Any>? = ...): kotlin/String // cn.rtast.rob.common.http/Http.post|post(kotlin.String;kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.Map<kotlin.String,kotlin.Any>?){}[0]
+    final fun put(kotlin/String, kotlin/String, kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/Map<kotlin/String, kotlin/Any>? = ...): kotlin/String // cn.rtast.rob.common.http/Http.put|put(kotlin.String;kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.Map<kotlin.String,kotlin.Any>?){}[0]
+    final inline fun <#A1: reified kotlin/Any?> delete(kotlin/String, kotlin/String? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/Map<kotlin/String, kotlin/Any>? = ...): #A1 // cn.rtast.rob.common.http/Http.delete|delete(kotlin.String;kotlin.String?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.Map<kotlin.String,kotlin.Any>?){0§<kotlin.Any?>}[0]
+    final inline fun <#A1: reified kotlin/Any?> get(kotlin/String, kotlin.collections/Map<kotlin/String, kotlin/Any>? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ...): #A1 // cn.rtast.rob.common.http/Http.get|get(kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.Any>?;kotlin.collections.Map<kotlin.String,kotlin.String>?){0§<kotlin.Any?>}[0]
+    final inline fun <#A1: reified kotlin/Any?> post(kotlin/String, kotlin.collections/Map<kotlin/String, kotlin/Any>? = ..., kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/Map<kotlin/String, kotlin/Any>? = ...): #A1 // cn.rtast.rob.common.http/Http.post|post(kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.Any>?;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.Map<kotlin.String,kotlin.Any>?){0§<kotlin.Any?>}[0]
+    final inline fun <#A1: reified kotlin/Any?> post(kotlin/String, kotlin/String, kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/Map<kotlin/String, kotlin/Any>? = ...): #A1 // cn.rtast.rob.common.http/Http.post|post(kotlin.String;kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.Map<kotlin.String,kotlin.Any>?){0§<kotlin.Any?>}[0]
+    final inline fun <#A1: reified kotlin/Any?> put(kotlin/String, kotlin/String, kotlin.collections/Map<kotlin/String, kotlin/String>? = ..., kotlin.collections/Map<kotlin/String, kotlin/Any>? = ...): #A1 // cn.rtast.rob.common.http/Http.put|put(kotlin.String;kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>?;kotlin.collections.Map<kotlin.String,kotlin.Any>?){0§<kotlin.Any?>}[0]
+}

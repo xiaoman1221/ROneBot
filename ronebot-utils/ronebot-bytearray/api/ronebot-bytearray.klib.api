@@ -22,7 +22,9 @@ final class cn.rtast.rob.ext.bytearray/ByteBuffer { // cn.rtast.rob.ext.bytearra
 }
 
 final fun (kotlin/ByteArray).cn.rtast.rob.ext.bytearray/plus(kotlin/ByteArray): kotlin/ByteArray // cn.rtast.rob.ext.bytearray/plus|plus@kotlin.ByteArray(kotlin.ByteArray){}[0]
+final fun (kotlin/ByteArray).cn.rtast.rob.ext.bytearray/toHexString(): kotlin/String // cn.rtast.rob.ext.bytearray/toHexString|toHexString@kotlin.ByteArray(){}[0]
 final fun (kotlin/ByteArray).cn.rtast.rob.ext.bytearray/toLong(): kotlin/Long // cn.rtast.rob.ext.bytearray/toLong|toLong@kotlin.ByteArray(){}[0]
 final fun (kotlin/ByteArray).cn.rtast.rob.ext.bytearray/toLong(kotlin/Int): kotlin/Long // cn.rtast.rob.ext.bytearray/toLong|toLong@kotlin.ByteArray(kotlin.Int){}[0]
 final fun (kotlin/ByteArray).cn.rtast.rob.ext.bytearray/toUtf8String(): kotlin/String // cn.rtast.rob.ext.bytearray/toUtf8String|toUtf8String@kotlin.ByteArray(){}[0]
 final fun (kotlin/String).cn.rtast.rob.ext.bytearray/toByteArray(): kotlin/ByteArray // cn.rtast.rob.ext.bytearray/toByteArray|toByteArray@kotlin.String(){}[0]
+final fun (kotlin/String).cn.rtast.rob.ext.bytearray/toHexByteArray(): kotlin/ByteArray // cn.rtast.rob.ext.bytearray/toHexByteArray|toHexByteArray@kotlin.String(){}[0]

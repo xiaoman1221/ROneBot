@@ -69,6 +69,7 @@ public final class cn/rtast/rob/qqbot/command/CommandManagerImpl : cn/rtast/rob/
 }
 
 public final class cn/rtast/rob/qqbot/entity/HttpCallbackACK {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/HttpCallbackACK$Companion;
 	public fun <init> ()V
 	public fun <init> (I)V
 	public synthetic fun <init> (IILkotlin/jvm/internal/DefaultConstructorMarker;)V
@@ -81,7 +82,22 @@ public final class cn/rtast/rob/qqbot/entity/HttpCallbackACK {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/HttpCallbackACK$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/HttpCallbackACK$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/HttpCallbackACK;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/HttpCallbackACK;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/HttpCallbackACK$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent : cn/rtast/rob/entity/IPrivateMessage, cn/rtast/rob/qqbot/actionable/C2CMessageActionable {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Companion;
 	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;Lkotlin/uuid/Uuid;)V
 	public synthetic fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;Lkotlin/uuid/Uuid;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
@@ -102,7 +118,18 @@ public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent : cn/
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Attachment {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Attachment$Companion;
 	public fun <init> (Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
@@ -123,17 +150,36 @@ public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Attac
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Attachment$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Attachment$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Attachment;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Attachment;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Attachment$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody {
-	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/util/List;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;)V
-	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody$Companion;
+	public field action Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/util/List;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;)V
+	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
-	public final fun component4 ()Ljava/lang/String;
-	public final fun component5 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
-	public final fun component6 ()Ljava/util/List;
-	public final fun component7 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;
-	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/util/List;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;
-	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/util/List;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;
+	public final fun component4 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
+	public final fun component5 ()Ljava/util/List;
+	public final fun component6 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/util/List;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/util/List;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
 	public final fun getAttachments ()Ljava/util/List;
@@ -147,7 +193,22 @@ public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$Messa
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageCreateEvent$MessageBody$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$Companion;
 	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;
@@ -160,13 +221,28 @@ public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent {
-	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;)V
-	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent$Companion;
+	public field action Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
-	public final fun component3 ()Ljava/lang/String;
-	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;
-	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
 	public final fun getOpenId ()Ljava/lang/String;
@@ -176,7 +252,22 @@ public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgR
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageReceiveEvent$MsgReceiveEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$Companion;
 	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;
@@ -189,13 +280,28 @@ public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent {
-	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;)V
-	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent$Companion;
+	public field action Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
-	public final fun component3 ()Ljava/lang/String;
-	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;
-	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
 	public final fun getOpenId ()Ljava/lang/String;
@@ -203,6 +309,20 @@ public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRe
 	public fun hashCode ()I
 	public final fun setAction (Lcn/rtast/rob/qqbot/qbot/QQBotAction;)V
 	public fun toString ()Ljava/lang/String;
+}
+
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/C2CMessageRejectEvent$MsgRejectEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
 public final class cn/rtast/rob/qqbot/entity/inbound/FriendAddEvent {
@@ -219,13 +339,14 @@ public final class cn/rtast/rob/qqbot/entity/inbound/FriendAddEvent {
 }
 
 public final class cn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent {
-	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;)V
-	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent$Companion;
+	public field action Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;)V
+	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
-	public final fun component3 ()Ljava/lang/String;
-	public final fun component4 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
-	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;)Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;
-	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;
+	public final fun component3 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;)Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
 	public final fun getAuthor ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
@@ -236,7 +357,22 @@ public final class cn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/FriendAddEvent$AddEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Companion;
 	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;
@@ -249,7 +385,18 @@ public final class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author$Companion;
 	public fun <init> (Ljava/lang/String;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun copy (Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;
@@ -260,14 +407,33 @@ public final class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent {
-	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;)V
-	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent$Companion;
+	public field action Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;)V
+	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
-	public final fun component3 ()Ljava/lang/String;
-	public final fun component4 ()Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;
-	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;
-	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;
+	public final fun component3 ()Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
 	public final fun getAuthor ()Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$Author;
@@ -278,7 +444,22 @@ public final class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent 
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/FriendDelEvent$DeleteEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$Companion;
 	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;
@@ -291,14 +472,25 @@ public final class cn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent {
-	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent$Companion;
+	public field action Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
-	public final fun component4 ()Ljava/lang/String;
-	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;
-	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
 	public final fun getGroupOpenId ()Ljava/lang/String;
@@ -309,7 +501,26 @@ public final class cn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobot
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$AddRobotEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupAddRobotEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent : cn/rtast/rob/entity/IGroupMessage, cn/rtast/rob/qqbot/actionable/GroupMessageActionable {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Companion;
 	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;Lkotlin/uuid/Uuid;)V
 	public synthetic fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;Lkotlin/uuid/Uuid;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Ljava/lang/String;
@@ -330,7 +541,18 @@ public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent :
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author$Companion;
 	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
@@ -345,18 +567,37 @@ public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$A
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody {
-	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;)V
-	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody$Companion;
+	public field action Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;)V
+	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
-	public final fun component4 ()Ljava/lang/String;
-	public final fun component5 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
+	public final fun component4 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
+	public final fun component5 ()Ljava/lang/String;
 	public final fun component6 ()Ljava/lang/String;
-	public final fun component7 ()Ljava/lang/String;
-	public final fun component8 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;
-	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;
-	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;
+	public final fun component7 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;Ljava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
 	public final fun getAuthor ()Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$Author;
@@ -371,7 +612,22 @@ public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$M
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageBody$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene$Companion;
 	public fun <init> (Ljava/lang/String;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun copy (Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;
@@ -382,7 +638,22 @@ public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$M
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupAtMessageCreateEvent$MessageScene$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$Companion;
 	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;
@@ -395,14 +666,29 @@ public final class cn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent {
-	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent$Companion;
+	public field action Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
-	public final fun component4 ()Ljava/lang/String;
-	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;
-	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
 	public final fun getGroupOpenId ()Ljava/lang/String;
@@ -413,7 +699,22 @@ public final class cn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$Delet
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupDeleteRobotEvent$DeleteRobotEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$Companion;
 	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;
@@ -426,14 +727,29 @@ public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent {
-	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent$Companion;
+	public field action Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
-	public final fun component4 ()Ljava/lang/String;
-	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;
-	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
 	public final fun getGroupOpenId ()Ljava/lang/String;
@@ -444,7 +760,22 @@ public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$Ms
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageReceiveEvent$MsgReceiveEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent {
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$Companion;
 	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;
@@ -457,14 +788,29 @@ public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent {
-	public fun <init> (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-	public final fun component1 ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public static final field Companion Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent$Companion;
+	public field action Lcn/rtast/rob/qqbot/qbot/QQBotAction;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
 	public final fun component3 ()Ljava/lang/String;
-	public final fun component4 ()Ljava/lang/String;
-	public final fun copy (Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;
-	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;Lcn/rtast/rob/qqbot/qbot/QQBotAction;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;
+	public static synthetic fun copy$default (Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()Lcn/rtast/rob/qqbot/qbot/QQBotAction;
 	public final fun getGroupOpenId ()Ljava/lang/String;
@@ -475,7 +821,22 @@ public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$Msg
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/entity/inbound/GroupMessageRejectEvent$MsgRejectEvent$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/enums/ButtonActionAnchor : java/lang/Enum {
+	public static final field Companion Lcn/rtast/rob/qqbot/enums/ButtonActionAnchor$Companion;
 	public static final field Normal Lcn/rtast/rob/qqbot/enums/ButtonActionAnchor;
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public final fun getType ()I
@@ -483,9 +844,14 @@ public final class cn/rtast/rob/qqbot/enums/ButtonActionAnchor : java/lang/Enum 
 	public static fun values ()[Lcn/rtast/rob/qqbot/enums/ButtonActionAnchor;
 }
 
+public final class cn/rtast/rob/qqbot/enums/ButtonActionAnchor$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/enums/ButtonActionType : java/lang/Enum {
 	public static final field Callback Lcn/rtast/rob/qqbot/enums/ButtonActionType;
 	public static final field Command Lcn/rtast/rob/qqbot/enums/ButtonActionType;
+	public static final field Companion Lcn/rtast/rob/qqbot/enums/ButtonActionType$Companion;
 	public static final field MiniApp Lcn/rtast/rob/qqbot/enums/ButtonActionType;
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public final fun getType ()I
@@ -493,7 +859,12 @@ public final class cn/rtast/rob/qqbot/enums/ButtonActionType : java/lang/Enum {
 	public static fun values ()[Lcn/rtast/rob/qqbot/enums/ButtonActionType;
 }
 
+public final class cn/rtast/rob/qqbot/enums/ButtonActionType$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/enums/ButtonPermissionType : java/lang/Enum {
+	public static final field Companion Lcn/rtast/rob/qqbot/enums/ButtonPermissionType$Companion;
 	public static final field Everyone Lcn/rtast/rob/qqbot/enums/ButtonPermissionType;
 	public static final field OnlyAdmin Lcn/rtast/rob/qqbot/enums/ButtonPermissionType;
 	public static final field SpecifyRoleGroup Lcn/rtast/rob/qqbot/enums/ButtonPermissionType;
@@ -504,8 +875,13 @@ public final class cn/rtast/rob/qqbot/enums/ButtonPermissionType : java/lang/Enu
 	public static fun values ()[Lcn/rtast/rob/qqbot/enums/ButtonPermissionType;
 }
 
+public final class cn/rtast/rob/qqbot/enums/ButtonPermissionType$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/enums/MsgType : java/lang/Enum {
 	public static final field ARK Lcn/rtast/rob/qqbot/enums/MsgType;
+	public static final field Companion Lcn/rtast/rob/qqbot/enums/MsgType$Companion;
 	public static final field Embed Lcn/rtast/rob/qqbot/enums/MsgType;
 	public static final field Markdown Lcn/rtast/rob/qqbot/enums/MsgType;
 	public static final field Media Lcn/rtast/rob/qqbot/enums/MsgType;
@@ -516,8 +892,13 @@ public final class cn/rtast/rob/qqbot/enums/MsgType : java/lang/Enum {
 	public static fun values ()[Lcn/rtast/rob/qqbot/enums/MsgType;
 }
 
+public final class cn/rtast/rob/qqbot/enums/MsgType$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/enums/OPCode : java/lang/Enum {
 	public static final field CallbackURLVerify Lcn/rtast/rob/qqbot/enums/OPCode;
+	public static final field Companion Lcn/rtast/rob/qqbot/enums/OPCode$Companion;
 	public static final field Dispatch Lcn/rtast/rob/qqbot/enums/OPCode;
 	public static final field HTTPCallbackACK Lcn/rtast/rob/qqbot/enums/OPCode;
 	public static final field Heartbeat Lcn/rtast/rob/qqbot/enums/OPCode;
@@ -533,7 +914,12 @@ public final class cn/rtast/rob/qqbot/enums/OPCode : java/lang/Enum {
 	public static fun values ()[Lcn/rtast/rob/qqbot/enums/OPCode;
 }
 
+public final class cn/rtast/rob/qqbot/enums/OPCode$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/enums/internal/HTTPMethod : java/lang/Enum {
+	public static final field Companion Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod$Companion;
 	public static final field DELETE Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod;
 	public static final field GET Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod;
 	public static final field POST Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod;
@@ -541,6 +927,10 @@ public final class cn/rtast/rob/qqbot/enums/internal/HTTPMethod : java/lang/Enum
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod;
 	public static fun values ()[Lcn/rtast/rob/qqbot/enums/internal/HTTPMethod;
+}
+
+public final class cn/rtast/rob/qqbot/enums/internal/HTTPMethod$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
 }
 
 public abstract class cn/rtast/rob/qqbot/interceptor/ExecutionInterceptor : cn/rtast/rob/interceptor/ICommandInterceptor {
@@ -608,6 +998,7 @@ public final class cn/rtast/rob/qqbot/qbot/SendActionMoreExt$DefaultImpls {
 }
 
 public final class cn/rtast/rob/qqbot/segment/Keyboard {
+	public static final field Companion Lcn/rtast/rob/qqbot/segment/Keyboard$Companion;
 	public fun <init> (Ljava/util/List;)V
 	public final fun component1 ()Ljava/util/List;
 	public final fun copy (Ljava/util/List;)Lcn/rtast/rob/qqbot/segment/Keyboard;
@@ -618,7 +1009,18 @@ public final class cn/rtast/rob/qqbot/segment/Keyboard {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/segment/Keyboard$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/segment/Keyboard$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/segment/Keyboard;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/segment/Keyboard;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
 public final class cn/rtast/rob/qqbot/segment/Keyboard$Action {
+	public static final field Companion Lcn/rtast/rob/qqbot/segment/Keyboard$Action$Companion;
 	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/segment/Keyboard$Permission;Ljava/lang/String;ZZILjava/lang/String;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Lcn/rtast/rob/qqbot/segment/Keyboard$Permission;
@@ -641,7 +1043,22 @@ public final class cn/rtast/rob/qqbot/segment/Keyboard$Action {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/segment/Keyboard$Action$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/segment/Keyboard$Action$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/segment/Keyboard$Action;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/segment/Keyboard$Action;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/segment/Keyboard$Action$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/segment/Keyboard$Button {
+	public static final field Companion Lcn/rtast/rob/qqbot/segment/Keyboard$Button$Companion;
 	public fun <init> (Ljava/lang/String;Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData;Lcn/rtast/rob/qqbot/segment/Keyboard$Action;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData;
@@ -656,7 +1073,26 @@ public final class cn/rtast/rob/qqbot/segment/Keyboard$Button {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/segment/Keyboard$Button$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/segment/Keyboard$Button$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/segment/Keyboard$Button;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/segment/Keyboard$Button;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/segment/Keyboard$Button$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class cn/rtast/rob/qqbot/segment/Keyboard$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/segment/Keyboard$Permission {
+	public static final field Companion Lcn/rtast/rob/qqbot/segment/Keyboard$Permission$Companion;
 	public fun <init> (ILjava/util/List;Ljava/util/List;)V
 	public final fun component1 ()I
 	public final fun component2 ()Ljava/util/List;
@@ -671,7 +1107,22 @@ public final class cn/rtast/rob/qqbot/segment/Keyboard$Permission {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/segment/Keyboard$Permission$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/segment/Keyboard$Permission$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/segment/Keyboard$Permission;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/segment/Keyboard$Permission;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/segment/Keyboard$Permission$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/segment/Keyboard$RenderData {
+	public static final field Companion Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData$Companion;
 	public fun <init> (Ljava/lang/String;Ljava/lang/String;I)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
@@ -686,7 +1137,22 @@ public final class cn/rtast/rob/qqbot/segment/Keyboard$RenderData {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/segment/Keyboard$RenderData$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/segment/Keyboard$RenderData;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/segment/Keyboard$RenderData$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/segment/Keyboard$Row {
+	public static final field Companion Lcn/rtast/rob/qqbot/segment/Keyboard$Row$Companion;
 	public fun <init> (Ljava/util/List;)V
 	public final fun component1 ()Ljava/util/List;
 	public final fun copy (Ljava/util/List;)Lcn/rtast/rob/qqbot/segment/Keyboard$Row;
@@ -697,7 +1163,22 @@ public final class cn/rtast/rob/qqbot/segment/Keyboard$Row {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/segment/Keyboard$Row$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/segment/Keyboard$Row$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/segment/Keyboard$Row;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/segment/Keyboard$Row;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/segment/Keyboard$Row$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/segment/Markdown {
+	public static final field Companion Lcn/rtast/rob/qqbot/segment/Markdown$Companion;
 	public fun <init> (Ljava/lang/String;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun copy (Ljava/lang/String;)Lcn/rtast/rob/qqbot/segment/Markdown;
@@ -708,6 +1189,20 @@ public final class cn/rtast/rob/qqbot/segment/Markdown {
 	public fun toString ()Ljava/lang/String;
 }
 
+public synthetic class cn/rtast/rob/qqbot/segment/Markdown$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcn/rtast/rob/qqbot/segment/Markdown$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcn/rtast/rob/qqbot/segment/Markdown;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcn/rtast/rob/qqbot/segment/Markdown;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+}
+
+public final class cn/rtast/rob/qqbot/segment/Markdown$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
 public final class cn/rtast/rob/qqbot/util/ButtonManager {
 	public final fun addButton ()V
 }
@@ -715,11 +1210,5 @@ public final class cn/rtast/rob/qqbot/util/ButtonManager {
 public final class cn/rtast/rob/qqbot/util/HttpServer {
 	public fun <init> (ILjava/lang/String;Ljava/lang/String;Lcn/rtast/rob/qqbot/qbot/QQBotListener;Lcn/rtast/rob/qqbot/BotInstance;)V
 	public final fun startHttpServer ()Lio/ktor/server/engine/EmbeddedServer;
-}
-
-public final class cn/rtast/rob/qqbot/util/JsonKt {
-	public static final fun getRtastUtilGson ()Lcom/google/gson/Gson;
-	public static final fun setRtastUtilGson (Lcom/google/gson/Gson;)V
-	public static final fun toJson (Ljava/lang/Object;)Ljava/lang/String;
 }
 

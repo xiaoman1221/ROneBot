@@ -1,0 +1,1292 @@
+// Klib ABI Dump
+// Targets: [linuxArm64, linuxX64, macosArm64, macosX64, mingwX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <cn.rtast.rob:ronebot-qqbot-webhook>
+final enum class cn.rtast.rob.qqbot.enums.internal/HTTPMethod : kotlin/Enum<cn.rtast.rob.qqbot.enums.internal/HTTPMethod> { // cn.rtast.rob.qqbot.enums.internal/HTTPMethod|null[0]
+    enum entry DELETE // cn.rtast.rob.qqbot.enums.internal/HTTPMethod.DELETE|null[0]
+    enum entry GET // cn.rtast.rob.qqbot.enums.internal/HTTPMethod.GET|null[0]
+    enum entry POST // cn.rtast.rob.qqbot.enums.internal/HTTPMethod.POST|null[0]
+    enum entry PUT // cn.rtast.rob.qqbot.enums.internal/HTTPMethod.PUT|null[0]
+
+    final val entries // cn.rtast.rob.qqbot.enums.internal/HTTPMethod.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.qqbot.enums.internal/HTTPMethod> // cn.rtast.rob.qqbot.enums.internal/HTTPMethod.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.qqbot.enums.internal/HTTPMethod // cn.rtast.rob.qqbot.enums.internal/HTTPMethod.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.qqbot.enums.internal/HTTPMethod> // cn.rtast.rob.qqbot.enums.internal/HTTPMethod.values|values#static(){}[0]
+
+    final object Companion : kotlinx.serialization.internal/SerializerFactory { // cn.rtast.rob.qqbot.enums.internal/HTTPMethod.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.enums.internal/HTTPMethod> // cn.rtast.rob.qqbot.enums.internal/HTTPMethod.Companion.serializer|serializer(){}[0]
+        final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // cn.rtast.rob.qqbot.enums.internal/HTTPMethod.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+    }
+}
+
+final enum class cn.rtast.rob.qqbot.enums/ButtonActionAnchor : kotlin/Enum<cn.rtast.rob.qqbot.enums/ButtonActionAnchor> { // cn.rtast.rob.qqbot.enums/ButtonActionAnchor|null[0]
+    enum entry Normal // cn.rtast.rob.qqbot.enums/ButtonActionAnchor.Normal|null[0]
+
+    final val entries // cn.rtast.rob.qqbot.enums/ButtonActionAnchor.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.qqbot.enums/ButtonActionAnchor> // cn.rtast.rob.qqbot.enums/ButtonActionAnchor.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val type // cn.rtast.rob.qqbot.enums/ButtonActionAnchor.type|{}type[0]
+        final fun <get-type>(): kotlin/Int // cn.rtast.rob.qqbot.enums/ButtonActionAnchor.type.<get-type>|<get-type>(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.qqbot.enums/ButtonActionAnchor // cn.rtast.rob.qqbot.enums/ButtonActionAnchor.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.qqbot.enums/ButtonActionAnchor> // cn.rtast.rob.qqbot.enums/ButtonActionAnchor.values|values#static(){}[0]
+
+    final object Companion : kotlinx.serialization.internal/SerializerFactory { // cn.rtast.rob.qqbot.enums/ButtonActionAnchor.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.enums/ButtonActionAnchor> // cn.rtast.rob.qqbot.enums/ButtonActionAnchor.Companion.serializer|serializer(){}[0]
+        final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // cn.rtast.rob.qqbot.enums/ButtonActionAnchor.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+    }
+}
+
+final enum class cn.rtast.rob.qqbot.enums/ButtonActionType : kotlin/Enum<cn.rtast.rob.qqbot.enums/ButtonActionType> { // cn.rtast.rob.qqbot.enums/ButtonActionType|null[0]
+    enum entry Callback // cn.rtast.rob.qqbot.enums/ButtonActionType.Callback|null[0]
+    enum entry Command // cn.rtast.rob.qqbot.enums/ButtonActionType.Command|null[0]
+    enum entry MiniApp // cn.rtast.rob.qqbot.enums/ButtonActionType.MiniApp|null[0]
+
+    final val entries // cn.rtast.rob.qqbot.enums/ButtonActionType.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.qqbot.enums/ButtonActionType> // cn.rtast.rob.qqbot.enums/ButtonActionType.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val type // cn.rtast.rob.qqbot.enums/ButtonActionType.type|{}type[0]
+        final fun <get-type>(): kotlin/Int // cn.rtast.rob.qqbot.enums/ButtonActionType.type.<get-type>|<get-type>(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.qqbot.enums/ButtonActionType // cn.rtast.rob.qqbot.enums/ButtonActionType.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.qqbot.enums/ButtonActionType> // cn.rtast.rob.qqbot.enums/ButtonActionType.values|values#static(){}[0]
+
+    final object Companion : kotlinx.serialization.internal/SerializerFactory { // cn.rtast.rob.qqbot.enums/ButtonActionType.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.enums/ButtonActionType> // cn.rtast.rob.qqbot.enums/ButtonActionType.Companion.serializer|serializer(){}[0]
+        final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // cn.rtast.rob.qqbot.enums/ButtonActionType.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+    }
+}
+
+final enum class cn.rtast.rob.qqbot.enums/ButtonPermissionType : kotlin/Enum<cn.rtast.rob.qqbot.enums/ButtonPermissionType> { // cn.rtast.rob.qqbot.enums/ButtonPermissionType|null[0]
+    enum entry Everyone // cn.rtast.rob.qqbot.enums/ButtonPermissionType.Everyone|null[0]
+    enum entry OnlyAdmin // cn.rtast.rob.qqbot.enums/ButtonPermissionType.OnlyAdmin|null[0]
+    enum entry SpecifyRoleGroup // cn.rtast.rob.qqbot.enums/ButtonPermissionType.SpecifyRoleGroup|null[0]
+    enum entry SpecifyUser // cn.rtast.rob.qqbot.enums/ButtonPermissionType.SpecifyUser|null[0]
+
+    final val entries // cn.rtast.rob.qqbot.enums/ButtonPermissionType.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.qqbot.enums/ButtonPermissionType> // cn.rtast.rob.qqbot.enums/ButtonPermissionType.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val type // cn.rtast.rob.qqbot.enums/ButtonPermissionType.type|{}type[0]
+        final fun <get-type>(): kotlin/Int // cn.rtast.rob.qqbot.enums/ButtonPermissionType.type.<get-type>|<get-type>(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.qqbot.enums/ButtonPermissionType // cn.rtast.rob.qqbot.enums/ButtonPermissionType.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.qqbot.enums/ButtonPermissionType> // cn.rtast.rob.qqbot.enums/ButtonPermissionType.values|values#static(){}[0]
+
+    final object Companion : kotlinx.serialization.internal/SerializerFactory { // cn.rtast.rob.qqbot.enums/ButtonPermissionType.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.enums/ButtonPermissionType> // cn.rtast.rob.qqbot.enums/ButtonPermissionType.Companion.serializer|serializer(){}[0]
+        final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // cn.rtast.rob.qqbot.enums/ButtonPermissionType.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+    }
+}
+
+final enum class cn.rtast.rob.qqbot.enums/MsgType : kotlin/Enum<cn.rtast.rob.qqbot.enums/MsgType> { // cn.rtast.rob.qqbot.enums/MsgType|null[0]
+    enum entry ARK // cn.rtast.rob.qqbot.enums/MsgType.ARK|null[0]
+    enum entry Embed // cn.rtast.rob.qqbot.enums/MsgType.Embed|null[0]
+    enum entry Markdown // cn.rtast.rob.qqbot.enums/MsgType.Markdown|null[0]
+    enum entry Media // cn.rtast.rob.qqbot.enums/MsgType.Media|null[0]
+    enum entry PlainText // cn.rtast.rob.qqbot.enums/MsgType.PlainText|null[0]
+
+    final val entries // cn.rtast.rob.qqbot.enums/MsgType.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.qqbot.enums/MsgType> // cn.rtast.rob.qqbot.enums/MsgType.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val type // cn.rtast.rob.qqbot.enums/MsgType.type|{}type[0]
+        final fun <get-type>(): kotlin/Int // cn.rtast.rob.qqbot.enums/MsgType.type.<get-type>|<get-type>(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.qqbot.enums/MsgType // cn.rtast.rob.qqbot.enums/MsgType.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.qqbot.enums/MsgType> // cn.rtast.rob.qqbot.enums/MsgType.values|values#static(){}[0]
+
+    final object Companion : kotlinx.serialization.internal/SerializerFactory { // cn.rtast.rob.qqbot.enums/MsgType.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.enums/MsgType> // cn.rtast.rob.qqbot.enums/MsgType.Companion.serializer|serializer(){}[0]
+        final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // cn.rtast.rob.qqbot.enums/MsgType.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+    }
+}
+
+final enum class cn.rtast.rob.qqbot.enums/OPCode : kotlin/Enum<cn.rtast.rob.qqbot.enums/OPCode> { // cn.rtast.rob.qqbot.enums/OPCode|null[0]
+    enum entry CallbackURLVerify // cn.rtast.rob.qqbot.enums/OPCode.CallbackURLVerify|null[0]
+    enum entry Dispatch // cn.rtast.rob.qqbot.enums/OPCode.Dispatch|null[0]
+    enum entry HTTPCallbackACK // cn.rtast.rob.qqbot.enums/OPCode.HTTPCallbackACK|null[0]
+    enum entry Heartbeat // cn.rtast.rob.qqbot.enums/OPCode.Heartbeat|null[0]
+    enum entry HeartbeatACK // cn.rtast.rob.qqbot.enums/OPCode.HeartbeatACK|null[0]
+    enum entry Hello // cn.rtast.rob.qqbot.enums/OPCode.Hello|null[0]
+    enum entry Identify // cn.rtast.rob.qqbot.enums/OPCode.Identify|null[0]
+    enum entry InvalidSession // cn.rtast.rob.qqbot.enums/OPCode.InvalidSession|null[0]
+    enum entry Reconnect // cn.rtast.rob.qqbot.enums/OPCode.Reconnect|null[0]
+    enum entry Resume // cn.rtast.rob.qqbot.enums/OPCode.Resume|null[0]
+
+    final val entries // cn.rtast.rob.qqbot.enums/OPCode.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.qqbot.enums/OPCode> // cn.rtast.rob.qqbot.enums/OPCode.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val opCode // cn.rtast.rob.qqbot.enums/OPCode.opCode|{}opCode[0]
+        final fun <get-opCode>(): kotlin/Int // cn.rtast.rob.qqbot.enums/OPCode.opCode.<get-opCode>|<get-opCode>(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.qqbot.enums/OPCode // cn.rtast.rob.qqbot.enums/OPCode.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.qqbot.enums/OPCode> // cn.rtast.rob.qqbot.enums/OPCode.values|values#static(){}[0]
+
+    final object Companion : kotlinx.serialization.internal/SerializerFactory { // cn.rtast.rob.qqbot.enums/OPCode.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.enums/OPCode> // cn.rtast.rob.qqbot.enums/OPCode.Companion.serializer|serializer(){}[0]
+        final fun serializer(kotlin/Array<out kotlinx.serialization/KSerializer<*>>...): kotlinx.serialization/KSerializer<*> // cn.rtast.rob.qqbot.enums/OPCode.Companion.serializer|serializer(kotlin.Array<out|kotlinx.serialization.KSerializer<*>>...){}[0]
+    }
+}
+
+abstract interface cn.rtast.rob.qqbot.actionable/C2CMessageActionable { // cn.rtast.rob.qqbot.actionable/C2CMessageActionable|null[0]
+    abstract suspend fun reply(cn.rtast.rob.qqbot.segment/Keyboard) // cn.rtast.rob.qqbot.actionable/C2CMessageActionable.reply|reply(cn.rtast.rob.qqbot.segment.Keyboard){}[0]
+    abstract suspend fun reply(cn.rtast.rob.qqbot.segment/Markdown) // cn.rtast.rob.qqbot.actionable/C2CMessageActionable.reply|reply(cn.rtast.rob.qqbot.segment.Markdown){}[0]
+    abstract suspend fun reply(kotlin/String) // cn.rtast.rob.qqbot.actionable/C2CMessageActionable.reply|reply(kotlin.String){}[0]
+    abstract suspend fun revoke() // cn.rtast.rob.qqbot.actionable/C2CMessageActionable.revoke|revoke(){}[0]
+}
+
+abstract interface cn.rtast.rob.qqbot.actionable/GroupMessageActionable : cn.rtast.rob.qqbot.actionable/C2CMessageActionable // cn.rtast.rob.qqbot.actionable/GroupMessageActionable|null[0]
+
+abstract interface cn.rtast.rob.qqbot.qbot/QQBotListener { // cn.rtast.rob.qqbot.qbot/QQBotListener|null[0]
+    open suspend fun onC2CMessage(cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent) // cn.rtast.rob.qqbot.qbot/QQBotListener.onC2CMessage|onC2CMessage(cn.rtast.rob.qqbot.entity.inbound.C2CMessageCreateEvent){}[0]
+    open suspend fun onC2CMessageReceiveEvent(cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent) // cn.rtast.rob.qqbot.qbot/QQBotListener.onC2CMessageReceiveEvent|onC2CMessageReceiveEvent(cn.rtast.rob.qqbot.entity.inbound.C2CMessageReceiveEvent){}[0]
+    open suspend fun onC2CMessageRejectEvent(cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent) // cn.rtast.rob.qqbot.qbot/QQBotListener.onC2CMessageRejectEvent|onC2CMessageRejectEvent(cn.rtast.rob.qqbot.entity.inbound.C2CMessageRejectEvent){}[0]
+    open suspend fun onFriendAdd(cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent) // cn.rtast.rob.qqbot.qbot/QQBotListener.onFriendAdd|onFriendAdd(cn.rtast.rob.qqbot.entity.inbound.FriendAddEvent){}[0]
+    open suspend fun onFriendDelete(cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent) // cn.rtast.rob.qqbot.qbot/QQBotListener.onFriendDelete|onFriendDelete(cn.rtast.rob.qqbot.entity.inbound.FriendDelEvent){}[0]
+    open suspend fun onGroupAddRobot(cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent) // cn.rtast.rob.qqbot.qbot/QQBotListener.onGroupAddRobot|onGroupAddRobot(cn.rtast.rob.qqbot.entity.inbound.GroupAddRobotEvent){}[0]
+    open suspend fun onGroupDeleteRobot(cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent) // cn.rtast.rob.qqbot.qbot/QQBotListener.onGroupDeleteRobot|onGroupDeleteRobot(cn.rtast.rob.qqbot.entity.inbound.GroupDeleteRobotEvent){}[0]
+    open suspend fun onGroupMessage(cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent) // cn.rtast.rob.qqbot.qbot/QQBotListener.onGroupMessage|onGroupMessage(cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent){}[0]
+    open suspend fun onGroupMessageReceiveEvent(cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent) // cn.rtast.rob.qqbot.qbot/QQBotListener.onGroupMessageReceiveEvent|onGroupMessageReceiveEvent(cn.rtast.rob.qqbot.entity.inbound.GroupMessageReceiveEvent){}[0]
+    open suspend fun onGroupMessageRejectEvent(cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent) // cn.rtast.rob.qqbot.qbot/QQBotListener.onGroupMessageRejectEvent|onGroupMessageRejectEvent(cn.rtast.rob.qqbot.entity.inbound.GroupMessageRejectEvent){}[0]
+}
+
+abstract interface cn.rtast.rob.qqbot.qbot/SendActionMoreExt : cn.rtast.rob.common.http/SendActionExt { // cn.rtast.rob.qqbot.qbot/SendActionMoreExt|null[0]
+    abstract suspend fun send(cn.rtast.rob.qqbot.enums.internal/HTTPMethod, kotlin/String, kotlin/Any?): kotlin/String // cn.rtast.rob.qqbot.qbot/SendActionMoreExt.send|send(cn.rtast.rob.qqbot.enums.internal.HTTPMethod;kotlin.String;kotlin.Any?){}[0]
+}
+
+abstract class cn.rtast.rob.qqbot.command/BaseCommand : cn.rtast.rob.command/IBaseCommand<cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent, cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent> { // cn.rtast.rob.qqbot.command/BaseCommand|null[0]
+    constructor <init>() // cn.rtast.rob.qqbot.command/BaseCommand.<init>|<init>(){}[0]
+
+    abstract val commandNames // cn.rtast.rob.qqbot.command/BaseCommand.commandNames|{}commandNames[0]
+        abstract fun <get-commandNames>(): kotlin.collections/List<kotlin/String> // cn.rtast.rob.qqbot.command/BaseCommand.commandNames.<get-commandNames>|<get-commandNames>(){}[0]
+
+    final suspend fun handleGroup(cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent, kotlin/String) // cn.rtast.rob.qqbot.command/BaseCommand.handleGroup|handleGroup(cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent;kotlin.String){}[0]
+    final suspend fun handlePrivate(cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent, kotlin/String) // cn.rtast.rob.qqbot.command/BaseCommand.handlePrivate|handlePrivate(cn.rtast.rob.qqbot.entity.inbound.C2CMessageCreateEvent;kotlin.String){}[0]
+    open suspend fun executeGroup(cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent, kotlin.collections/List<kotlin/String>) // cn.rtast.rob.qqbot.command/BaseCommand.executeGroup|executeGroup(cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent;kotlin.collections.List<kotlin.String>){}[0]
+    open suspend fun executeGroup(cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent, kotlin.collections/List<kotlin/String>, kotlin/String) // cn.rtast.rob.qqbot.command/BaseCommand.executeGroup|executeGroup(cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent;kotlin.collections.List<kotlin.String>;kotlin.String){}[0]
+    open suspend fun executePrivate(cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent, kotlin.collections/List<kotlin/String>) // cn.rtast.rob.qqbot.command/BaseCommand.executePrivate|executePrivate(cn.rtast.rob.qqbot.entity.inbound.C2CMessageCreateEvent;kotlin.collections.List<kotlin.String>){}[0]
+    open suspend fun executePrivate(cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent, kotlin.collections/List<kotlin/String>, kotlin/String) // cn.rtast.rob.qqbot.command/BaseCommand.executePrivate|executePrivate(cn.rtast.rob.qqbot.entity.inbound.C2CMessageCreateEvent;kotlin.collections.List<kotlin.String>;kotlin.String){}[0]
+}
+
+abstract class cn.rtast.rob.qqbot.interceptor/ExecutionInterceptor : cn.rtast.rob.interceptor/ICommandInterceptor<cn.rtast.rob.qqbot.command/BaseCommand, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent, cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent> { // cn.rtast.rob.qqbot.interceptor/ExecutionInterceptor|null[0]
+    constructor <init>() // cn.rtast.rob.qqbot.interceptor/ExecutionInterceptor.<init>|<init>(){}[0]
+}
+
+final class cn.rtast.rob.qqbot.command/CommandManagerImpl : cn.rtast.rob.command/CommandManager<cn.rtast.rob.qqbot.command/BaseCommand, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent, cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent> { // cn.rtast.rob.qqbot.command/CommandManagerImpl|null[0]
+    constructor <init>() // cn.rtast.rob.qqbot.command/CommandManagerImpl.<init>|<init>(){}[0]
+
+    final val commands // cn.rtast.rob.qqbot.command/CommandManagerImpl.commands|{}commands[0]
+        final fun <get-commands>(): kotlin.collections/MutableList<cn.rtast.rob.qqbot.command/BaseCommand> // cn.rtast.rob.qqbot.command/CommandManagerImpl.commands.<get-commands>|<get-commands>(){}[0]
+    final val groupDslCommands // cn.rtast.rob.qqbot.command/CommandManagerImpl.groupDslCommands|{}groupDslCommands[0]
+        final fun <get-groupDslCommands>(): kotlin.collections/MutableList<kotlin.collections/Map<kotlin.collections/List<kotlin/String>, kotlin.coroutines/SuspendFunction1<cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent, kotlin/Unit>>> // cn.rtast.rob.qqbot.command/CommandManagerImpl.groupDslCommands.<get-groupDslCommands>|<get-groupDslCommands>(){}[0]
+    final val privateDslCommands // cn.rtast.rob.qqbot.command/CommandManagerImpl.privateDslCommands|{}privateDslCommands[0]
+        final fun <get-privateDslCommands>(): kotlin.collections/MutableList<kotlin.collections/Map<kotlin.collections/List<kotlin/String>, kotlin.coroutines/SuspendFunction1<cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent, kotlin/Unit>>> // cn.rtast.rob.qqbot.command/CommandManagerImpl.privateDslCommands.<get-privateDslCommands>|<get-privateDslCommands>(){}[0]
+
+    final var commandRegex // cn.rtast.rob.qqbot.command/CommandManagerImpl.commandRegex|{}commandRegex[0]
+        final fun <get-commandRegex>(): kotlin.text/Regex // cn.rtast.rob.qqbot.command/CommandManagerImpl.commandRegex.<get-commandRegex>|<get-commandRegex>(){}[0]
+        final fun <set-commandRegex>(kotlin.text/Regex) // cn.rtast.rob.qqbot.command/CommandManagerImpl.commandRegex.<set-commandRegex>|<set-commandRegex>(kotlin.text.Regex){}[0]
+
+    final suspend fun handleGroup(cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent) // cn.rtast.rob.qqbot.command/CommandManagerImpl.handleGroup|handleGroup(cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent){}[0]
+    final suspend fun handlePrivate(cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent) // cn.rtast.rob.qqbot.command/CommandManagerImpl.handlePrivate|handlePrivate(cn.rtast.rob.qqbot.entity.inbound.C2CMessageCreateEvent){}[0]
+}
+
+final class cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent : cn.rtast.rob.entity/IPrivateMessage, cn.rtast.rob.qqbot.actionable/C2CMessageActionable { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent|null[0]
+    constructor <init>(kotlin/String, cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody, kotlin.uuid/Uuid? = ...) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.<init>|<init>(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.C2CMessageCreateEvent.MessageBody;kotlin.uuid.Uuid?){}[0]
+
+    final val d // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.d|{}d[0]
+        final fun <get-d>(): cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.d.<get-d>|<get-d>(){}[0]
+    final val id // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.id|{}id[0]
+        final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.id.<get-id>|<get-id>(){}[0]
+
+    final var sessionId // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.sessionId|{}sessionId[0]
+        final fun <get-sessionId>(): kotlin.uuid/Uuid? // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.sessionId.<get-sessionId>|<get-sessionId>(){}[0]
+        final fun <set-sessionId>(kotlin.uuid/Uuid?) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.sessionId.<set-sessionId>|<set-sessionId>(kotlin.uuid.Uuid?){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.component1|component1(){}[0]
+    final fun component2(): cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.component2|component2(){}[0]
+    final fun component3(): kotlin.uuid/Uuid? // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.component3|component3(){}[0]
+    final fun copy(kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody = ..., kotlin.uuid/Uuid? = ...): cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.copy|copy(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.C2CMessageCreateEvent.MessageBody;kotlin.uuid.Uuid?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.toString|toString(){}[0]
+    final suspend fun reply(cn.rtast.rob.qqbot.segment/Keyboard) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.reply|reply(cn.rtast.rob.qqbot.segment.Keyboard){}[0]
+    final suspend fun reply(cn.rtast.rob.qqbot.segment/Markdown) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.reply|reply(cn.rtast.rob.qqbot.segment.Markdown){}[0]
+    final suspend fun reply(kotlin/String) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.reply|reply(kotlin.String){}[0]
+    final suspend fun revoke() // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.revoke|revoke(){}[0]
+
+    final class Attachment { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment|null[0]
+        constructor <init>(kotlin/String, kotlin/String, kotlin/Int, kotlin/Int, kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.<init>|<init>(kotlin.String;kotlin.String;kotlin.Int;kotlin.Int;kotlin.String;kotlin.String){}[0]
+
+        final val content // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.content|{}content[0]
+            final fun <get-content>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.content.<get-content>|<get-content>(){}[0]
+        final val contentType // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.contentType|{}contentType[0]
+            final fun <get-contentType>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.contentType.<get-contentType>|<get-contentType>(){}[0]
+        final val filename // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.filename|{}filename[0]
+            final fun <get-filename>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.filename.<get-filename>|<get-filename>(){}[0]
+        final val height // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.height|{}height[0]
+            final fun <get-height>(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.height.<get-height>|<get-height>(){}[0]
+        final val url // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.url|{}url[0]
+            final fun <get-url>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.url.<get-url>|<get-url>(){}[0]
+        final val width // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.width|{}width[0]
+            final fun <get-width>(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.width.<get-width>|<get-width>(){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.component2|component2(){}[0]
+        final fun component3(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.component3|component3(){}[0]
+        final fun component4(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.component4|component4(){}[0]
+        final fun component5(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.component5|component5(){}[0]
+        final fun component6(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.component6|component6(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/Int = ..., kotlin/Int = ..., kotlin/String = ..., kotlin/String = ...): cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.copy|copy(kotlin.String;kotlin.String;kotlin.Int;kotlin.Int;kotlin.String;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment> { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.C2CMessageCreateEvent.Attachment){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final class MessageBody { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody|null[0]
+        constructor <init>(kotlin/String, kotlin/String, kotlin/String, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author, kotlin.collections/List<cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment>, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.<init>|<init>(kotlin.String;kotlin.String;kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.Author;kotlin.collections.List<cn.rtast.rob.qqbot.entity.inbound.C2CMessageCreateEvent.Attachment>;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.MessageScene){}[0]
+
+        final val attachments // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.attachments|{}attachments[0]
+            final fun <get-attachments>(): kotlin.collections/List<cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.attachments.<get-attachments>|<get-attachments>(){}[0]
+        final val author // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.author|{}author[0]
+            final fun <get-author>(): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.author.<get-author>|<get-author>(){}[0]
+        final val content // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.content|{}content[0]
+            final fun <get-content>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.content.<get-content>|<get-content>(){}[0]
+        final val id // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.id|{}id[0]
+            final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.id.<get-id>|<get-id>(){}[0]
+        final val messageScene // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.messageScene|{}messageScene[0]
+            final fun <get-messageScene>(): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.messageScene.<get-messageScene>|<get-messageScene>(){}[0]
+        final val timestamp // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.timestamp|{}timestamp[0]
+            final fun <get-timestamp>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+
+        final var action // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.action|{}action[0]
+            final fun <get-action>(): cn.rtast.rob.qqbot.qbot/QQBotAction // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.action.<get-action>|<get-action>(){}[0]
+            final fun <set-action>(cn.rtast.rob.qqbot.qbot/QQBotAction) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.action.<set-action>|<set-action>(cn.rtast.rob.qqbot.qbot.QQBotAction){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.component2|component2(){}[0]
+        final fun component3(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.component3|component3(){}[0]
+        final fun component4(): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.component4|component4(){}[0]
+        final fun component5(): kotlin.collections/List<cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.component5|component5(){}[0]
+        final fun component6(): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.component6|component6(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author = ..., kotlin.collections/List<cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Attachment> = ..., cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene = ...): cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.copy|copy(kotlin.String;kotlin.String;kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.Author;kotlin.collections.List<cn.rtast.rob.qqbot.entity.inbound.C2CMessageCreateEvent.Attachment>;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.MessageScene){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody> { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.C2CMessageCreateEvent.MessageBody){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.Companion|null[0]
+            final val $childSerializers // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.Companion.$childSerializers|{}$childSerializers[0]
+
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.MessageBody.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent> { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.C2CMessageCreateEvent){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent|null[0]
+    constructor <init>(kotlin/String, cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.<init>|<init>(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.C2CMessageReceiveEvent.MsgReceiveEvent){}[0]
+
+    final val d // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.d|{}d[0]
+        final fun <get-d>(): cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.d.<get-d>|<get-d>(){}[0]
+    final val id // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.id|{}id[0]
+        final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.id.<get-id>|<get-id>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.component1|component1(){}[0]
+    final fun component2(): cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent = ...): cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.copy|copy(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.C2CMessageReceiveEvent.MsgReceiveEvent){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.toString|toString(){}[0]
+
+    final class MsgReceiveEvent { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent|null[0]
+        constructor <init>(kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.<init>|<init>(kotlin.String;kotlin.String){}[0]
+
+        final val openId // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.openId|{}openId[0]
+            final fun <get-openId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.openId.<get-openId>|<get-openId>(){}[0]
+        final val timestamp // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.timestamp|{}timestamp[0]
+            final fun <get-timestamp>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+
+        final var action // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.action|{}action[0]
+            final fun <get-action>(): cn.rtast.rob.qqbot.qbot/QQBotAction // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.action.<get-action>|<get-action>(){}[0]
+            final fun <set-action>(cn.rtast.rob.qqbot.qbot/QQBotAction) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.action.<set-action>|<set-action>(cn.rtast.rob.qqbot.qbot.QQBotAction){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.component2|component2(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ...): cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.copy|copy(kotlin.String;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent> { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.C2CMessageReceiveEvent.MsgReceiveEvent){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.MsgReceiveEvent.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent> { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.C2CMessageReceiveEvent){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageReceiveEvent.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent|null[0]
+    constructor <init>(kotlin/String, cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.<init>|<init>(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.C2CMessageRejectEvent.MsgRejectEvent){}[0]
+
+    final val d // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.d|{}d[0]
+        final fun <get-d>(): cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.d.<get-d>|<get-d>(){}[0]
+    final val id // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.id|{}id[0]
+        final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.id.<get-id>|<get-id>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.component1|component1(){}[0]
+    final fun component2(): cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent = ...): cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.copy|copy(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.C2CMessageRejectEvent.MsgRejectEvent){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.toString|toString(){}[0]
+
+    final class MsgRejectEvent { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent|null[0]
+        constructor <init>(kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.<init>|<init>(kotlin.String;kotlin.String){}[0]
+
+        final val openId // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.openId|{}openId[0]
+            final fun <get-openId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.openId.<get-openId>|<get-openId>(){}[0]
+        final val timestamp // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.timestamp|{}timestamp[0]
+            final fun <get-timestamp>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+
+        final var action // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.action|{}action[0]
+            final fun <get-action>(): cn.rtast.rob.qqbot.qbot/QQBotAction // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.action.<get-action>|<get-action>(){}[0]
+            final fun <set-action>(cn.rtast.rob.qqbot.qbot/QQBotAction) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.action.<set-action>|<set-action>(cn.rtast.rob.qqbot.qbot.QQBotAction){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.component2|component2(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ...): cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.copy|copy(kotlin.String;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent> { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.C2CMessageRejectEvent.MsgRejectEvent){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.MsgRejectEvent.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent> { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent) // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.C2CMessageRejectEvent){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent> // cn.rtast.rob.qqbot.entity.inbound/C2CMessageRejectEvent.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent { // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent|null[0]
+    constructor <init>(kotlin/String, cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent) // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.<init>|<init>(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.FriendAddEvent.AddEvent){}[0]
+
+    final val d // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.d|{}d[0]
+        final fun <get-d>(): cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.d.<get-d>|<get-d>(){}[0]
+    final val id // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.id|{}id[0]
+        final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.id.<get-id>|<get-id>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.component1|component1(){}[0]
+    final fun component2(): cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent = ...): cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.copy|copy(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.FriendAddEvent.AddEvent){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.toString|toString(){}[0]
+
+    final class AddEvent { // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent|null[0]
+        constructor <init>(kotlin/String, kotlin/String, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author) // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.<init>|<init>(kotlin.String;kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.Author){}[0]
+
+        final val author // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.author|{}author[0]
+            final fun <get-author>(): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.author.<get-author>|<get-author>(){}[0]
+        final val openid // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.openid|{}openid[0]
+            final fun <get-openid>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.openid.<get-openid>|<get-openid>(){}[0]
+        final val timestamp // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.timestamp|{}timestamp[0]
+            final fun <get-timestamp>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+
+        final var action // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.action|{}action[0]
+            final fun <get-action>(): cn.rtast.rob.qqbot.qbot/QQBotAction // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.action.<get-action>|<get-action>(){}[0]
+            final fun <set-action>(cn.rtast.rob.qqbot.qbot/QQBotAction) // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.action.<set-action>|<set-action>(cn.rtast.rob.qqbot.qbot.QQBotAction){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.component2|component2(){}[0]
+        final fun component3(): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.component3|component3(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author = ...): cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.copy|copy(kotlin.String;kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.Author){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent> { // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent) // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.FriendAddEvent.AddEvent){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent> // cn.rtast.rob.qqbot.entity.inbound/FriendAddEvent.AddEvent.Companion.serializer|serializer(){}[0]
+        }
+    }
+}
+
+final class cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent { // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent|null[0]
+    constructor <init>(kotlin/String, cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent) // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.<init>|<init>(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.FriendDelEvent.DeleteEvent){}[0]
+
+    final val d // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.d|{}d[0]
+        final fun <get-d>(): cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.d.<get-d>|<get-d>(){}[0]
+    final val id // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.id|{}id[0]
+        final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.id.<get-id>|<get-id>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.component1|component1(){}[0]
+    final fun component2(): cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent = ...): cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.copy|copy(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.FriendDelEvent.DeleteEvent){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.toString|toString(){}[0]
+
+    final class Author { // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author|null[0]
+        constructor <init>(kotlin/String) // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.<init>|<init>(kotlin.String){}[0]
+
+        final val unionOpenId // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.unionOpenId|{}unionOpenId[0]
+            final fun <get-unionOpenId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.unionOpenId.<get-unionOpenId>|<get-unionOpenId>(){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author> { // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author) // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.FriendDelEvent.Author){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author> // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final class DeleteEvent { // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent|null[0]
+        constructor <init>(kotlin/String, kotlin/String, cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author) // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.<init>|<init>(kotlin.String;kotlin.String;cn.rtast.rob.qqbot.entity.inbound.FriendDelEvent.Author){}[0]
+
+        final val author // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.author|{}author[0]
+            final fun <get-author>(): cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.author.<get-author>|<get-author>(){}[0]
+        final val openId // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.openId|{}openId[0]
+            final fun <get-openId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.openId.<get-openId>|<get-openId>(){}[0]
+        final val timestamp // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.timestamp|{}timestamp[0]
+            final fun <get-timestamp>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+
+        final var action // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.action|{}action[0]
+            final fun <get-action>(): cn.rtast.rob.qqbot.qbot/QQBotAction // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.action.<get-action>|<get-action>(){}[0]
+            final fun <set-action>(cn.rtast.rob.qqbot.qbot/QQBotAction) // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.action.<set-action>|<set-action>(cn.rtast.rob.qqbot.qbot.QQBotAction){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.component2|component2(){}[0]
+        final fun component3(): cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.component3|component3(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Author = ...): cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.copy|copy(kotlin.String;kotlin.String;cn.rtast.rob.qqbot.entity.inbound.FriendDelEvent.Author){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent> { // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent) // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.FriendDelEvent.DeleteEvent){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent> // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.DeleteEvent.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent> { // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent) // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.FriendDelEvent){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent> // cn.rtast.rob.qqbot.entity.inbound/FriendDelEvent.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent { // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent|null[0]
+    constructor <init>(kotlin/String, cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent) // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.<init>|<init>(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupAddRobotEvent.AddRobotEvent){}[0]
+
+    final val d // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.d|{}d[0]
+        final fun <get-d>(): cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.d.<get-d>|<get-d>(){}[0]
+    final val id // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.id|{}id[0]
+        final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.id.<get-id>|<get-id>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.component1|component1(){}[0]
+    final fun component2(): cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent = ...): cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.copy|copy(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupAddRobotEvent.AddRobotEvent){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.toString|toString(){}[0]
+
+    final class AddRobotEvent { // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent|null[0]
+        constructor <init>(kotlin/String, kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.<init>|<init>(kotlin.String;kotlin.String;kotlin.String){}[0]
+
+        final val groupOpenId // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.groupOpenId|{}groupOpenId[0]
+            final fun <get-groupOpenId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.groupOpenId.<get-groupOpenId>|<get-groupOpenId>(){}[0]
+        final val opMemberOpenId // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.opMemberOpenId|{}opMemberOpenId[0]
+            final fun <get-opMemberOpenId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.opMemberOpenId.<get-opMemberOpenId>|<get-opMemberOpenId>(){}[0]
+        final val timestamp // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.timestamp|{}timestamp[0]
+            final fun <get-timestamp>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+
+        final var action // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.action|{}action[0]
+            final fun <get-action>(): cn.rtast.rob.qqbot.qbot/QQBotAction // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.action.<get-action>|<get-action>(){}[0]
+            final fun <set-action>(cn.rtast.rob.qqbot.qbot/QQBotAction) // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.action.<set-action>|<set-action>(cn.rtast.rob.qqbot.qbot.QQBotAction){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.component2|component2(){}[0]
+        final fun component3(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.component3|component3(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ...): cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.copy|copy(kotlin.String;kotlin.String;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent> { // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent) // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.GroupAddRobotEvent.AddRobotEvent){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent> // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.AddRobotEvent.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent> { // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent) // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.GroupAddRobotEvent){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent> // cn.rtast.rob.qqbot.entity.inbound/GroupAddRobotEvent.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent : cn.rtast.rob.entity/IGroupMessage, cn.rtast.rob.qqbot.actionable/GroupMessageActionable { // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent|null[0]
+    constructor <init>(kotlin/String, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody, kotlin.uuid/Uuid? = ...) // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.<init>|<init>(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.MessageBody;kotlin.uuid.Uuid?){}[0]
+
+    final val d // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.d|{}d[0]
+        final fun <get-d>(): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.d.<get-d>|<get-d>(){}[0]
+    final val id // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.id|{}id[0]
+        final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.id.<get-id>|<get-id>(){}[0]
+
+    final var sessionId // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.sessionId|{}sessionId[0]
+        final fun <get-sessionId>(): kotlin.uuid/Uuid? // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.sessionId.<get-sessionId>|<get-sessionId>(){}[0]
+        final fun <set-sessionId>(kotlin.uuid/Uuid?) // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.sessionId.<set-sessionId>|<set-sessionId>(kotlin.uuid.Uuid?){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.component1|component1(){}[0]
+    final fun component2(): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.component2|component2(){}[0]
+    final fun component3(): kotlin.uuid/Uuid? // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.component3|component3(){}[0]
+    final fun copy(kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody = ..., kotlin.uuid/Uuid? = ...): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.copy|copy(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.MessageBody;kotlin.uuid.Uuid?){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.toString|toString(){}[0]
+    final suspend fun reply(cn.rtast.rob.qqbot.segment/Keyboard) // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.reply|reply(cn.rtast.rob.qqbot.segment.Keyboard){}[0]
+    final suspend fun reply(cn.rtast.rob.qqbot.segment/Markdown) // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.reply|reply(cn.rtast.rob.qqbot.segment.Markdown){}[0]
+    final suspend fun reply(kotlin/String) // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.reply|reply(kotlin.String){}[0]
+    final suspend fun revoke() // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.revoke|revoke(){}[0]
+
+    final class Author { // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author|null[0]
+        constructor <init>(kotlin/String, kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.<init>|<init>(kotlin.String;kotlin.String;kotlin.String){}[0]
+
+        final val id // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.id|{}id[0]
+            final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.id.<get-id>|<get-id>(){}[0]
+        final val memberOpenId // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.memberOpenId|{}memberOpenId[0]
+            final fun <get-memberOpenId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.memberOpenId.<get-memberOpenId>|<get-memberOpenId>(){}[0]
+        final val unionOpenId // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.unionOpenId|{}unionOpenId[0]
+            final fun <get-unionOpenId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.unionOpenId.<get-unionOpenId>|<get-unionOpenId>(){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.component2|component2(){}[0]
+        final fun component3(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.component3|component3(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ...): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.copy|copy(kotlin.String;kotlin.String;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author> { // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author) // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.Author){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author> // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final class MessageBody { // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody|null[0]
+        constructor <init>(kotlin/String, kotlin/String, kotlin/String, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author, kotlin/String, kotlin/String, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene) // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.<init>|<init>(kotlin.String;kotlin.String;kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.Author;kotlin.String;kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.MessageScene){}[0]
+
+        final val author // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.author|{}author[0]
+            final fun <get-author>(): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.author.<get-author>|<get-author>(){}[0]
+        final val content // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.content|{}content[0]
+            final fun <get-content>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.content.<get-content>|<get-content>(){}[0]
+        final val groupId // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.groupId|{}groupId[0]
+            final fun <get-groupId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.groupId.<get-groupId>|<get-groupId>(){}[0]
+        final val groupOpenId // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.groupOpenId|{}groupOpenId[0]
+            final fun <get-groupOpenId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.groupOpenId.<get-groupOpenId>|<get-groupOpenId>(){}[0]
+        final val id // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.id|{}id[0]
+            final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.id.<get-id>|<get-id>(){}[0]
+        final val messageScene // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.messageScene|{}messageScene[0]
+            final fun <get-messageScene>(): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.messageScene.<get-messageScene>|<get-messageScene>(){}[0]
+        final val timestamp // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.timestamp|{}timestamp[0]
+            final fun <get-timestamp>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+
+        final var action // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.action|{}action[0]
+            final fun <get-action>(): cn.rtast.rob.qqbot.qbot/QQBotAction // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.action.<get-action>|<get-action>(){}[0]
+            final fun <set-action>(cn.rtast.rob.qqbot.qbot/QQBotAction) // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.action.<set-action>|<set-action>(cn.rtast.rob.qqbot.qbot.QQBotAction){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.component2|component2(){}[0]
+        final fun component3(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.component3|component3(){}[0]
+        final fun component4(): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.component4|component4(){}[0]
+        final fun component5(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.component5|component5(){}[0]
+        final fun component6(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.component6|component6(){}[0]
+        final fun component7(): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.component7|component7(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Author = ..., kotlin/String = ..., kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene = ...): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.copy|copy(kotlin.String;kotlin.String;kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.Author;kotlin.String;kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.MessageScene){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody> { // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody) // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.MessageBody){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody> // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageBody.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final class MessageScene { // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene|null[0]
+        constructor <init>(kotlin/String) // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.<init>|<init>(kotlin.String){}[0]
+
+        final val source // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.source|{}source[0]
+            final fun <get-source>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.source.<get-source>|<get-source>(){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene> { // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene) // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent.MessageScene){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene> // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.MessageScene.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent> { // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent) // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent> // cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent { // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent|null[0]
+    constructor <init>(kotlin/String, cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent) // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.<init>|<init>(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupDeleteRobotEvent.DeleteRobotEvent){}[0]
+
+    final val d // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.d|{}d[0]
+        final fun <get-d>(): cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.d.<get-d>|<get-d>(){}[0]
+    final val id // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.id|{}id[0]
+        final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.id.<get-id>|<get-id>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.component1|component1(){}[0]
+    final fun component2(): cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent = ...): cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.copy|copy(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupDeleteRobotEvent.DeleteRobotEvent){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.toString|toString(){}[0]
+
+    final class DeleteRobotEvent { // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent|null[0]
+        constructor <init>(kotlin/String, kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.<init>|<init>(kotlin.String;kotlin.String;kotlin.String){}[0]
+
+        final val groupOpenId // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.groupOpenId|{}groupOpenId[0]
+            final fun <get-groupOpenId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.groupOpenId.<get-groupOpenId>|<get-groupOpenId>(){}[0]
+        final val opMemberOpenId // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.opMemberOpenId|{}opMemberOpenId[0]
+            final fun <get-opMemberOpenId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.opMemberOpenId.<get-opMemberOpenId>|<get-opMemberOpenId>(){}[0]
+        final val timestamp // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.timestamp|{}timestamp[0]
+            final fun <get-timestamp>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+
+        final var action // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.action|{}action[0]
+            final fun <get-action>(): cn.rtast.rob.qqbot.qbot/QQBotAction // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.action.<get-action>|<get-action>(){}[0]
+            final fun <set-action>(cn.rtast.rob.qqbot.qbot/QQBotAction) // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.action.<set-action>|<set-action>(cn.rtast.rob.qqbot.qbot.QQBotAction){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.component2|component2(){}[0]
+        final fun component3(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.component3|component3(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ...): cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.copy|copy(kotlin.String;kotlin.String;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent> { // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent) // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.GroupDeleteRobotEvent.DeleteRobotEvent){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent> // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.DeleteRobotEvent.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent> { // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent) // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.GroupDeleteRobotEvent){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent> // cn.rtast.rob.qqbot.entity.inbound/GroupDeleteRobotEvent.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent { // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent|null[0]
+    constructor <init>(kotlin/String, cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent) // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.<init>|<init>(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupMessageReceiveEvent.MsgReceiveEvent){}[0]
+
+    final val d // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.d|{}d[0]
+        final fun <get-d>(): cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.d.<get-d>|<get-d>(){}[0]
+    final val id // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.id|{}id[0]
+        final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.id.<get-id>|<get-id>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.component1|component1(){}[0]
+    final fun component2(): cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent = ...): cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.copy|copy(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupMessageReceiveEvent.MsgReceiveEvent){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.toString|toString(){}[0]
+
+    final class MsgReceiveEvent { // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent|null[0]
+        constructor <init>(kotlin/String, kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.<init>|<init>(kotlin.String;kotlin.String;kotlin.String){}[0]
+
+        final val groupOpenId // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.groupOpenId|{}groupOpenId[0]
+            final fun <get-groupOpenId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.groupOpenId.<get-groupOpenId>|<get-groupOpenId>(){}[0]
+        final val opMemberOpenId // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.opMemberOpenId|{}opMemberOpenId[0]
+            final fun <get-opMemberOpenId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.opMemberOpenId.<get-opMemberOpenId>|<get-opMemberOpenId>(){}[0]
+        final val timestamp // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.timestamp|{}timestamp[0]
+            final fun <get-timestamp>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+
+        final var action // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.action|{}action[0]
+            final fun <get-action>(): cn.rtast.rob.qqbot.qbot/QQBotAction // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.action.<get-action>|<get-action>(){}[0]
+            final fun <set-action>(cn.rtast.rob.qqbot.qbot/QQBotAction) // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.action.<set-action>|<set-action>(cn.rtast.rob.qqbot.qbot.QQBotAction){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.component2|component2(){}[0]
+        final fun component3(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.component3|component3(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ...): cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.copy|copy(kotlin.String;kotlin.String;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent> { // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent) // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.GroupMessageReceiveEvent.MsgReceiveEvent){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent> // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.MsgReceiveEvent.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent> { // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent) // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.GroupMessageReceiveEvent){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent> // cn.rtast.rob.qqbot.entity.inbound/GroupMessageReceiveEvent.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent { // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent|null[0]
+    constructor <init>(kotlin/String, cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent) // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.<init>|<init>(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupMessageRejectEvent.MsgRejectEvent){}[0]
+
+    final val d // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.d|{}d[0]
+        final fun <get-d>(): cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.d.<get-d>|<get-d>(){}[0]
+    final val id // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.id|{}id[0]
+        final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.id.<get-id>|<get-id>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.component1|component1(){}[0]
+    final fun component2(): cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.component2|component2(){}[0]
+    final fun copy(kotlin/String = ..., cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent = ...): cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.copy|copy(kotlin.String;cn.rtast.rob.qqbot.entity.inbound.GroupMessageRejectEvent.MsgRejectEvent){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.toString|toString(){}[0]
+
+    final class MsgRejectEvent { // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent|null[0]
+        constructor <init>(kotlin/String, kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.<init>|<init>(kotlin.String;kotlin.String;kotlin.String){}[0]
+
+        final val groupOpenId // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.groupOpenId|{}groupOpenId[0]
+            final fun <get-groupOpenId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.groupOpenId.<get-groupOpenId>|<get-groupOpenId>(){}[0]
+        final val opMemberOpenId // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.opMemberOpenId|{}opMemberOpenId[0]
+            final fun <get-opMemberOpenId>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.opMemberOpenId.<get-opMemberOpenId>|<get-opMemberOpenId>(){}[0]
+        final val timestamp // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.timestamp|{}timestamp[0]
+            final fun <get-timestamp>(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+
+        final var action // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.action|{}action[0]
+            final fun <get-action>(): cn.rtast.rob.qqbot.qbot/QQBotAction // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.action.<get-action>|<get-action>(){}[0]
+            final fun <set-action>(cn.rtast.rob.qqbot.qbot/QQBotAction) // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.action.<set-action>|<set-action>(cn.rtast.rob.qqbot.qbot.QQBotAction){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.component2|component2(){}[0]
+        final fun component3(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.component3|component3(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ...): cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.copy|copy(kotlin.String;kotlin.String;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent> { // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent) // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.GroupMessageRejectEvent.MsgRejectEvent){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent> // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.MsgRejectEvent.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent> { // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent) // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.inbound.GroupMessageRejectEvent){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent> // cn.rtast.rob.qqbot.entity.inbound/GroupMessageRejectEvent.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.qqbot.entity/HttpCallbackACK { // cn.rtast.rob.qqbot.entity/HttpCallbackACK|null[0]
+    constructor <init>(kotlin/Int = ...) // cn.rtast.rob.qqbot.entity/HttpCallbackACK.<init>|<init>(kotlin.Int){}[0]
+
+    final val op // cn.rtast.rob.qqbot.entity/HttpCallbackACK.op|{}op[0]
+        final fun <get-op>(): kotlin/Int // cn.rtast.rob.qqbot.entity/HttpCallbackACK.op.<get-op>|<get-op>(){}[0]
+
+    final fun component1(): kotlin/Int // cn.rtast.rob.qqbot.entity/HttpCallbackACK.component1|component1(){}[0]
+    final fun copy(kotlin/Int = ...): cn.rtast.rob.qqbot.entity/HttpCallbackACK // cn.rtast.rob.qqbot.entity/HttpCallbackACK.copy|copy(kotlin.Int){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.entity/HttpCallbackACK.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.entity/HttpCallbackACK.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.qqbot.entity/HttpCallbackACK.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.entity/HttpCallbackACK> { // cn.rtast.rob.qqbot.entity/HttpCallbackACK.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.qqbot.entity/HttpCallbackACK.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.entity/HttpCallbackACK.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.entity/HttpCallbackACK.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.entity/HttpCallbackACK // cn.rtast.rob.qqbot.entity/HttpCallbackACK.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.entity/HttpCallbackACK) // cn.rtast.rob.qqbot.entity/HttpCallbackACK.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.entity.HttpCallbackACK){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.qqbot.entity/HttpCallbackACK.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.entity/HttpCallbackACK> // cn.rtast.rob.qqbot.entity/HttpCallbackACK.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.qqbot.qbot/QQBotAction : cn.rtast.rob.qqbot.qbot/SendActionMoreExt { // cn.rtast.rob.qqbot.qbot/QQBotAction|null[0]
+    final suspend fun <#A1: kotlin/Any?> send(kotlin/String, #A1?): kotlin/String // cn.rtast.rob.qqbot.qbot/QQBotAction.send|send(kotlin.String;0:0?){0§<kotlin.Any?>}[0]
+    final suspend fun revokeGroupMessage(kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.qbot/QQBotAction.revokeGroupMessage|revokeGroupMessage(kotlin.String;kotlin.String){}[0]
+    final suspend fun revokePrivateMessage(kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.qbot/QQBotAction.revokePrivateMessage|revokePrivateMessage(kotlin.String;kotlin.String){}[0]
+    final suspend fun send(cn.rtast.rob.qqbot.enums.internal/HTTPMethod, kotlin/String, kotlin/Any?): kotlin/String // cn.rtast.rob.qqbot.qbot/QQBotAction.send|send(cn.rtast.rob.qqbot.enums.internal.HTTPMethod;kotlin.String;kotlin.Any?){}[0]
+    final suspend fun sendGroupKeyboardMessage(kotlin/String, cn.rtast.rob.qqbot.segment/Keyboard, kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.qbot/QQBotAction.sendGroupKeyboardMessage|sendGroupKeyboardMessage(kotlin.String;cn.rtast.rob.qqbot.segment.Keyboard;kotlin.String;kotlin.String){}[0]
+    final suspend fun sendGroupMarkdownMessage(kotlin/String, cn.rtast.rob.qqbot.segment/Markdown, kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.qbot/QQBotAction.sendGroupMarkdownMessage|sendGroupMarkdownMessage(kotlin.String;cn.rtast.rob.qqbot.segment.Markdown;kotlin.String;kotlin.String){}[0]
+    final suspend fun sendGroupPlainTextMessage(kotlin/String, kotlin/String, kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.qbot/QQBotAction.sendGroupPlainTextMessage|sendGroupPlainTextMessage(kotlin.String;kotlin.String;kotlin.String;kotlin.String){}[0]
+    final suspend fun sendPrivateKeyboardMessage(kotlin/String, cn.rtast.rob.qqbot.segment/Keyboard, kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.qbot/QQBotAction.sendPrivateKeyboardMessage|sendPrivateKeyboardMessage(kotlin.String;cn.rtast.rob.qqbot.segment.Keyboard;kotlin.String;kotlin.String){}[0]
+    final suspend fun sendPrivateMarkdownMessage(kotlin/String, cn.rtast.rob.qqbot.segment/Markdown, kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.qbot/QQBotAction.sendPrivateMarkdownMessage|sendPrivateMarkdownMessage(kotlin.String;cn.rtast.rob.qqbot.segment.Markdown;kotlin.String;kotlin.String){}[0]
+    final suspend fun sendPrivatePlainTextMessage(kotlin/String, kotlin/String, kotlin/String, kotlin/String) // cn.rtast.rob.qqbot.qbot/QQBotAction.sendPrivatePlainTextMessage|sendPrivatePlainTextMessage(kotlin.String;kotlin.String;kotlin.String;kotlin.String){}[0]
+}
+
+final class cn.rtast.rob.qqbot.segment/Keyboard { // cn.rtast.rob.qqbot.segment/Keyboard|null[0]
+    constructor <init>(kotlin.collections/List<cn.rtast.rob.qqbot.segment/Keyboard.Row>) // cn.rtast.rob.qqbot.segment/Keyboard.<init>|<init>(kotlin.collections.List<cn.rtast.rob.qqbot.segment.Keyboard.Row>){}[0]
+
+    final val content // cn.rtast.rob.qqbot.segment/Keyboard.content|{}content[0]
+        final fun <get-content>(): kotlin.collections/List<cn.rtast.rob.qqbot.segment/Keyboard.Row> // cn.rtast.rob.qqbot.segment/Keyboard.content.<get-content>|<get-content>(){}[0]
+
+    final fun component1(): kotlin.collections/List<cn.rtast.rob.qqbot.segment/Keyboard.Row> // cn.rtast.rob.qqbot.segment/Keyboard.component1|component1(){}[0]
+    final fun copy(kotlin.collections/List<cn.rtast.rob.qqbot.segment/Keyboard.Row> = ...): cn.rtast.rob.qqbot.segment/Keyboard // cn.rtast.rob.qqbot.segment/Keyboard.copy|copy(kotlin.collections.List<cn.rtast.rob.qqbot.segment.Keyboard.Row>){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.segment/Keyboard.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.segment/Keyboard.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.toString|toString(){}[0]
+
+    final class Action { // cn.rtast.rob.qqbot.segment/Keyboard.Action|null[0]
+        constructor <init>(kotlin/String, cn.rtast.rob.qqbot.segment/Keyboard.Permission, kotlin/String, kotlin/Boolean, kotlin/Boolean, kotlin/Int, kotlin/String) // cn.rtast.rob.qqbot.segment/Keyboard.Action.<init>|<init>(kotlin.String;cn.rtast.rob.qqbot.segment.Keyboard.Permission;kotlin.String;kotlin.Boolean;kotlin.Boolean;kotlin.Int;kotlin.String){}[0]
+
+        final val anchor // cn.rtast.rob.qqbot.segment/Keyboard.Action.anchor|{}anchor[0]
+            final fun <get-anchor>(): kotlin/Int // cn.rtast.rob.qqbot.segment/Keyboard.Action.anchor.<get-anchor>|<get-anchor>(){}[0]
+        final val data // cn.rtast.rob.qqbot.segment/Keyboard.Action.data|{}data[0]
+            final fun <get-data>(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.Action.data.<get-data>|<get-data>(){}[0]
+        final val enter // cn.rtast.rob.qqbot.segment/Keyboard.Action.enter|{}enter[0]
+            final fun <get-enter>(): kotlin/Boolean // cn.rtast.rob.qqbot.segment/Keyboard.Action.enter.<get-enter>|<get-enter>(){}[0]
+        final val permission // cn.rtast.rob.qqbot.segment/Keyboard.Action.permission|{}permission[0]
+            final fun <get-permission>(): cn.rtast.rob.qqbot.segment/Keyboard.Permission // cn.rtast.rob.qqbot.segment/Keyboard.Action.permission.<get-permission>|<get-permission>(){}[0]
+        final val reply // cn.rtast.rob.qqbot.segment/Keyboard.Action.reply|{}reply[0]
+            final fun <get-reply>(): kotlin/Boolean // cn.rtast.rob.qqbot.segment/Keyboard.Action.reply.<get-reply>|<get-reply>(){}[0]
+        final val type // cn.rtast.rob.qqbot.segment/Keyboard.Action.type|{}type[0]
+            final fun <get-type>(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.Action.type.<get-type>|<get-type>(){}[0]
+        final val unsupportedTips // cn.rtast.rob.qqbot.segment/Keyboard.Action.unsupportedTips|{}unsupportedTips[0]
+            final fun <get-unsupportedTips>(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.Action.unsupportedTips.<get-unsupportedTips>|<get-unsupportedTips>(){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.Action.component1|component1(){}[0]
+        final fun component2(): cn.rtast.rob.qqbot.segment/Keyboard.Permission // cn.rtast.rob.qqbot.segment/Keyboard.Action.component2|component2(){}[0]
+        final fun component3(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.Action.component3|component3(){}[0]
+        final fun component4(): kotlin/Boolean // cn.rtast.rob.qqbot.segment/Keyboard.Action.component4|component4(){}[0]
+        final fun component5(): kotlin/Boolean // cn.rtast.rob.qqbot.segment/Keyboard.Action.component5|component5(){}[0]
+        final fun component6(): kotlin/Int // cn.rtast.rob.qqbot.segment/Keyboard.Action.component6|component6(){}[0]
+        final fun component7(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.Action.component7|component7(){}[0]
+        final fun copy(kotlin/String = ..., cn.rtast.rob.qqbot.segment/Keyboard.Permission = ..., kotlin/String = ..., kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Int = ..., kotlin/String = ...): cn.rtast.rob.qqbot.segment/Keyboard.Action // cn.rtast.rob.qqbot.segment/Keyboard.Action.copy|copy(kotlin.String;cn.rtast.rob.qqbot.segment.Keyboard.Permission;kotlin.String;kotlin.Boolean;kotlin.Boolean;kotlin.Int;kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.segment/Keyboard.Action.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.segment/Keyboard.Action.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.Action.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.segment/Keyboard.Action> { // cn.rtast.rob.qqbot.segment/Keyboard.Action.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.segment/Keyboard.Action.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.segment/Keyboard.Action.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.segment/Keyboard.Action.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.segment/Keyboard.Action // cn.rtast.rob.qqbot.segment/Keyboard.Action.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.segment/Keyboard.Action) // cn.rtast.rob.qqbot.segment/Keyboard.Action.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.segment.Keyboard.Action){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.segment/Keyboard.Action.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.segment/Keyboard.Action> // cn.rtast.rob.qqbot.segment/Keyboard.Action.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final class Button { // cn.rtast.rob.qqbot.segment/Keyboard.Button|null[0]
+        constructor <init>(kotlin/String, cn.rtast.rob.qqbot.segment/Keyboard.RenderData, cn.rtast.rob.qqbot.segment/Keyboard.Action) // cn.rtast.rob.qqbot.segment/Keyboard.Button.<init>|<init>(kotlin.String;cn.rtast.rob.qqbot.segment.Keyboard.RenderData;cn.rtast.rob.qqbot.segment.Keyboard.Action){}[0]
+
+        final val action // cn.rtast.rob.qqbot.segment/Keyboard.Button.action|{}action[0]
+            final fun <get-action>(): cn.rtast.rob.qqbot.segment/Keyboard.Action // cn.rtast.rob.qqbot.segment/Keyboard.Button.action.<get-action>|<get-action>(){}[0]
+        final val id // cn.rtast.rob.qqbot.segment/Keyboard.Button.id|{}id[0]
+            final fun <get-id>(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.Button.id.<get-id>|<get-id>(){}[0]
+        final val renderData // cn.rtast.rob.qqbot.segment/Keyboard.Button.renderData|{}renderData[0]
+            final fun <get-renderData>(): cn.rtast.rob.qqbot.segment/Keyboard.RenderData // cn.rtast.rob.qqbot.segment/Keyboard.Button.renderData.<get-renderData>|<get-renderData>(){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.Button.component1|component1(){}[0]
+        final fun component2(): cn.rtast.rob.qqbot.segment/Keyboard.RenderData // cn.rtast.rob.qqbot.segment/Keyboard.Button.component2|component2(){}[0]
+        final fun component3(): cn.rtast.rob.qqbot.segment/Keyboard.Action // cn.rtast.rob.qqbot.segment/Keyboard.Button.component3|component3(){}[0]
+        final fun copy(kotlin/String = ..., cn.rtast.rob.qqbot.segment/Keyboard.RenderData = ..., cn.rtast.rob.qqbot.segment/Keyboard.Action = ...): cn.rtast.rob.qqbot.segment/Keyboard.Button // cn.rtast.rob.qqbot.segment/Keyboard.Button.copy|copy(kotlin.String;cn.rtast.rob.qqbot.segment.Keyboard.RenderData;cn.rtast.rob.qqbot.segment.Keyboard.Action){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.segment/Keyboard.Button.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.segment/Keyboard.Button.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.Button.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.segment/Keyboard.Button> { // cn.rtast.rob.qqbot.segment/Keyboard.Button.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.segment/Keyboard.Button.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.segment/Keyboard.Button.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.segment/Keyboard.Button.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.segment/Keyboard.Button // cn.rtast.rob.qqbot.segment/Keyboard.Button.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.segment/Keyboard.Button) // cn.rtast.rob.qqbot.segment/Keyboard.Button.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.segment.Keyboard.Button){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.segment/Keyboard.Button.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.segment/Keyboard.Button> // cn.rtast.rob.qqbot.segment/Keyboard.Button.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final class Permission { // cn.rtast.rob.qqbot.segment/Keyboard.Permission|null[0]
+        constructor <init>(kotlin/Int, kotlin.collections/List<kotlin/Long>, kotlin.collections/List<kotlin/Long>) // cn.rtast.rob.qqbot.segment/Keyboard.Permission.<init>|<init>(kotlin.Int;kotlin.collections.List<kotlin.Long>;kotlin.collections.List<kotlin.Long>){}[0]
+
+        final val specifyRoleIds // cn.rtast.rob.qqbot.segment/Keyboard.Permission.specifyRoleIds|{}specifyRoleIds[0]
+            final fun <get-specifyRoleIds>(): kotlin.collections/List<kotlin/Long> // cn.rtast.rob.qqbot.segment/Keyboard.Permission.specifyRoleIds.<get-specifyRoleIds>|<get-specifyRoleIds>(){}[0]
+        final val specifyUserIds // cn.rtast.rob.qqbot.segment/Keyboard.Permission.specifyUserIds|{}specifyUserIds[0]
+            final fun <get-specifyUserIds>(): kotlin.collections/List<kotlin/Long> // cn.rtast.rob.qqbot.segment/Keyboard.Permission.specifyUserIds.<get-specifyUserIds>|<get-specifyUserIds>(){}[0]
+        final val type // cn.rtast.rob.qqbot.segment/Keyboard.Permission.type|{}type[0]
+            final fun <get-type>(): kotlin/Int // cn.rtast.rob.qqbot.segment/Keyboard.Permission.type.<get-type>|<get-type>(){}[0]
+
+        final fun component1(): kotlin/Int // cn.rtast.rob.qqbot.segment/Keyboard.Permission.component1|component1(){}[0]
+        final fun component2(): kotlin.collections/List<kotlin/Long> // cn.rtast.rob.qqbot.segment/Keyboard.Permission.component2|component2(){}[0]
+        final fun component3(): kotlin.collections/List<kotlin/Long> // cn.rtast.rob.qqbot.segment/Keyboard.Permission.component3|component3(){}[0]
+        final fun copy(kotlin/Int = ..., kotlin.collections/List<kotlin/Long> = ..., kotlin.collections/List<kotlin/Long> = ...): cn.rtast.rob.qqbot.segment/Keyboard.Permission // cn.rtast.rob.qqbot.segment/Keyboard.Permission.copy|copy(kotlin.Int;kotlin.collections.List<kotlin.Long>;kotlin.collections.List<kotlin.Long>){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.segment/Keyboard.Permission.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.segment/Keyboard.Permission.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.Permission.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.segment/Keyboard.Permission> { // cn.rtast.rob.qqbot.segment/Keyboard.Permission.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.segment/Keyboard.Permission.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.segment/Keyboard.Permission.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.segment/Keyboard.Permission.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.segment/Keyboard.Permission // cn.rtast.rob.qqbot.segment/Keyboard.Permission.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.segment/Keyboard.Permission) // cn.rtast.rob.qqbot.segment/Keyboard.Permission.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.segment.Keyboard.Permission){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.segment/Keyboard.Permission.Companion|null[0]
+            final val $childSerializers // cn.rtast.rob.qqbot.segment/Keyboard.Permission.Companion.$childSerializers|{}$childSerializers[0]
+
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.segment/Keyboard.Permission> // cn.rtast.rob.qqbot.segment/Keyboard.Permission.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final class RenderData { // cn.rtast.rob.qqbot.segment/Keyboard.RenderData|null[0]
+        constructor <init>(kotlin/String, kotlin/String, kotlin/Int) // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.<init>|<init>(kotlin.String;kotlin.String;kotlin.Int){}[0]
+
+        final val label // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.label|{}label[0]
+            final fun <get-label>(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.label.<get-label>|<get-label>(){}[0]
+        final val style // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.style|{}style[0]
+            final fun <get-style>(): kotlin/Int // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.style.<get-style>|<get-style>(){}[0]
+        final val visitedLabel // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.visitedLabel|{}visitedLabel[0]
+            final fun <get-visitedLabel>(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.visitedLabel.<get-visitedLabel>|<get-visitedLabel>(){}[0]
+
+        final fun component1(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.component1|component1(){}[0]
+        final fun component2(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.component2|component2(){}[0]
+        final fun component3(): kotlin/Int // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.component3|component3(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/Int = ...): cn.rtast.rob.qqbot.segment/Keyboard.RenderData // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.copy|copy(kotlin.String;kotlin.String;kotlin.Int){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.segment/Keyboard.RenderData> { // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.segment/Keyboard.RenderData // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.segment/Keyboard.RenderData) // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.segment.Keyboard.RenderData){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.Companion|null[0]
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.segment/Keyboard.RenderData> // cn.rtast.rob.qqbot.segment/Keyboard.RenderData.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final class Row { // cn.rtast.rob.qqbot.segment/Keyboard.Row|null[0]
+        constructor <init>(kotlin.collections/List<cn.rtast.rob.qqbot.segment/Keyboard.Button>) // cn.rtast.rob.qqbot.segment/Keyboard.Row.<init>|<init>(kotlin.collections.List<cn.rtast.rob.qqbot.segment.Keyboard.Button>){}[0]
+
+        final val buttons // cn.rtast.rob.qqbot.segment/Keyboard.Row.buttons|{}buttons[0]
+            final fun <get-buttons>(): kotlin.collections/List<cn.rtast.rob.qqbot.segment/Keyboard.Button> // cn.rtast.rob.qqbot.segment/Keyboard.Row.buttons.<get-buttons>|<get-buttons>(){}[0]
+
+        final fun component1(): kotlin.collections/List<cn.rtast.rob.qqbot.segment/Keyboard.Button> // cn.rtast.rob.qqbot.segment/Keyboard.Row.component1|component1(){}[0]
+        final fun copy(kotlin.collections/List<cn.rtast.rob.qqbot.segment/Keyboard.Button> = ...): cn.rtast.rob.qqbot.segment/Keyboard.Row // cn.rtast.rob.qqbot.segment/Keyboard.Row.copy|copy(kotlin.collections.List<cn.rtast.rob.qqbot.segment.Keyboard.Button>){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.segment/Keyboard.Row.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.segment/Keyboard.Row.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // cn.rtast.rob.qqbot.segment/Keyboard.Row.toString|toString(){}[0]
+
+        final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.segment/Keyboard.Row> { // cn.rtast.rob.qqbot.segment/Keyboard.Row.$serializer|null[0]
+            final val descriptor // cn.rtast.rob.qqbot.segment/Keyboard.Row.$serializer.descriptor|{}descriptor[0]
+                final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.segment/Keyboard.Row.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+            final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.segment/Keyboard.Row.$serializer.childSerializers|childSerializers(){}[0]
+            final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.segment/Keyboard.Row // cn.rtast.rob.qqbot.segment/Keyboard.Row.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+            final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.segment/Keyboard.Row) // cn.rtast.rob.qqbot.segment/Keyboard.Row.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.segment.Keyboard.Row){}[0]
+        }
+
+        final object Companion { // cn.rtast.rob.qqbot.segment/Keyboard.Row.Companion|null[0]
+            final val $childSerializers // cn.rtast.rob.qqbot.segment/Keyboard.Row.Companion.$childSerializers|{}$childSerializers[0]
+
+            final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.segment/Keyboard.Row> // cn.rtast.rob.qqbot.segment/Keyboard.Row.Companion.serializer|serializer(){}[0]
+        }
+    }
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.segment/Keyboard> { // cn.rtast.rob.qqbot.segment/Keyboard.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.qqbot.segment/Keyboard.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.segment/Keyboard.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.segment/Keyboard.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.segment/Keyboard // cn.rtast.rob.qqbot.segment/Keyboard.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.segment/Keyboard) // cn.rtast.rob.qqbot.segment/Keyboard.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.segment.Keyboard){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.qqbot.segment/Keyboard.Companion|null[0]
+        final val $childSerializers // cn.rtast.rob.qqbot.segment/Keyboard.Companion.$childSerializers|{}$childSerializers[0]
+
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.segment/Keyboard> // cn.rtast.rob.qqbot.segment/Keyboard.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.qqbot.segment/Markdown { // cn.rtast.rob.qqbot.segment/Markdown|null[0]
+    constructor <init>(kotlin/String) // cn.rtast.rob.qqbot.segment/Markdown.<init>|<init>(kotlin.String){}[0]
+
+    final val content // cn.rtast.rob.qqbot.segment/Markdown.content|{}content[0]
+        final fun <get-content>(): kotlin/String // cn.rtast.rob.qqbot.segment/Markdown.content.<get-content>|<get-content>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.qqbot.segment/Markdown.component1|component1(){}[0]
+    final fun copy(kotlin/String = ...): cn.rtast.rob.qqbot.segment/Markdown // cn.rtast.rob.qqbot.segment/Markdown.copy|copy(kotlin.String){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.qqbot.segment/Markdown.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.qqbot.segment/Markdown.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.qqbot.segment/Markdown.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.qqbot.segment/Markdown> { // cn.rtast.rob.qqbot.segment/Markdown.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.qqbot.segment/Markdown.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.qqbot.segment/Markdown.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.qqbot.segment/Markdown.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.qqbot.segment/Markdown // cn.rtast.rob.qqbot.segment/Markdown.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.qqbot.segment/Markdown) // cn.rtast.rob.qqbot.segment/Markdown.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.qqbot.segment.Markdown){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.qqbot.segment/Markdown.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.qqbot.segment/Markdown> // cn.rtast.rob.qqbot.segment/Markdown.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.qqbot.util/ButtonManager { // cn.rtast.rob.qqbot.util/ButtonManager|null[0]
+    final fun addButton() // cn.rtast.rob.qqbot.util/ButtonManager.addButton|addButton(){}[0]
+}
+
+final class cn.rtast.rob.qqbot.util/HttpServer { // cn.rtast.rob.qqbot.util/HttpServer|null[0]
+    constructor <init>(kotlin/Int, kotlin/String, kotlin/String, cn.rtast.rob.qqbot.qbot/QQBotListener, cn.rtast.rob.qqbot/BotInstance) // cn.rtast.rob.qqbot.util/HttpServer.<init>|<init>(kotlin.Int;kotlin.String;kotlin.String;cn.rtast.rob.qqbot.qbot.QQBotListener;cn.rtast.rob.qqbot.BotInstance){}[0]
+
+    final fun startHttpServer(): io.ktor.server.engine/EmbeddedServer<io.ktor.server.cio/CIOApplicationEngine, io.ktor.server.cio/CIOApplicationEngine.Configuration> // cn.rtast.rob.qqbot.util/HttpServer.startHttpServer|startHttpServer(){}[0]
+}
+
+final class cn.rtast.rob.qqbot/BotInstance : cn.rtast.rob/BaseBotInstance { // cn.rtast.rob.qqbot/BotInstance|null[0]
+    final val isActionInitialized // cn.rtast.rob.qqbot/BotInstance.isActionInitialized|{}isActionInitialized[0]
+        final fun <get-isActionInitialized>(): kotlin/Boolean // cn.rtast.rob.qqbot/BotInstance.isActionInitialized.<get-isActionInitialized>|<get-isActionInitialized>(){}[0]
+    final val scheduler // cn.rtast.rob.qqbot/BotInstance.scheduler|{}scheduler[0]
+        final fun <get-scheduler>(): cn.rtast.rob.scheduler/BotCoroutineScheduler<cn.rtast.rob.qqbot/BotInstance> // cn.rtast.rob.qqbot/BotInstance.scheduler.<get-scheduler>|<get-scheduler>(){}[0]
+
+    final suspend fun createBot(): cn.rtast.rob.qqbot/BotInstance // cn.rtast.rob.qqbot/BotInstance.createBot|createBot(){}[0]
+    final suspend fun disposeBot() // cn.rtast.rob.qqbot/BotInstance.disposeBot|disposeBot(){}[0]
+}
+
+final object cn.rtast.rob.qqbot/QBotFactory : cn.rtast.rob/BotFactory { // cn.rtast.rob.qqbot/QBotFactory|null[0]
+    final val commandManager // cn.rtast.rob.qqbot/QBotFactory.commandManager|{}commandManager[0]
+        final fun <get-commandManager>(): cn.rtast.rob.qqbot.command/CommandManagerImpl // cn.rtast.rob.qqbot/QBotFactory.commandManager.<get-commandManager>|<get-commandManager>(){}[0]
+    final val globalScheduler // cn.rtast.rob.qqbot/QBotFactory.globalScheduler|{}globalScheduler[0]
+        final fun <get-globalScheduler>(): cn.rtast.rob.scheduler/GlobalCoroutineScheduler<cn.rtast.rob.qqbot/BotInstance> // cn.rtast.rob.qqbot/QBotFactory.globalScheduler.<get-globalScheduler>|<get-globalScheduler>(){}[0]
+
+    final var groupCommandExecutionTimes // cn.rtast.rob.qqbot/QBotFactory.groupCommandExecutionTimes|{}groupCommandExecutionTimes[0]
+        final fun <get-groupCommandExecutionTimes>(): kotlin/Int // cn.rtast.rob.qqbot/QBotFactory.groupCommandExecutionTimes.<get-groupCommandExecutionTimes>|<get-groupCommandExecutionTimes>(){}[0]
+        final fun <set-groupCommandExecutionTimes>(kotlin/Int) // cn.rtast.rob.qqbot/QBotFactory.groupCommandExecutionTimes.<set-groupCommandExecutionTimes>|<set-groupCommandExecutionTimes>(kotlin.Int){}[0]
+    final var interceptor // cn.rtast.rob.qqbot/QBotFactory.interceptor|{}interceptor[0]
+        final fun <get-interceptor>(): cn.rtast.rob.interceptor/ICommandInterceptor<cn.rtast.rob.qqbot.command/BaseCommand, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent, cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent> // cn.rtast.rob.qqbot/QBotFactory.interceptor.<get-interceptor>|<get-interceptor>(){}[0]
+        final fun <set-interceptor>(cn.rtast.rob.interceptor/ICommandInterceptor<cn.rtast.rob.qqbot.command/BaseCommand, cn.rtast.rob.qqbot.entity.inbound/GroupAtMessageCreateEvent, cn.rtast.rob.qqbot.entity.inbound/C2CMessageCreateEvent>) // cn.rtast.rob.qqbot/QBotFactory.interceptor.<set-interceptor>|<set-interceptor>(cn.rtast.rob.interceptor.ICommandInterceptor<cn.rtast.rob.qqbot.command.BaseCommand,cn.rtast.rob.qqbot.entity.inbound.GroupAtMessageCreateEvent,cn.rtast.rob.qqbot.entity.inbound.C2CMessageCreateEvent>){}[0]
+    final var privateCommandExecutionTimes // cn.rtast.rob.qqbot/QBotFactory.privateCommandExecutionTimes|{}privateCommandExecutionTimes[0]
+        final fun <get-privateCommandExecutionTimes>(): kotlin/Int // cn.rtast.rob.qqbot/QBotFactory.privateCommandExecutionTimes.<get-privateCommandExecutionTimes>|<get-privateCommandExecutionTimes>(){}[0]
+        final fun <set-privateCommandExecutionTimes>(kotlin/Int) // cn.rtast.rob.qqbot/QBotFactory.privateCommandExecutionTimes.<set-privateCommandExecutionTimes>|<set-privateCommandExecutionTimes>(kotlin.Int){}[0]
+    final var totalCommandExecutionTimes // cn.rtast.rob.qqbot/QBotFactory.totalCommandExecutionTimes|{}totalCommandExecutionTimes[0]
+        final fun <get-totalCommandExecutionTimes>(): kotlin/Int // cn.rtast.rob.qqbot/QBotFactory.totalCommandExecutionTimes.<get-totalCommandExecutionTimes>|<get-totalCommandExecutionTimes>(){}[0]
+        final fun <set-totalCommandExecutionTimes>(kotlin/Int) // cn.rtast.rob.qqbot/QBotFactory.totalCommandExecutionTimes.<set-totalCommandExecutionTimes>|<set-totalCommandExecutionTimes>(kotlin.Int){}[0]
+
+    final suspend fun createServer(kotlin/Int, kotlin/String, kotlin/String, cn.rtast.rob.qqbot.qbot/QQBotListener): cn.rtast.rob.qqbot/BotInstance // cn.rtast.rob.qqbot/QBotFactory.createServer|createServer(kotlin.Int;kotlin.String;kotlin.String;cn.rtast.rob.qqbot.qbot.QQBotListener){}[0]
+}
