@@ -1,5 +1,5 @@
 // Klib ABI Dump
-// Targets: [wasmJs]
+// Targets: [linuxArm64, linuxX64, mingwX64, wasmJs]
 // Rendering settings:
 // - Signature version: 2
 // - Show manifest properties: true

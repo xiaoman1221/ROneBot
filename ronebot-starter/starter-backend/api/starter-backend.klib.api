@@ -1,0 +1,123 @@
+// Klib ABI Dump
+// Targets: [linuxArm64, linuxX64, mingwX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <cn.rtast.rob:starter-backend>
+final enum class cn.rtast.rob.starter.backend.enums/ProjectType : kotlin/Enum<cn.rtast.rob.starter.backend.enums/ProjectType> { // cn.rtast.rob.starter.backend.enums/ProjectType|null[0]
+    enum entry OneBot11 // cn.rtast.rob.starter.backend.enums/ProjectType.OneBot11|null[0]
+    enum entry QQBot // cn.rtast.rob.starter.backend.enums/ProjectType.QQBot|null[0]
+
+    final val buildScriptName // cn.rtast.rob.starter.backend.enums/ProjectType.buildScriptName|{}buildScriptName[0]
+        final fun <get-buildScriptName>(): kotlin/String // cn.rtast.rob.starter.backend.enums/ProjectType.buildScriptName.<get-buildScriptName>|<get-buildScriptName>(){}[0]
+    final val entries // cn.rtast.rob.starter.backend.enums/ProjectType.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<cn.rtast.rob.starter.backend.enums/ProjectType> // cn.rtast.rob.starter.backend.enums/ProjectType.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val mainClassName // cn.rtast.rob.starter.backend.enums/ProjectType.mainClassName|{}mainClassName[0]
+        final fun <get-mainClassName>(): kotlin/String // cn.rtast.rob.starter.backend.enums/ProjectType.mainClassName.<get-mainClassName>|<get-mainClassName>(){}[0]
+    final val platformName // cn.rtast.rob.starter.backend.enums/ProjectType.platformName|{}platformName[0]
+        final fun <get-platformName>(): kotlin/String // cn.rtast.rob.starter.backend.enums/ProjectType.platformName.<get-platformName>|<get-platformName>(){}[0]
+
+    final fun valueOf(kotlin/String): cn.rtast.rob.starter.backend.enums/ProjectType // cn.rtast.rob.starter.backend.enums/ProjectType.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<cn.rtast.rob.starter.backend.enums/ProjectType> // cn.rtast.rob.starter.backend.enums/ProjectType.values|values#static(){}[0]
+
+    final object Companion { // cn.rtast.rob.starter.backend.enums/ProjectType.Companion|null[0]
+        final fun fromString(kotlin/String): cn.rtast.rob.starter.backend.enums/ProjectType? // cn.rtast.rob.starter.backend.enums/ProjectType.Companion.fromString|fromString(kotlin.String){}[0]
+    }
+}
+
+final class cn.rtast.rob.starter.backend.entity/Config { // cn.rtast.rob.starter.backend.entity/Config|null[0]
+    constructor <init>(kotlin/String) // cn.rtast.rob.starter.backend.entity/Config.<init>|<init>(kotlin.String){}[0]
+
+    final val frontend // cn.rtast.rob.starter.backend.entity/Config.frontend|{}frontend[0]
+        final fun <get-frontend>(): kotlin/String // cn.rtast.rob.starter.backend.entity/Config.frontend.<get-frontend>|<get-frontend>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.starter.backend.entity/Config.component1|component1(){}[0]
+    final fun copy(kotlin/String = ...): cn.rtast.rob.starter.backend.entity/Config // cn.rtast.rob.starter.backend.entity/Config.copy|copy(kotlin.String){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.starter.backend.entity/Config.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.starter.backend.entity/Config.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.starter.backend.entity/Config.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.starter.backend.entity/Config> { // cn.rtast.rob.starter.backend.entity/Config.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.starter.backend.entity/Config.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.starter.backend.entity/Config.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.starter.backend.entity/Config.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.starter.backend.entity/Config // cn.rtast.rob.starter.backend.entity/Config.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.starter.backend.entity/Config) // cn.rtast.rob.starter.backend.entity/Config.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.starter.backend.entity.Config){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.starter.backend.entity/Config.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.starter.backend.entity/Config> // cn.rtast.rob.starter.backend.entity/Config.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.starter.backend.entity/LatestVersion { // cn.rtast.rob.starter.backend.entity/LatestVersion|null[0]
+    constructor <init>(kotlin/String) // cn.rtast.rob.starter.backend.entity/LatestVersion.<init>|<init>(kotlin.String){}[0]
+
+    final val version // cn.rtast.rob.starter.backend.entity/LatestVersion.version|{}version[0]
+        final fun <get-version>(): kotlin/String // cn.rtast.rob.starter.backend.entity/LatestVersion.version.<get-version>|<get-version>(){}[0]
+
+    final fun component1(): kotlin/String // cn.rtast.rob.starter.backend.entity/LatestVersion.component1|component1(){}[0]
+    final fun copy(kotlin/String = ...): cn.rtast.rob.starter.backend.entity/LatestVersion // cn.rtast.rob.starter.backend.entity/LatestVersion.copy|copy(kotlin.String){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.starter.backend.entity/LatestVersion.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // cn.rtast.rob.starter.backend.entity/LatestVersion.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // cn.rtast.rob.starter.backend.entity/LatestVersion.toString|toString(){}[0]
+
+    final object $serializer : kotlinx.serialization.internal/GeneratedSerializer<cn.rtast.rob.starter.backend.entity/LatestVersion> { // cn.rtast.rob.starter.backend.entity/LatestVersion.$serializer|null[0]
+        final val descriptor // cn.rtast.rob.starter.backend.entity/LatestVersion.$serializer.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): kotlinx.serialization.descriptors/SerialDescriptor // cn.rtast.rob.starter.backend.entity/LatestVersion.$serializer.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun childSerializers(): kotlin/Array<kotlinx.serialization/KSerializer<*>> // cn.rtast.rob.starter.backend.entity/LatestVersion.$serializer.childSerializers|childSerializers(){}[0]
+        final fun deserialize(kotlinx.serialization.encoding/Decoder): cn.rtast.rob.starter.backend.entity/LatestVersion // cn.rtast.rob.starter.backend.entity/LatestVersion.$serializer.deserialize|deserialize(kotlinx.serialization.encoding.Decoder){}[0]
+        final fun serialize(kotlinx.serialization.encoding/Encoder, cn.rtast.rob.starter.backend.entity/LatestVersion) // cn.rtast.rob.starter.backend.entity/LatestVersion.$serializer.serialize|serialize(kotlinx.serialization.encoding.Encoder;cn.rtast.rob.starter.backend.entity.LatestVersion){}[0]
+    }
+
+    final object Companion { // cn.rtast.rob.starter.backend.entity/LatestVersion.Companion|null[0]
+        final fun serializer(): kotlinx.serialization/KSerializer<cn.rtast.rob.starter.backend.entity/LatestVersion> // cn.rtast.rob.starter.backend.entity/LatestVersion.Companion.serializer|serializer(){}[0]
+    }
+}
+
+final class cn.rtast.rob.starter.backend.resources/AbstractResource { // cn.rtast.rob.starter.backend.resources/AbstractResource|null[0]
+    constructor <init>(kotlin/UByteArray) // cn.rtast.rob.starter.backend.resources/AbstractResource.<init>|<init>(kotlin.UByteArray){}[0]
+
+    final fun asByteArray(): kotlin/ByteArray // cn.rtast.rob.starter.backend.resources/AbstractResource.asByteArray|asByteArray(){}[0]
+    final fun asString(): kotlin/String // cn.rtast.rob.starter.backend.resources/AbstractResource.asString|asString(){}[0]
+    final fun saveTo(kotlinx.io.files/Path) // cn.rtast.rob.starter.backend.resources/AbstractResource.saveTo|saveTo(kotlinx.io.files.Path){}[0]
+}
+
+final object cn.rtast.rob.starter.backend.util/Http { // cn.rtast.rob.starter.backend.util/Http|null[0]
+    final val client // cn.rtast.rob.starter.backend.util/Http.client|{}client[0]
+        final fun <get-client>(): io.ktor.client/HttpClient // cn.rtast.rob.starter.backend.util/Http.client.<get-client>|<get-client>(){}[0]
+
+    final suspend inline fun <#A1: reified kotlin/Any?> get(kotlin/String): #A1 // cn.rtast.rob.starter.backend.util/Http.get|get(kotlin.String){0§<kotlin.Any?>}[0]
+}
+
+final object cn.rtast.rob.starter.backend.util/Resources { // cn.rtast.rob.starter.backend.util/Resources|null[0]
+    final fun load(kotlin/String): kotlin/ByteArray // cn.rtast.rob.starter.backend.util/Resources.load|load(kotlin.String){}[0]
+    final fun loadAsString(kotlin/String): kotlin/String // cn.rtast.rob.starter.backend.util/Resources.loadAsString|loadAsString(kotlin.String){}[0]
+    final fun loadConfig(): cn.rtast.rob.starter.backend.entity/Config // cn.rtast.rob.starter.backend.util/Resources.loadConfig|loadConfig(){}[0]
+}
+
+final val cn.rtast.rob.starter.backend.util/json // cn.rtast.rob.starter.backend.util/json|{}json[0]
+    final fun <get-json>(): kotlinx.serialization.json/Json // cn.rtast.rob.starter.backend.util/json.<get-json>|<get-json>(){}[0]
+final val cn.rtast.rob.starter.backend/config // cn.rtast.rob.starter.backend/config|{}config[0]
+    final fun <get-config>(): cn.rtast.rob.starter.backend.entity/Config // cn.rtast.rob.starter.backend/config.<get-config>|<get-config>(){}[0]
+final val cn.rtast.rob.starter.backend/tempDir // cn.rtast.rob.starter.backend/tempDir|{}tempDir[0]
+    final fun <get-tempDir>(): kotlinx.io.files/Path // cn.rtast.rob.starter.backend/tempDir.<get-tempDir>|<get-tempDir>(){}[0]
+
+final fun (kotlinx.io.files/Path).cn.rtast.rob.starter.backend.util/delete() // cn.rtast.rob.starter.backend.util/delete|delete@kotlinx.io.files.Path(){}[0]
+final fun (kotlinx.io.files/Path).cn.rtast.rob.starter.backend.util/deleteRecursively() // cn.rtast.rob.starter.backend.util/deleteRecursively|deleteRecursively@kotlinx.io.files.Path(){}[0]
+final fun (kotlinx.io.files/Path).cn.rtast.rob.starter.backend.util/exists(): kotlin/Boolean // cn.rtast.rob.starter.backend.util/exists|exists@kotlinx.io.files.Path(){}[0]
+final fun (kotlinx.io.files/Path).cn.rtast.rob.starter.backend.util/mkdirs(): kotlinx.io.files/Path // cn.rtast.rob.starter.backend.util/mkdirs|mkdirs@kotlinx.io.files.Path(){}[0]
+final fun (kotlinx.io.files/Path).cn.rtast.rob.starter.backend.util/readBytes(): kotlin/ByteArray // cn.rtast.rob.starter.backend.util/readBytes|readBytes@kotlinx.io.files.Path(){}[0]
+final fun (kotlinx.io.files/Path).cn.rtast.rob.starter.backend.util/readText(): kotlin/String // cn.rtast.rob.starter.backend.util/readText|readText@kotlinx.io.files.Path(){}[0]
+final fun (kotlinx.io.files/Path).cn.rtast.rob.starter.backend.util/writeBytes(kotlin/ByteArray) // cn.rtast.rob.starter.backend.util/writeBytes|writeBytes@kotlinx.io.files.Path(kotlin.ByteArray){}[0]
+final fun (kotlinx.io.files/Path).cn.rtast.rob.starter.backend.util/writeText(kotlin/String) // cn.rtast.rob.starter.backend.util/writeText|writeText@kotlinx.io.files.Path(kotlin.String){}[0]
+final fun cn.rtast.rob.starter.backend.resources/getResources(kotlin/String): cn.rtast.rob.starter.backend.resources/AbstractResource // cn.rtast.rob.starter.backend.resources/getResources|getResources(kotlin.String){}[0]
+final fun cn.rtast.rob.starter.backend.util/generateProject(cn.rtast.rob.starter.backend.enums/ProjectType, kotlin/String, kotlin/String, kotlin/String, kotlin/String, kotlin/String, kotlin/String, kotlin.collections/List<cn.rtast.rob.starter.common/ExtraFeature>, kotlin.collections/List<cn.rtast.rob.starter.common/ROneBotTarget>): kotlin/ByteArray // cn.rtast.rob.starter.backend.util/generateProject|generateProject(cn.rtast.rob.starter.backend.enums.ProjectType;kotlin.String;kotlin.String;kotlin.String;kotlin.String;kotlin.String;kotlin.String;kotlin.collections.List<cn.rtast.rob.starter.common.ExtraFeature>;kotlin.collections.List<cn.rtast.rob.starter.common.ROneBotTarget>){}[0]
+final fun cn.rtast.rob.starter.backend.util/zipDirectory(kotlinx.io.files/Path, kotlinx.io.files/Path) // cn.rtast.rob.starter.backend.util/zipDirectory|zipDirectory(kotlinx.io.files.Path;kotlinx.io.files.Path){}[0]
+final fun cn.rtast.rob.starter.backend/main() // cn.rtast.rob.starter.backend/main|main(){}[0]
+final inline fun <#A: reified kotlin/Any?> (#A).cn.rtast.rob.starter.backend.util/toJson(): kotlin/String // cn.rtast.rob.starter.backend.util/toJson|toJson@0:0(){0§<kotlin.Any?>}[0]
+final inline fun <#A: reified kotlin/Any?> (kotlin/String).cn.rtast.rob.starter.backend.util/fromJson(): #A // cn.rtast.rob.starter.backend.util/fromJson|fromJson@kotlin.String(){0§<kotlin.Any?>}[0]
