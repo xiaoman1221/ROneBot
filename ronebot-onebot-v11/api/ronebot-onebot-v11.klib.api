@@ -3282,7 +3282,7 @@ final class cn.rtast.rob.event.raw.metadata/RawHeartBeatEvent { // cn.rtast.rob.
 }
 
 final class cn.rtast.rob.event.raw/AddFriendRequestEvent : cn.rtast.rob.actionable/RequestEventActionable { // cn.rtast.rob.event.raw/AddFriendRequestEvent|null[0]
-    constructor <init>(cn.rtast.rob.onebot/OneBotAction? = ..., kotlin/Long, kotlin/String, kotlin/String, kotlin/Long) // cn.rtast.rob.event.raw/AddFriendRequestEvent.<init>|<init>(cn.rtast.rob.onebot.OneBotAction?;kotlin.Long;kotlin.String;kotlin.String;kotlin.Long){}[0]
+    constructor <init>(kotlin/Long, kotlin/String, kotlin/String, kotlin/Long) // cn.rtast.rob.event.raw/AddFriendRequestEvent.<init>|<init>(kotlin.Long;kotlin.String;kotlin.String;kotlin.Long){}[0]
 
     final val comment // cn.rtast.rob.event.raw/AddFriendRequestEvent.comment|{}comment[0]
         final fun <get-comment>(): kotlin/String // cn.rtast.rob.event.raw/AddFriendRequestEvent.comment.<get-comment>|<get-comment>(){}[0]
@@ -3294,15 +3294,14 @@ final class cn.rtast.rob.event.raw/AddFriendRequestEvent : cn.rtast.rob.actionab
         final fun <get-userId>(): kotlin/Long // cn.rtast.rob.event.raw/AddFriendRequestEvent.userId.<get-userId>|<get-userId>(){}[0]
 
     final var action // cn.rtast.rob.event.raw/AddFriendRequestEvent.action|{}action[0]
-        final fun <get-action>(): cn.rtast.rob.onebot/OneBotAction? // cn.rtast.rob.event.raw/AddFriendRequestEvent.action.<get-action>|<get-action>(){}[0]
-        final fun <set-action>(cn.rtast.rob.onebot/OneBotAction?) // cn.rtast.rob.event.raw/AddFriendRequestEvent.action.<set-action>|<set-action>(cn.rtast.rob.onebot.OneBotAction?){}[0]
+        final fun <get-action>(): cn.rtast.rob.onebot/OneBotAction // cn.rtast.rob.event.raw/AddFriendRequestEvent.action.<get-action>|<get-action>(){}[0]
+        final fun <set-action>(cn.rtast.rob.onebot/OneBotAction) // cn.rtast.rob.event.raw/AddFriendRequestEvent.action.<set-action>|<set-action>(cn.rtast.rob.onebot.OneBotAction){}[0]
 
-    final fun component1(): cn.rtast.rob.onebot/OneBotAction? // cn.rtast.rob.event.raw/AddFriendRequestEvent.component1|component1(){}[0]
-    final fun component2(): kotlin/Long // cn.rtast.rob.event.raw/AddFriendRequestEvent.component2|component2(){}[0]
+    final fun component1(): kotlin/Long // cn.rtast.rob.event.raw/AddFriendRequestEvent.component1|component1(){}[0]
+    final fun component2(): kotlin/String // cn.rtast.rob.event.raw/AddFriendRequestEvent.component2|component2(){}[0]
     final fun component3(): kotlin/String // cn.rtast.rob.event.raw/AddFriendRequestEvent.component3|component3(){}[0]
-    final fun component4(): kotlin/String // cn.rtast.rob.event.raw/AddFriendRequestEvent.component4|component4(){}[0]
-    final fun component5(): kotlin/Long // cn.rtast.rob.event.raw/AddFriendRequestEvent.component5|component5(){}[0]
-    final fun copy(cn.rtast.rob.onebot/OneBotAction? = ..., kotlin/Long = ..., kotlin/String = ..., kotlin/String = ..., kotlin/Long = ...): cn.rtast.rob.event.raw/AddFriendRequestEvent // cn.rtast.rob.event.raw/AddFriendRequestEvent.copy|copy(cn.rtast.rob.onebot.OneBotAction?;kotlin.Long;kotlin.String;kotlin.String;kotlin.Long){}[0]
+    final fun component4(): kotlin/Long // cn.rtast.rob.event.raw/AddFriendRequestEvent.component4|component4(){}[0]
+    final fun copy(kotlin/Long = ..., kotlin/String = ..., kotlin/String = ..., kotlin/Long = ...): cn.rtast.rob.event.raw/AddFriendRequestEvent // cn.rtast.rob.event.raw/AddFriendRequestEvent.copy|copy(kotlin.Long;kotlin.String;kotlin.String;kotlin.Long){}[0]
     final fun equals(kotlin/Any?): kotlin/Boolean // cn.rtast.rob.event.raw/AddFriendRequestEvent.equals|equals(kotlin.Any?){}[0]
     final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw/AddFriendRequestEvent.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // cn.rtast.rob.event.raw/AddFriendRequestEvent.toString|toString(){}[0]
