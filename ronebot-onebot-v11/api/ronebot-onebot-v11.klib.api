@@ -349,7 +349,8 @@ final enum class cn.rtast.rob.event.raw.group/GroupRequestsType : kotlin/Enum<cn
 
 abstract interface cn.rtast.rob.actionable/FileEventActionable { // cn.rtast.rob.actionable/FileEventActionable|null[0]
     abstract suspend fun readBytes(): kotlin/ByteArray // cn.rtast.rob.actionable/FileEventActionable.readBytes|readBytes(){}[0]
-    abstract suspend fun saveTo(kotlinx.io.files/Path) // cn.rtast.rob.actionable/FileEventActionable.saveTo|saveTo(kotlinx.io.files.Path){}[0]
+    abstract suspend fun saveTo(kotlinx.io.files/Path): kotlinx.io.files/Path // cn.rtast.rob.actionable/FileEventActionable.saveTo|saveTo(kotlinx.io.files.Path){}[0]
+    abstract suspend fun saveToAsync(kotlinx.io.files/Path) // cn.rtast.rob.actionable/FileEventActionable.saveToAsync|saveToAsync(kotlinx.io.files.Path){}[0]
 }
 
 abstract interface cn.rtast.rob.actionable/GroupMessageActionable : cn.rtast.rob.actionable/MessageActionable { // cn.rtast.rob.actionable/GroupMessageActionable|null[0]
@@ -1521,7 +1522,8 @@ final class cn.rtast.rob.event.raw.file/RawFileEvent : cn.rtast.rob.actionable/F
     final fun hashCode(): kotlin/Int // cn.rtast.rob.event.raw.file/RawFileEvent.hashCode|hashCode(){}[0]
     final fun toString(): kotlin/String // cn.rtast.rob.event.raw.file/RawFileEvent.toString|toString(){}[0]
     final suspend fun readBytes(): kotlin/ByteArray // cn.rtast.rob.event.raw.file/RawFileEvent.readBytes|readBytes(){}[0]
-    final suspend fun saveTo(kotlinx.io.files/Path) // cn.rtast.rob.event.raw.file/RawFileEvent.saveTo|saveTo(kotlinx.io.files.Path){}[0]
+    final suspend fun saveTo(kotlinx.io.files/Path): kotlinx.io.files/Path // cn.rtast.rob.event.raw.file/RawFileEvent.saveTo|saveTo(kotlinx.io.files.Path){}[0]
+    final suspend fun saveToAsync(kotlinx.io.files/Path) // cn.rtast.rob.event.raw.file/RawFileEvent.saveToAsync|saveToAsync(kotlinx.io.files.Path){}[0]
 
     final class File { // cn.rtast.rob.event.raw.file/RawFileEvent.File|null[0]
         constructor <init>(kotlin/String, kotlin/String, kotlin/Int, kotlin/String, kotlin/Long) // cn.rtast.rob.event.raw.file/RawFileEvent.File.<init>|<init>(kotlin.String;kotlin.String;kotlin.Int;kotlin.String;kotlin.Long){}[0]
