@@ -6,8 +6,8 @@
 // - Show declarations: true
 
 // Library unique name: <cn.rtast.rob:ronebot-common>
-open annotation class cn.rtast.rob.annotations/InternalROBApi : kotlin/Annotation { // cn.rtast.rob.annotations/InternalROBApi|null[0]
-    constructor <init>() // cn.rtast.rob.annotations/InternalROBApi.<init>|<init>(){}[0]
+open annotation class cn.rtast.rob.annotations/InternalROneBotApi : kotlin/Annotation { // cn.rtast.rob.annotations/InternalROneBotApi|null[0]
+    constructor <init>() // cn.rtast.rob.annotations/InternalROneBotApi.<init>|<init>(){}[0]
 }
 
 final enum class cn.rtast.rob.enums/MusicShareType : kotlin/Enum<cn.rtast.rob.enums/MusicShareType> { // cn.rtast.rob.enums/MusicShareType|null[0]
@@ -511,6 +511,15 @@ final class cn.rtast.rob.scheduler/CoroutineTaskHandle : cn.rtast.rob.scheduler/
     final suspend fun cancel(): kotlin/Boolean // cn.rtast.rob.scheduler/CoroutineTaskHandle.cancel|cancel(){}[0]
 }
 
+final class cn.rtast.rob.util/Logger { // cn.rtast.rob.util/Logger|null[0]
+    constructor <init>() // cn.rtast.rob.util/Logger.<init>|<init>(){}[0]
+
+    final fun debug(kotlin/String) // cn.rtast.rob.util/Logger.debug|debug(kotlin.String){}[0]
+    final fun error(kotlin/String) // cn.rtast.rob.util/Logger.error|error(kotlin.String){}[0]
+    final fun info(kotlin/String) // cn.rtast.rob.util/Logger.info|info(kotlin.String){}[0]
+    final fun warn(kotlin/String) // cn.rtast.rob.util/Logger.warn|warn(kotlin.String){}[0]
+}
+
 final val cn.rtast.rob.event/eventHandlers // cn.rtast.rob.event/eventHandlers|{}eventHandlers[0]
     final fun <get-eventHandlers>(): kotlin.collections/MutableMap<cn.rtast.rob/BaseBotInstance, kotlin.collections/MutableMap<kotlin.reflect/KClass<out cn.rtast.rob.event/BaseDispatchEvent<*>>, kotlin.coroutines/SuspendFunction1<cn.rtast.rob.event/BaseDispatchEvent<*>, kotlin/Unit>>> // cn.rtast.rob.event/eventHandlers.<get-eventHandlers>|<get-eventHandlers>(){}[0]
 final val cn.rtast.rob.event/flowEventChannel // cn.rtast.rob.event/flowEventChannel|{}flowEventChannel[0]
@@ -523,6 +532,8 @@ final val cn.rtast.rob.util/ID // cn.rtast.rob.util/ID|@kotlin.Long{}ID[0]
     final fun (kotlin/Long).<get-ID>(): cn.rtast.rob.util/IBotManager.ID // cn.rtast.rob.util/ID.<get-ID>|<get-ID>@kotlin.Long(){}[0]
 final val cn.rtast.rob.util/ID // cn.rtast.rob.util/ID|@kotlin.String{}ID[0]
     final fun (kotlin/String).<get-ID>(): cn.rtast.rob.util/IBotManager.ID // cn.rtast.rob.util/ID.<get-ID>|<get-ID>@kotlin.String(){}[0]
+final val cn.rtast.rob.util/json // cn.rtast.rob.util/json|{}json[0]
+    final fun <get-json>(): kotlinx.serialization.json/Json // cn.rtast.rob.util/json.<get-json>|<get-json>(){}[0]
 final val cn.rtast.rob/commonCoroutineScope // cn.rtast.rob/commonCoroutineScope|{}commonCoroutineScope[0]
     final fun <get-commonCoroutineScope>(): kotlinx.coroutines/CoroutineScope // cn.rtast.rob/commonCoroutineScope.<get-commonCoroutineScope>|<get-commonCoroutineScope>(){}[0]
 final val cn.rtast.rob/logger // cn.rtast.rob/logger|{}logger[0]
@@ -558,8 +569,12 @@ final fun <#A: cn.rtast.rob.entity/ISender> (#A).cn.rtast.rob.permission/setPerm
 final fun <#A: cn.rtast.rob.entity/ISender> (#A).cn.rtast.rob.permission/setPermission(kotlin/Int) // cn.rtast.rob.permission/setPermission|setPermission@0:0(kotlin.Int){0§<cn.rtast.rob.entity.ISender>}[0]
 final fun <#A: cn.rtast.rob.entity/ISender> (#A).cn.rtast.rob.permission/setPermission(kotlin/String) // cn.rtast.rob.permission/setPermission|setPermission@0:0(kotlin.String){0§<cn.rtast.rob.entity.ISender>}[0]
 final fun <#A: cn.rtast.rob/BotFactory> (#A).cn.rtast.rob.permission/getPermissionManager(): cn.rtast.rob.permission/PermissionManager // cn.rtast.rob.permission/getPermissionManager|getPermissionManager@0:0(){0§<cn.rtast.rob.BotFactory>}[0]
+final fun cn.rtast.rob.util/getLogger(): cn.rtast.rob.util/Logger // cn.rtast.rob.util/getLogger|getLogger(){}[0]
 final inline fun <#A: reified cn.rtast.rob.event/BaseDispatchEvent<*>> (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.event/flowEvent(crossinline kotlin.coroutines/SuspendFunction1<kotlinx.coroutines.flow/Flow<#A>, kotlin/Unit>) // cn.rtast.rob.event/flowEvent|flowEvent@cn.rtast.rob.BaseBotInstance(kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.flow.Flow<0:0>,kotlin.Unit>){0§<cn.rtast.rob.event.BaseDispatchEvent<*>>}[0]
 final inline fun <#A: reified cn.rtast.rob.event/BaseDispatchEvent<*>> (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.event/onEvent(crossinline kotlin.coroutines/SuspendFunction1<#A, kotlin/Unit>) // cn.rtast.rob.event/onEvent|onEvent@cn.rtast.rob.BaseBotInstance(kotlin.coroutines.SuspendFunction1<0:0,kotlin.Unit>){0§<cn.rtast.rob.event.BaseDispatchEvent<*>>}[0]
 final inline fun <#A: reified cn.rtast.rob.event/BaseDispatchEvent<*>> (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.event/subscribe(crossinline kotlin.coroutines/SuspendFunction1<#A, kotlin/Unit>) // cn.rtast.rob.event/subscribe|subscribe@cn.rtast.rob.BaseBotInstance(kotlin.coroutines.SuspendFunction1<0:0,kotlin.Unit>){0§<cn.rtast.rob.event.BaseDispatchEvent<*>>}[0]
+final inline fun <#A: reified kotlin/Any?> (#A).cn.rtast.rob.util/toJson(): kotlin/String // cn.rtast.rob.util/toJson|toJson@0:0(){0§<kotlin.Any?>}[0]
+final inline fun <#A: reified kotlin/Any?> (kotlin/String).cn.rtast.rob.util/fromArrayJson(): #A // cn.rtast.rob.util/fromArrayJson|fromArrayJson@kotlin.String(){0§<kotlin.Any?>}[0]
+final inline fun <#A: reified kotlin/Any?> (kotlin/String).cn.rtast.rob.util/fromJson(): #A // cn.rtast.rob.util/fromJson|fromJson@kotlin.String(){0§<kotlin.Any?>}[0]
 final suspend fun (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.event/dispatchEvent(cn.rtast.rob.event/BaseDispatchEvent<out cn.rtast.rob/SendAction>) // cn.rtast.rob.event/dispatchEvent|dispatchEvent@cn.rtast.rob.BaseBotInstance(cn.rtast.rob.event.BaseDispatchEvent<out|cn.rtast.rob.SendAction>){}[0]
 final suspend fun <#A: cn.rtast.rob.event/BaseDispatchEvent<out cn.rtast.rob/SendAction>> (cn.rtast.rob/BaseBotInstance).cn.rtast.rob.event/emitFlowEvent(#A) // cn.rtast.rob.event/emitFlowEvent|emitFlowEvent@cn.rtast.rob.BaseBotInstance(0:0){0§<cn.rtast.rob.event.BaseDispatchEvent<out|cn.rtast.rob.SendAction>>}[0]

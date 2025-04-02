@@ -36,7 +36,7 @@ public abstract interface class cn/rtast/rob/SendAction {
 	public abstract fun send (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 }
 
-public abstract interface annotation class cn/rtast/rob/annotations/InternalROBApi : java/lang/annotation/Annotation {
+public abstract interface annotation class cn/rtast/rob/annotations/InternalROneBotApi : java/lang/annotation/Annotation {
 }
 
 public abstract interface class cn/rtast/rob/command/CommandManager {
@@ -561,5 +561,21 @@ public final class cn/rtast/rob/util/IBotManagerKt {
 	public static final fun getID (I)Lcn/rtast/rob/util/IBotManager$ID;
 	public static final fun getID (J)Lcn/rtast/rob/util/IBotManager$ID;
 	public static final fun getID (Ljava/lang/String;)Lcn/rtast/rob/util/IBotManager$ID;
+}
+
+public final class cn/rtast/rob/util/JsonKt {
+	public static final fun getJson ()Lkotlinx/serialization/json/Json;
+}
+
+public final class cn/rtast/rob/util/Logger {
+	public fun <init> ()V
+	public final fun debug (Ljava/lang/String;)V
+	public final fun error (Ljava/lang/String;)V
+	public final fun info (Ljava/lang/String;)V
+	public final fun warn (Ljava/lang/String;)V
+}
+
+public final class cn/rtast/rob/util/LoggerKt {
+	public static final fun getLogger ()Lcn/rtast/rob/util/Logger;
 }
 
